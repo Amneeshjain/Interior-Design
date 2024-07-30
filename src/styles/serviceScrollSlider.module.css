@@ -1,0 +1,157 @@
+.servicesMainContiner {
+  padding: 100px 0;
+}
+.display{
+  display: flex;
+  gap: 30px;
+}
+.servicesButton{
+  width: 100%;
+    padding: 15px 0px 15px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+
+}
+.servicesButton1{
+  width: 100%;
+    padding: 7px 0px 7px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+
+}
+@media only screen and (max-width: 768px) {
+  .servicesMainContiner {
+    padding: 80px 0;
+  }
+}
+
+.servicesMainContiner {
+  scroll-behavior: smooth;
+  background-color: #fafafa;
+}
+
+.serviceSliderCard {
+  padding: 40px;
+  transition: 0.4s ease-in-out;
+  border: 1px solid #cfcfcf;
+  position: relative;
+  width: 100%;
+  max-width: calc(95% / 3);
+  border-radius: 10px;
+}
+
+.serviceSliderCard:hover {
+  margin-top: -20px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.serviceSliderCard figure,
+.serviceSliderCard p,
+.serviceSliderCard h2 {
+  margin-bottom: 0;
+}
+
+.serviceSliderCard figure {
+  width: 73px;
+  height: 73px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.serviceSliderCard figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+.serviceSliderCard .customCard h2 {
+  font-size: 25px;
+  line-height: 36.02px;
+  letter-spacing: 1.02px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.serviceSliderCard .customCard p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #595959;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+.serviceSliderCard .customCard a {
+  font-size: 14px;
+  line-height: 18.15px;
+  font-weight: 500;
+  letter-spacing: 0.77px;
+  color: #0d0d0d!important;
+  padding-bottom: 5px;
+  transition: 0.5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.serviceSliderCard .customCard a:hover {
+  color: #838383!important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .serviceSliderCard {
+    padding: 22px;
+  }
+
+  .serviceSliderCard figure {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .serviceSliderCard .customCard h2 {
+    font-size: 16px;
+    line-height: 21.02px;
+    padding-bottom: 10px;
+  }
+
+  .serviceSliderCard .customCard p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    padding-bottom: 10px;
+  }
+
+  .serviceSliderCard .customCard a {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .mainCon {
+    margin-top: 0 !important;
+  }
+  .cardContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .serviceSliderCard {
+    max-width: calc(100% / 2 - 13px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .serviceSliderCard {
+    max-width: calc(100% / 1);
+    margin-bottom:20px;
+  }
+  .display{
+    display: block;
+  }
+  .serviceSliderCard:hover {
+    margin-top: auto;
+    cursor: pointer;
+    
+  }
+}

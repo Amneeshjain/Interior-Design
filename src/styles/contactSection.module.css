@@ -1,0 +1,307 @@
+.contactMainContainer {
+  padding: 100px 0;
+  /* background-color: #fafafa; */
+}
+
+.contactMainContainer .contactItems {
+  display: flex;
+  align-items: center;
+}
+
+.contactMainContainer .contactItems .left,
+.contactMainContainer .contactItems .right {
+  width: 100%;
+  max-width: calc(100% / 2);
+}
+
+.contactMainContainer .contactItems .left .tag {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.contactMainContainer .contactItems .left .tag hr {
+  width: 80px;
+  margin: 0;
+  opacity: 1;
+  border: 1px solid #0d0d0d;
+}
+
+.contactMainContainer .contactItems .left .tag p {
+  margin-bottom: 0;
+  font-size: 19.22px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contactMainContainer .contactItems .left h2 {
+  font-size: 58.45px;
+  line-height: 69.41px;
+  letter-spacing: 3.09px;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.contactMainContainer .contactItems .left ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactMainContainer .contactItems .left .contactDetailContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactMainContainer .contactItems .left ul h3 {
+  font-size: 23.53px;
+  line-height: 37.64px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.contactMainContainer .contactItems .left ul li {
+  gap: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.contactMainContainer .contactItems .left ul li figure {
+  margin-bottom: 0;
+}
+
+.contactMainContainer .contactItems .left ul li a,
+.contactMainContainer .contactItems .left ul li p {
+  font-size: 18.82px;
+  line-height: 30.59px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.contactMainContainer .contactItems .left ul li a:hover {
+  text-decoration: underline !important;
+}
+
+.contactMainContainer .contactItems .left ul li p {
+  margin-bottom: 0;
+}
+
+.contactMainContainer .contactItems .right .formContainer {
+  padding: 68px;
+  background-color: #ffffff;
+}
+
+.contactMainContainer .contactItems .right .formContainer form {
+  gap: 23px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.contactMainContainer
+  .contactItems
+  .right
+  .formContainer
+  form
+  input[type="text"],
+.contactMainContainer
+  .contactItems
+  .right
+  .formContainer
+  form
+  input[type="email"],
+.contactMainContainer .contactItems .right .formContainer form textarea {
+  width: 100%;
+  padding: 20px 34px;
+  outline: none;
+  border: 1px solid #e7e7e7;
+  font-size: 18.32px;
+  color: #666666;
+  font-weight: 300;
+  line-height: 21.98px;
+  text-transform: capitalize;
+}
+
+.contactMainContainer
+  .contactItems
+  .right
+  .formContainer
+  form
+  input::placeholder {
+  font-size: 18.32px;
+  color: #666666;
+  font-weight: 300;
+  line-height: 21.98px;
+  text-transform: capitalize;
+}
+
+.contactMainContainer
+  .contactItems
+  .right
+  .formContainer
+  form
+  input[type="submit"] {
+  font-size: 16.03px;
+  line-height: 16.03px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 21.18px 37.78px;
+  background-color: #181818;
+  transition: 0.5s ease-in-out;
+}
+
+.contactMainContainer
+  .contactItems
+  .right
+  .formContainer
+  form
+  input[type="submit"]:hover {
+  background-color: #313131;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contactMainContainer .contactItems .left .tag hr {
+    width: 60px;
+  }
+  .contactMainContainer .contactItems .left .tag p {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .contactMainContainer .contactItems .left h2 {
+    font-size: 40.45px;
+    line-height: 47.41px;
+    letter-spacing: 1.09px;
+    padding-bottom: 30px;
+  }
+
+  .contactMainContainer .contactItems .left ul h3 {
+    font-size: 21.53px;
+    line-height: 27.64px;
+    padding-bottom: 10px;
+  }
+
+  .contactMainContainer .contactItems .right .formContainer {
+    padding: 40px;
+  }
+
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input[type="text"],
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input[type="email"],
+  .contactMainContainer .contactItems .right .formContainer form textarea {
+    padding: 17px;
+    font-size: 16px;
+  }
+
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input::placeholder {
+    font-size: 16px;
+  }
+
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input[type="submit"] {
+    font-size: 13px;
+    padding: 17px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contactMainContainer .contactItems .left h2 {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 1.09px;
+    padding-bottom: 10px;
+  }
+
+  .contactMainContainer .contactItems .left ul h3 {
+    font-size: 17.53px;
+    line-height: 27.64px;
+    padding-bottom: 0;
+  }
+
+  .contactMainContainer .contactItems .left ul {
+    gap: 10px;
+  }
+
+  .contactMainContainer .contactItems .left ul li a,
+  .contactMainContainer .contactItems .left ul li p {
+    font-size: 16px;
+  }
+
+  .contactMainContainer .contactItems .right .formContainer {
+    padding: 30px;
+  }
+
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input[type="text"],
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input[type="email"],
+  .contactMainContainer .contactItems .right .formContainer form textarea {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .contactMainContainer
+    .contactItems
+    .right
+    .formContainer
+    form
+    input::placeholder {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contactMainContainer {
+    padding: 80px 0;
+  }
+
+  .contactMainContainer .contactItems {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .contactMainContainer .contactItems .left,
+  .contactMainContainer .contactItems .right {
+    max-width: 100%;
+  }
+}

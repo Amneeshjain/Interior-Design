@@ -1,0 +1,118 @@
+.getJobSection {
+  padding: 84.05px 0 70px 0;
+}
+
+.registerFormContainer input[type="file"] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+}
+
+.registerFormContainer {
+  margin: 65px 61px 0 61px;
+  padding: 37px 44px;
+  background-color: #ededed8c;
+}
+
+@media only screen and (max-width: 1199px) {
+  .registerFormContainer form .file label {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .registerFormContainer {
+    margin: 40px 0 0 0;
+    padding: 30px;
+  }
+}
+
+.registerFormContainer .tittle {
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 700;
+  color: #2d2f30;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 991px) {
+  .registerFormContainer .tittle {
+    font-size: 22px;
+    line-height: 24.4px;
+  }
+}
+
+.registerFormContainer form {
+  overflow: hidden;
+  margin-top: 23px;
+}
+
+.registerFormContainer form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 24px;
+  font-size: 18.32px;
+  line-height: 21.98px;
+  color: #666666;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 991px) {
+  .registerFormContainer form input {
+    padding: 14px;
+    font-size: 14.32px;
+  }
+}
+
+.fileInput {
+  visibility: hidden;
+  position: absolute;
+  width: 0 !important;
+}
+
+.registerFormContainer form .file label {
+  width: 100%;
+  padding: 20px 30px;
+  font-size: 19px;
+  line-height: 28.6px;
+  color: #2d2f30;
+  cursor: pointer;
+  font-weight: 700;
+  width: fit-content;
+  background-color: #ffffff;
+}
+
+.registerFormContainer form .fileLabel {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.registerFormContainer form input[type="submit"] {
+  width: 209.24px !important;
+  background-color: #181818 !important;
+  color: #ffffff !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .registerFormContainer form .file label {
+    padding: 14px;
+    font-size: 16px;
+    line-height: 24.4px;
+  }
+
+  .registerFormContainer form .submit_btn input[type="submit"] {
+    width: 100% !important;
+  }
+
+  /* .cusRow {
+    column-gap: 15px !important;
+  } */
+}
+
+.registerFormContainer form .submit_btn {
+  margin-top: 40px;
+}

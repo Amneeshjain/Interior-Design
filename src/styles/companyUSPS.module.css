@@ -1,0 +1,99 @@
+.CompanyUpsMainContainer {
+  margin-bottom: 57px;
+}
+
+.CompanyUpsMainContainer .CompanyUpsBg {
+  padding: 40px;
+  background-color: #fafafa;
+}
+
+.CompanyUpsMainContainer .CompanyUpsBg .tag {
+  gap: 30px;
+  display: flex;
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+.CompanyUpsMainContainer .CompanyUpsBg .tag p {
+  width: 100%;
+  margin-bottom: 0;
+  max-width: fit-content;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.CompanyUpsMainContainer .CompanyUpsBg .tag hr {
+  margin: 0;
+  width: 100%;
+  opacity: 1;
+  border: 1px solid #0d0d0d;
+}
+
+.CompanyUpsMainContainer .CompanyUpsItems {
+  gap: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.upsCard {
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  max-width: calc(100% / 4);
+}
+
+.upsCard .icon figure {
+  width: 33px;
+  height: 33px;
+}
+
+.upsCard .icon figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.upsCard h3 {
+  font-size: 17px;
+  line-height: 19.28px;
+  font-weight: 500;
+  letter-spacing: 0.87px;
+  color: #0d0d0d;
+  margin-bottom: 0;
+  padding-bottom: 8.72px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.upsCard p {
+  font-size: 12px;
+  line-height: 26.01px;
+  font-weight: 400;
+  color: #0d0d0d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .CompanyUpsMainContainer .CompanyUpsItems {
+    flex-wrap: wrap;
+  }
+
+  .upsCard {
+    max-width: calc(100% / 2 - 20px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .CompanyUpsMainContainer .CompanyUpsBg {
+    padding: 20px;
+  }
+  .CompanyUpsMainContainer .CompanyUpsItems {
+    gap: 20px;
+  }
+  .upsCard {
+    max-width: calc(100%);
+  }
+}

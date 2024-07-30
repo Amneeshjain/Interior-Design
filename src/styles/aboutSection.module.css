@@ -1,0 +1,245 @@
+.aboutMainContainer {
+  padding: 146px 0;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sectionTitle .left .tag {
+  gap: 19.28px;
+  display: flex;
+  align-items: center;
+  font-size: 18.23px;
+  line-height: 21.21px;
+  letter-spacing: 0.96px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 33.14px;
+}
+
+.sectionTitle .left .tag hr {
+  opacity: 1;
+  width: 77.13px;
+  border: 1.45px solid #0d0d0d;
+}
+
+.sectionTitle .left h2 {
+  font-size: 60px;
+  line-height: 69.41px;
+  letter-spacing: 3.09px;
+  color: #0d0d0d;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.sectionTitle .right a {
+  font-size: 16.4px;
+  line-height: 19.28px;
+  color: #0d0d0d;
+  padding-bottom: 13.97px;
+  border-bottom: 1.93px solid #cfcfcf;
+  text-transform: uppercase;
+  letter-spacing: 0.87px;
+  font-weight: 500;
+}
+
+.aboutInnerItems {
+  gap: 33px;
+  display: flex;
+  overflow: hidden;
+  padding-top: 64.83px;
+  align-items: flex-start;
+}
+
+.aboutInnerItems img {
+  filter: grayscale(1);
+  transition: 0.4s ease-in-out;
+}
+
+
+.aboutInnerItems img:hover, 
+.aboutInnerItems img.in-view {
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+.aboutInnerItems .left {
+  width: 100%;
+  max-width: 60%;
+}
+
+.aboutInnerItems .left figure {
+  width: 744px;
+  height: 735px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.aboutInnerItems .left figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutInnerItems .right {
+  width: 100%;
+  max-width: 40%;
+}
+
+.aboutInnerItems .right ul {
+  gap: 33px;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  flex-direction: column;
+}
+
+.aboutInnerItems .right ul li figure {
+  height: 351px;
+  width: 519px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.aboutInnerItems .right ul li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1400px) {
+  .aboutMainContainer {
+    padding: 110px 0;
+  }
+
+  .sectionTitle .left .tag {
+    font-size: 15.23px;
+    line-height: 16px;
+    padding-bottom: 15px;
+  }
+
+  .sectionTitle .left .tag hr {
+    width: 50.13px;
+  }
+
+  .sectionTitle .left h2 {
+    font-size: 45px;
+    line-height: 60px;
+    letter-spacing: 1.8px;
+  }
+
+  .sectionTitle .right a {
+    font-size: 13px;
+    line-height: 15.28px;
+    padding-bottom: 6.97px;
+    letter-spacing: 0.5px;
+  }
+
+  .aboutInnerItems .left figure {
+    width: 636px;
+    height: 650px;
+  }
+
+  .aboutInnerItems .right ul li figure {
+    height: 308px;
+    width: 445px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .aboutInnerItems .left figure {
+    width: 528px;
+    height: 580px;
+  }
+
+  .aboutInnerItems .right ul li figure {
+    height: 273px;
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .sectionTitle .left .tag {
+    padding-bottom: 10px;
+  }
+
+  .sectionTitle .left h2 {
+    font-size: 33px;
+    line-height: 44px;
+  }
+
+  .aboutInnerItems {
+    padding-top: 35px;
+  }
+
+  .aboutInnerItems,
+  .aboutInnerItems .right ul {
+    gap: 20px;
+  }
+  .aboutInnerItems .left figure {
+    width: 397px;
+    height: 450px;
+  }
+
+  .aboutInnerItems .right ul li figure {
+    height: 215px;
+    width: 279px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutMainContainer {
+    padding: 80px 0;
+  }
+  .sectionTitle {
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .aboutInnerItems .left figure {
+    width: 100%;
+    height: 350px;
+  }
+
+  .aboutInnerItems .right ul li figure {
+    height: 100%;
+    width: 240px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .sectionTitle .left h2 br {
+    display: none;
+  }
+
+  .sectionTitle .left h2 {
+    font-size: 26px;
+    line-height: 37px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .aboutInnerItems,
+  .aboutInnerItems .right ul {
+    gap: 10px;
+  }
+  .aboutInnerItems {
+    flex-direction: column;
+  }
+
+  .aboutInnerItems .left,
+  .aboutInnerItems .right {
+    max-width: 100%;
+  }
+
+  .aboutInnerItems .left figure,
+  .aboutInnerItems .right ul li figure {
+    width: 100%;
+    height: 100%;
+  }
+}

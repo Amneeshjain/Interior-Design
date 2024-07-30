@@ -1,0 +1,15 @@
+.bgGrey{
+    background-color: #f4f4f4;
+    padding: 100px;
+}
+.readMoreButton{
+    font-weight: 500;
+    text-decoration: underline!important;
+    cursor:pointer;
+}
+@media only screen and (max-width: 460px) {
+.bgGrey{
+    background-color: #f4f4f4;
+    padding: 100px 5px 100px 5px;
+}
+}
