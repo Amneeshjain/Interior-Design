@@ -20,7 +20,6 @@ const About = () => {
         style={{ color: "#fff !important" }}
         title="About Colonelz "
         text="How it Started ?"
-        buttonText="Get in Touch"
         backgroundImage="../../bg-hero.png"
       />
       <CompanyUps />
@@ -36,15 +35,17 @@ const About = () => {
     <Experts/>
       <Team />
       <WhyChooseUS />
-      <GetInTouch />
+      
       <Process />
-      <Contact bg="#fafafa" />
+      {/* <Contact bg="#fafafa" /> */}
       <BlogSection />
+      <GetInTouch />
       <AboutMore
       text="Decorate Your Interiors: Modern Design Meets Classic Charm"
        content="Our approach combines sleek, present-day factors with classic design capabilities to create interiors that are sparkling and timeless. We are aware of integrating current tendencies with traditional touches, making sure your area stays stylish for years yet to come." 
       mainText="Our designs are crafted to offer a harmonious blend of vintage and new, giving your property a unique and fashionable enchantment. Experience a space that feels present-day and enduring, best for any lifestyle."
       />
+      
     </div>
   );
 };

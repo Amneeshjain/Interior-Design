@@ -32,7 +32,7 @@ const Gallery = () => {
                 Gallery
                 <hr />
               </div>
-              <h2>THE INITIAL CONCEPTS</h2>
+              <h2>Explore Our Project Gallery</h2>
             </div>
           </div>
           <div className={style.gallaryItems}>

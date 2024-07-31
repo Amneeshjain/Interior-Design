@@ -19,7 +19,7 @@ const BlogContent = () => {
           <div className={styles.lineRight}></div>
         </div>
 
-        <h1 className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}>
+        <h1 className={`text-center col-lg-6 offset-lg-3`}>
         18 useful online research resources for student architects
         </h1>
         <div className="container">

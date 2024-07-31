@@ -1,5 +1,6 @@
 import Link from "next/link";
 import style from "../styles/footer.module.css";
+import Button from "./button";
 
 const Footer = () => {
   return (
@@ -75,37 +76,46 @@ const Footer = () => {
                   <li>
                     <Link href="/about">About</Link>
                   </li>
-                  <li>
-                    <Link href="/get-in-touch">Get In Touch</Link>
-                  </li>
+                  
                   <li>
                     <Link href="/career">Careers</Link>
                   </li>
                   <li>
                     <Link href="/blogs">Blog</Link>
                   </li>
-                </ul>
-              </div>
-              <div className={style.footerRow}>
-                <p className={style.tag}>Support</p>
-                <ul>
                   <li>
                     <Link href="/termsand-conditions">Terms of Service</Link>
                   </li>
-                  {/* <li>
-                    <Link href="/get-in-touch">Help center</Link>
-                  </li> */}
                   <li>
                     <Link href="/privacy">Privacy Policy</Link>
                   </li>
-                   {/* <li>
-                    <Link href="/get-in-touch">Testimonials</Link>
-                  </li> */}
                 </ul>
               </div>
               <div className={style.footerRow}>
-                <p className={style.tag}>Contacts us</p>
+                <p className={style.tag}>Services</p>
                 <ul>
+                <li>
+                    <Link href="/interior/residential-interior">Residential Interior</Link>
+                  </li>
+                  <li>
+                    <Link href="/interior/commercial-interior">Commercial Interior</Link>
+                  </li>
+                  <li>
+                    <Link href="/architecture">Architecture</Link>
+                  </li>
+                  
+                  <li>
+                    <Link href="/construction">Construction</Link>
+                  </li>
+                   <li>
+                    <Link href="/projects">Projects</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={style.footerRow}>
+                <p className={style.tag}>Visit Us</p>
+                <ul>
+                <Link className={`${style.colorWhite}`} href="/get-in-touch"><Button variant="secondary">Get In Touch</Button></Link>
                   <li>
                     <figure>
                       <img src="/Email.svg" alt="" />
@@ -142,7 +152,7 @@ const Footer = () => {
           </div>
           <div className={style.footerStyle}>
                 <p className={style.footerText}>© 2024 Colonelz Inc. All rights reserved.</p>
-                <p className={style.footerText}>© Created and maintained by Media Dynox.</p>
+                <p className={style.footerText}>Created and Maintained by <Link href="https://mediadynox.com/">Media Dynox.</Link></p>
               </div>
         </div>
       </div>

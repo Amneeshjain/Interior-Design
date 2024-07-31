@@ -22,9 +22,10 @@ const Team = () => {
             <div className={styles.lineRight}></div>
           </div>
           <h1
-            className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}
+            className={`text-center col-lg-6 offset-lg-3`}
           >
-            NAOMI SAHAY
+            
+            Naomi Sahay
           </h1>
           <div className="container mt-5 mb-5">
             <div className="row">

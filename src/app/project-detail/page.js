@@ -5,13 +5,14 @@ import HeroSection from "../../components/About/HeroSection";
 import Galary from "../../components/ProjectDetail/Galary";
 import AboutProjects from "../../components/AboutProjects";
 import Video from "@/components/homepage/Video";
+import GetInTouch from "../../components/homepage/GetInTouch";
 
 const page = () => {
   return (
     <div>
       <HeroSection
         title="Vasant Kunj Residence"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../project-details.png"
         text="Project Details"
         color={"#fff"}
@@ -21,7 +22,8 @@ const page = () => {
 
       <Galary bg="#FAFAFA" />
       <Video />
-      <Contact />
+      {/* <Contact /> */}
+      <GetInTouch />
     </div>
   );
 };

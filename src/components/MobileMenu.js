@@ -109,9 +109,9 @@ const Navbar = () => {
             </div>
 
             <div className={styles.dropdown}>
-              <button href="/interior" onClick={() => toggleDropdown("interiorDesign")}>
-                interior design
-                <img src="dropDownArrow.svg" alt="" />
+              <button  className={styles.menuOnly}>
+                <Link href="/interior">interior design</Link>
+                <img src="dropDownArrow.svg" alt="" onClick={() => toggleDropdown("interiorDesign")}/>
               </button>
               <div
                 className={`${styles.dropdownContent} ${

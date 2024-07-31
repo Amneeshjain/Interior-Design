@@ -1,6 +1,6 @@
 .whyChooseMainContainer {
   padding: 100px 0;
-  background-color: #fafafa;
+ 
 }
 
 .whyChooseMainContainer .sectionTittle .tag {
@@ -29,7 +29,7 @@
   font-size: 50.45px;
   line-height: 69.41px;
   letter-spacing: 3.9px;
-  text-transform: uppercase;
+ 
 }
 
 .chooseItemsWrapper {

@@ -6,6 +6,7 @@ import styles from "../../styles/about.module.css";
 import style from "../../styles/home.module.css";
 import Link from "next/link";
 import hero from "../../styles/innerHero.module.css";
+
 const HeroSection = ({
   title,
   buttonText,
@@ -20,6 +21,7 @@ const HeroSection = ({
   const bgColorStyle = {
     background: background || "#fff", // Default to black if color prop is not provided
   };
+
   return (
     <div
       className={`d-flex align-items-center ${styles.heroSection} `}
@@ -35,9 +37,11 @@ const HeroSection = ({
               <p>{text}</p>
             </div>
             <h2 className="">{title}</h2>
-            <Link href="/">
-              <Button variant="secondary">{buttonText}</Button>
-            </Link>
+            {buttonText && (
+              <Link href="/">
+                <Button variant="secondary">{buttonText}</Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -47,9 +51,11 @@ const HeroSection = ({
 
 HeroSection.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
+  buttonText: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  background: PropTypes.string,
 };
 
 export default HeroSection;

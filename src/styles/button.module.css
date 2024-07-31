@@ -38,7 +38,7 @@
 }
 
 .secondary:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: #000000;
   border-color: #4e555b;
 }

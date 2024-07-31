@@ -130,7 +130,7 @@ const Team = () => {
             <div className={styles.lineRight}></div>
           </div>
           <h1
-            className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}
+            className={`text-center col-lg-6 offset-lg-3`}
           >
             Your Imagination into Immersence
           </h1>

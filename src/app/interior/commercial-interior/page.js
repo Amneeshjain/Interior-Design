@@ -7,6 +7,7 @@ import Services from "../../../components/homepage/Services";
 import Process from "@/components/About/Process";
 import Faq from "@/components/Faq/Faq";
 import AboutFirm from "../../../components/About/AboutFirm";
+import GetInTouch from "../../../components/homepage/GetInTouch";
 const textData = [
   {
     image: "/plan.png",
@@ -85,6 +86,7 @@ const page = () => {
       <Process />
 
       <Faq faqData={faqData} />
+      <GetInTouch/>
       <AboutMore
         text="Artistry in Every Detail: Crafting Unique and Inspiring Environments"
         mainText="Infuse your private home with creative flair and bespoke details that set it apart from the regular. We take pleasure in incorporating specific design factors and custom touches that reflect your flavor and inspire creativity. Our approach involves cautiously curating every detail to enhance the overall ambiance and create a truly different environment. Experience a home that is not always just designed but artistically crafted to make a declaration. Our commercial interior design services ensure that every element is thoughtfully chosen.
@@ -93,7 +95,7 @@ const page = () => {
 "
         content="Experience the difference with our commercial interior design services and see how our business interior design expertise can transform your space. Trust our commercial interior design firm and our talented commercial interior designers to deliver exceptional results. Our commercial interior decorator will ensure every detail is perfect."
       />
-      <Contact bg="#fafafa" />
+      {/* <Contact bg="#fafafa" /> */}
     </div>
   );
 };

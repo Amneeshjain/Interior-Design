@@ -2,10 +2,12 @@
 import HeroSection from "@/components/About/HeroSection";
 import styles from "../../styles/home.module.css";
 import style from "../../styles/gitInTouch.module.css";
-import styling from "../../styles/footer.module.css"
+import styling from "../../styles/footer.module.css";
+import style2 from "../../styles/contactSection.module.css"
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Contact from "../../components/About/Contact"
 
 const GetInTouch = () => {
   const [fileName, setFileName] = useState("");
@@ -53,12 +55,12 @@ const GetInTouch = () => {
             <div className="d-flex align-items-center justify-content-center">
               <div className={styles.lineLeft}></div>
               <p className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}>
-                Contact Us
+                Get In Touch
               </p>
               <div className={styles.lineRight}></div>
             </div>
 
-            <h1 className={`text-center col-lg-6 offset-lg-3 mb-5 ${styles.uppercase}`}>
+            <h1 className={`text-center col-lg-6 offset-lg-3 mb-5 `}>
               Hey! Tell us about <br />
               your project
             </h1>
@@ -114,73 +116,8 @@ const GetInTouch = () => {
             </form>
           </div>
         </div>
-        <div className="container">
-          <div className={style.getInTouchMap}>
-            <div className={style.getInTouch_MapContainer}>
-              <div className={` row ${style.cusRowCon}`}>
-                <div className={`col-lg-6 col-md-12 ${style.mapMainCol_container}`}>
-                  <div>
-                    <div className={style.mapContainer}>
-                      <div className={style.mapItems} id="g-mapdisplay">
-                        <iframe
-                          className={style.mapIframe}
-                          frameBorder="0"
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.172529196996!2d77.033676773742!3d28.414050493971892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d236a0cf13cc5%3A0x8f739ce50923a065!2sColonelz%20Constructions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1721986258818!5m2!1sen!2sin"
-                        ></iframe>
-                      </div>
-                      <a className="googl-ehtml" href="https://www.bootstrapskins.com/themes" id="grab-map-info"></a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-12">
-                  <ul className={style.getInTouch_detail}>
-                    
-                    <li>
-                      <h4>Address</h4>
-                      <p>D-11, Vipul World, Sector-48 Gurugram – 18, Haryana, India</p>
-                      <Link className="d-flex" href="tel:+918447500754">
-                        <Image width={20} height={20} src="/ph.png" alt="" /> +918447500754
-                      </Link>
-                    </li>
-                    <li>
-                      <h4>Social media</h4>
-                      <ul className={styling.socialIcons1}>
-                  <li>
-                    <Link href="https://www.facebook.com/ColonelzConstructions" target="_blank">
-                      <figure>
-                        <img src="/face.png" alt=""  width="22px"/>
-                      </figure>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://www.instagram.com/colonelzconstructions/" target="_blank">
-                      <figure>
-                        <img src="/inst.png" alt="" width="22px"/>
-                      </figure>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://www.youtube.com/@ColonelzConstruction" target="_blank">
-                      <figure>
-                        <img src="/you.png" alt="" width="22px"/>
-                      </figure>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
-                      <figure>
-                        <img src="/in.png" alt="" width="22px"/>
-                      </figure>
-                    </Link>
-                  </li>
-                </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Contact/>
+       
       </div>
     </>
   );

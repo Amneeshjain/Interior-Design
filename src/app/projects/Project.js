@@ -3,12 +3,13 @@ import React from "react";
 import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
 import OurProjects from "../../components/Project/OurProjects";
+import GetInTouch from "../../components/homepage/GetInTouch";
 const Project = () => {
   return (
     <div>
       <HeroSection
         title="our Projects"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../projectli.png"
         text={"Projects"}
         color={"#fff"}
@@ -17,7 +18,8 @@ const Project = () => {
 
       <OurProjects />
 
-      <Contact bg="#FAFAFA" />
+      {/* <Contact bg="#FAFAFA" /> */}
+      <GetInTouch />
     </div>
   );
 };

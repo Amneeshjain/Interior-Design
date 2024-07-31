@@ -48,7 +48,7 @@ const Career = () => {
       <HeroSection
         title="Join our Team"
         text="Career"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../career.png"
         color={"#fff"}
         background={"#fff"}
@@ -68,7 +68,7 @@ const Career = () => {
             </div>
 
             <h1
-              className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}
+              className={`text-center col-lg-6 offset-lg-3`}
             >
               Become a Part of our <br />
               organization

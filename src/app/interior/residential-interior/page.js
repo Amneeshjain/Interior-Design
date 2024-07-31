@@ -7,6 +7,7 @@ import Services from "../../../components/homepage/Services";
 import Process from "@/components/About/Process";
 import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../../components/aboutMore/AboutMore";
+import GetInTouch from "../../../components/homepage/GetInTouch";
 const textData = [
   {
     image: "/blueprint.png",
@@ -62,7 +63,7 @@ const page = () => {
       <HeroSection
         text="Interior"
         title="Residential Interior"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../bg-hero.png"
       />
 
@@ -76,12 +77,13 @@ const page = () => {
       <Process />
 
       <Faq faqData={faqData} />
+      <GetInTouch/>
       <AboutMore
        text="Sophisticated Spaces: Where Functionality and Style Unite"
        mainText="Our designs seamlessly blend capability with sophistication, ensuring your area is sensible and beautiful. We attention on creating layouts that decorate usability while retaining a stylish and stylish look.Residential interior design and residential interior design service are integral to our approach."
        content="Every piece of furnishings and décor is selected to complement the overall design, presenting both practicality and visual appeal. Our residential interior design expertise ensures a harmonious balance. Enjoy a space that not only looks beautiful but also supports your day-to-day activities effectively and efficiently. Our residential interior decorator brings creativity to every project.
 Residential interior design for residential addresses is at the core of what we do. Our interior design for residential offers tailored solutions. With our residential interior decorator, every detail is thoughtfully considered. Residential interior design transforms your living space. Trust our residential interior design service for exceptional results" />
-      <Contact bg="#fafafa" />
+      {/* <Contact bg="#fafafa" /> */}
     </div>
   );
 };

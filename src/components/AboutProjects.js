@@ -5,13 +5,13 @@ import Link from "next/link";
 const ABOUT_PROJECT_DATA = [
   {
     id: 1,
-    title: "Moodboard & inspiration",
+    title: "Moodboard & Inspiration",
     description:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
   },
   {
     id: 2,
-    title: "Space planning",
+    title: "Space Planning",
     description:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
   },
@@ -47,7 +47,7 @@ const AboutProjects = () => {
                 About Project
                 <hr />
               </div>
-              <h2>THE INITIAL CONCEPTS</h2>
+              <h2>The Initial Concepts</h2>
             </div>
           </div>
 

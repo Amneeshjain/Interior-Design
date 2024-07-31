@@ -9,7 +9,7 @@ const page = () => {
     <div>
       <HeroSection
         title="Articles & news"
-        buttonText="Get in Touch"
+       // buttonText="Get in Touch"
         backgroundImage="../../blog-detail.png"
         text="Articles & news"
         background={"#fff"}

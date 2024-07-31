@@ -4,6 +4,9 @@
   overflow: hidden;
   background-color: #000000;
 }
+.colorWhite{
+  color:#000!important;
+}
 .footerText{
   font-size: 12px;
   color:#999999;
@@ -30,7 +33,7 @@
   align-items: flex-end;
 }
 .socialIcons1 {
-  display: flex;
+  display: flex!important;
   gap: 20px;
   list-style: none;
   padding-top: 20px;
@@ -91,8 +94,10 @@
 }
 
 .footerLinksContainer .footerRow .tag {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
 }
 
 .footerLinksContainer .footerRow ul {
@@ -102,10 +107,11 @@
 .footerLinksContainer .footerRow ul li a,
 .footerLinksContainer .footerRow ul li p,
 .footerDetails p {
-  font-weight: 400;
-  font-size: 17px;
-  color: #999999;
-  margin-bottom: 0;
+  font-weight: 300;
+    font-size: 14px;
+    line-height: 26.01px;
+    
+    color:#999999;
   transition: 0.5s ease-in-out;
 }
 

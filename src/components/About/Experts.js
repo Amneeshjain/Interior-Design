@@ -46,7 +46,7 @@ const Team = () => {
             </p>
             <div className={styles.lineRight}></div>
           </div>
-          <h1 className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}>
+          <h1 className={`text-center col-lg-6 offset-lg-3`}>
             Innovation for sophistication
           </h1>
           <div className="container mt-5 mb-5">

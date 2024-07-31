@@ -9,7 +9,7 @@ import AboutFirm from "@/components/About/AboutFirm";
 import CardSection from "./cardSection";
 import Faq from "../../components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
-
+import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
   {
     title: "PRELIMINARY PLANS",
@@ -67,7 +67,7 @@ const page = () => {
     <>
       <HeroSection
         title="INTERIOR DESIGN"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../interior.png"
         text="Services"
         background={"#fff"}
@@ -88,18 +88,19 @@ const page = () => {
       {/* <CardSection /> */}
       <Service />
       <WhyChooseUs
-        title="COMPREHENSIVE ARCHITECTURE PLANNING"
+        title="Comprehensive Architecture Planning"
         tag="EXPERTISE"
         items={items}
       />
       <Faq faqData={faqData} />
+      <GetInTouch />
       <AboutMore
         text="Create Your Sanctuary: Personalized Comfort in Every Corner"
         mainText="Transform your house into a non-public haven with the best interior design company with each detail caters to your consolation and style. We paint closely with you to recognize your alternatives and wishes, making sure every nook of your area feels like a retreat. From comfortable nooks to fashionable living areas, we are cognizant of growing surroundings that display your character and promote rest. Our designs prioritize comfort without compromising on aesthetic attraction, making your private home a real sanctuary. "
         content="Our interior design company provides interior design services that cater to all your needs. With our interior decorator, you can explore living room decor ideas that enhance your space. Our home interior design solutions are tailored to your preferences. Discover new interior design ideas to create your perfect haven. Modern interior design elements are incorporated to give your home a contemporary feel. We offer affordable interior design options to suit any budget. Trust our interior design company for all your interior design services. Our interior decorator will work closely with you to bring your living room decor ideas to life. Experience home interior design that reflects your style. Our interior design ideas will transform your space. Embrace modern interior design for a chic look. Enjoy affordable interior design solutions for every corner of your home."
       />
 
-      <Contact bg="#fafafa" />
+      {/* <Contact bg="#fafafa" /> */}
     </>
   );
 };

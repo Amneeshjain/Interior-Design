@@ -61,8 +61,8 @@ const OurProjects = () => {
               <hr />
             </div>
             <h2>
-              BROWSE OUR Latest <br />
-              PROJECTS
+            Browse Our Latest <br />
+            Projects
             </h2>
           </div>
         </div>

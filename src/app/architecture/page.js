@@ -9,6 +9,7 @@ import Process from "@/components/About/Process";
 import AboutFirm from "@/components/About/AboutFirm";
 import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
+import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
   {
     title: "PRELIMINARY PLANS",
@@ -88,7 +89,7 @@ const page = () => {
     <div>
       <HeroSection
         title="Architecture"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../architecture.png"
         text="Services"
         background={"#fff"}
@@ -103,18 +104,19 @@ const page = () => {
           description="Believes in switching vision to visuals, we shape buildings and afterward building shapes our lives. Our team integrates exceptional architectural craftsmen with their innovative designs. We customize an exclusive interior design with your vision for every inch of your space. From concept to completion, experience seamless integration of style and functionality. Partner with one of the leading architecture firms to flourish your spaces with luxury."
         />
       </div>
-      <WhyChooseUs
+      {/* <WhyChooseUs
         title="COMPREHENSIVE ARCHITECTURE PLANNING"
         tag="EXPERTISE"
         items={items}
-      />
+      /> */}
       <Services
-        title="OUR SERVICES"
-        subtitle="SHAPING DREAMS INTO SKYLINES"
+        title="EXPERTISE"
+        subtitle="Shaping Dreams Into Skylines"
         text={textData}
       />
       <Process bg="#FAFAFA" />
       <Faq faqData={faqData} />
+      <GetInTouch />
       <AboutMore
         text="Design with Purpose: Transforming Spaces to Fit Your Lifestyle
 "
@@ -125,7 +127,7 @@ We use thoughtful indoors architecture and sensible house building plans to deli
         content="From developing building plans to executing innovative architectural designs, our architecture firms focuses on transforming your space right into a sanctuary that fits your way of life. By addressing your precise wishes, we create houses that aren't handiest visually appealing but also fairly purposeful.
 "
       />
-      <Contact bg="#FAFAFA" />
+      {/* <Contact bg="#FAFAFA" /> */}
     </div>
   );
 };

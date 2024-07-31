@@ -8,6 +8,7 @@ import Process from "../../components/About/Process";
 import AboutFirm from "../../components/About/AboutFirm";
 import Faq from "../../components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
+import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
   {
     title: "Turnkey ",
@@ -83,7 +84,7 @@ const page = () => {
     <div>
       <HeroSection
         title="Quality Foundations For Lasting Structures"
-        buttonText="Get in Touch"
+        //buttonText="Get in Touch"
         backgroundImage="../../projectli.png"
         text={"Construction"}
         color={"#fff"}
@@ -100,11 +101,11 @@ const page = () => {
     />
       </div>
 
-      <WhyChooseUs
+      {/* <WhyChooseUs
       title="Constructing Excellence, Delivering Results"
       tag="Why Colonelz?"
       items={items}
-    />
+    /> */}
 
       <Services title="Expertise "
       subtitle="Our Construction Capabilities" text={textData}/>
@@ -112,6 +113,7 @@ const page = () => {
       <Process bg="#FAFAFA" />
 
       <Faq faqData={faqData}/>
+      <GetInTouch />
       <AboutMore
         text="Innovative Interiors: Modern Solutions for Stylish Living
 "
@@ -121,7 +123,7 @@ Our home construction businesses method combines present day layout with effecti
         content="By leveraging our knowledge as a leading building construction company, we make certain that every factor of your own home aligns together with your lifestyle. Our construction services provide you with the latest developments in interior layout, all even as adhering to the highest requirements of best and efficiency.
 Choose us for your next undertaking and revel in how our cutting-edge domestic creation solutions can raise your residing area. Our commitment to super construction planning and execution will convey your imaginative and prescient to life with fashion and precision."
       />
-      <Contact bg="#FAFAFA" />
+      {/* <Contact bg="#FAFAFA" /> */}
     </div>
   );
 };

@@ -7,7 +7,9 @@
   right: 0;
   z-index: 999999999999999;
 }
-
+.menuOnly{
+  padding: 0 10px 10px 0px!important;
+}
 .scrollClass {
   /* backdrop-filter: blur(0); */
   background-color: #0d0d0d; /* Styles to apply when class is toggled */

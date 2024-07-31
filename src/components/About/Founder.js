@@ -23,9 +23,9 @@ const Team = () => {
             <div className={styles.lineRight}></div>
           </div>
           <h1
-            className={`text-center col-lg-6 offset-lg-3 ${styles.uppercase}`}
+            className={`text-center col-lg-6 offset-lg-3`}
           >
-            COL BIRAJ SAHAY
+            Col Biraj Sahay
           </h1>
           <div className={`${styling.hideinmobile}`}>
           <div className="container mt-5 mb-5">
@@ -60,7 +60,7 @@ const Team = () => {
           <div className={`${styling.hideindesktop}`}>
           <div className="container mb-5">
             <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-3 mt-5">
                 <img  className={styling.imgstyle} src="/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-008.jpg" width="100%"/>
               </div>
               <div className={`col-lg-9 ${styling.pdRight}`}>
