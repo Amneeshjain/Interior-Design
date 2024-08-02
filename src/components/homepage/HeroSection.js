@@ -51,8 +51,8 @@ const HeroSection = () => {
             </div>
             <div className={style.textDiv}>
               <h1 data-aos="fade-up" data-aos-duration="1000">
-               Transforming {" "}
-                <span className={style.textOutline}> Spaces</span>
+               Transforming Spaces{" "}
+                {/* <span className={style.textOutline}> Spaces</span> */}
                 <br />
                 <div className={style.bannerIcon}>
                   <figure>

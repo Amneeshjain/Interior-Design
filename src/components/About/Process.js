@@ -1,8 +1,10 @@
+'use client'
+
 import style from "../../styles/process.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Process = () => {
@@ -100,13 +102,12 @@ const Process = () => {
               animate={controls}
               variants={cardVariants}
             >
-              <div className={style.circle}>2</div>
+               <div className={style.circle}>2</div>
               <div className={style.content}>
                 <h2>Pitch Presentation</h2>
                 <p>We present our design ideas and concepts to you, showcasing how they meet your needs. This stage allows you to provide feedback.</p>
               </div>
             </motion.div>
-
             <motion.div
               className={`col-lg-3 col-6 ${style.box}`}
               custom={2}

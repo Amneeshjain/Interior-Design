@@ -20,6 +20,9 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
+  const myfuntion=()=>{
+    console.log("hiiiiiiiii")
+  }
 
   return (
     <>
@@ -43,8 +46,8 @@ const Portfolio = () => {
             </h2>
           </div>
         </div>
-
         <div className={styles.slideContainer}>
+        <Link href="/projects">
           <div className={` ${styles.greyBg} ${styles.sticky}`}>
             <div className={styles.info}>
               <div>
@@ -54,9 +57,8 @@ const Portfolio = () => {
               </div>
 
               <div>
-                <Link href="/projects">
                 <Image src={whiteButton} alt="Button" height={60} width={60} />
-                </Link>
+             
               </div>
             </div>
             <motion.div
@@ -65,16 +67,24 @@ const Portfolio = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className={styles.imageHeight}>
+            
+                
+              <div className={styles.imageHeight} >
                 <Image
                   src={BgInteriar3}
                   alt="Description"
                   layout="fill"
-                  objectFit="cover" // or 'contain', 'none', etc.
+                  objectFit="cover"
+                  
+                   // or 'contain', 'none', etc.
                 />
               </div>
+            
+             
             </motion.div>
           </div>
+          </Link>
+          <Link href="/projects">
           <div className={`${styles.greenBg} ${styles.sticky}`}>
             <div className={styles.info}>
               <div>
@@ -104,7 +114,8 @@ const Portfolio = () => {
               </div>
             </motion.div>
           </div>
-
+          </Link>
+          <Link href="/projects">
           <div className={` ${styles.greyBg} ${styles.sticky}`}>
             <div className={styles.info}>
               <div>
@@ -135,6 +146,7 @@ const Portfolio = () => {
               </div>
             </motion.div>
           </div>
+          </Link>
         </div>
       </div>
       <style jsx>{`

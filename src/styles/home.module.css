@@ -139,14 +139,15 @@
 }
 .centerImgFade {
   position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  width: 100%;
-  max-width: fit-content;
-  height: 420px;
-  border-radius: 50%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: 493px;
+    border-radius: 50%;
 }
 
 /* .textDiv {
@@ -166,8 +167,8 @@
 
 .textDiv h1 {
   font-weight: 900;
-  font-size: 85px;
-  line-height: 125px;
+  font-size: 30px;
+  line-height: 35px;
   position: relative;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -181,13 +182,20 @@
 }
 @media only screen and (max-width: 1400px) {
   .textDiv h1 {
-    font-size: 71px;
-    line-height: 110px;
+    font-size: 25px;
+    line-height: 35px;
   }
   .textDiv figure img {
     width:51px;
     object-fit: contain;
   }
+  .Lorem {
+    width: 310px!important;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26.01px;
+    margin: 20px 0 20.98px;
+}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -195,8 +203,8 @@
     justify-content: unset;
   }
   .textDiv h1 {
-    font-size: 64px;
-    line-height: 90px;
+    font-size: 30px;
+    line-height: 35px;
     font-weight: 800;
   }
   .textOutline {
@@ -206,8 +214,8 @@
 
 @media only screen and (max-width: 992px) {
   .textDiv h1 {
-    font-size: 52px;
-    line-height: 70px;
+    font-size: 30px;
+    line-height: 35px;
     font-weight: 700;
   }
 
@@ -222,8 +230,8 @@
 
 @media only screen and (max-width: 768px) {
   .textDiv h1 {
-    font-size: 37px;
-    line-height: 58px;
+    font-size: 30px;
+    line-height: 35px;
   }
 }
 
@@ -288,7 +296,7 @@
 .bannerIcon {
   display: flex;
   align-items: center;
-  gap: 37.49px;
+  gap: 10.49px;
   color: #000;
 }
 
@@ -347,12 +355,12 @@
 }
 
 .textDiv figure img {
-  width:51px;
+  width:20px;
   object-fit: contain;
 }
 
 .Lorem {
-  width: 400px;
+  width: 395px;
   font-weight: 300;
   font-size: 14px;
   line-height: 26.01px;

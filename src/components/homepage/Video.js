@@ -75,14 +75,18 @@ const Video = () => {
             )}
             <style jsx>{`
               .video-section {
+             
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+                flex-direction: row;
+                gap:100px;
+                align-items: start;
+                text-align: start;
               }
               .video-overlay {
                 position: relative;
                 cursor: pointer;
+              
+               
               }
               .video-overlay img {
                 width: 100%;

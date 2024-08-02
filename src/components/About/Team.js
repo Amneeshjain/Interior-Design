@@ -76,14 +76,14 @@ const TeamSliderData = [
 
 const Team = () => {
   const settings = {
-    dots: false,
-    infinite: false,
+  
+    infinite:true,
     autoplay: true,
     speed: 500,
     slidesToShow: 3, // Default number of slides to show
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
+   
+    autoplaySpeed:1000,
     arrows: false,
     dots:true,
     // nextArrow: leftIcon,

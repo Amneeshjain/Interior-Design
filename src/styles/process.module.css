@@ -1,33 +1,57 @@
+/* ======================================== */
+
+.masonryGrid {
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.masonryGridColumn {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/* ============================================== */
 .box {
-  background-color: #ededed;
+  background-color: #fff;
+  /* background-color: #ededed; */
   border-radius: 10px;
   flex: 1;
-  margin: 10px 10px 50px 10px;
-  padding: 20px;
+  margin: 10px 10px 20px 10px;
+  padding: 2.5rem;
   text-align: center;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.box h2{
+.box h2 {
   font-size: 20px;
 }
 .circle {
-  background-color: #766f6f;
-    color: #fff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    border: 5px solid #fff;
+  /* background-color: #766f6f; */
+  background-color: #000;
+
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  border: 5px solid #fff;
 }
-.content{
-  margin-top:20px;
+.content {
+  margin-top: 4rem;
 }
 .processMainContainer {
   padding: 100px 0;
@@ -43,13 +67,14 @@
 
 .processMainContainer .btnContainer {
   text-align: center;
+  padding-top: 3rem;
 }
 
 .processMainContainer .btnContainer a {
   font-size: 16px;
   font-weight: 300;
   font-weight: 300;
-  padding: 23px 30px;
+  padding: 20px 30px;
   line-height: 14.4px;
   letter-spacing: 0.65px;
   text-transform: uppercase;
@@ -65,7 +90,7 @@
 
 .processCard {
   width: 100%;
-  padding: 30px;
+  padding: 50px;
   text-align: center;
   position: relative;
   max-width: calc(100% / 3);
@@ -104,13 +129,14 @@
 
 .processCard p {
   margin-bottom: 0;
+  /* padding-top: 2rem; */
   font-size: 15.61px;
   line-height: 33.3px;
   font-weight: 400;
   color: #595959;
 }
-.mt5{
-  margin-top:5rem;
+.mt5 {
+  margin-top: 5rem;
 }
 @media only screen and (max-width: 1400px) {
   .processCard h2 {
@@ -177,7 +203,7 @@
     text-align: center;
     position: relative;
   }
-  .mt5{
-    margin-top:3rem;
+  .mt5 {
+    margin-top: 3rem;
   }
 }

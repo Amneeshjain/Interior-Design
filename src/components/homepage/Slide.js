@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import style from '../../styles/style.module.css';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import style from "../../styles/style.module.css";
 
 function Slide({ cards }) {
   const panelsRef = useRef([]);
@@ -15,7 +15,7 @@ function Slide({ cards }) {
 
   return (
     <section className={`${style.works} ${style.thecontainer}`}>
-      {cards.map((item, index) => (
+      {cards.map((item, index) =>
         <div
           className={`${style.panel} ${style.mt30}`}
           key={item.id}
@@ -25,19 +25,27 @@ function Slide({ cards }) {
             <div className={`${style.img}`}>
               <img src={item.image} alt="" />
             </div>
-            <div className={`${style.cont} ${style.dFlex} ${style.alignItemsEnd}`}>
+            <div
+              className={`${style.cont} ${style.dFlex} ${style.alignItemsEnd}`}
+            >
               <div>
-                <span>{item.tag}</span>
-                <h5>{item.title}</h5>
+                <span>
+                  {item.tag}
+                </span>
+                <h5>
+                  {item.title}
+                </h5>
               </div>
               <div className={`${style.mlAuto}`}>
-                <h6>{item.date}</h6>
+                <h6>
+                  {item.date}
+                </h6>
               </div>
             </div>
-            <a href="#0" className={`${style.linkOverlay}`}></a>
+            <a href="#0" className={`${style.linkOverlay}`} />
           </div>
         </div>
-      ))}
+      )}
     </section>
   );
 }
