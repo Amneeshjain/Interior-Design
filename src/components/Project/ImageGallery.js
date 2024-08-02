@@ -13,10 +13,12 @@ const images = [
   "/about-1.png",
   "/about-2.png",
   "/about-3.png",
+  "/about-2.png",
   "/about-1.png",
-  "/about-1.png",
-  "/about-3.png",
   "/about-2.png"
+  // "/about-1.png"
+  // "/about-3.png",
+  // "/about-2.png"
 
   // Add more image paths as needed
 ];
@@ -25,24 +27,29 @@ const ImageGallery = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const openLightbox = index => {
-    setPhotoIndex(index);
-    setIsOpen(true);
-  };
-  const preloadImage = src => {
+  const preloadImage = (src, callback) => {
     const img = new window.Image();
     img.src = src;
+    img.onload = callback;
+    console.log("Preloading image:", img);
+  };
+
+  const openLightbox = index => {
+    preloadImage(images[index], () => {
+      setPhotoIndex(index);
+      setIsOpen(true);
+    });
   };
 
   const breakpoints = {
-    default: 2,
-    1100: 2,
+    default: 3,
+    1100: 3,
     700: 1
   };
 
   return (
     <div className="container">
-      <div className="row bg-dark ">
+      <div className="row ">
         <div>
           <Masonry
             breakpointCols={breakpoints}
@@ -51,9 +58,9 @@ const ImageGallery = () => {
           >
             {images.map((src, index) =>
               <div
-                key={index}
+                key={index + 1}
                 className={styles.imageWrapper}
-                onClick={() => openLightbox(index)}
+                onClick={i => openLightbox(index)}
               >
                 <Image
                   src={src}
@@ -74,11 +81,18 @@ const ImageGallery = () => {
               prevSrc={images[(photoIndex + images.length - 1) % images.length]}
               onCloseRequest={() => setIsOpen(false)}
               onMovePrevRequest={() => {
-                console.log("fkjhfskjdfkdsfhsd");
-                setPhotoIndex((photoIndex + images.length - 1) % images.length);
+                const newIndex =
+                  (photoIndex + images.length - 1) % images.length;
+                preloadImage(images[newIndex], () => {
+                  setPhotoIndex(newIndex);
+                });
               }}
-              onMoveNextRequest={() =>
-                setPhotoIndex((photoIndex + 1) % images.length)}
+              onMoveNextRequest={() => {
+                const newIndex = (photoIndex + 1) % images.length;
+                preloadImage(images[newIndex], () => {
+                  setPhotoIndex(newIndex);
+                });
+              }}
             />}
         </div>
       </div>
