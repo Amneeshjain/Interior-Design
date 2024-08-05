@@ -18,14 +18,10 @@
 .fixedText {
   position: fixed;
   top: 200px; /* Adjust as needed */
-  
- 
 }
 .fixedImage {
   position: fixed;
   top: 100px; /* Adjust as needed */
-  
- 
 }
 .fixedCircularImage {
   position: fixed;
@@ -117,21 +113,19 @@
 
 .starDiv {
   padding: 30px 0 25px 0px !important;
-  
 }
-.rotate{
+.rotate {
   animation: rotate 10s linear infinite; /* Adjust the duration as needed */
 }
 @keyframes rotate {
-  from{
-    transform:rotate(0deg);
+  from {
+    transform: rotate(0deg);
   }
-  
-  to{
-    transform:rotate(360deg);
+
+  to {
+    transform: rotate(360deg);
   }
 }
-
 
 .centerImg {
   max-width: 300px;
@@ -139,15 +133,15 @@
 }
 .centerImgFade {
   position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    width: 100%;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    height: 493px;
-    border-radius: 50%;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 493px;
+  border-radius: 50%;
 }
 
 /* .textDiv {
@@ -186,16 +180,16 @@
     line-height: 35px;
   }
   .textDiv figure img {
-    width:51px;
+    width: 51px;
     object-fit: contain;
   }
   .Lorem {
-    width: 310px!important;
+    width: 310px !important;
     font-weight: 300;
     font-size: 14px;
     line-height: 26.01px;
     margin: 20px 0 20.98px;
-}
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -251,9 +245,9 @@
   }
   .overflowXCustom {
     height: 111vh;
-      overflow-x: hidden !important;
-      overflow-y: hidden;
-      margin-top: -140px;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    margin-top: -140px;
   }
 }
 
@@ -263,9 +257,9 @@
   }
   .overflowXCustom {
     height: 111vh;
-      overflow-x: hidden !important;
-      overflow-y: hidden;
-      margin-top: -110px;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    margin-top: -110px;
   }
 }
 
@@ -355,7 +349,7 @@
 }
 
 .textDiv figure img {
-  width:20px;
+  width: 20px;
   object-fit: contain;
 }
 
@@ -718,9 +712,8 @@
 }
 .overflowXCustom {
   height: 100vh;
-    overflow-x: hidden !important;
-    overflow-y: hidden;
-    
+  overflow-x: hidden !important;
+  overflow-y: hidden;
 }
 .colorWhite {
   color: #fff;
@@ -803,7 +796,7 @@
   bottom: 80px;
   right: 7%;
   width: 141px;
-  height: 141px;/* Make width and height equal for a perfect circle */
+  height: 141px; /* Make width and height equal for a perfect circle */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -834,7 +827,7 @@
     display: none;
   }
   .textDiv figure img {
-    width:23px;
+    width: 23px;
     object-fit: contain;
   }
 }

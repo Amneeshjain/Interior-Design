@@ -1,108 +1,92 @@
 "use client";
-
-import { useState, useEffect } from "react";
-import Modal from "react-modal";
+import React, { Component, useEffect } from "react";
+import LightGallery from "lightgallery/react";
 import Image from "next/image";
+import styles from "../../styles/process.module.css";
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import fjGallery from "flickr-justified-gallery";
+
+// import plugins if you need
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 const images = [
-  { src: "/about-1.png", width: 800, height: 600 },
-  { src: "/about-2.png", width: 800, height: 600 },
-  { src: "/about-3.png", width: 800, height: 600 },
-  { src: "/about-1.png", width: 800, height: 600 },
-  { src: "/about-2.png", width: 800, height: 600 },
-  { src: "/about-3.png", width: 800, height: 600 },
-  { src: "/about-1.png", width: 800, height: 600 },
-  { src: "/about-2.png", width: 800, height: 600 },
-  { src: "/about-3.png", width: 800, height: 600 }
+  { src: "/about-1.png", width: 500, height: 800 },
+  { src: "/about-2.png", width: 400, height: 600 },
+  { src: "/about-3.png", width: 700, height: 400 },
+  { src: "/about-1.png", width: 500, height: 600 },
+  { src: "/about-2.png", width: 700, height: 400 },
+  { src: "/about-3.png", width: 700, height: 400 },
+  { src: "/about-1.png", width: 700, height: 400 },
+  { src: "/about-2.png", width: 700, height: 400 },
+  { src: "/about-3.png", width: 700, height: 400 },
+  { src: "/about-1.png", width: 700, height: 400 },
+  { src: "/about-1.png", width: 700, height: 400 },
+  { src: "/about-2.png", width: 700, height: 400 },
+  { src: "/about-1.png", width: 700, height: 400 }
+
   // Add more image paths as needed
 ];
 
 const ImageGallery = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState({
-    image: images,
-    index: 0
-  });
-
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
   useEffect(() => {
-    const rootElement = document.querySelector("#__next");
-    if (rootElement) {
-      Modal.setAppElement(rootElement);
-    }
+    fjGallery(document.querySelectorAll(".gallery"), {
+      itemSelector: ".gallery__item",
+      rowHeight: 345,
+      lastRow: "start",
+      gutter: 10,
+      rowHeightTolerance: 0.1,
+      calculateItemsHeight: false
+    });
   }, []);
 
-  const openModal = (image, index) => {
-    console.log("hihiihh", image);
-    // return;
-    setSelectedImage(image[index]);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
-    <div className="container">
-      <div className="row d-flex">
-        <div className="gallery">
-          {images.map((image, index) =>
+    <div className=" mt-4 mb-4  ">
+      <LightGallery
+        onInit={onInit}
+        speed={300}
+        plugins={[lgThumbnail, lgZoom]}
+        mode="lg-fade"
+        pager={false}
+        thumbnail={true}
+        galleryId={"nature"}
+        autoplayFirstVideo={false}
+        elementClassNames={"gallery"}
+        mobileSettings={{
+          controls: false,
+          showCloseIcon: false,
+          download: false,
+          rotate: false
+        }}
+      >
+        {images.map((img, index) =>
+          <a
+            key={index}
+            href={img.src}
+            data-lg-size={`${img.width}-${img.height}`}
+            // className={styles.gallery_item}
+            data-pinterest-text="Pin it2"
+            data-tweet-text="lightGallery slide  2"
+            className="gallery__item"
+          >
             <Image
-              key={index}
-              src={image}
-              alt={`Gallery image ${index + 1}`}
-              onClick={() => openModal(image, index)}
-              className="gallery-image"
+              src={img.src}
+              alt={`Image ${index + 1}`}
+              width={img.width}
+              height={img.height}
+              className={styles.sliderImage}
+              loading="lazy"
             />
-          )}
-        </div>
-
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={closeModal}
-          contentLabel="Image Modal"
-          className="modal"
-          overlayClassName="overlay"
-        >
-          {selectedImage && <Image src={selectedImage.image} alt="Selected" />}
-        </Modal>
-
-        <style jsx>{`
-          .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-          }
-          .gallery-image {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            cursor: pointer;
-          }
-          .modal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            right: auto;
-            bottom: auto;
-            transform: translate(-50%, -50%);
-            max-width: 90%;
-            max-height: 90%;
-          }
-          .overlay {
-            background: rgba(0, 0, 0, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        `}</style>
-      </div>
+          </a>
+        )}
+      </LightGallery>
     </div>
   );
 };
