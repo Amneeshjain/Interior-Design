@@ -1,100 +1,107 @@
 "use client";
-import React, { useState } from "react";
-import Masonry from "react-masonry-css";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+
+import { useState, useEffect } from "react";
+import Modal from "react-modal";
 import Image from "next/image";
-import styles from "../../styles/process.module.css";
 
 const images = [
-  "/about-1.png",
-  "/about-2.png",
-  "/about-3.png",
-  "/about-1.png",
-  "/about-2.png",
-  "/about-3.png",
-  "/about-2.png",
-  "/about-1.png",
-  "/about-2.png"
-  // "/about-1.png"
-  // "/about-3.png",
-  // "/about-2.png"
-
+  { src: "/about-1.png", width: 800, height: 600 },
+  { src: "/about-2.png", width: 800, height: 600 },
+  { src: "/about-3.png", width: 800, height: 600 },
+  { src: "/about-1.png", width: 800, height: 600 },
+  { src: "/about-2.png", width: 800, height: 600 },
+  { src: "/about-3.png", width: 800, height: 600 },
+  { src: "/about-1.png", width: 800, height: 600 },
+  { src: "/about-2.png", width: 800, height: 600 },
+  { src: "/about-3.png", width: 800, height: 600 }
   // Add more image paths as needed
 ];
 
 const ImageGallery = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState({
+    image: images,
+    index: 0
+  });
 
-  const preloadImage = (src, callback) => {
-    const img = new window.Image();
-    img.src = src;
-    img.onload = callback;
-    console.log("Preloading image:", img);
+  useEffect(() => {
+    const rootElement = document.querySelector("#__next");
+    if (rootElement) {
+      Modal.setAppElement(rootElement);
+    }
+  }, []);
+
+  const openModal = (image, index) => {
+    console.log("hihiihh", image);
+    // return;
+    setSelectedImage(image[index]);
+    setIsOpen(true);
   };
 
-  const openLightbox = index => {
-    preloadImage(images[index], () => {
-      setPhotoIndex(index);
-      setIsOpen(true);
-    });
-  };
-
-  const breakpoints = {
-    default: 3,
-    1100: 3,
-    700: 1
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedImage(null);
   };
 
   return (
     <div className="container">
-      <div className="row ">
-        <div>
-          <Masonry
-            breakpointCols={breakpoints}
-            className={styles.masonryGrid}
-            columnClassName={styles.masonryGridColumn}
-          >
-            {images.map((src, index) =>
-              <div
-                key={index + 1}
-                className={styles.imageWrapper}
-                onClick={i => openLightbox(index)}
-              >
-                <Image
-                  src={src}
-                  alt={`Image ${index + 1}`}
-                  layout="responsive"
-                  width={500}
-                  height={500}
-                  className={styles.image}
-                />
-              </div>
-            )}
-          </Masonry>
-
-          {isOpen &&
-            <Lightbox
-              mainSrc={images[photoIndex]}
-              nextSrc={images[(photoIndex + 1) % images.length]}
-              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-              onCloseRequest={() => setIsOpen(false)}
-              onMovePrevRequest={() => {
-                const newIndex =
-                  (photoIndex + images.length - 1) % images.length;
-                preloadImage(images[newIndex], () => {
-                  setPhotoIndex(newIndex);
-                });
-              }}
-              onMoveNextRequest={() => {
-                const newIndex = (photoIndex + 1) % images.length;
-                preloadImage(images[newIndex], () => {
-                  setPhotoIndex(newIndex);
-                });
-              }}
-            />}
+      <div className="row d-flex">
+        <div className="gallery">
+          {images.map((image, index) =>
+            <Image
+              key={index}
+              src={image}
+              alt={`Gallery image ${index + 1}`}
+              onClick={() => openModal(image, index)}
+              className="gallery-image"
+            />
+          )}
         </div>
+
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          contentLabel="Image Modal"
+          className="modal"
+          overlayClassName="overlay"
+        >
+          {selectedImage && <Image src={selectedImage.image} alt="Selected" />}
+        </Modal>
+
+        <style jsx>{`
+          .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+          .gallery-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+          }
+          .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+          }
+          .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        `}</style>
       </div>
     </div>
   );

@@ -1,5 +1,19 @@
 /* ======================================== */
-
+.imgdata {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.imgSize {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
 .masonryGrid {
   display: flex;
   margin-left: -30px; /* gutter size offset */
@@ -15,6 +29,11 @@
   width: 100%;
   margin-bottom: 30px;
   cursor: pointer;
+}
+.imagesdata {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 /* ============================================== */
