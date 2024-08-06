@@ -61,12 +61,11 @@
   transition: 0.4s ease-in-out;
 }
 
-
-.aboutInnerItems img:hover, 
+.aboutInnerItems img:hover,
 .aboutInnerItems img.in-view {
-    cursor: pointer;
-    transform: scale(1.2);
-    filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.2);
+  filter: grayscale(0);
 }
 .aboutInnerItems .left {
   width: 100%;
@@ -209,6 +208,10 @@
   .aboutInnerItems .right ul li figure {
     height: 100%;
     width: 240px;
+  }
+
+  .aboutInnerItems img {
+    filter: unset;
   }
 }
 

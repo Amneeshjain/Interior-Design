@@ -6,40 +6,39 @@
 .uppercase {
   text-transform: capitalize;
 }
-.hideinmobile{
+.hideinmobile {
   display: block;
 }
-.hideindesktop{
+.hideindesktop {
   display: none;
 }
 .whiteBg {
   background-color: #fff;
   padding: 30px;
 }
-.principalMainContainer{
+.principalMainContainer {
   background-color: #fafafa;
   padding: 88px 0 1px 0;
 }
-.ExpertMainContainer{
+.ExpertMainContainer {
   padding: 88px 0 20px 0;
 }
-.paraStyling{
-    font-size: 16px;
-    line-height: 30px;
-    color: #666;
-    text-align: justify;
-    
-  }
-  .pdRight{
-    padding-right:40px;
-  }
-  .imgstyle{
-    padding: 20px;
-    border: 1px solid #ededed;
-  }
-  .fw600{
-    font-weight: 600;
-  }
+.paraStyling {
+  font-size: 16px;
+  line-height: 30px;
+  color: #666;
+  text-align: justify;
+}
+.pdRight {
+  padding-right: 40px;
+}
+.imgstyle {
+  padding: 20px;
+  border: 1px solid #ededed;
+}
+.fw600 {
+  font-weight: 600;
+}
 .display {
   display: flex;
   align-items: center;
@@ -240,10 +239,10 @@
   /* .heroSection {
     height: 55vh;
   } */
-  .hideinmobile{
+  .hideinmobile {
     display: none;
   }
-  .hideindesktop{
+  .hideindesktop {
     display: block;
   }
   .step {
@@ -263,18 +262,17 @@
   .fs58 {
     font-size: 36px;
   }
-  .paraStyling{
+  .paraStyling {
     line-height: 28px;
-    
   }
-  .hideinmobile{
+  .hideinmobile {
     display: none;
   }
-  .hideindesktop{
+  .hideindesktop {
     display: block;
   }
-  .pdRight{
-    padding-right:10px;
+  .pdRight {
+    padding-right: 10px;
   }
   .button {
     padding: 5px 10px 10px 5px;
@@ -311,7 +309,7 @@
     align-items: start;
     gap: 10px;
   }
-  .paraStyling:first-child{
+  .paraStyling:first-child {
     font-size: 16px;
     color: #666;
     text-align: justify;

@@ -12,7 +12,7 @@ const Team = () => {
     <>
       <div className={`${styling.principalMainContainer}`}>
         <div className={style.sectionTitle} data-aos="zoom-out-up">
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex align-items-center justify-content-center mx-4">
             <div className={styles.lineLeft}></div>
             <p
               className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}

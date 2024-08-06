@@ -14,10 +14,9 @@
 .teamSliderItems {
   padding-top: 70px;
 }
-.expert_card{
+.expert_card {
   position: relative;
   cursor: pointer;
-  
 }
 
 .expert_card figure img {

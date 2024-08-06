@@ -1,8 +1,7 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import HeroSection from "../../components/homepage/HeroSection";
-// import BlogSection from "../../components/homepage/BlogSection";
+import BlogSection from "../../components/homepage/BlogSection";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import AboutUs from "../../components/homepage/AboutUs";
 import Slide from "../../components/homepage/Slide";
@@ -12,7 +11,7 @@ import Portfolio from "../../components/homepage/Portfolio";
 import styles from "../../styles/home.module.css";
 import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
-import ImageGallery from "@/components/Project/ImageGallery";
+// import ImageGallery from "../../components/homepage/ImageGallery";
 // import ThreeSixtyCompo from "../../components/homepage/ThreeSixty";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
@@ -131,8 +130,8 @@ const Homepage = () => {
       <Video />
       <Testimonials />
       <GetInTouch />
-      <ImageGallery />
-      {/* <BlogSection /> */}
+      {/* <ImageGallery /> */}
+      <BlogSection />
       <AboutMore
         text="Transform Your Space: Timeless Elegance in Every Design"
         content="From costly materials to seamless functionality, we create interiors that stand the check of time and increase your dwelling experience. Discover how our designs can transform your area right into a haven of grace and style."

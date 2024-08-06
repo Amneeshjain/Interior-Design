@@ -5,12 +5,7 @@ import styles from "../../styles/home.module.css";
 const ArticleCard = ({ title, category, date, image, description }) => {
   return (
     <div>
-      <Link
-        className={styles.linkStyling}
-        href="/blog-detail-content"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+      <Link className={styles.linkStyling} href="/blog-detail-content">
         <Image
           src={image}
           alt={title}
@@ -20,11 +15,14 @@ const ArticleCard = ({ title, category, date, image, description }) => {
         />
         <div className={styles.cardContent}>
           <div className={styles.cardCategoryDate}>
-            
-            <div className={styles.lineGrey}></div>
-            <div className={styles.date}>{date}</div>
+            <div className={styles.lineGrey} />
+            <div className={styles.date}>
+              {date}
+            </div>
           </div>
-          <div className={styles.cardTitle}>{title}</div>
+          <div className={styles.cardTitle}>
+            {title}
+          </div>
         </div>
       </Link>
     </div>

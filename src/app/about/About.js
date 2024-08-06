@@ -4,7 +4,7 @@ import BlogSection from "../../components/homepage/BlogSection";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
-import Process from "../../components/About/Process";
+// import Process from "../../components/About/Process";
 import AboutFirm from "../../components/About/AboutFirm";
 import Team from "../../components/About/Team";
 import CompanyUps from "../../components/About/CompanyUps";
@@ -12,7 +12,9 @@ import WhyChooseUS from "../../components/About/WhyChooseUS";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import Founder from "../../components/About/Founder";
 import PrincipalDesigner from "../../components/About/PrincipalDesigner";
-import Experts from "../../components/About/Experts";
+import TimelineCard from "../../components/About/TimelineCard";
+
+// import Experts from "../../components/About/Experts";
 
 const About = () => {
   return (
@@ -33,11 +35,12 @@ const About = () => {
       />
       <Founder />
       <PrincipalDesigner />
-      <Experts />
+      {/* <Experts /> */}
       <Team />
       <WhyChooseUS />
 
-      <Process />
+      {/* <Process /> */}
+      <TimelineCard />
       {/* <Contact bg="#fafafa" /> */}
       <BlogSection />
       <GetInTouch />

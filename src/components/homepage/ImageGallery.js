@@ -2,13 +2,13 @@
 import React, { Component, useEffect } from "react";
 import LightGallery from "lightgallery/react";
 import Image from "next/image";
-import styles from "../../styles/process.module.css";
+import styles from "../../styles/imageGallery.module.css";
 
 // import styles
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
-import fjGallery from "flickr-justified-gallery";
+//import fjGallery from "flickr-justified-gallery";
 
 // import plugins if you need
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -25,8 +25,6 @@ const images = [
   { src: "/about-2.png", width: 700, height: 400 },
   { src: "/about-3.png", width: 700, height: 400 },
   { src: "/about-1.png", width: 700, height: 400 },
-  { src: "/about-1.png", width: 700, height: 400 },
-  { src: "/about-2.png", width: 700, height: 400 },
   { src: "/about-1.png", width: 700, height: 400 }
 
   // Add more image paths as needed
@@ -36,16 +34,16 @@ const ImageGallery = () => {
   const onInit = () => {
     console.log("lightGallery has been initialized");
   };
-  useEffect(() => {
-    fjGallery(document.querySelectorAll(".gallery"), {
-      itemSelector: ".gallery__item",
-      rowHeight: 345,
-      lastRow: "start",
-      gutter: 10,
-      rowHeightTolerance: 0.1,
-      calculateItemsHeight: false
-    });
-  }, []);
+  //   useEffect(() => {
+  //     fjGallery(document.querySelectorAll(".gallery"), {
+  //       itemSelector: ".gallery__item",
+  //       rowHeight: 345,
+  //       lastRow: "start",
+  //       gutter: 10,
+  //       rowHeightTolerance: 0.1,
+  //       calculateItemsHeight: false
+  //     });
+  //   }, []);
 
   return (
     <div className=" mt-4 mb-4  ">
@@ -60,8 +58,8 @@ const ImageGallery = () => {
         autoplayFirstVideo={false}
         elementClassNames={"gallery"}
         mobileSettings={{
-          controls: false,
-          showCloseIcon: false,
+          controls: true,
+          showCloseIcon: true,
           download: false,
           rotate: false
         }}

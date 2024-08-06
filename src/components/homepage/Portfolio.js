@@ -20,9 +20,7 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
-  const myfuntion=()=>{
-    console.log("hiiiiiiiii")
-  }
+ 
 
   return (
     <>
@@ -32,7 +30,7 @@ const Portfolio = () => {
 
         <div
           style={{ color: "#fff" }}
-          className={styleA.sectionTitle}
+          className={style.sectionTitle}
           data-aos="fade-up"
           data-aos-duration="1000"
         >

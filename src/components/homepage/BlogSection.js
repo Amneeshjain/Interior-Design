@@ -32,8 +32,7 @@ const BlogSection = () => {
         <div className="container">
           <div
             className={styleA.sectionTitle}
-            data-aos="fade-up"
-            data-aos-duration="1000"
+           
           >
             <div className={styleA.left}>
               <div className={styleA.tag}>

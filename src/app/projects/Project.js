@@ -4,7 +4,6 @@ import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
 import OurProjects from "../../components/Project/OurProjects";
 import GetInTouch from "../../components/homepage/GetInTouch";
-import ImageGallery from "../../components/Project/ImageGallery";
 const Project = () => {
   return (
     <div>
@@ -16,10 +15,7 @@ const Project = () => {
         color={"#fff"}
         background={"#fff"}
       />
-
       <OurProjects />
-      <ImageGallery />
-
       {/* <Contact bg="#FAFAFA" /> */}
       <GetInTouch />
     </div>
