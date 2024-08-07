@@ -1,5 +1,6 @@
 "use client";
-import React, { Component, useEffect } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 import LightGallery from "lightgallery/react";
 import Image from "next/image";
 import styles from "../../styles/imageGallery.module.css";
@@ -25,7 +26,6 @@ const images = [
   { src: "/about-2.png", width: 700, height: 400 },
   { src: "/about-3.png", width: 700, height: 400 },
   { src: "/about-1.png", width: 700, height: 400 },
-  { src: "/about-1.png", width: 700, height: 400 }
 
   // Add more image paths as needed
 ];
@@ -46,6 +46,32 @@ const ImageGallery = () => {
   //   }, []);
 
   return (
+
+<>
+
+<div className="container-fluid mt-5">
+    <ResponsiveMasonry
+    columnsCountBreakPoints={{350: 1, 750: 2, 900: 4}}
+>
+    <Masonry gutter="15px">
+    {images.map((img, index) =>
+          <a
+            key={index}
+            href={img.src}
+            data-lg-size={`${img.width}-${img.height}`}
+          >
+            <Image
+              src={img.src}
+              alt={`Image ${index + 1}`}
+              width={img.width}
+              height={img.height}
+              className={styles.sliderImage}
+              loading="lazy"
+            />
+          </a>
+        )}
+    </Masonry>
+</ResponsiveMasonry>
     <div className=" mt-4 mb-4  ">
       <LightGallery
         onInit={onInit}
@@ -58,35 +84,17 @@ const ImageGallery = () => {
         autoplayFirstVideo={false}
         elementClassNames={"gallery"}
         mobileSettings={{
-          controls: true,
-          showCloseIcon: true,
+          controls: false,
+          showCloseIcon: false,
           download: false,
           rotate: false
         }}
       >
-        {images.map((img, index) =>
-          <a
-            key={index}
-            href={img.src}
-            data-lg-size={`${img.width}-${img.height}`}
-            // className={styles.gallery_item}
-            data-pinterest-text="Pin it2"
-            data-tweet-text="lightGallery slide  2"
-            className="gallery__item"
-          >
-            <Image
-              src={img.src}
-              alt={`Image ${index + 1}`}
-              width={img.width}
-              height={img.height}
-              className={styles.sliderImage}
-              loading="lazy"
-            />
-          </a>
-        )}
+       
       </LightGallery>
     </div>
-  );
+    </div>
+    </> );
 };
 
 export default ImageGallery;

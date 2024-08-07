@@ -11,7 +11,7 @@ import Portfolio from "../../components/homepage/Portfolio";
 import styles from "../../styles/home.module.css";
 import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
-// import ImageGallery from "../../components/homepage/ImageGallery";
+import ImageGallery from "../../components/homepage/ImageGallery";
 // import ThreeSixtyCompo from "../../components/homepage/ThreeSixty";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
@@ -130,7 +130,7 @@ const Homepage = () => {
       <Video />
       <Testimonials />
       <GetInTouch />
-      {/* <ImageGallery /> */}
+      <ImageGallery />
       <BlogSection />
       <AboutMore
         text="Transform Your Space: Timeless Elegance in Every Design"
