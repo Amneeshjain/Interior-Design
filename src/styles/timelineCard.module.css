@@ -77,14 +77,14 @@
 }
 
 .timelineItem_111:nth-child(odd) .bubleContent_1 {
-  border-radius: 5px;
+  border-radius: 3px;
   /* padding: 4rem; */
   left: -25px;
   top: -210px;
 }
 
 .timelineItem_111:nth-child(even) .bubleContent_1 {
-  border-radius: 5px;
+  border-radius: 3px;
   bottom: -210px;
   left: -25px;
 }

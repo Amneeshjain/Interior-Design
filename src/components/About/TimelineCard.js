@@ -20,6 +20,7 @@ const timelineData = [
       "We present our design ideas and concepts to you, showcasing how they meet your needs. This stage allows you to provide feedback.",
     content: "Pitch Presentation",
     color: "var(--color2)",
+     icon:"/presentation.png"
     
   },
   {
@@ -35,6 +36,8 @@ const timelineData = [
       "We visit your space to take precise measurements and existing conditions. This ensures that our design fits perfectly.",
     content: "Site Measurement",
     color: "var(--color4)",
+    icon:"/measuring.png"
+
      
   },
   {
@@ -42,6 +45,8 @@ const timelineData = [
       "We provide a detailed timeline and a tentative estimate for the project. This helps you understand the scope of work.",
     content: " Estimate",
     color: "var(--color5)",
+    icon:"/estimation.png"
+
      
   },
   {
@@ -49,6 +54,8 @@ const timelineData = [
       "Our team creates detailed design plans and 3D renderings based on your feedback. This phase focuses on perfecting every detail of your design.",
     content: "Design",
     color: "var(--color6)",
+    icon:"/design.png"
+
     
   },
   {
@@ -56,6 +63,8 @@ const timelineData = [
       "We begin the actual work, coordinating with contractors and suppliers to bring your design to life. This involves construction, installation, and final touches.",
     content: "Execution",
     color: "var(--color7)",
+    icon:"/execute.png"
+
  
   },
   {
@@ -63,6 +72,8 @@ const timelineData = [
       "After completing the project, we conduct a thorough review with you to ensure everything meets your expectations. We hand over the space ready for you to enjoy.",
     content: "Handover",
     color: "var(--color8)",
+    icon:"/completed-task -1.png"
+
    
   },
   
