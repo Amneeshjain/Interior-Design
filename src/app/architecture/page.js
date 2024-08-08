@@ -104,11 +104,11 @@ const page = () => {
           description="Believes in switching vision to visuals, we shape buildings and afterward building shapes our lives. Our team integrates exceptional architectural craftsmen with their innovative designs. We customize an exclusive interior design with your vision for every inch of your space. From concept to completion, experience seamless integration of style and functionality. Partner with one of the leading architecture firms to flourish your spaces with luxury."
         />
       </div>
-      {/* <WhyChooseUs
+      <WhyChooseUs
         title="COMPREHENSIVE ARCHITECTURE PLANNING"
         tag="EXPERTISE"
         items={items}
-      /> */}
+      />
       <Services
         title="EXPERTISE"
         subtitle="Shaping Dreams Into Skylines"

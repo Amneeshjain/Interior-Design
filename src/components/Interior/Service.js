@@ -10,16 +10,16 @@ import Image from "next/image";
 const projectData = [
   {
     id: 1,
-    title: "Vasant Kunj Residence",
+    title: "Residential Interior",
     image: "/residentialImage.jpg",
-    description: "Luxurious living spaces in Vasant Kunj.",
+    // description: "Luxurious living spaces in Vasant Kunj.",
     navigate:"/interior/residential-interior"
   },
   {
     id: 2,
-    title: "Sun Moon Restaurant",
+    title: "Commercial Interior",
     image: "/residentialimage2.jpg",
-    description: "Elegant dining experience at Sun Moon Restaurant.",
+    // description: "Elegant dining experience at Sun Moon Restaurant.",
     navigate:"/interior/commercial-interior"
   },
   

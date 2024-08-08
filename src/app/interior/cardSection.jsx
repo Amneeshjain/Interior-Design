@@ -10,15 +10,15 @@ const projectData = [
     title: "RESIDENTIAL INTERIOR",
     image: "/project-img.png",
     link: "/interior/residential-interior",
-    description: "Luxurious living spaces in Vasant Kunj.",
+    description: "Luxurious living spaces in Vasant Kunj."
   },
   {
     id: 2,
     title: "COMMERCIAL INTERIOR",
     image: "/project-img.png",
     link: "/interior/residential-commercial",
-    description: "Elegant dining experience at Sun Moon Restaurant.",
-  },
+    description: "Elegant dining experience at Sun Moon Restaurant."
+  }
 ];
 
 const CardSection = () => {
@@ -29,17 +29,17 @@ const CardSection = () => {
           style={{ paddingTop: "0" }}
           className={`row ${style.projectsCardContainer}`}
         >
-          {projectData.map((project, index) => (
+          {projectData.map((project, index) =>
             <Link
               href={project.link}
               key={project.id}
-              className={`col-lg-6 col-6 ${style.gap} ${
-                index % 2 === 0 ? style.even : style.odd
-              }`}
+              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0
+                ? style.even
+                : style.odd}`}
             >
               <ProjectCard project={project} />
             </Link>
-          ))}
+          )}
         </div>
       </div>
     </div>
