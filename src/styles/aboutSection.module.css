@@ -11,6 +11,7 @@
 .sectionTitle .left .tag {
   gap: 19.28px;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 18.23px;
   line-height: 21.21px;

@@ -30,7 +30,7 @@ const Portfolio = () => {
 
         <div
           style={{ color: "#fff" }}
-          className={style.sectionTitle}
+          className={styleA.sectionTitle}
           data-aos="fade-up"
           data-aos-duration="1000"
         >
