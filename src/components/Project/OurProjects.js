@@ -10,26 +10,26 @@ const projectData = [
     id: 1,
     title: "Vasant Kunj Residence",
     image: "/project-img.png",
-    description: "Luxurious living spaces in Vasant Kunj.",
+    description: "Luxurious living spaces in Vasant Kunj."
   },
   {
     id: 2,
     title: "Sun Moon Restaurant",
     image: "/project-img.png",
-    description: "Elegant dining experience at Sun Moon Restaurant.",
+    description: "Elegant dining experience at Sun Moon Restaurant."
   },
   {
     id: 3,
     title: "Hotel Udai Niwas",
     image: "/project-img.png",
-    description: "Heritage hotel in the heart of the city.",
+    description: "Heritage hotel in the heart of the city."
   },
   {
     id: 4,
     title: "Another Vasant Kunj Residence",
     image: "/project-img.png",
-    description: "Modern living in Vasant Kunj.",
-  },
+    description: "Modern living in Vasant Kunj."
+  }
 ];
 
 const OurProjects = () => {
@@ -52,7 +52,7 @@ const OurProjects = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              textAlign: "center",
+              textAlign: "center"
             }}
           >
             <div className={stylesA.tag}>
@@ -61,24 +61,24 @@ const OurProjects = () => {
               <hr />
             </div>
             <h2>
-            Browse Our Latest <br />
-            Projects
+              Browse Our Latest <br />
+              Projects
             </h2>
           </div>
         </div>
 
         <div className={`row ${style.projectsCardContainer}`}>
-          {projectData.map((project, index) => (
+          {projectData.map((project, index) =>
             <Link
               href="/project-detail"
               key={project.id}
-              className={`col-lg-6 col-6 ${style.gap} ${
-                index % 2 === 0 ? style.even : style.odd
-              }`}
+              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0
+                ? style.even
+                : style.odd}`}
             >
               <ProjectCard project={project} />
             </Link>
-          ))}
+          )}
         </div>
         <div className={styles.loadMore}>
           <button

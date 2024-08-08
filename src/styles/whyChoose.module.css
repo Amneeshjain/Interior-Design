@@ -1,7 +1,7 @@
-.whyChooseMainContainer {
+/* .whyChooseMainContainer {
   padding: 100px 0;
  
-}
+} */
 
 .whyChooseMainContainer .sectionTittle .tag {
   gap: 20px;
@@ -29,7 +29,6 @@
   font-size: 50.45px;
   line-height: 69.41px;
   letter-spacing: 3.9px;
- 
 }
 
 .chooseItemsWrapper {

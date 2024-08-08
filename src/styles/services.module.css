@@ -1,7 +1,7 @@
 .aboutServiceMainContainer {
   padding: 110px 0;
 }
-.pStyling{
+.pStyling {
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
@@ -10,35 +10,36 @@
   text-align: justify;
 }
 
-.ServiceBox{
-    padding: 35px;
-    text-align: justify;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px;
+.ServiceBox {
+  /* padding: 35px; */
+  text-align: justify;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
 }
-.gaping{
-  gap:20px;
+.gaping {
+  gap: 20px;
 }
-.btnContainer{
+.btnContainer {
   background-color: #f4f4f4;
   text-align: center;
   padding: 10px;
 }
-.btnContainer a{
-  
+.btnContainer a {
   font-size: 16.73px;
-    line-height: 20px;
-    letter-spacing: 0.9px;
-    text-transform: uppercase;
-    font-weight: 400;
-    transition: 0.5s ease-in-out;
-    color: #0d0d0d;
-    
-    
+  line-height: 20px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: 0.5s ease-in-out;
+  color: #0d0d0d;
 }
-.displayprop{
+.imgSize {
+  width: 100%;
+  height: auto;
+}
+/* .displayprop {
   display: flex;
-}
+} */
 .aboutServiceItems {
   gap: 53px;
   display: flex;
@@ -152,13 +153,13 @@
   }
 }
 @media only screen and (max-width: 540px) {
-.displayprop{
-  display: block;
-}
-.spacingFromTop{
-  margin-top:30px;
-}
-.equalSpacing{
-  margin-top:15px;
-}
+  .displayprop {
+    display: block;
+  }
+  .spacingFromTop {
+    margin-top: 30px;
+  }
+  .equalSpacing {
+    margin-top: 15px;
+  }
 }

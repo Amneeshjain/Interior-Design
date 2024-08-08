@@ -1,4 +1,4 @@
-// components/Project/ProjectCard.js
+// components / Project / ProjectCard.js;
 import React from "react";
 import Image from "next/image";
 import styles from "../../styles/project.module.css";

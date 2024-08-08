@@ -4,10 +4,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const WhyChooseUs = ({ title = '', tag = '', items = [] }) => {
+const WhyChooseUs = ({ title = "", tag = "", items = [] }) => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 800
     });
   }, []);
 
@@ -20,24 +20,28 @@ const WhyChooseUs = ({ title = '', tag = '', items = [] }) => {
             {tag}
           </div>
           <h2 className="col-lg-7">
-            {title.split('\n').map((line, index) => (
+            {title.split("\n").map((line, index) =>
               <span key={index}>
                 {line}
                 <br />
               </span>
-            ))}
+            )}
           </h2>
         </div>
         <div className={style.chooseItemsWrapper}>
           <div className={style.whyChooseItems}>
-            {items.map((item, index) => (
+            {items.map((item, index) =>
               <div className={style.choosePoints} key={index}>
                 <div className={style.items} data-aos="fade-up">
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
+                  <h4>
+                    {item.title}
+                  </h4>
+                  <p>
+                    {item.description}
+                  </p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .card:after {
+.card:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -22,7 +22,7 @@
   top: 0;
   transition: 0.5s ease-in-out;
   background-color: #00000082;
-} */
+}
 
 .cardImageContainer img {
   transition: 0.5s ease-in-out;
