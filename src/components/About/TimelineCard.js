@@ -27,6 +27,7 @@ const timelineData = [
       " Once you're happy with the design, we finalize the contract and require an advance payment to begin the project.",
     content: "Contract",
     color: "var(--color3)",
+    icon:"/contract.png"
    
   },
   {
@@ -131,8 +132,8 @@ const TimelineCard = () => {
                <Image
                 src={item.icon}
                 alt={`Image `}
-                width="90"
-                height="90"
+                width="85"
+                height="85"
                 // className={styles.sliderImage}
                 loading="lazy"
               />
