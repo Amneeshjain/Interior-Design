@@ -1,5 +1,6 @@
 // components/Timeline.js
 import React from "react";
+import Image from "next/image";
 import styles from "../../styles/timelineCard.module.css";
 import style from "../../styles/process.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
@@ -12,7 +13,7 @@ const timelineData = [
       "We start by discussing your vision and needs to fully grasp your design preferences and requirements. This helps us create custom design plans.",
     content: "Understanding",
     color: "var(--color1)",
-     border:`3px solid black`
+    icon:"/understanding.png"
   },
   {
     description:
@@ -121,7 +122,21 @@ const TimelineCard = () => {
                 {item.content}
               </div>
               <div className={styles.content1}>
-                <p>{item.description}</p>
+                <div style={{
+                 marginTop:"10px",
+                //   width:"30px",
+                //   height:"30px",
+                  // backgroundColor:"red"
+                }}>
+               <Image
+                src={item.icon}
+                alt={`Image `}
+                width="90"
+                height="90"
+                // className={styles.sliderImage}
+                loading="lazy"
+              />
+                </div>
               </div>
             </div>
             <div
@@ -136,6 +151,7 @@ const TimelineCard = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   fontSize: "1.5rem",
+                  fontWeight:"600",
                   // boxShadow:"0 2px 4px rgba(0, 0, 0, 0.1);"
                   border:"3px solid black"
                 
