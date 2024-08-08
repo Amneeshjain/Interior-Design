@@ -165,7 +165,7 @@ const TimelineCard = () => {
                   fontSize: "1.5rem",
                   fontWeight:"600",
                   // boxShadow:"0 2px 4px rgba(0, 0, 0, 0.1);"
-                  border:"3px solid black"
+                  border:"3px solid rgb(245, 245, 245)"
                 
                 }}
               >

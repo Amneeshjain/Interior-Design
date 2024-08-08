@@ -1,4 +1,21 @@
 /* ======================================== */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 5fr));
+  grid-gap: 10px;
+}
+.imageGalleryContainer {
+  background-color: #ededed;
+}
+.image_row {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* .masonry_item {
+  break-inside: avoid;
+} */
+
 .galleryOverlay {
   position: fixed;
   top: 0;
@@ -10,6 +27,12 @@
   justify-content: center;
   align-items: center;
   z-index: 99999;
+}
+.modalpadding {
+  padding: 0 !important;
+}
+.modal_header {
+  padding: 4px !important;
 }
 
 .galleryWrapper {

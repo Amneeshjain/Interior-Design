@@ -1,72 +1,135 @@
-"use client";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useState, useRef } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import styles from "../../styles/imageGallery.module.css";
-// import CloseIcon from "../../public/close-icon.svg"; // Adjust the path as necessary
-
-const images = [
-  { src: "/about-1.png", width: 500, height: 800 },
-  { src: "/about-2.png", width: 400, height: 600 },
-  { src: "/about-3.png", width: 700, height: 400 },
-  { src: "/about-1.png", width: 500, height: 600 },
-  { src: "/about-2.png", width: 700, height: 400 },
-  { src: "/about-3.png", width: 700, height: 400 },
-  { src: "/about-1.png", width: 700, height: 400 },
-  { src: "/about-2.png", width: 700, height: 400 },
-  { src: "/about-3.png", width: 700, height: 400 },
-  { src: "/about-1.png", width: 700, height: 400 }
-  // Add more image paths as needed
-];
+import style from "../../styles/imageGallery.module.css";
 
 const ImageGallery = () => {
-  const ref = useRef(null);
+  const images = [
+    { src: "/about-1.png", thumb: "/about-1.png" },
+    { src: "/about-1.png", thumb: "/about-1.png" },
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+    // { src: "/about-1.png", thumb: "/about-1.png" },
+    { src: "/about-2.png", thumb: "/about-2.png" },
+    { src: "/about-1.png", thumb: "/about-1.png" },
+    { src: "/about-2.png", thumb: "/about-2.png" },
+    { src: "/about-1.png", thumb: "/about-1.png" },
+    { src: "/about-2.png", thumb: "/about-2.png" },
+    { src: "/about-3.png", thumb: "/about-3.png" }
+  ];
 
-  const handleOpen = index => {
-    setPhotoIndex(index);
-    setIsOpen(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleSelect = index => {
+    setActiveIndex(index);
   };
 
-  return (
-    <div className="container-fluid mt-5">
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-        <Masonry gutter="15px">
-          {images.map((img, index) =>
-            <div key={index} onClick={() => handleOpen(index)}>
-              <Image
-                src={img.src}
-                alt={`Image ${index + 1}`}
-                width={img.width}
-                height={img.height}
-                className={styles.sliderImage}
-                loading="lazy"
-              />
-            </div>
-          )}
-        </Masonry>
-      </ResponsiveMasonry>
+  if (!isClient) return null; // Prevent server-side rendering issues
 
-      {isOpen &&
-        <Lightbox
-          controller={{ ref }}
-          on={{ click: () => ref.current?.close() }}
-          slides={images.map(img => ({ src: img.src }))}
-          index={photoIndex}
-          open={true}
-          close={() => setIsOpen(false)}
-          plugins={[Fullscreen, Thumbnails, Zoom]}
-          // render={{
-          //   iconClose: () => <img src={CloseIcon} alt="Close" />
-          // }}
-        />}
+  return (
+    <div className={style.imageGalleryContainer}>
+      <div className={style.image_row}>
+        <div className={style.masonry}>
+          {images.map((image, index) =>
+            <a
+              href="#"
+              key={index}
+              onClick={e => {
+                e.preventDefault();
+                handleSelect(index);
+              }}
+              data-bs-toggle="modal"
+              data-bs-target="#exampleLightbox"
+              className={style.masonry_item}
+            >
+              <Image
+                src={image.thumb}
+                alt={`thumbnail ${index + 1}`}
+                className="img-fluid"
+                width={700}
+                height={500}
+              />
+            </a>
+          )}
+        </div>
+
+        <div
+          className="modal fade"
+          id="exampleLightbox"
+          tabIndex="-1"
+          aria-labelledby="exampleLightboxLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-xl modal-dialog-centered">
+            <div className="modal-content">
+              <div className={`modal-header ${style.modal_header}`}>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                />
+              </div>
+              <div className={`modal-body${style.modalpadding}`}>
+                <div id="lightboxExampleCarousel" className="carousel slide">
+                  <div className="carousel-inner ratio ratio-16x9 bg-dark">
+                    {images.map((image, index) =>
+                      <div
+                        className={`carousel-item text-center ${index ===
+                        activeIndex
+                          ? "active"
+                          : ""}`}
+                        key={index}
+                      >
+                        <Image
+                          src={image.src}
+                          alt={`image ${index + 1}`}
+                          className="img-fluid mh-100"
+                          width={1600}
+                          height={900}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#lightboxExampleCarousel"
+                    data-bs-slide="prev"
+                    onClick={() =>
+                      handleSelect(
+                        (activeIndex - 1 + images.length) % images.length
+                      )}
+                  >
+                    <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    />
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#lightboxExampleCarousel"
+                    data-bs-slide="next"
+                    onClick={() =>
+                      handleSelect((activeIndex + 1) % images.length)}
+                  >
+                    <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    />
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

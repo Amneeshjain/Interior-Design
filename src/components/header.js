@@ -68,6 +68,8 @@ const Header = () => {
                       </Link>
                       <img src="right-arrow.png" alt="" />
                       {/* Architecture sub menu  */}
+ {/* ============================================desktop======================= */}
+ <div className={style.desktop_View}>                    
                       <ul className={style.interiorDesSubMenu}>
                         <li>
                           {/* <img src="dropDownArrow.svg" alt="" /> */}
@@ -99,6 +101,49 @@ const Header = () => {
                           </Link>
                         </li>
                       </ul>
+
+                      </div>
+{/* ====================================mobile view===========================                       */}
+{/* <div className={style.mobile_View}>
+<ul className={style.interiorDesSubMenu}>
+  <li>
+    
+    <Link className={style.menuli}
+      href="/interior/residential-interior"
+      onClick={() =>
+        handleClick(
+          "/interior",
+          "/interior/residential-interior"
+        )
+      }
+    >
+      - Residential Interior
+    </Link>
+  </li>
+
+  <li >
+    
+    <Link className={style.menuli}
+      href="/interior/commercial-interior"
+      onClick={() =>
+        handleClick(
+          "/interior",
+          "/interior/commercial-interior"
+        )
+      }
+    >
+      - Commercial Interior
+    </Link>
+  </li>
+</ul>
+
+</div> */}
+
+
+
+
+
+                      
                     </li>
 
                     <li className={`${style.architectureMenu}`}>

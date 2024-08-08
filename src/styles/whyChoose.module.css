@@ -1,7 +1,6 @@
-/* .whyChooseMainContainer {
+.whyChooseMainContainer {
   padding: 100px 0;
- 
-} */
+}
 
 .whyChooseMainContainer .sectionTittle .tag {
   gap: 20px;
@@ -147,6 +146,10 @@
   .whyChooseMainContainer .sectionTittle .tag {
     font-size: 14.22px;
     padding-bottom: 10px;
+  }
+  .whyChooseMainContainer {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .whyChooseMainContainer .sectionTittle h2 {
