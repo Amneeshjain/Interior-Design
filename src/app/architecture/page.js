@@ -5,8 +5,9 @@ import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
 import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
 import Services from "../../components/homepage/Services";
-import Process from "@/components/About/Process";
+// import Process from "@/components/About/Process";
 import AboutFirm from "@/components/About/AboutFirm";
+import TimelineCard from "../../components/About/TimelineCard";
 import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
@@ -14,23 +15,23 @@ const items = [
   {
     title: "PRELIMINARY PLANS",
     description:
-      "The process of building architecture designs is adeptly put together for easy bidding of the construction documents. Therefore, setting up a strong foundation for the execution phase.",
+      "The process of building architecture designs is adeptly put together for easy bidding of the construction documents. Therefore, setting up a strong foundation for the execution phase."
   },
   {
     title: "SCHEMATIC DESIGNS",
     description:
-      "Be it house building plans or commercial, the specifications of building plans are made according to your requirements. Your budget is diligently balanced for an effective interior architecture.",
+      "Be it house building plans or commercial, the specifications of building plans are made according to your requirements. Your budget is diligently balanced for an effective interior architecture."
   },
   {
     title: "OVERVIEWS",
     description:
-      "We arrange overview sessions where schematic designs and preliminary plans are systematically organized. Consequently, you get a clear definition of the scope of the project.",
+      "We arrange overview sessions where schematic designs and preliminary plans are systematically organized. Consequently, you get a clear definition of the scope of the project."
   },
   {
     title: "CLEAR BLUEPRINTS",
     description:
-      "Our experts offer comprehensive construction documentation, clearly outlining the roles of all included parties to ensure seamless coordination. This helps in effective project management, fostering smooth and efficient progress.",
-  },
+      "Our experts offer comprehensive construction documentation, clearly outlining the roles of all included parties to ensure seamless coordination. This helps in effective project management, fostering smooth and efficient progress."
+  }
 ];
 const textData = [
   {
@@ -38,51 +39,50 @@ const textData = [
     title: "Innovative Design and Technical Proficiency",
     description:
       "Creative Eye and Attention to Detail: Developing particular and practical architectural designs with a eager awareness on aesthetics and meticulous detail. Sketching Ability and Computer Knowledge: Proficiency in hand drawing and the use of architectural software program (which includes AutoCAD, Revit, or BIM equipment) to create particular plans, 3-d models, and renderings.",
-    buttonText: "View service",
+    buttonText: "View service"
   },
   {
     image: "/arch2.png",
     title: "Sustainable and Technologically Integrated Solutions",
     description:
       "Knowledge of Sustainable Practices: Implementing eco-friendly and sustainable architectural principles, along with the use of inexperienced substances, power-green structures, and sustainable creation strategies.Consider Technology Implementation: Integrating superior technologies, which include clever building structures and revolutionary creation techniques, to beautify the capability and performance of structures.",
-    buttonText: "View service",
+    buttonText: "View service"
   },
   {
     image: "/arch3.png",
     title: "Client-Centric Project Management and Safety",
     description:
       "Superior Communication: Effectively conveying architectural concepts, plans, and development to customers, contractors, and other stakeholders, making sure clean and consistent communique at some point of the task.Attention to Detail: Managing all elements of the layout and construction manner meticulously, from initial concept to very last crowning glory, to make sure terrific results.",
-    buttonText: "View service",
-  },
-  
+    buttonText: "View service"
+  }
 ];
 const faqData = [
   {
     question: "1). What services do we offer as an Architect?",
     answer:
-      "As an architect, we provide interior designs with constructions, building plans, modern executives, residential architecture services, and designer furniture. Moreover, we provide room decorations, palace design, electrical supplies, heating and plumbing services. ",
+      "As an architect, we provide interior designs with constructions, building plans, modern executives, residential architecture services, and designer furniture. Moreover, we provide room decorations, palace design, electrical supplies, heating and plumbing services. "
   },
   {
     question: "2). How do I choose the right Architect for my project?",
     answer:
-      "A good architect must have experience in architectural engineering to include room decoration, electrical and residential room services. We provide a design philosophy, hassle-free project delivery along with technical services. These areas have to be kept in mind while choosing the right architectural projects for the house building plans. ",
+      "A good architect must have experience in architectural engineering to include room decoration, electrical and residential room services. We provide a design philosophy, hassle-free project delivery along with technical services. These areas have to be kept in mind while choosing the right architectural projects for the house building plans. "
   },
   {
-    question: "3). What should you prepare before starting an Architectural project?",
+    question:
+      "3). What should you prepare before starting an Architectural project?",
     answer:
-      "Interior architecture must have explicit programs, constraints, sites, goals and concepts to make a strong project. Our designers and architects follow their goals, architectural design, interior projects, and designing constraints before starting architecture projects.",
+      "Interior architecture must have explicit programs, constraints, sites, goals and concepts to make a strong project. Our designers and architects follow their goals, architectural design, interior projects, and designing constraints before starting architecture projects."
   },
   {
     question: "4).  What is the typical process for an Architectural project?",
     answer:
-      "Mainly, we follow construction documentation, interior designs, construction administrations and interior function processes for an architectural project. Our happy clients got these architectural facilities from us for building plans.",
+      "Mainly, we follow construction documentation, interior designs, construction administrations and interior function processes for an architectural project. Our happy clients got these architectural facilities from us for building plans."
   },
   {
     question: "5). How do Architects charge for their services?",
     answer:
-      "Usually, architects of Colonelz create fixed budget costs for client attraction. Many architects get payment of 10-20% of charges whereas the Colonel's architect's charge is based on 5000 per sqft for housing build plans.",
-  },
-  
+      "Usually, architects of Colonelz create fixed budget costs for client attraction. Many architects get payment of 10-20% of charges whereas the Colonel's architect's charge is based on 5000 per sqft for housing build plans."
+  }
 ];
 const page = () => {
   return (
@@ -114,7 +114,8 @@ const page = () => {
         subtitle="Shaping Dreams Into Skylines"
         text={textData}
       />
-      <Process bg="#FAFAFA" />
+      <TimelineCard />
+      {/* <Process bg="#FAFAFA" /> */}
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore
