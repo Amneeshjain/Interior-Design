@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="container">
           <div className={style.footerItems}>
             <div className={style.footerDetails}>
-              <div className="">
-                <Link className={style.footerLogo} href="/">
-                  <figure>
+              <div className="py-0">
+                <Link className={`py-0 ${style.footerLogo}`} href="/">
+                  <figure >
                     <img src="/COLONELZ_22png_artboard16.png" alt="" />
                   </figure>
                 </Link>
@@ -139,6 +139,7 @@ const Footer = () => {
                       <Link
                         href="https://maps.app.goo.gl/uXjo914FmXRjWFrr9"
                         target="_blank"
+                      
                       >
                         D-11, Vipul World, Sector-48 Gurugram – 18, Haryana,
                         India

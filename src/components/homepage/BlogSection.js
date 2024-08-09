@@ -35,7 +35,7 @@ const BlogSection = () => {
            
           >
             <div className={styleA.left}>
-              <div className={styleA.tag}>
+              <div className={styleA.tag} style={{ display: "flex", justifyContent: "start" }}>
                 <hr />
                 Articles
               </div>

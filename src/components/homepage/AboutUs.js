@@ -42,7 +42,7 @@ const AboutUs = () => {
             data-aos-duration="1000"
           >
             <div className={style.left}>
-              <div className={style.tag}>
+              <div className={style.tag} style={{ display: "flex", justifyContent: "start" }}>
                 <hr />
                 About the firm
               </div>
