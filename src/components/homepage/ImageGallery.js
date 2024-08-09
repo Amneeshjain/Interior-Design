@@ -98,6 +98,8 @@ const ImageGallery = () => {
                 data-bs-toggle="modal"
                 data-bs-target="#exampleLightbox"
                 className={style.masonry_item}
+                data-aos="zoom-in"
+                // data-aos-duration="1000"
               >
                 <img
                   src={image.thumb}
