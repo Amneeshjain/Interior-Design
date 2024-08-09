@@ -33,16 +33,15 @@ const ImageGallery = () => {
     },
     {
       src:
-        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg",
-      thumb:
-        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg"
-    },
-
-    {
-      src:
         "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
       thumb:
         "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg"
     }
   ];
 
@@ -60,7 +59,7 @@ const ImageGallery = () => {
   if (!isClient) return null;
 
   return (
-    <div className={`container-fluid ${style.imageGalleryContainer}`}>
+    <div className={`container-fluid px-0 ${style.imageGalleryContainer}`}>
       <div className={`row ${style.image_row}`}>
         <div
           style={{ justifyContent: "center", alignItems: "center" }}
