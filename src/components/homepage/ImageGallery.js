@@ -59,8 +59,8 @@ const ImageGallery = () => {
   if (!isClient) return null;
 
   return (
-    <div className={`container-fluid px-0 ${style.imageGalleryContainer}`}>
-      <div className={`row ${style.image_row}`}>
+    <div className={`container-fluid  ${style.imageGalleryContainer}`}>
+      <div className={`row px-0 ${style.image_row}`}>
         <div
           style={{ justifyContent: "center", alignItems: "center" }}
           className={stylesA.sectionTitle}
