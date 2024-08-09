@@ -409,4 +409,11 @@ a {
   .hide-in-web {
     display: block;
   }
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 100;
+    font-size: 16px;
+  }
 }

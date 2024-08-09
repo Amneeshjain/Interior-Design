@@ -13,8 +13,8 @@
   object-fit: cover;
 }
 .image_height {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
 }
 .image_row {
@@ -100,6 +100,10 @@
   right: 10px;
 }
 
+.imagesss {
+  width: 100%;
+  height: 100%;
+}
 /* .gallery_item {
   margin-top: 4rem;
 } */
@@ -116,7 +120,7 @@
   overflow: hidden;
 } */
 
-.imgSize {
+/* .imgSize {
   width: 100%;
   display: block;
   cursor: pointer;
@@ -125,6 +129,24 @@
 .image {
   width: 100%;
   cursor: pointer;
-}
+} */
 
 /* ============================================== */
+@media only screen and (max-width: 768px) {
+  .image_row {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .masonry {
+    display: contents;
+  }
+  .imagesss {
+    width: 100%;
+    height: 100%;
+  }
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+}

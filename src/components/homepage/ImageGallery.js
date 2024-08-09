@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const ImageGallery = () => {
   const images = [
@@ -56,11 +57,11 @@ const ImageGallery = () => {
     setActiveIndex(index);
   };
 
-  if (!isClient) return null; // Prevent server-side rendering issues
+  if (!isClient) return null;
 
   return (
-    <div className={style.imageGalleryContainer}>
-      <div className={style.image_row}>
+    <div className={`container-fluid ${style.imageGalleryContainer}`}>
+      <div className={`row ${style.image_row}`}>
         <div
           style={{ justifyContent: "center", alignItems: "center" }}
           className={stylesA.sectionTitle}
@@ -82,33 +83,34 @@ const ImageGallery = () => {
               Our Gallery
               <hr />
             </div>
-            <h2 className="col-lg-8 mb-5">Explore Our Catalogue</h2>
+            <h2 className="col-lg-12 mb-5">Explore Our Catalogue</h2>
           </div>
         </div>
-        <div className={style.masonry}>
-          {images.map((image, index) =>
-            <a
-              href="#"
-              key={index}
-              onClick={e => {
-                e.preventDefault();
-                handleSelect(index);
-              }}
-              data-bs-toggle="modal"
-              data-bs-target="#exampleLightbox"
-              className={style.masonry_item}
-            >
-              <img
-                src={image.thumb}
-                alt={`thumbnail ${index + 1}`}
-                className={style.image_height}
-              />
-            </a>
-          )}
-        </div>
-
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="15px">
+            {images.map((image, index) =>
+              <a
+                href="#"
+                key={index}
+                onClick={e => {
+                  e.preventDefault();
+                  handleSelect(index);
+                }}
+                data-bs-toggle="modal"
+                data-bs-target="#exampleLightbox"
+                className={style.masonry_item}
+              >
+                <img
+                  src={image.thumb}
+                  alt={`thumbnail ${index + 1}`}
+                  className={style.imagesss}
+                />
+              </a>
+            )}
+          </Masonry>
+        </ResponsiveMasonry>
         <div
-          className={`modal fade `} // Apply the overlay class here
+          className={`modal fade `}
           id="exampleLightbox"
           tabIndex="-1"
           aria-labelledby="exampleLightboxLabel"
@@ -136,7 +138,7 @@ const ImageGallery = () => {
                         <img
                           src={image.src}
                           alt={`image ${index + 1}`}
-                          className={`mh-100 ${style.cover_image}`}
+                          className={`mh-100 `}
                         />
                       </div>
                     )}
