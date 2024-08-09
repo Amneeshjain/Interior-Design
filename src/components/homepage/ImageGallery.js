@@ -1,17 +1,48 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
+import stylesA from "../../styles/aboutSection.module.css";
 
 const ImageGallery = () => {
   const images = [
-    { src: "/about-1.png", thumb: "/about-1.png" },
-    { src: "/about-1.png", thumb: "/about-1.png" },
-    { src: "/about-2.png", thumb: "/about-2.png" },
-    { src: "/about-1.png", thumb: "/about-1.png" },
-    { src: "/about-2.png", thumb: "/about-2.png" },
-    { src: "/about-1.png", thumb: "/about-1.png" },
-    { src: "/about-2.png", thumb: "/about-2.png" },
-    { src: "/about-3.png", thumb: "/about-3.png" }
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg"
+    },
+
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg"
+    },
+
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
+    }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,6 +61,30 @@ const ImageGallery = () => {
   return (
     <div className={style.imageGalleryContainer}>
       <div className={style.image_row}>
+        <div
+          style={{ justifyContent: "center", alignItems: "center" }}
+          className={stylesA.sectionTitle}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div
+            className={stylesA.left}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center"
+            }}
+          >
+            <div className={stylesA.tag}>
+              <hr />
+              Our Gallery
+              <hr />
+            </div>
+            <h2 className="col-lg-8 mb-5">Explore Our Catalogue</h2>
+          </div>
+        </div>
         <div className={style.masonry}>
           {images.map((image, index) =>
             <a
@@ -43,12 +98,10 @@ const ImageGallery = () => {
               data-bs-target="#exampleLightbox"
               className={style.masonry_item}
             >
-              <Image
+              <img
                 src={image.thumb}
                 alt={`thumbnail ${index + 1}`}
-                className="img-fluid"
-                width={700}
-                height={500}
+                className={style.image_height}
               />
             </a>
           )}
@@ -65,8 +118,8 @@ const ImageGallery = () => {
             <div className="modal-content">
               <div className={`modal-body `}>
                 <div id="lightboxExampleCarousel" className="carousel slide">
-                  <button
-                    type="button"
+                  <img
+                    src="/close.png"
                     className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
@@ -80,12 +133,10 @@ const ImageGallery = () => {
                           : ""}`}
                         key={index}
                       >
-                        <Image
+                        <img
                           src={image.src}
                           alt={`image ${index + 1}`}
-                          className="img-fluid mh-100"
-                          width={1600}
-                          height={900}
+                          className={`mh-100 ${style.cover_image}`}
                         />
                       </div>
                     )}

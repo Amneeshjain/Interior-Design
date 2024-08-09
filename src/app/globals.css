@@ -26,6 +26,11 @@ html {
 .modal-body {
   padding: 0 !important;
 }
+.btn-close:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 .btn-close {
   position: absolute;
   top: 25px;
