@@ -236,3 +236,11 @@
 .team_card:hover .detail_boxhover {
   opacity: 1;
 }
+
+/* =============================midea Query=========================== */
+@media (max-width: 576px) {
+  .teamSliderMainContainer {
+    padding: 0px 0 60px 0;
+    /* background-color: #fafafa; */
+  }
+}

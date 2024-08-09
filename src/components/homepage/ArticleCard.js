@@ -5,7 +5,10 @@ import styles from "../../styles/home.module.css";
 const ArticleCard = ({ title, category, date, image, description }) => {
   return (
     <div>
-      <Link className={styles.linkStyling} href="/blog-detail-content">
+      <Link
+        className={`px-0 ${styles.linkStyling}`}
+        href="/blog-detail-content"
+      >
         <Image
           src={image}
           alt={title}

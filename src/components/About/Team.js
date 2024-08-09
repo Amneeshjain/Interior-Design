@@ -79,11 +79,11 @@ const Team = () => {
   
     infinite:true,
     autoplay: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 3, // Default number of slides to show
-    slidesToScroll: 1,
+    slidesToScroll: 2,
    
-    autoplaySpeed:1000,
+    autoplaySpeed:3000,
     arrows: false,
     dots:true,
     // nextArrow: leftIcon,
@@ -117,10 +117,10 @@ const Team = () => {
   return (
     <>
       <div id="Team"
-        className={`${style.teamSliderMainContainer} teamSliderMainContainer`}
+        className={`${style.teamSliderMainContainer}`}
       >
         <div className={style.sectionTitle} data-aos="zoom-out-up">
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex  align-items-center justify-content-center ">
             <div className={styles.lineLeft}></div>
             <p
               className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}
@@ -135,7 +135,7 @@ const Team = () => {
             Your Imagination into Immersence
           </h1>
         </div>
-        <div className="container">
+        <div className="container  py-4 px-0">
           <div className={style.teamSliderItems}>
             <div className={style.teamSliderContainer}>
               <Slider className={style.sliderDiv} {...settings}>
