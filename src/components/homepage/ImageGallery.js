@@ -6,8 +6,6 @@ const ImageGallery = () => {
   const images = [
     { src: "/about-1.png", thumb: "/about-1.png" },
     { src: "/about-1.png", thumb: "/about-1.png" },
-
-    // { src: "/about-1.png", thumb: "/about-1.png" },
     { src: "/about-2.png", thumb: "/about-2.png" },
     { src: "/about-1.png", thumb: "/about-1.png" },
     { src: "/about-2.png", thumb: "/about-2.png" },
@@ -57,7 +55,7 @@ const ImageGallery = () => {
         </div>
 
         <div
-          className="modal fade"
+          className={`modal fade `} // Apply the overlay class here
           id="exampleLightbox"
           tabIndex="-1"
           aria-labelledby="exampleLightboxLabel"
@@ -65,16 +63,14 @@ const ImageGallery = () => {
         >
           <div className="modal-dialog modal-xl modal-dialog-centered">
             <div className="modal-content">
-              <div className={`modal-header ${style.modal_header}`}>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                />
-              </div>
-              <div className={`modal-body${style.modalpadding}`}>
+              <div className={`modal-body `}>
                 <div id="lightboxExampleCarousel" className="carousel slide">
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  />
                   <div className="carousel-inner ratio ratio-16x9 bg-dark">
                     {images.map((image, index) =>
                       <div

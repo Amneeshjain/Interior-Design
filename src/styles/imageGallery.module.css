@@ -11,6 +11,24 @@
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+}
+
+.modal-dialog {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 /* .masonry_item {
   break-inside: avoid;

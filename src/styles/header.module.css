@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999999999;
+  z-index: 100;
   border-bottom: 1px solid #dadada;
 }
 .menuli {
@@ -92,8 +92,8 @@
   gap: 30px;
   flex-direction: column;
 }
-.dropIcon{
-  width:10px;
+.dropIcon {
+  width: 10px;
 }
 .serviceMenu .serviceSubMenu li {
   display: flex;

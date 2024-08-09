@@ -9,7 +9,7 @@
 * {
   text-decoration: none !important;
 }
-.hide-in-web{
+.hide-in-web {
   display: none;
 }
 * {
@@ -18,29 +18,41 @@
   margin: 0;
 }
 html {
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth !important;
 }
 .container {
   padding: 0 25px !important;
 }
-.fixedButton{
-  background-color: #000;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 64px;
-    text-align: center;
-    padding: 16px;
-    font-size: 20px;
-    z-index: 100;
+.modal-body {
+  padding: 0 !important;
 }
-.fixedButton a{
+.btn-close {
+  position: absolute;
+  top: 25px;
+  right: 24px;
+  z-index: 100;
+  font-size: 24px;
+  /* color: #666; */
+  /* background-color: #fff; */
+}
+.fixedButton {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  padding: 16px;
+  font-size: 20px;
+  z-index: 100;
+}
+.fixedButton a {
   color: #fff;
 }
 .slick-dots li button:before {
   font-family: 'slick';
-  font-size: 10px!important;
+  font-size: 10px !important;
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -56,7 +68,7 @@ html {
 }
 .slick-dots {
   position: absolute;
-  bottom: -50px!important;
+  bottom: -50px !important;
   display: block;
   width: 100%;
   padding: 0;
@@ -97,7 +109,6 @@ body {
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0)
   );
-
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
   --tile-border: conic-gradient(
@@ -109,36 +120,29 @@ body {
     #00000010,
     #00000080
   );
-
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 }
-
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 50px;
 }
-
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #0d0d0d;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #030202;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
@@ -146,7 +150,6 @@ body {
       rgba(1, 65, 255, 0),
       rgba(1, 65, 255, 0.3)
     );
-
     --tile-start-rgb: 2, 13, 46;
     --tile-end-rgb: 2, 5, 19;
     --tile-border: conic-gradient(
@@ -158,29 +161,24 @@ body {
       #ffffff10,
       #ffffff80
     );
-
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
 }
-
 ul {
   padding-left: 0 !important;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
-
 .slick-prev,
 .slick-next {
   width: 58px !important;
@@ -188,48 +186,39 @@ a {
   z-index: 99999;
   background-color: #0d0d0d !important;
 }
-
 .slick-disabled {
   border: 1px solid #0d0d0d !important;
   background-color: #fff !important;
 }
-
 .slick-disabled:before {
   opacity: 1 !important;
   color: #0d0d0d !important;
 }
-
 .teamSliderMainContainer .slick-prev {
   left: 41px !important;
   top: 115% !important;
   position: absolute !important;
 }
-
 .teamSliderMainContainer .slick-next {
   right: 41px !important;
   top: 115% !important;
   position: absolute !important;
 }
-
 .testimonial_main_container .slick-prev {
   left: 0 !important;
   top: 115% !important;
   position: absolute !important;
 }
-
 .testimonial_main_container .slick-next {
   right: 0 !important;
   top: 115% !important;
   position: absolute !important;
 }
-
 .testimonial_main_container .slick-track {
   display: flex;
   gap: 50px;
 }
-
 /* sm-header-css */
-
 .open-menu,
 .close-menu {
   cursor: pointer;
@@ -238,7 +227,6 @@ a {
   color: #252a32;
   background: none;
 }
-
 .close-menu {
   position: absolute;
   top: 0;
@@ -248,7 +236,6 @@ a {
   color: #252a32;
   background: none;
 }
-
 .brand {
   font-family: inherit;
   font-size: 1.75rem;
@@ -258,7 +245,6 @@ a {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
-
 .title-large {
   font-family: inherit;
   font-size: 2.25rem;
@@ -268,7 +254,6 @@ a {
   text-align: center;
   text-transform: capitalize;
 }
-
 .header {
   position: relative;
   width: 100%;
@@ -403,22 +388,20 @@ a {
 .header .navbar .menu-item.active.has-collapsible span::after {
   transform: rotate(90deg);
 }
-
 .col-md-4 {
   display: none;
   /* other styles */
 }
-
 .load-more {
   visibility: visible;
   /* other styles */
 }
 @media only screen and (max-width: 500px) {
-.testimonial_main_container .slick-track {
-  display: flex;
-  gap: 20px;
-}
-.hide-in-web{
-  display: block;
-}
+  .testimonial_main_container .slick-track {
+    display: flex;
+    gap: 20px;
+  }
+  .hide-in-web {
+    display: block;
+  }
 }
