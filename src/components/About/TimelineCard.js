@@ -120,7 +120,7 @@ const TimelineCard = () => {
         {timelineData.map((item, index) => (
           <div
             className={styles.timelineItem_111}
-            style={{ zIndex: 9000 - index }}
+            // style={{ zIndex: 9000 - index }}
             key={index}
           >
             <div className={styles.arrowEnd_no_use} />
