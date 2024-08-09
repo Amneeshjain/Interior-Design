@@ -29,13 +29,13 @@ const Team = () => {
           </h1>
           <div className="container mt-5 mb-5">
             <div className="row">
-              <div className="col-lg-3">
+              <div className="col-lg-3 mt-2">
                 <img className={styling.imgstyle}
                   src="/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-009.jpg"
                   width="100%"
                 />
               </div>
-              <div className="col-lg-9">
+              <div className="col-lg-9 py-5">
                 <p className={styling.paraStyling}>
                   <span className={styling.fw600}>Naomi Sahay</span> holding,{" "}
                   <span className={styling.fw600}>
@@ -48,7 +48,7 @@ const Team = () => {
                   leads our team in creating spaces that exude timeless elegance
                   and contemporary innovation.
                 </p>
-                <p className={styling.paraStyling}><span className={styling.fw600}>Colonelz</span> is a brand built with the vision of being the differentiator in space designing, wherein
+                <p className={`py-1 ${styling.paraStyling}`}><span className={styling.fw600}>Colonelz</span> is a brand built with the vision of being the differentiator in space designing, wherein
                 your desires and the purse strings have a common meeting ground.</p>
                 <p className={styling.paraStyling}>
                   

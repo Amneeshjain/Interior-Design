@@ -29,8 +29,8 @@ const Team = () => {
           </h1>
           <div className={`${styling.hideinmobile}`}>
           <div className="container mt-5 mb-5">
-            <div className="row">
-              <div className={`col-lg-9 ${styling.pdRight}`}>
+            <div className="row ">
+              <div className={`col-lg-9 mt-5 ${styling.pdRight}`}>
                 <p className={styling.paraStyling}>
                   <span className={styling.fw600}>Col. Biraj Sahay,</span> a distinguished leader with over four
                   decades of experience, <span className={styling.fw600}>including 23 years in the Army  and
@@ -40,7 +40,8 @@ const Team = () => {
                   Limited,</span> he is now a successful entrepreneur leading Colonelz
                   Group of Companies.
                 </p>
-                <p className={styling.paraStyling}>
+                {/* <br/> */}
+                <p className={`py-1 ${styling.paraStyling}`}>
                   Under his guidance, <span className={styling.fw600}>Colonelz Constructions Pvt. Ltd.</span>
                   specializes in Architecture, Construction, Interior Designing,
                   and flawless execution. We set a benchmark for excellence in
