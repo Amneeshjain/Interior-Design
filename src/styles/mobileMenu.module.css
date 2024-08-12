@@ -7,8 +7,8 @@
   right: 0;
   z-index: 999999999999999;
 }
-.menuOnly{
-  padding: 0 10px 10px 0px!important;
+.menuOnly {
+  padding: 0 10px 0 0px !important;
 }
 .scrollClass {
   /* backdrop-filter: blur(0); */

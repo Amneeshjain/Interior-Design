@@ -10,12 +10,12 @@ const Navbar = () => {
     services: false,
     construction: false,
     interiorDesign: false,
-    projects: false,
+    projects: false
     // construction: false,
   });
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleDropdown = (dropdown) => {
+  const toggleDropdown = dropdown => {
     setDropdowns({ ...dropdowns, [dropdown]: !dropdowns[dropdown] });
   };
 
@@ -45,7 +45,11 @@ const Navbar = () => {
         <div className={styles.sm_logo}>
           <Link href="/">
             <figure>
-              <img src="/COLONELZ_22png_artboard16.png" alt="" width={"150px"}/>
+              <img
+                src="/COLONELZ_22png_artboard16.png"
+                alt=""
+                width={"150px"}
+              />
             </figure>
           </Link>
         </div>
@@ -66,27 +70,34 @@ const Navbar = () => {
             Services <img src="dropDownArrow.svg" alt="" />
           </button>
           <div
-            className={`${styles.dropdownContent} ${
-              dropdowns.services ? styles.open : ""
-            }`}
+            className={`${styles.dropdownContent} ${dropdowns.services
+              ? styles.open
+              : ""}`}
           >
             <div className={styles.dropdown}>
-              <Link href="/construction" onClick={toggleMenu}>
-                Construction
-                {/* <img src="dropDownArrow.svg" alt="" /> */}
-              </Link>
-              {/* <div
-                className={`${styles.dropdownContent} ${
-                  dropdowns.construction ? styles.open : ""
-                }`}
+              <button className={styles.menuOnly}>
+                <Link href="/interior">interior design</Link>
+                <img
+                  src="dropDownArrow.svg"
+                  alt=""
+                  onClick={() => toggleDropdown("interiorDesign")}
+                />
+              </button>
+              <div
+                className={`${styles.dropdownContent} ${dropdowns.interiorDesign
+                  ? styles.open
+                  : ""}`}
               >
                 <Link
                   onClick={toggleMenu}
-                  href="/constraction/residential-constraction"
+                  href="/interior/residential-interior"
                 >
-                  Residential Construction
+                  Residential Interior
                 </Link>
-              </div> */}
+                <Link onClick={toggleMenu} href="/interior/commercial-interior">
+                  Commercial Interior
+                </Link>
+              </div>
             </div>
 
             <div className={styles.dropdown}>
@@ -107,30 +118,23 @@ const Navbar = () => {
                 </Link>
               </div> */}
             </div>
-
             <div className={styles.dropdown}>
-              <button  className={styles.menuOnly}>
-                <Link href="/interior">interior design</Link>
-                <img src="dropDownArrow.svg" alt="" onClick={() => toggleDropdown("interiorDesign")}/>
-              </button>
-              <div
+              <Link href="/construction" onClick={toggleMenu}>
+                Construction
+                {/* <img src="dropDownArrow.svg" alt="" /> */}
+              </Link>
+              {/* <div
                 className={`${styles.dropdownContent} ${
-                  dropdowns.interiorDesign ? styles.open : ""
+                  dropdowns.construction ? styles.open : ""
                 }`}
               >
                 <Link
                   onClick={toggleMenu}
-                  href="/interior/residential-interior"
+                  href="/constraction/residential-constraction"
                 >
-                  Residential Interior
+                  Residential Construction
                 </Link>
-                <Link
-                  onClick={toggleMenu}
-                  href="/interior/commercial-interior"
-                >
-                  Commercial Interior
-                </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
