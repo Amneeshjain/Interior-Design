@@ -1,9 +1,41 @@
 /* ======================================== */
-/* .masonry {
+
+.card1 {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardImageContainer1 img {
+  transition: 0.5s ease-in-out;
+}
+.cardImageContainer1 {
+  width: 100%;
+  height: 100%;
+  height: 624.11px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+/* .card1:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  top: 0;
+  transition: 0.5s ease-in-out;
+  background-color: #00000082;
+} */
+
+.card1:hover .cardImageContainer1 img {
+  transform: scale(1.2);
+}
+.masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: 20px;
-} */
+}
 .imageGalleryContainer {
   width: 100%;
   background-color: #ededed;

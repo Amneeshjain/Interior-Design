@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
+import styles from "../../styles/project.module.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Link from "next/link";
 
 const ImageGallery = () => {
   const images = [
@@ -37,11 +39,37 @@ const ImageGallery = () => {
       thumb:
         "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
     },
+
     {
       src:
-        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg",
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
       thumb:
-        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-337.jpg"
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+    },
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg"
+    },
+
+    {
+      src:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+      thumb:
+        "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
     }
   ];
 
@@ -85,29 +113,38 @@ const ImageGallery = () => {
             <h2 className="col-lg-12 mb-5">Explore Our Catalogue</h2>
           </div>
         </div>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
           <Masonry gutter="15px">
-            {images.map((image, index) =>
-              <a
-                href="#"
-                key={index}
-                onClick={e => {
-                  e.preventDefault();
-                  handleSelect(index);
-                }}
-                data-bs-toggle="modal"
-                data-bs-target="#exampleLightbox"
-                className={style.masonry_item}
-                data-aos="zoom-in"
-                // data-aos-duration="1000"
-              >
-                <img
-                  src={image.thumb}
-                  alt={`thumbnail ${index + 1}`}
-                  className={style.imagesss}
-                />
-              </a>
+            {/* <div className={`${styles.cardImageContainer}`}> */}
+            {/* <div className={`${style.masonry} `}> */}
+            {images.map(
+              (image, index) =>
+                // <div className={style.card1} key={index}>
+                // {/* <div className={style.cardImageContainer1}> */}
+                <a
+                  key={index}
+                  onClick={e => {
+                    e.preventDefault();
+                    handleSelect(index);
+                  }}
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleLightbox"
+                  className={style.masonry_item}
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src={image.thumb}
+                    alt={`thumbnail ${index + 1}`}
+                    className={`${style.imagesss}`}
+                  />
+                </a>
+              // </div>
+              // </div>
             )}
+            {/* </div> */}
+            {/* </div> */}
           </Masonry>
         </ResponsiveMasonry>
         <div

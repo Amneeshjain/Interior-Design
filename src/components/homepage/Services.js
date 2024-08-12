@@ -68,7 +68,7 @@ const Card = ({ item }) => {
     <div className={`${styles.serviceSliderCard} col-lg-4`}>
       <div className="transition-transform scale">
         <div>
-          <div className={`${styles.customCard}`}>
+          <div className={`mt-4 ${styles.customCard}`}>
             <figure>
               <Image
                 src={item.image}
