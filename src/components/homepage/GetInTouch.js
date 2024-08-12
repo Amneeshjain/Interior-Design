@@ -14,9 +14,9 @@ const GetInTouch = () => {
                 Ready to make your design
                 <br /> journey incredible?
               </h2>
-              <p data-aos="fade-up" data-aos-duration="1500">
+              {/* <p data-aos="fade-up" data-aos-duration="1500">
                 Let’s Design Something Ravishing Jointly
-              </p>
+              </p> */}
               <div className={style.btnContainer}>
                 <Link href="/get-in-touch">Get in touch Today! </Link>
               </div>

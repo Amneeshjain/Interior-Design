@@ -13,8 +13,8 @@ const HeroSection = () => {
 
   const handleScrollImg = () => {
     const scrollPosition = window.scrollY;
-    const scaleCalc = 1 + (scrollPosition / window.innerHeight) * 1.5;
-    const opacityCalc = 1 - (scrollPosition / window.innerHeight) * 1.5;
+    const scaleCalc = 1 + scrollPosition / window.innerHeight * 1.5;
+    const opacityCalc = 1 - scrollPosition / window.innerHeight * 1.5;
     setOpacity(Math.max(0, opacityCalc));
     setScale(scaleCalc);
   };
@@ -28,17 +28,17 @@ const HeroSection = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 800
     });
   }, []);
 
   return (
     <div className={style.bg}>
-      <div className={style.bannerDesignLine}></div>
-      <div className={style.bannerDesignLine}></div>
-      <div className={style.bannerDesignLine}></div>
-      <div className={style.bannerDesignLine}></div>
-      <div className={style.bannerDesignLine}></div>
+      <div className={style.bannerDesignLine} />
+      <div className={style.bannerDesignLine} />
+      <div className={style.bannerDesignLine} />
+      <div className={style.bannerDesignLine} />
+      <div className={style.bannerDesignLine} />
       <div className={`container`}>
         <div className={style.banner_items}>
           <div style={{ width: "100%" }} className={`content`}>
@@ -47,16 +47,22 @@ const HeroSection = () => {
               data-aos="fade-up"
               data-aos-duration="700"
             >
-              <Image src={"/image_2.png"} className={style.rotate} alt="star" height={64} width={64} />
+              <Image
+                src={"/image_2.png"}
+                className={style.rotate}
+                alt="star"
+                height={64}
+                width={64}
+              />
             </div>
             <div className={style.textDiv}>
               <h1 data-aos="fade-up" data-aos-duration="1000">
-               Transforming Spaces{" "}
+                Transforming Spaces{" "}
                 {/* <span className={style.textOutline}> Spaces</span> */}
                 <br />
                 <div className={style.bannerIcon}>
                   <figure>
-                    <img src="bannerArrow.svg" alt="icon"  />
+                    <img src="bannerArrow.svg" alt="icon" />
                   </figure>
                   Igniting Emotions
                 </div>
@@ -66,7 +72,10 @@ const HeroSection = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                We are a team of seasoned interior designers, architects, and contractors, complemented by skilled craftsmen and innovative technicians. Our unique blend of expertise ensures the highest quality, made-to-measure details tailored to your vision.
+                We are a team of seasoned interior designers, architects, and
+                contractors, complemented by skilled craftsmen and innovative
+                technicians. Our unique blend of expertise ensures the highest
+                quality, made-to-measure details tailored to your vision.
               </p>
               <div className={style.banner_btn}>
                 <Link href="/get-in-touch">
@@ -86,7 +95,7 @@ const HeroSection = () => {
             className={`${style.centerImg} ${style.centerImgFade}`}
             style={{
               transform: `translate(-50%, 0%) scale(${scale})`,
-              opacity: opacity,
+              opacity: opacity
             }}
           />
         </div>

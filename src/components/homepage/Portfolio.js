@@ -55,7 +55,7 @@ const Portfolio = () => {
               </div>
 
               <div>
-                <Image src={whiteButton} alt="Button" height={60} width={60} />
+                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
              
               </div>
             </div>
@@ -92,7 +92,7 @@ const Portfolio = () => {
               </div>
               <div>
               <Link href="/projects">
-                <Image src={whiteButton} alt="Button" height={60} width={60} />
+                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
                 </Link>
               </div>
             </div>
@@ -124,7 +124,7 @@ const Portfolio = () => {
 
               <div>
                 <Link href="/projects">
-                <Image src={whiteButton} alt="Button" height={60} width={60} />
+                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
                 </Link>
               </div>
             </div>

@@ -152,7 +152,7 @@
 
 .banner_items {
   position: relative;
-  z-index: 9999;
+  z-index: 98;
   height: 100%;
   display: flex;
   align-items: center;

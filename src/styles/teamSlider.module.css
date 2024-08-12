@@ -35,7 +35,7 @@
   max-width: 271.81px;
   text-align: center;
   position: absolute;
-  z-index: 999;
+  z-index: 98;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -47,7 +47,7 @@
 }
 
 .expert_card .detail_box h3 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 600;
   color: #181818;
@@ -55,7 +55,7 @@
 }
 
 .expert_card .detail_boxhover h3 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 600;
   color: #ffffff;
@@ -63,7 +63,7 @@
 }
 
 .expert_card .detail_box .profile {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
   font-weight: 300;
   color: #666666;
@@ -142,7 +142,7 @@
 }
 
 .team_card .detail_box h3 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 600;
   color: #181818;
@@ -158,7 +158,7 @@
 }
 
 .team_card .detail_box .profile {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
   font-weight: 300;
   color: #666666;

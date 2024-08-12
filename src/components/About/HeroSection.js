@@ -13,20 +13,20 @@ const HeroSection = ({
   backgroundImage,
   text,
   color,
-  background,
+  background
 }) => {
   const textColorStyle = {
-    color: color || "#fff", // Default to black if color prop is not provided
+    color: color || "#fff" // Default to black if color prop is not provided
   };
   const bgColorStyle = {
-    background: background || "#fff", // Default to black if color prop is not provided
+    background: background || "#fff" // Default to black if color prop is not provided
   };
 
   return (
     <div
       className={`d-flex align-items-center ${styles.heroSection} `}
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage})`
       }}
     >
       <div className={`container ${styles.zIndex100}`}>
@@ -34,14 +34,19 @@ const HeroSection = ({
           <div className={hero.innerItems}>
             <div className={hero.tag} style={textColorStyle}>
               <hr />
-              <p>{text}</p>
+              <p>
+                {text}
+              </p>
             </div>
-            <h2 className="">{title}</h2>
-            {buttonText && (
+            <h2 className="">
+              {title}
+            </h2>
+            {buttonText &&
               <Link href="/">
-                <Button variant="secondary">{buttonText}</Button>
-              </Link>
-            )}
+                <Button variant="secondary">
+                  {buttonText}
+                </Button>
+              </Link>}
           </div>
         </div>
       </div>
@@ -55,7 +60,7 @@ HeroSection.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   color: PropTypes.string,
-  background: PropTypes.string,
+  background: PropTypes.string
 };
 
 export default HeroSection;

@@ -6,6 +6,7 @@ import Galary from "../../components/ProjectDetail/Galary";
 import AboutProjects from "../../components/AboutProjects";
 import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
+// import ImageGallery from "@/components/homepage/ImageGallery";
 
 const page = () => {
   return (
@@ -24,6 +25,7 @@ const page = () => {
       <Video />
       {/* <Contact /> */}
       <GetInTouch />
+      {/* <ImageGallery /> */}
     </div>
   );
 };
