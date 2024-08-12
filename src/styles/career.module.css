@@ -1,6 +1,9 @@
 .getJobSection {
   padding: 84.05px 0 70px 0;
 }
+.withdd {
+  width: 100%;
+}
 
 .registerFormContainer input[type="file"] {
   z-index: -1;
@@ -115,4 +118,17 @@
 
 .registerFormContainer form .submit_btn {
   margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .registerFormContainer form .file label {
+    /* padding: 13px; */
+    font-size: 10px;
+    line-height: 22.4px;
+    width: 149px;
+  }
+  .mbView {
+    display: inline-block;
+    margin-top: 1rem;
+  }
 }

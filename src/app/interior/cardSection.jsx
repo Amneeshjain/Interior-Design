@@ -37,7 +37,7 @@ const CardSection = () => {
                 ? style.even
                 : style.odd}`}
             >
-              <ProjectCard project={project} />
+              {/* <ProjectCard project={project} /> */}
             </Link>
           )}
         </div>

@@ -89,7 +89,7 @@ const Career = () => {
                   <input type="text" placeholder="Current/Previous Job Title" />
                 </div>
 
-                <div className="col-lg-12 col-md-12 col-sm-12 d-flex gap-3">
+                <div className={`col-lg-12 col-md-12 col-sm-12 d-flex gap-4 `}>
                   <div className={style.file}>
                     <input
                       type="file"
@@ -98,11 +98,11 @@ const Career = () => {
                       multiple
                       required
                     />
-                    <label style={{ width: "100%" }} htmlFor="file-upload">
+                    <label className={style.withdd} htmlFor="file-upload">
                       Upload Your CV
                     </label>
                   </div>
-<div className="d-flex align-items-center gap-2">
+<div className={`d-flex align-items-center gap-2 ${style.mbView}`}>
                   <div id="file-upload-filename" >{cvFileName}</div>
                   <div>
                   {cvFileName && (
@@ -126,11 +126,11 @@ const Career = () => {
                       multiple
                       required
                     />
-                    <label style={{ width: "100%" }} htmlFor="file-document">
+                    <label className={style.withdd} htmlFor="file-document">
                       Upload Your Document
                     </label>
                   </div>
-                  <div className="d-flex align-items-center gap-2">
+                  <div className={`d-flex align-items-center gap-2 ${style.mbView}`}>
 
                   
                   <div id="file-upload-document" >{documentFileName}</div>

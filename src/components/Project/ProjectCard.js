@@ -5,14 +5,14 @@ import styles from "../../styles/project.module.css";
 import style from "../../styles/home.module.css";
 
 const ProjectCard = ({ project }) =>
+  <>
   <div className={styles.card}>
     {/* <Image src={project.image} alt={project.title} className={styles.image} /> */}
-
     <div className={styles.cardImageContainer}>
       <Image
         src={project.image}
         alt={project.title}
-        className={styles.image}
+        // className={styles.image}
         layout="fill"
       />
     </div>
@@ -27,6 +27,8 @@ const ProjectCard = ({ project }) =>
         </p>
       </div>
     </div>
-  </div>;
+  </div>
+  
+  </>
 
 export default ProjectCard;

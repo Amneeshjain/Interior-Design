@@ -2,7 +2,7 @@
 import style from "../../styles/services.module.css";
 import styles from "../../styles/home.module.css";
 import styling from "../../styles/serviceScrollSlider.module.css";
-import ProjectCard from "../../components/Project/ProjectCard";
+import ProjectCard2 from "../../components/Project/ProjectCard2";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -44,27 +44,19 @@ const Services = () => {
       </h1>
       <div className="container mb-5 mt-5">
       <div className={`row ${style.projectsCardContainer}`}>
-          {projectData.map((project, index) =>
+          {projectData.map((project2, index) =>
             <Link
-              href={project.navigate}
-              key={project.id}
+              href={project2.navigate}
+              key={project2.id}
               className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0
                 ? style.even
                 : style.odd}`}
             >
-              <ProjectCard project={project} />
+              <ProjectCard2 project2={project2} />
             </Link>
           )}
         </div>
-        {/* <div className={styles.loadMore}>
-          <button
-            style={{ margin: "0 auto" }}
-            onClick={handleToggle}
-            className={`${styles.toggleButton}`}
-          >
-            {showMore ? "Show Less" : "See More"}
-          </button>
-        </div> */}
+      
       </div>
     </>
   );

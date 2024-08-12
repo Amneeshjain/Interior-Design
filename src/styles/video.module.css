@@ -5,6 +5,8 @@
 
 .vedioSectionMain {
   padding-top: 64px;
+  display: flex;
+  gap: 20px;
 }
 .video_overlay {
   position: relative;
@@ -109,6 +111,11 @@
 }
 
 @media only screen and (max-width: 429px) {
+  .vedioSectionMain {
+    padding-top: 64px;
+    display: block;
+    gap: 20px;
+  }
   .videoMainContainer:after {
     height: 260px;
   }

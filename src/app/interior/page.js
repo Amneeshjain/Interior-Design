@@ -6,8 +6,8 @@ import HeroSection from "../../components/About/HeroSection";
 import Service from "../../components/Interior/Service";
 import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
 import AboutFirm from "@/components/About/AboutFirm";
-import CardSection from "./cardSection";
 import Faq from "../../components/Faq/Faq";
+// import cardSection from "../../app/interior/cardSection"
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
@@ -85,7 +85,7 @@ const page = () => {
         />
       </div>
 
-      {/* <CardSection /> */}
+      {/* <cardSection /> */}
       <Service />
       <WhyChooseUs
         title="Comprehensive Architecture Planning"
