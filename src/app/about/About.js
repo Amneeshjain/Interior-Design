@@ -37,10 +37,10 @@ const About = () => {
       <PrincipalDesigner />
       {/* <Experts /> */}
       <Team />
+      <TimelineCard />
       <WhyChooseUS />
 
       {/* <Process /> */}
-      <TimelineCard />
       {/* <Contact bg="#fafafa" /> */}
       <BlogSection />
       <GetInTouch />

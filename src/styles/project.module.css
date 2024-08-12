@@ -21,7 +21,7 @@
   z-index: 98;
   top: 0;
   transition: 0.5s ease-in-out;
-  background-color: #00000082;
+  background-color: #55535382;
 }
 
 .cardImageContainer img {
@@ -33,10 +33,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 98;
   top: 0;
   transition: 0.5s ease-in-out;
-  background-color: #00000082;
+  background-color: #55535382;
 }
 
 .card:hover .cardImageContainer img {

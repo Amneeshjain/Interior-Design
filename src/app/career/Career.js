@@ -6,41 +6,29 @@ import style from "../../styles/career.module.css";
 import { useState } from "react";
 
 const Career = () => {
-  const [fileName, setFileName] = useState("");
-  const [videoName, setVideoName] = useState("");
+  const [cvFileName, setCvFileName] = useState("");
+  const [documentFileName, setDocumentFileName] = useState("");
 
-  const handleFileChange = (event) => {
+  const handleCvFileChange = (event) => {
     const input = event.target;
     const uploadedFileName = input.files[0].name;
-    setFileName(uploadedFileName);
+    setCvFileName(uploadedFileName);
   };
 
-  const handleVideoChange = (event) => {
+  const handleDocumentFileChange = (event) => {
     const input = event.target;
-    const uploadedVideoName = input.files[0].name;
-    setVideoName(uploadedVideoName);
+    const uploadedFileName = input.files[0].name;
+    setDocumentFileName(uploadedFileName);
   };
 
-  const handleRemoveFile = (event) => {
-    setFileName("");
+  const handleRemoveCvFile = () => {
+    setCvFileName("");
     document.getElementById("file-upload").value = "";
-
-    if (event.target.files[0] > 0) {
-      setFileName(true);
-    } else {
-      setFileName(false);
-    }
   };
 
-  const handleRemoveVideo = (event) => {
-    setVideoName("");
-    document.getElementById("video-upload").value = "";
-
-    if (event.target.files[0] > 0) {
-      setVideoName(true);
-    } else {
-      setVideoName(false);
-    }
+  const handleRemoveDocumentFile = () => {
+    setDocumentFileName("");
+    document.getElementById("file-document").value = "";
   };
 
   return (
@@ -62,14 +50,12 @@ const Career = () => {
               <p
                 className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}
               >
-                Get a JOb
+                Get a Job
               </p>
               <div className={styles.lineRight}></div>
             </div>
 
-            <h1
-              className={`text-center col-lg-6 offset-lg-3`}
-            >
+            <h1 className={`text-center col-lg-6 offset-lg-3`}>
               Become a Part of our <br />
               organization
             </h1>
@@ -103,55 +89,55 @@ const Career = () => {
                   <input type="text" placeholder="Current/Previous Job Title" />
                 </div>
 
-                <div className="col-lg-3 col-md-6 col-12">
-                  <div class={style.file}>
+                <div className="col-lg-12 col-md-12 col-sm-12 d-flex gap-3">
+                  <div className={style.file}>
                     <input
                       type="file"
                       id="file-upload"
-                      onChange={handleFileChange}
+                      onChange={handleCvFileChange}
                       multiple
                       required
                     />
-                    <label style={{ width: "100%" }} for="file-upload">
+                    <label style={{ width: "100%" }} htmlFor="file-upload">
                       Upload Your CV
                     </label>
                   </div>
-                  <div id="file-upload-filename">{fileName}</div>
-                  {fileName && (
+
+                  <div id="file-upload-filename">{cvFileName}</div>
+                  {cvFileName && (
                     <button
                       className="btn btn-danger"
-                      onClick={handleRemoveFile}
-                      id=""
+                      onClick={handleRemoveCvFile}
+                      type="button"
+                    >
+                      &times;
+                    </button>
+                  )}
+
+                  {/* Document Upload */}
+                  <div className={style.file}>
+                    <input
+                      type="file"
+                      id="file-document"
+                      onChange={handleDocumentFileChange}
+                      multiple
+                      required
+                    />
+                    <label style={{ width: "100%" }} htmlFor="file-document">
+                      Upload Your Document
+                    </label>
+                  </div>
+                  <div id="file-upload-document">{documentFileName}</div>
+                  {documentFileName && (
+                    <button
+                      className="btn btn-danger"
+                      onClick={handleRemoveDocumentFile}
+                      type="button"
                     >
                       &times;
                     </button>
                   )}
                 </div>
-
-                {/* <div className="col-lg-4 col-md-6 col-12">
-                  <div class={style.file}>
-                    <input
-                      type="file"
-                      id="video-upload"
-                      onChange={handleVideoChange}
-                      multiple
-                      required
-                    />
-                    <label style={{ width: "100%" }} for="video-upload">
-                      Upload Your Video CV
-                    </label>
-                  </div>
-                  <div id="file-upload-filename">{videoName}</div>
-                  {videoName && (
-                    <button
-                      className="btn btn-danger"
-                      onClick={handleRemoveVideo}
-                      id=""
-                    >
-                      &times;
-                    </button>
-                  )}
-                </div> */}
               </div>
               <div className={`col-lg-12 ${style.submit_btn}`}>
                 <input value="Submit" type="submit" />

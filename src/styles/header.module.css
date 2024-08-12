@@ -98,7 +98,7 @@
 .serviceMenu .serviceSubMenu li {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 18px;
   padding-bottom: 30px !important;
 }
 
