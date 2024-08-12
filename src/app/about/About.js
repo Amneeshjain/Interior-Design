@@ -13,7 +13,7 @@ import AboutMore from "../../components/aboutMore/AboutMore";
 import Founder from "../../components/About/Founder";
 import PrincipalDesigner from "../../components/About/PrincipalDesigner";
 import TimelineCard from "../../components/About/TimelineCard";
-import TwoVideoSection from "../../components/About/TwoVideoSection";
+// import TwoVideoSection from "../../components/About/TwoVideoSection";
 // import Video from "../../components/homepage/Video";
 
 // import Experts from "../../components/About/Experts";
@@ -46,7 +46,7 @@ const About = () => {
       {/* <Contact bg="#fafafa" /> */}
       <BlogSection />
       {/* <Video /> */}
-      <TwoVideoSection />
+      {/* <TwoVideoSection /> */}
       <GetInTouch />
       <AboutMore
         text="Decorate Your Interiors: Modern Design Meets Classic Charm"

@@ -45,8 +45,8 @@ const TwoVideoSection = () => {
           </div>
           <div className={styles.vedioSectionMain}>
             {!isPlaying ? (
-                <div className="d-flex gap-5">
-              <div className="video-overlay" onClick={handlePlay}>
+                <div className={`${styles.videoView1}`}>
+              <div className={styles.video_overlay} onClick={handlePlay}>
                 <img src="/video.png" alt="Video Thumbnail" />
                 <button className="play-button">
                   <svg
@@ -61,7 +61,7 @@ const TwoVideoSection = () => {
                   </svg>
                 </button>
               </div>
-              <div className="video-overlay" onClick={handlePlay}>
+              <div  className={styles.video_overlay} onClick={handlePlay}>
               <img src="/video.png" alt="Video Thumbnail" />
               <button className="play-button">
                 <svg
@@ -79,7 +79,7 @@ const TwoVideoSection = () => {
             </div>
               
             ) : (
-                <div className="d-flex gap-2">
+                <div className={`${styles.videoView2}`}>
               <div className="iframe-container">
                 <ReactPlayer
                   url="https://www.youtube.com/embed/qUOYp0-tm0Y"
@@ -113,17 +113,8 @@ const TwoVideoSection = () => {
                 align-items: start;
                 text-align: start;
               }
-              .video-overlay {
-                position: relative;
-                cursor: pointer;
-              
+             
                
-              }
-              .video-overlay img {
-                width: 100%;
-                height: 600px;
-              }
-                
               .play-button {
                 position: absolute;
                 top: 50%;
