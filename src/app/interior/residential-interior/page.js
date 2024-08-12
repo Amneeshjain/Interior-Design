@@ -74,8 +74,8 @@ const page = () => {
         />
       </div>
 
-      {/* <Process /> */}
       <TimelineCard />
+      {/* <Process /> */}
 
       <Faq faqData={faqData} />
       <GetInTouch />

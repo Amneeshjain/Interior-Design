@@ -3,9 +3,8 @@ import styles from "../../styles/video.module.css";
 import ReactPlayer from "react-player";
 import stylesA from "../../styles/aboutSection.module.css";
 import Link from "next/link";
-
-const Video = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const TwoVideoSection = () => {
+    const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -14,10 +13,11 @@ const Video = () => {
   const handleEnded = () => {
     setIsPlaying(false);
   };
-
   return (
     <>
-      <div className={styles.videoMainContainer}>
+    
+    
+    <div className={styles.videoMainContainer}>
         <div className="container">
           <div
             style={{ justifyContent: "center", alignItems: "center" }}
@@ -45,6 +45,7 @@ const Video = () => {
           </div>
           <div className={styles.vedioSectionMain}>
             {!isPlaying ? (
+                <div className="d-flex gap-5">
               <div className="video-overlay" onClick={handlePlay}>
                 <img src="/video.png" alt="Video Thumbnail" />
                 <button className="play-button">
@@ -60,19 +61,47 @@ const Video = () => {
                   </svg>
                 </button>
               </div>
-              
+              <div className="video-overlay" onClick={handlePlay}>
+              <img src="/video.png" alt="Video Thumbnail" />
+              <button className="play-button">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="32" cy="32" r="32" fill="white" />
+                  <path d="M25 20L45 32L25 44V20Z" fill="black" />
+                </svg>
+              </button>
+            </div>
+            </div>
               
             ) : (
+                <div className="d-flex gap-2">
               <div className="iframe-container">
                 <ReactPlayer
                   url="https://www.youtube.com/embed/qUOYp0-tm0Y"
                   playing={isPlaying}
                   controls
                   width="100%"
-                  height="700px"
+                  height="100%"
                   className={styles.reactPlayer}
                   onEnded={handleEnded}
                 />
+              </div>
+              <div className="iframe-container">
+                <ReactPlayer
+                  url="https://www.youtube.com/embed/qUOYp0-tm0Y"
+                  playing={isPlaying}
+                  controls
+                  width="100%"
+                  height="100%"
+                  className={styles.reactPlayer}
+                  onEnded={handleEnded}
+                />
+              </div>
               </div>
             )}
             <style jsx>{`
@@ -92,7 +121,7 @@ const Video = () => {
               }
               .video-overlay img {
                 width: 100%;
-                height: auto;
+                height: 600px;
               }
                 
               .play-button {
@@ -119,7 +148,7 @@ const Video = () => {
                 }
               }
               .iframe-container {
-                width: 100%;
+                width: 50%;
                 position: relative;
                 overflow: hidden;
                 margin-top: 16px;
@@ -133,14 +162,18 @@ const Video = () => {
                 border: 0;
               }
             `}</style>
+            
           </div>
         </div>
         <div className={styles.btnContainer}>
           <Link href="/get-in-touch">Get in touch</Link>
         </div>
       </div>
+    
+    
+    
     </>
-  );
-};
+  )
+}
 
-export default Video;
+export default TwoVideoSection

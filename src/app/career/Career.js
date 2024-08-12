@@ -102,10 +102,12 @@ const Career = () => {
                       Upload Your CV
                     </label>
                   </div>
-
-                  <div id="file-upload-filename">{cvFileName}</div>
+<div className="d-flex align-items-center gap-2">
+                  <div id="file-upload-filename" >{cvFileName}</div>
+                  <div>
                   {cvFileName && (
                     <button
+                    style={{height:'40px'}}
                       className="btn btn-danger"
                       onClick={handleRemoveCvFile}
                       type="button"
@@ -113,7 +115,8 @@ const Career = () => {
                       &times;
                     </button>
                   )}
-
+</div>
+</div>
                   {/* Document Upload */}
                   <div className={style.file}>
                     <input
@@ -127,9 +130,16 @@ const Career = () => {
                       Upload Your Document
                     </label>
                   </div>
-                  <div id="file-upload-document">{documentFileName}</div>
+                  <div className="d-flex align-items-center gap-2">
+
+                  
+                  <div id="file-upload-document" >{documentFileName}</div>
+                  <div>
                   {documentFileName && (
+                  
+
                     <button
+                    style={{height:'40px'}}
                       className="btn btn-danger"
                       onClick={handleRemoveDocumentFile}
                       type="button"
@@ -137,6 +147,8 @@ const Career = () => {
                       &times;
                     </button>
                   )}
+                  </div>
+                  </div>
                 </div>
               </div>
               <div className={`col-lg-12 ${style.submit_btn}`}>
