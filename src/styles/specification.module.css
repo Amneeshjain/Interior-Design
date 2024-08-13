@@ -82,3 +82,14 @@
   color: white;
   font-size: 1.5rem;
 }
+@media only screen and (max-width: 768px) {
+  .sectionTitle2 .left2 h2 {
+    font-size: 36px;
+    line-height: 48.41px;
+    letter-spacing: 2.09px;
+    color: #0d0d0d;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+}
