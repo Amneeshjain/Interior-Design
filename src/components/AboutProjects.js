@@ -7,19 +7,19 @@ const ABOUT_PROJECT_DATA = [
     id: 1,
     title: "Inspiration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
+      "We have beautiful renovation and natural decoration skills to design rooms and inspire our customers with the best interior designs.",
   },
   {
     id: 2,
     title: "Space Planning",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
+      "Customization makes our work more innovative by including custom modular systems and layout designs with maximum potential. ",
   },
   {
     id: 3,
     title: "Decoration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
+      "Space transformation and architecture rejuvenation thrive on the excellent look for all residential rooms to decore creatively.",
   },
 ];
 

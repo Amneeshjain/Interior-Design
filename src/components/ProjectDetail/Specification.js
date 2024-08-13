@@ -26,12 +26,22 @@ const Specification = () => {
             <div className={styles.left2}>
               <div className={styles.tag2}>
                 <hr />
-                <span className={styles.spannn}>DLF The Crest</span>
+                <span className={styles.spannn}>REVAMP THE ELEGANCE </span>
               </div>
-              <h2>Specifications</h2>
+              <h2>Crafting Luxurious</h2>
             </div>
           </div>
-          <ul className={`list-unstyled ${styles.specificationsList}`}>
+          <p className={styles.videoP}>
+            I recently had the pleasure of working with Colonelz, an exceptional
+            interior design and construction company. Their team of
+            professionals turned my dream space into a reality with their
+            impeccable design expertise and flawless execution. From concept to
+            completion, Colonelz exceeded my expectations with their attention
+            to detail and commitment to quality craftsmanship. I highly
+            recommend Colonelz to anyone in need of outstanding interior design
+            and construction services.
+          </p>
+          {/* <ul className={`list-unstyled ${styles.specificationsList}`}>
             <li>
               <div className={styles.specificationItem}>
                 <span className={styles.icon}>
@@ -68,7 +78,7 @@ const Specification = () => {
               </div>
             </li>
             <hr />
-          </ul>
+          </ul> */}
         </div>
         <div className="col-md-6  ">
           {!isPlaying

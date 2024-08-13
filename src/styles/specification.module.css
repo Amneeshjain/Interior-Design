@@ -10,7 +10,11 @@
   align-items: flex-end;
   justify-content: space-between;
 }
-
+.videoP {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+  line-height: 36px;
+}
 .sectionTitle2 .left2 .tag2 {
   gap: 19.28px;
   display: flex;
