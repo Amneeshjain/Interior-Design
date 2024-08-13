@@ -1,0 +1,80 @@
+.specificationsContainer {
+  padding: 2rem;
+}
+.specificationsContainerRow {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.sectionTitle2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sectionTitle2 .left2 .tag2 {
+  gap: 19.28px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  font-size: 18.23px;
+  line-height: 21.21px;
+  letter-spacing: 0.96px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 30.14px;
+}
+
+.sectionTitle2 .left2 .tag2 hr {
+  opacity: 1;
+  width: 77.13px;
+  border: 1.45px solid #0d0d0d;
+}
+.spannn {
+  margin-top: 0.4rem;
+}
+
+.sectionTitle2 .left2 h2 {
+  font-size: 60px;
+  line-height: 69.41px;
+  letter-spacing: 3.09px;
+  color: #0d0d0d;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.specificationsTitle {
+  font-size: 2rem;
+  color: #0d0d0d;
+  margin-bottom: 2rem;
+}
+
+.specificationsList {
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.specificationItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.specificationItem span {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.icon {
+  background-color: #ededed;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}

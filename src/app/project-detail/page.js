@@ -6,8 +6,9 @@ import Galary from "../../components/ProjectDetail/Galary";
 import AboutProjects from "../../components/AboutProjects";
 // import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
-import TwoVideoSection from "../../components/About/TwoVideoSection";
+// import TwoVideoSection from "../../components/About/TwoVideoSection";
 import ImageGallery from "@/components/homepage/ImageGallery";
+import Specification from "../../components/ProjectDetail/Specification";
 
 const page = () => {
   return (
@@ -22,7 +23,8 @@ const page = () => {
       />
       <AboutProjects />
 
-      <TwoVideoSection />
+      {/* <TwoVideoSection /> */}
+      <Specification />
       <ImageGallery />
       {/* <Galary bg="#FAFAFA" /> */}
       {/* <Video /> */}

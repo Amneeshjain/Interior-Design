@@ -5,7 +5,7 @@ import Link from "next/link";
 const ABOUT_PROJECT_DATA = [
   {
     id: 1,
-    title: "Moodboard & Inspiration",
+    title: "Inspiration",
     description:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit eu eget egestas velit fermentum quis feugiat non sit.",
   },
