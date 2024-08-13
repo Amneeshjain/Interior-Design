@@ -162,10 +162,10 @@ const TwoVideoSection = () => {
           }
         }
         .iframe-container {
-          width: 50%;
+          width: 100%;
           position: relative;
           overflow: hidden;
-          margin-top: 16px;
+        
         }
         .iframe-container iframe {
           position: absolute;
