@@ -89,7 +89,10 @@ const Career = () => {
                   <input type="text" placeholder="Current/Previous Job Title" />
                 </div>
 
-                <div className={`col-lg-12 col-md-12 col-sm-12 d-flex gap-4 `}>
+                <div className={`col-lg-12  col-md-12 col-sm-12 ${style.mbs}`}>
+
+                  <div className={style.buttonflex}>
+
                   <div className={style.file}>
                     <input
                       type="file"
@@ -102,23 +105,28 @@ const Career = () => {
                       Upload Your CV
                     </label>
                   </div>
-<div className={`d-flex align-items-center gap-2 ${style.mbView}`}>
-                  <div id="file-upload-filename" >{cvFileName}</div>
-                  <div>
-                  {cvFileName && (
-                    <button
-                    style={{height:'40px'}}
-                      className="btn btn-danger"
-                      onClick={handleRemoveCvFile}
-                      type="button"
-                    >
-                      &times;
-                    </button>
-                  )}
-</div>
-</div>
+                  <div
+                    className={`d-flex align-items-center gap-2 mt-3`}
+                  >
+                    <div id="file-upload-filename">{cvFileName}</div>
+                    <div>
+                      {cvFileName && (
+                        <button
+                          style={{ height: "40px" }}
+                          className="btn btn-danger"
+                          onClick={handleRemoveCvFile}
+                          type="button"
+                        >
+                          &times;
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                  
+                  </div>
                   {/* Document Upload */}
-                  <div className={style.file}>
+                  <div className={style.buttonflex}>
+                  <div className={` ${style.file}`}>
                     <input
                       type="file"
                       id="file-document"
@@ -130,23 +138,20 @@ const Career = () => {
                       Upload Your Document
                     </label>
                   </div>
-                  <div className={`d-flex align-items-center gap-2 ${style.mbView}`}>
-
-                  
-                  <div id="file-upload-document" >{documentFileName}</div>
-                  <div>
-                  {documentFileName && (
-                  
-
-                    <button
-                    style={{height:'40px'}}
-                      className="btn btn-danger"
-                      onClick={handleRemoveDocumentFile}
-                      type="button"
-                    >
-                      &times;
-                    </button>
-                  )}
+                  <div className={`d-flex align-items-center gap-2 mt-3`} >
+                    <div id="file-upload-document" data-bs-toggle="tooltip" title="file" data-bs-placement="top" data-bs-title="file">{documentFileName}</div>
+                    <div>
+                      {documentFileName && (
+                        <button
+                          style={{ height: "40px" }}
+                          className="btn btn-danger"
+                          onClick={handleRemoveDocumentFile}
+                          type="button"
+                        >
+                          &times;
+                        </button>
+                      )}
+                    </div>
                   </div>
                   </div>
                 </div>

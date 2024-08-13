@@ -43,12 +43,12 @@ const Services = () => {
         Tailored to fit your space and style
       </h1>
       <div className="container mb-5 mt-5">
-      <div className={`row ${style.projectsCardContainer}`}>
+      <div className={`row `}>
           {projectData.map((project2, index) =>
             <Link
               href={project2.navigate}
               key={project2.id}
-              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0
+              className={`col-lg-6 col-md-6 col-sm-6 ${style.gapss} ${index % 2 === 0
                 ? style.even
                 : style.odd}`}
             >

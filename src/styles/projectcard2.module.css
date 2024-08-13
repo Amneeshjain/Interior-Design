@@ -80,6 +80,11 @@
   position: absolute;
   bottom: 0;
 }
+.content1 .contentText1 h2 {
+  background-color: #000000;
+  opacity: 0.7;
+  padding: 9px;
+}
 .lineLeft,
 .lineRight {
   width: 50px;
@@ -172,6 +177,16 @@
   .projectMainContainer {
     padding: 80px 0;
   }
+  .cardImageContainer1 .image1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 60;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+  }
 
   .projectsCardContainer {
     padding-top: 40px;
@@ -196,6 +211,13 @@
   }
   .contentText1 p {
     font-size: 13px;
+  }
+  .content1 .contentText1 h2 {
+    margin-top: 1rem;
+    color: #ffffff;
+    background-color: #000000;
+    opacity: 0.8;
+    padding: 9px;
   }
 }
 

@@ -76,7 +76,9 @@ const Navbar = () => {
           >
             <div className={styles.dropdown}>
               <button className={styles.menuOnly}>
-                <Link href="/interior">interior design</Link>
+                <Link href="/interior" onClick={toggleMenu}>
+                  interior design
+                </Link>
                 <img
                   src="dropDownArrow.svg"
                   alt=""

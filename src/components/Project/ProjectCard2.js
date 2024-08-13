@@ -12,7 +12,7 @@ const ProjectCard2 = ({ project2 }) => {
           <Image
             src={project2.image}
             alt={project2.title}
-            // className={styles.image}
+            className={styles.image}
             layout="fill"
           />
         </div>
@@ -23,7 +23,7 @@ const ProjectCard2 = ({ project2 }) => {
               {project2.title}
             </h2>
             <p className={`${style.fs16} ${style.fw300}`}>
-              {project2.description}
+              {/* {project2.description} */}
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
 import Galary from "../../components/ProjectDetail/Galary";
 import AboutProjects from "../../components/AboutProjects";
-// import Video from "@/components/homepage/Video";
+import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
 // import TwoVideoSection from "../../components/About/TwoVideoSection";
 import ImageGallery from "@/components/homepage/ImageGallery";
@@ -27,7 +27,7 @@ const page = () => {
       <Specification />
       <ImageGallery />
       {/* <Galary bg="#FAFAFA" /> */}
-      {/* <Video /> */}
+      <Video />
       {/* <Contact /> */}
       <GetInTouch />
       {/* <ImageGallery /> */}

@@ -77,14 +77,14 @@
 }
 
 .registerFormContainer form .file label {
-  width: 100%;
+  width: 300px;
   padding: 20px 30px;
   font-size: 18px;
   line-height: 28.6px;
   color: #2d2f30;
   cursor: pointer;
   font-weight: 700;
-  width: fit-content;
+
   background-color: #ffffff;
 }
 
@@ -119,16 +119,30 @@
 .registerFormContainer form .submit_btn {
   margin-top: 40px;
 }
+.mbs {
+  display: flex;
+  gap: 30px;
+}
 
 @media only screen and (max-width: 768px) {
   .registerFormContainer form .file label {
     /* padding: 13px; */
     font-size: 10px;
     line-height: 22.4px;
-    width: 149px;
+    width: 141px;
   }
-  .mbView {
-    display: inline-block;
+
+  .mbs {
+    display: block;
+  }
+  .buttonflex {
+    display: block;
+    gap: 20px;
     margin-top: 1rem;
   }
 }
+
+/* .buttonflex {
+  display: block;
+  gap: 20px;
+} */

@@ -72,7 +72,7 @@ const OurProjects = () => {
             <Link
               href="/project-detail"
               key={project.id}
-              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0
+              className={`col-lg-6  ${style.gap} ${index % 2 === 0
                 ? style.even
                 : style.odd}`}
             >
