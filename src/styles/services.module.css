@@ -156,7 +156,10 @@
   .displayprop {
     display: block;
   }
-
+  .paad {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .spacingFromTop {
     margin-top: 30px;
   }

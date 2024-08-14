@@ -39,7 +39,7 @@ const Services = () => {
         </p>
         <div className={styles.lineRight}></div>
       </div>
-      <h1 className={`text-center col-lg-6 offset-lg-3  ${styles.paad}`}>
+      <h1 className={`text-center col-lg-6 offset-lg-3 ${style.paad}`}>
         Tailored to fit your space and style
       </h1>
       <div className={`container` }>

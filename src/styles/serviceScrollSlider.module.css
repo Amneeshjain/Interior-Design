@@ -10,8 +10,8 @@
   padding: 15px 0px 15px 0px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 30px;
-  background-color: transparent; /* Remove default blue color */
-  color: black;
+  background-color:#666; /* Remove default blue color */
+  color: #fff;
 }
 .servicesButton1 {
   width: 100%;

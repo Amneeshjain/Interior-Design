@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import ReactPlayer from "react-player";
 import styles from "../../styles/specification.module.css";
 
 const Specification = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playerHeight, setPlayerHeight] = useState('700px');
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -12,6 +13,22 @@ const Specification = () => {
   const handleEnded = () => {
     setIsPlaying(false);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        // Mobile view
+        setPlayerHeight(''); // Remove height
+      } else {
+        // Desktop view
+        setPlayerHeight('700px'); // Set height to 700px
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div className={`container  ${styles.specificationsContainer}`}>
       <div
@@ -80,9 +97,9 @@ const Specification = () => {
             <hr />
           </ul> */}
         </div>
-        <div className="col-md-6  ">
+        <div className="col-lg-6 col-md-12 col-sm-12  ">
           {!isPlaying
-            ? <div className="video-overlay" onClick={handlePlay}>
+            ? <div className={styles.video_overlay} onClick={handlePlay}>
                 <img src="/video.png" alt="Video Thumbnail" />
                 <button className="play-button">
                   <svg
@@ -100,31 +117,14 @@ const Specification = () => {
             : <div className="iframe-container">
                 <ReactPlayer
                   url="https://www.youtube.com/embed/qUOYp0-tm0Y"
-                  playing={isPlaying}
                   controls
-                  width="100%"
-                  height="700px"
-                  className={styles.reactPlayer}
-                  onEnded={handleEnded}
+                  playing={isPlaying}
+                  height={playerHeight} 
+                  // className={styles.reactPlayer}
+                
                 />
               </div>}
           <style jsx>{`
-            .video-section {
-              display: flex;
-              flex-direction: row;
-              gap: 100px;
-              align-items: start;
-              text-align: start;
-            }
-            .video-overlay {
-              position: relative;
-              cursor: pointer;
-            }
-            .video-overlay img {
-              width: 100%;
-              height: 600px;
-            }
-
             .play-button {
               position: absolute;
               top: 50%;
@@ -164,8 +164,9 @@ const Specification = () => {
             }
           `}</style>
         </div>
+        </div>
       </div>
-    </div>
+  
   );
 };
 
