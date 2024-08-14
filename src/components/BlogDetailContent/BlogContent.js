@@ -26,8 +26,8 @@ const BlogContent = () => {
         <figure className="mt-5">
                 <img src="detail.png" alt="" width="100%" height="100%"/>
         </figure>
-        <h1>INTERESTING ARCHITECTURE TRENDS</h1>
-        <p>Dignissim adipiscing velit nam velit donec feugiat quis sociis. Fusce in vitae nibh lectus. Faucibus dictum ut in nec, convallis urna metus, gravida urna cum placerat non amet nam odio lacus mattis. Ultrices facilisis volutpat mi molestie at tempor etiam. Velit malesuada cursus a porttitor accumsan, sit scelerisque interdum tellus amet diam elementum, nunc consectetur diam aliquet ipsum ut lobortis cursus nisl lectus suspendisse ac facilisis feugiat leo pretium id rutrum urna auctor sit nunc turpis.</p>
+        <h1 className="mt-5">INTERESTING ARCHITECTURE TRENDS</h1>
+        <p className="py-4 ">Dignissim adipiscing velit nam velit donec feugiat quis sociis. Fusce in vitae nibh lectus. Faucibus dictum ut in nec, convallis urna metus, gravida urna cum placerat non amet nam odio lacus mattis. Ultrices facilisis volutpat mi molestie at tempor etiam. Velit malesuada cursus a porttitor accumsan, sit scelerisque interdum tellus amet diam elementum, nunc consectetur diam aliquet ipsum ut lobortis cursus nisl lectus suspendisse ac facilisis feugiat leo pretium id rutrum urna auctor sit nunc turpis.</p>
         </div>
     </>
   );
