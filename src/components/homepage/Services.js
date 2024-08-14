@@ -79,7 +79,7 @@ const Card = ({ item }) => {
             </figure>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            {item.url && <Link href={item.url}><button className={styles.servicesButton}>View services</button></Link>}
+            {item.url && <Link className={styles.color11} href={item.url}><button className={styles.servicesButton}>View services</button></Link>}
           </div>
         </div>
       </div>
