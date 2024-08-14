@@ -11,6 +11,7 @@ import TimelineCard from "../../components/About/TimelineCard";
 import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
+import ImageGallery from "@/components/homepage/ImageGallery";
 const items = [
   {
     title: "PRELIMINARY PLANS",
@@ -117,6 +118,7 @@ const page = () => {
         text={textData}
       />
       {/* <Process bg="#FAFAFA" /> */}
+      <ImageGallery />
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore

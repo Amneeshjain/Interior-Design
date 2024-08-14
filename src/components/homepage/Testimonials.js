@@ -47,9 +47,10 @@ const Testimonials = () => {
 
   return (
     <div
-      className={`${styles.testimonial_main_container} testimonial_main_container`}
+      className={`testimonial_main_container ${styles.testimonial_main_container} `}
     >
-      <div className="container">
+      <div className="container px-0">
+        {/* <div className="row px-0"> */}
         <div
           className={styles.sectionTittle}
           data-aos="fade-up"
@@ -66,7 +67,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className={`${styles.testimonialViewer}`}>
+        <div className={` ${styles.testimonialViewer}`}>
           <div className={styles.TestimonialSlider}>
             <Slider className={style.sliderMain} {...settings}>
               <div className={`col-lg-6 ${styles.testiCard}`}>
@@ -178,6 +179,7 @@ const Testimonials = () => {
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 

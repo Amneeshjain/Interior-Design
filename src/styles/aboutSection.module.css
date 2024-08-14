@@ -19,7 +19,7 @@
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0;
-  padding-bottom: 33.14px;
+  /* padding-top: 1rem; */
 }
 
 .sectionTitle .left .tag hr {

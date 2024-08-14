@@ -7,11 +7,12 @@
   display: flex;
   align-items: center;
 }
-.pTag{
+.pTag {
   font-size: 18.82px;
-    line-height: 30.59px;
-    font-weight: 300;
-    color: #666666;
+  line-height: 30.59px;
+  font-weight: 300;
+  color: #666666;
+  padding-right: 1rem;
 }
 .contactMainContainer .contactItems .left,
 .contactMainContainer .contactItems .right {
