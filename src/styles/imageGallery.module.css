@@ -51,8 +51,7 @@
   object-fit: cover;
 }
 .image_row {
-  padding-top: 4rem;
-  padding-bottom: 7rem;
+padding: 100px 0;
 }
 .modal_overlay {
   background-color: rgba(0, 0, 0, 0.8);

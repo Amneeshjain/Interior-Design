@@ -1,17 +1,11 @@
 import React from "react";
-
-
-
-
-
-
 import Image from "next/image";
 import styles from "../../styles/projectcard2.module.css";
 import style from "../../styles/home.module.css";
 
 const ProjectCard2 = ({ project2 }) => {
   return (
-    <div>
+    <div className={`${styles.rowpad}`}>
       <div className={styles.card1}>
         {/* <Image src={project.image} alt={project.title} className={styles.image} /> */}
         <div className={styles.cardImageContainer1}>
@@ -27,11 +21,11 @@ const ProjectCard2 = ({ project2 }) => {
           <div className={styles.contentText1}>
             <div className={styles.h2s}>
 
-            <h2 className={`${style.fs261} ${style.fw3001}`}>
+            <h2 className={`${styles.fs261} ${styles.fw3001}`}>
               {project2.title}
             </h2>
             </div>
-            <p className={`${style.fs161} ${style.fw3001}`}>
+            <p className={`${styles.fs161} ${styles.fw3001}`}>
               {/* {project2.description} */}
             </p>
           </div>

@@ -32,17 +32,17 @@ const Services = () => {
   };
   return (
     <>
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-center ">
         <div className={styles.lineLeft}></div>
         <p className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}>
           Interior Services
         </p>
         <div className={styles.lineRight}></div>
       </div>
-      <h1 className={`text-center col-lg-6 offset-lg-3 ${styles.paad}`}>
+      <h1 className={`text-center col-lg-6 offset-lg-3  ${styles.paad}`}>
         Tailored to fit your space and style
       </h1>
-      <div className="container mb-5 mt-5">
+      <div className={`container` }>
       <div className={`row `}>
           {projectData.map((project2, index) =>
             <Link

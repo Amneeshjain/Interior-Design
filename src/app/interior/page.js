@@ -86,7 +86,7 @@ const page = () => {
       </div>
 
       {/* <cardSection /> */}
-      <Service />
+      <Service/>
       <WhyChooseUs
         title="Comprehensive Architecture Planning"
         tag="EXPERTISE"

@@ -11,10 +11,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .fs261 {
-  font-size: 16px;
+  font-size: 26px;
 }
 .fw3001 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .fs161 {
@@ -55,7 +55,7 @@
 
 .cardImageContainer1 {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   height: 624.11px;
   position: relative;
   overflow: hidden;
@@ -66,6 +66,10 @@
   width: 100%;
   height: auto;
 }
+.rowpad{
+  padding-bottom: 100px;
+  padding-top: 60px;
+}
 
 .content1 {
   /* padding: 16px; */
@@ -75,7 +79,7 @@
   bottom: 40px;
   height: 100%;
   cursor: pointer;
- top:2%;
+ top:0;
   text-transform: uppercase;
   transition: 0.4s ease-in-out;
   z-index: 98;
@@ -89,14 +93,18 @@
 }
 .contentText1 {
   position: absolute;
-  bottom: -2px;
+    bottom: -2px;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    bottom: -5px;
 }
 .content1 .contentText1 .h2s {
-  background-color: #000000;
-
-  padding: 9px;
-  width: 620px;
-  /* height: 100%; */
+    background-color: #000;
+    padding: 15px 9px 15px 9px;
+    width: 100%;
+    height: 65px;
+    position: absolute;
 }
 .lineLeft,
 .lineRight {
@@ -186,6 +194,13 @@
   .projectMainContainer {
     padding: 80px 0;
   }
+  .content1 .contentText1 .h2s {
+    background-color: #000;
+    padding: 12px 9px 12px 9px;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+}
   .cardImageContainer1 .image1 {
     position: absolute;
     height: 100%;
@@ -196,6 +211,16 @@
     bottom: 0;
     color: transparent;
   }
+  .rowpad{
+  padding-bottom: 10px;
+  padding-top: 0;
+}
+.fs261 {
+  font-size: 18px;
+}
+.fw3001 {
+  font-weight: 300;
+}
 
   /* .projectsCardContainer {
     padding-top: 40px;
@@ -225,7 +250,7 @@
   .content1 .contentText1 .h2s {
     background-color: #000000;
   
-    padding: 9px;
+    padding: 21px;
     width: 365px;
     /* height: 100%; */
   }
