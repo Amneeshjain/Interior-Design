@@ -21,9 +21,9 @@ const ProjectCard2 = ({ project2 }) => {
           <div className={styles.contentText1}>
             <div className={styles.h2s}>
 
-            <h2 className={`${styles.fs261} ${styles.fw3001}`}>
-              {project2.title}
-            </h2>
+              <h2 className={`${styles.fs261} ${styles.fw3001}`}>
+                {project2.title}
+              </h2>
             </div>
             <p className={`${styles.fs161} ${styles.fw3001}`}>
               {/* {project2.description} */}

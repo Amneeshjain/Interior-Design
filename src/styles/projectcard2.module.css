@@ -21,7 +21,6 @@
   font-size: 12px;
 }
 
-
 /* .card1:after {
   content: "";
   position: absolute;
@@ -66,7 +65,7 @@
   width: 100%;
   height: auto;
 }
-.rowpad{
+.rowpad {
   padding-bottom: 100px;
   padding-top: 60px;
 }
@@ -79,7 +78,7 @@
   bottom: 40px;
   height: 100%;
   cursor: pointer;
- top:0;
+  top: 0;
   text-transform: uppercase;
   transition: 0.4s ease-in-out;
   z-index: 98;
@@ -93,18 +92,18 @@
 }
 .contentText1 {
   position: absolute;
-    bottom: -2px;
-    width: 100%;
-    height: 65px;
-    position: absolute;
-    bottom: -5px;
+  bottom: -2px;
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: -5px;
 }
 .content1 .contentText1 .h2s {
-    background-color: #000;
-    padding: 15px 9px 15px 9px;
-    width: 100%;
-    height: 65px;
-    position: absolute;
+  background-color: #000;
+  padding: 15px 9px 15px 9px;
+  width: 100%;
+  height: 65px;
+  position: absolute;
 }
 .lineLeft,
 .lineRight {
@@ -160,8 +159,6 @@
   
   } */
 
-
-
 @media only screen and (max-width: 992px) {
   /* .even {
       margin-top: 12px;
@@ -200,7 +197,7 @@
     width: 100%;
     height: 65px;
     position: absolute;
-}
+  }
   .cardImageContainer1 .image1 {
     position: absolute;
     height: 100%;
@@ -211,21 +208,21 @@
     bottom: 0;
     color: transparent;
   }
-  .rowpad{
-  padding-bottom: 10px;
-  padding-top: 0;
-}
-.fs261 {
-  font-size: 18px;
-}
-.fw3001 {
-  font-weight: 300;
-}
+  .rowpad {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+  .fs261 {
+    font-size: 18px;
+  }
+  .fw3001 {
+    font-weight: 300;
+  }
 
   /* .projectsCardContainer {
     padding-top: 40px;
   } */
-    /* .cardImageContainer1 {
+  /* .cardImageContainer1 {
       height: 240px;
     } */
 
@@ -246,12 +243,12 @@
   .contentText1 p {
     font-size: 13px;
   }
-  
+
   .content1 .contentText1 .h2s {
     background-color: #000000;
-  
+
     padding: 21px;
-    width: 365px;
+
     /* height: 100%; */
   }
 }
