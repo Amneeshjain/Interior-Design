@@ -70,7 +70,7 @@ const page = () => {
         buttonText="Get in Touch"
         backgroundImage="../../bg-hero.png"
       />
-      <div className="mt-5">
+      <div style={{paddingTop:"100px;"}}>
         <AboutFirm
           imgSrc="/Meeting room.jpg"
           imgAlt="About Firm"
