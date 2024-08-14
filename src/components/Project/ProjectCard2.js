@@ -1,4 +1,10 @@
 import React from "react";
+
+
+
+
+
+
 import Image from "next/image";
 import styles from "../../styles/projectcard2.module.css";
 import style from "../../styles/home.module.css";
@@ -12,17 +18,20 @@ const ProjectCard2 = ({ project2 }) => {
           <Image
             src={project2.image}
             alt={project2.title}
-            className={styles.image}
+            // className={styles.image}
             layout="fill"
           />
         </div>
 
         <div className={styles.content1}>
           <div className={styles.contentText1}>
-            <h2 className={`${style.fs26} ${style.fw300}`}>
+            <div className={styles.h2s}>
+
+            <h2 className={`${style.fs261} ${style.fw3001}`}>
               {project2.title}
             </h2>
-            <p className={`${style.fs16} ${style.fw300}`}>
+            </div>
+            <p className={`${style.fs161} ${style.fw3001}`}>
               {/* {project2.description} */}
             </p>
           </div>
