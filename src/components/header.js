@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import style from "../styles/header.module.css";
-import styless from "../styles/home.module.css"
+
 import { useState } from "react";
 
 const Header = () => {
@@ -15,38 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={styless.social_media_icons}>
-        <ul className={styless.socialIcons_111}>
-          <li className={styless.social_facebook} >
-            <Link href="https://www.facebook.com/ColonelzConstructions" target="_blank">
 
-              <img src="/Facebook.svg" alt="" />
-
-            </Link>
-          </li>
-          <li className={styless.social_instagram}>
-            <Link href="https://www.instagram.com/colonelzconstructions/" target="_blank">
-
-              <img src="/instagram.svg" alt="" />
-
-            </Link>
-          </li>
-          <li className={styless.social_youtube} >
-            <Link href="https://www.youtube.com/@ColonelzConstruction" target="_blank">
-
-              <img src="/YouTube.svg" alt="" />
-
-            </Link>
-          </li>
-          <li className={styless.social_linked} >
-            <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
-
-              <img src="/linked.png" alt="" width="22px" />
-
-            </Link>
-          </li>
-        </ul>
-      </div>
       <div className={style.headerMainContainer}>
         <div className="container">
           <div className={style.headerInnerItems}>
