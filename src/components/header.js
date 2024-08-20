@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import style from "../styles/header.module.css";
+import styless from "../styles/home.module.css"
 import { useState } from "react";
 
 const Header = () => {
@@ -14,6 +15,38 @@ const Header = () => {
 
   return (
     <>
+      <div className={styless.social_media_icons}>
+        <ul className={styless.socialIcons_111}>
+          <li className={styless.social_facebook} >
+            <Link href="https://www.facebook.com/ColonelzConstructions" target="_blank">
+
+              <img src="/Facebook.svg" alt="" />
+
+            </Link>
+          </li>
+          <li className={styless.social_instagram}>
+            <Link href="https://www.instagram.com/colonelzconstructions/" target="_blank">
+
+              <img src="/instagram.svg" alt="" />
+
+            </Link>
+          </li>
+          <li className={styless.social_youtube} >
+            <Link href="https://www.youtube.com/@ColonelzConstruction" target="_blank">
+
+              <img src="/YouTube.svg" alt="" />
+
+            </Link>
+          </li>
+          <li className={styless.social_linked} >
+            <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
+
+              <img src="/linked.png" alt="" width="22px" />
+
+            </Link>
+          </li>
+        </ul>
+      </div>
       <div className={style.headerMainContainer}>
         <div className="container">
           <div className={style.headerInnerItems}>
@@ -44,13 +77,12 @@ const Header = () => {
                   <Link href="/about">About</Link>
                 </li>
                 <li
-                  className={`${style.serviceMenu} ${
-                    activeLink.startsWith("/interior") ||
+                  className={`${style.serviceMenu} ${activeLink.startsWith("/interior") ||
                     activeLink === "/architecture" ||
                     activeLink === "/constraction"
-                      ? "active"
-                      : "inactive"
-                  }`}
+                    ? "active"
+                    : "inactive"
+                    }`}
                 >
                   <Link href="" onClick={() => handleClick("/services")}>
                     Services
@@ -59,7 +91,7 @@ const Header = () => {
                   {/* services sub menu */}
                   <ul className={style.serviceSubMenu}>
                     <li className={style.interiorDesMenu}>
-                     
+
                       <Link className={style.menuli}
                         href="/interior"
                         onClick={() => handleClick("/interior")}
@@ -68,43 +100,43 @@ const Header = () => {
                       </Link>
                       <img src="right-arrow.png" alt="" />
                       {/* Architecture sub menu  */}
- {/* ============================================desktop======================= */}
- <div className={style.desktop_View}>                    
-                      <ul className={style.interiorDesSubMenu}>
-                        <li>
-                          {/* <img src="dropDownArrow.svg" alt="" /> */}
-                          <Link className={style.menuli}
-                            href="/interior/residential-interior"
-                            onClick={() =>
-                              handleClick(
-                                "/interior",
-                                "/interior/residential-interior"
-                              )
-                            }
-                          >
-                            - Residential Interior
-                          </Link>
-                        </li>
+                      {/* ============================================desktop======================= */}
+                      <div className={style.desktop_View}>
+                        <ul className={style.interiorDesSubMenu}>
+                          <li>
+                            {/* <img src="dropDownArrow.svg" alt="" /> */}
+                            <Link className={style.menuli}
+                              href="/interior/residential-interior"
+                              onClick={() =>
+                                handleClick(
+                                  "/interior",
+                                  "/interior/residential-interior"
+                                )
+                              }
+                            >
+                              - Residential Interior
+                            </Link>
+                          </li>
 
-                        <li >
-                          {/* <img src="dropDownArrow.svg" alt="" /> */}
-                          <Link className={style.menuli}
-                            href="/interior/commercial-interior"
-                            onClick={() =>
-                              handleClick(
-                                "/interior",
-                                "/interior/commercial-interior"
-                              )
-                            }
-                          >
-                            - Commercial Interior
-                          </Link>
-                        </li>
-                      </ul>
+                          <li >
+                            {/* <img src="dropDownArrow.svg" alt="" /> */}
+                            <Link className={style.menuli}
+                              href="/interior/commercial-interior"
+                              onClick={() =>
+                                handleClick(
+                                  "/interior",
+                                  "/interior/commercial-interior"
+                                )
+                              }
+                            >
+                              - Commercial Interior
+                            </Link>
+                          </li>
+                        </ul>
 
                       </div>
-{/* ====================================mobile view===========================                       */}
-{/* <div className={style.mobile_View}>
+                      {/* ====================================mobile view===========================                       */}
+                      {/* <div className={style.mobile_View}>
 <ul className={style.interiorDesSubMenu}>
   <li>
     
@@ -143,7 +175,7 @@ const Header = () => {
 
 
 
-                      
+
                     </li>
 
                     <li className={`${style.architectureMenu}`}>
