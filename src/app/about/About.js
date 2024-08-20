@@ -33,7 +33,7 @@ const About = () => {
         imgAlt="About Firm"
         tagText="Our Legacy"
         title="Fabricating Finesse Since 2004"
-        description="Pledged towards offering our clients what they urge. As client's preferences take top priority. Colonelz strives to provide spaces that meet their needs and surpass their desires. Additionally, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
+        description=" We make the client's preferences our top most priority. Colonelz strives to provide spaces that meet their needs and surpass their desired visions. Additionally, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
       />
       <Founder />
       <PrincipalDesigner />

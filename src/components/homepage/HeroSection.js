@@ -77,8 +77,8 @@ const HeroSection = () => {
                   data-aos-duration="1000"
                 >
                   We are a team of seasoned interior designers, architects, and
-                  contractors, complemented by skilled craftsmen and innovative
-                  technicians. Our unique blend of expertise ensures the highest
+                  contractors, housing skilled craftsmen and innovative
+                  technicians. Our expertise ensures the highest
                   quality, made-to-measure details tailored to your vision.
                 </p>
                 <div className={style.banner_btn}>
@@ -106,38 +106,7 @@ const HeroSection = () => {
           {/* <CircularText /> */}
         </div>
       </div>
-      <div className={style.social_media_icons}>
-        <ul className={style.socialIcons_111}>
-          <li style={{ backgroundColor: "#000", padding: "10px" }}>
-            <Link href="https://www.facebook.com/ColonelzConstructions" target="_blank">
 
-              <img src="/Facebook.svg" alt="" />
-
-            </Link>
-          </li>
-          <li style={{ backgroundColor: "#666", padding: "10px" }}>
-            <Link href="https://www.instagram.com/colonelzconstructions/" target="_blank">
-
-              <img src="/instagram.svg" alt="" />
-
-            </Link>
-          </li>
-          <li style={{ backgroundColor: "#000", padding: "10px" }}>
-            <Link href="https://www.youtube.com/@ColonelzConstruction" target="_blank">
-
-              <img src="/YouTube.svg" alt="" />
-
-            </Link>
-          </li>
-          <li style={{ backgroundColor: "#666", padding: "10px" }}>
-            <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
-
-              <img src="/linked.png" alt="" width="22px" />
-
-            </Link>
-          </li>
-        </ul>
-      </div>
     </>);
 };
 

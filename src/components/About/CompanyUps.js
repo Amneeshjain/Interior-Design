@@ -7,28 +7,29 @@ const CompanyUps = () => {
       icon: "/Ups1.png",
       title: "Innovative Designs",
       description:
-        "We are a castle designer that offers magical transformation and functional design solutions to style your home like our own. ",
+        "We customise designs and layouts as per your preferences, bringing your vision to life."
+
     },
     {
       id: 2,
       icon: "/Ups2.png",
       title: "Turnkey Solutions",
       description:
-        "Concept to Completion, we take the stress out of the equation for the client by providing a one-stop solution for the entire project. ",
+        "Sit back and relax. We ensure you to deliver your desired project on time. Concept to Completion will always be our motto.",
     },
     {
       id: 3,
       icon: "/Ups3.png",
       title: "Full Transparency",
       description:
-        "We welcome the responsibility to be honest and thrive on the problem-solving, we encounter despite the grey hairs.",
+        "We welcome the responsibility to be honest and thrive on problem-solving, Full transperancy and communication to be maintained with the client.",
     },
     {
       id: 4,
       icon: "/Ups4.png",
       title: "Project Management",
       description:
-        "We help you envision the design and realise your home, We aim for a comprehensive process from foundation to furnishing.  ",
+        "We help you envision the design you've always dreamt of and aim for a comprehensive process from foundation to furnishing.  ",
     },
   ];
   return (
@@ -37,7 +38,7 @@ const CompanyUps = () => {
         <div className="container">
           <div className={style.CompanyUpsBg}>
             <div className={style.tag}>
-              <p>Company USPS</p>
+              <p>Company USP<span style={{ textTransform: "lowercase" }}>'s</span></p>
               <hr />
             </div>
             <div className={style.CompanyUpsItems}>

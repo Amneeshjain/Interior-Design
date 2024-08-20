@@ -20,7 +20,7 @@ const textData = [
     image: "/fi_10365082.png",
     title: "Architecture",
     description:
-      "Architectural services include design, preparation of construction documents, and construction administration.",
+      "Architectural services include design, preparation of construction documents,  administration.",
     buttonText: "View service",
     url: "/architecture"
   },
@@ -28,7 +28,7 @@ const textData = [
     image: "/fi_8172688.png",
     title: "Interior Design",
     description:
-      "Tailored residential and commercial interior services, transforming spaces with style and personalized design",
+      "Tailored residential and commercial interior services, transforming spaces with style and personalized design.",
     buttonText: "View service",
     url: "/interior"
   },

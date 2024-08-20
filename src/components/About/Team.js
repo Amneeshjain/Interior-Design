@@ -76,16 +76,16 @@ const TeamSliderData = [
 
 const Team = () => {
   const settings = {
-  
-    infinite:true,
+
+    infinite: true,
     autoplay: true,
     // speed: 500,
     slidesToShow: 3, // Default number of slides to show
     slidesToScroll: 2,
-   
-    autoplaySpeed:3000,
+
+    autoplaySpeed: 3000,
     arrows: false,
-    dots:true,
+    dots: true,
     // nextArrow: leftIcon,
     responsive: [
       {
@@ -125,14 +125,14 @@ const Team = () => {
             <p
               className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}
             >
-              Meet Our Team 
+              Meet Our Team
             </p>
             <div className={styles.lineRight}></div>
           </div>
           <h1
             className={`text-center col-lg-6 offset-lg-3`}
           >
-            Your Imagination into Immersence
+            They turn your Imagination into Reality
           </h1>
         </div>
         <div className="container  py-4 px-0">

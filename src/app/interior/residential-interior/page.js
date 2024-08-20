@@ -15,19 +15,19 @@ const textData = [
     image: "/blueprint.png",
     title: "Design Creativity and Technical Skills",
     description:
-      "Creative Eye and Attention to Detail: The ability to check particular and cohesive designs whilst paying meticulous interest to each element and its effect on the general aesthetic.Sketching Ability and Computer Knowledge: Proficiency in hand sketching and the use of design software (like AutoCAD, SketchUp, or Revit) to create special plans, renderings, and visualizations."
+      " We keep a check on cohesive designs and pay keen interest to each element while maintaining the aesthetics. For proficiency, we use design softwares (AutoCAD, SketchUp, or Revit) to create special plans, renderings, and visualizations."
   },
   {
     image: "/interior-design.png",
     title: "Trend Awareness and Sustainable Practices",
     description:
-      "Trend Identification: Staying updated with the brand new layout trends and incorporating contemporary patterns and progressive ideas into tasks.Knowledge of Sustainable Practices: Understanding and implementing green and sustainable layout ideas, consisting of the selection of inexperienced materials and energy-efficient solutions."
+      " We keep our tabs on the brand new trends and incorporate contemporary patterns and ideas into execution. We also implement sustainable layout ideas, by picking organic materials and energy-efficient solutions."
   },
   {
     image: "/kitchen.png",
     title: "Communication and Project Management",
     description:
-      "Superior Communication: Effectively conveying design concepts and thoughts to clients, contractors, and different stakeholders, ensuring clean and constant communicate all through the challenge.Attention to Detail: Ensuring every aspect of the layout is achieved exactly, from preliminary concept to very last implementation, retaining high standards and client pleasure."
+      " We thoroughly convey design layouts and thoughts to our clients, contractors, and vendors, ensuring productive communication. We make sure every aspect of the layout is achieved, from preliminary concept to very last implementation, retaining high standards and client pleasure."
   }
 ];
 const faqData = [

@@ -40,7 +40,7 @@ const Video = () => {
                 Watch video
                 <hr />
               </div>
-              <h2>Converging Spaces Into Stunning Reality</h2>
+              <h2>Converting Spaces Into Stunning Reality</h2>
             </div>
           </div>
           <div className={styles.vedioSectionMain}>
@@ -60,8 +60,8 @@ const Video = () => {
                   </svg>
                 </button>
               </div>
-              
-              
+
+
             ) : (
               <div className="iframe-container">
                 <ReactPlayer

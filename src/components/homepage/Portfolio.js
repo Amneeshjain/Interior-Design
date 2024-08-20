@@ -20,7 +20,7 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
- 
+
 
   return (
     <>
@@ -40,110 +40,110 @@ const Portfolio = () => {
               Our portfolio
             </div>
             <h2 style={{ color: "#fff", textAlign: "center" }}>
-              Explore Our Portfolio <br /> And Ignite Your Inspiration.
+              Explore Our Portfolio <br /> to fuel Your Inspiration.
             </h2>
           </div>
         </div>
         <div className={styles.slideContainer}>
-        <Link href="/projects">
-          <div className={` ${styles.greyBg} ${styles.sticky}`}>
-            <div className={styles.info}>
-              <div>
-                <p className={style.colorWhite}>STUDIO APARTMENT
-                </p>
-                <p className={style.colorWhite}>GURGAON</p>
-              </div>
+          <Link href="/projects">
+            <div className={` ${styles.greyBg} ${styles.sticky}`}>
+              <div className={styles.info}>
+                <div>
+                  <p className={style.colorWhite}>STUDIO APARTMENT,
+                  </p>
+                  <p className={style.colorWhite}>GURGAON</p>
+                </div>
 
-              <div>
-                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-             
+                <div>
+                  {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
+
+                </div>
               </div>
+              <motion.div
+                className={styles.mtTopCustom}
+                initial={{ y: 75, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+
+
+                <div className={styles.imageHeight} >
+                  <Image
+                    src={BgInteriar3}
+                    alt="Description"
+                    layout="fill"
+                    objectFit="cover"
+
+                  // or 'contain', 'none', etc.
+                  />
+                </div>
+
+
+              </motion.div>
             </div>
-            <motion.div
-              className={styles.mtTopCustom}
-              initial={{ y: 75, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-            
-                
-              <div className={styles.imageHeight} >
-                <Image
-                  src={BgInteriar3}
-                  alt="Description"
-                  layout="fill"
-                  objectFit="cover"
-                  
-                   // or 'contain', 'none', etc.
-                />
-              </div>
-            
-             
-            </motion.div>
-          </div>
           </Link>
           <Link href="/projects">
-          <div className={`${styles.greenBg} ${styles.sticky}`}>
-            <div className={styles.info}>
-              <div>
-                <p className={style.colorWhite}>EF</p>
-                <p className={style.colorWhite}>TATA PRIMANTI
-                </p>
+            <div className={`${styles.greenBg} ${styles.sticky}`}>
+              <div className={styles.info}>
+                <div>
+                  <p className={style.colorWhite}>EF</p>
+                  <p className={style.colorWhite}>TATA PRIMANTI
+                  </p>
+                </div>
+                <div>
+                  <Link href="/projects">
+                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
+                  </Link>
+                </div>
               </div>
-              <div>
-              <Link href="/projects">
-                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-                </Link>
-              </div>
+              <motion.div
+                className={styles.mtTopCustom}
+                initial={{ y: 75, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className={styles.imageHeight}>
+                  <Image
+                    src={BgInteriar2}
+                    alt="Description"
+                    layout="fill"
+                    objectFit="cover" // or 'contain', 'none', etc.
+                  />
+                </div>
+              </motion.div>
             </div>
-            <motion.div
-              className={styles.mtTopCustom}
-              initial={{ y: 75, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <div className={styles.imageHeight}>
-                <Image
-                  src={BgInteriar2}
-                  alt="Description"
-                  layout="fill"
-                  objectFit="cover" // or 'contain', 'none', etc.
-                />
-              </div>
-            </motion.div>
-          </div>
           </Link>
           <Link href="/projects">
-          <div className={` ${styles.greyBg} ${styles.sticky}`}>
-            <div className={styles.info}>
-              <div>
-                <p className={style.colorWhite}>BPTP 
-                </p>
-                <p className={style.colorWhite}>SECTOR 102</p>
-              </div>
+            <div className={` ${styles.greyBg} ${styles.sticky}`}>
+              <div className={styles.info}>
+                <div>
+                  <p className={style.colorWhite}>BPTP,
+                  </p>
+                  <p className={style.colorWhite}>SECTOR 102</p>
+                </div>
 
-              <div>
-                <Link href="/projects">
-                {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-                </Link>
+                <div>
+                  <Link href="/projects">
+                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
+                  </Link>
+                </div>
               </div>
+              <motion.div
+                className={styles.mtTopCustom}
+                initial={{ y: 75, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className={styles.imageHeight}>
+                  <Image
+                    src={BgInteriar1}
+                    alt="Description"
+                    layout="fill"
+                    objectFit="cover" // or 'contain', 'none', etc.
+                  />
+                </div>
+              </motion.div>
             </div>
-            <motion.div
-              className={styles.mtTopCustom}
-              initial={{ y: 75, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <div className={styles.imageHeight}>
-                <Image
-                  src={BgInteriar1}
-                  alt="Description"
-                  layout="fill"
-                  objectFit="cover" // or 'contain', 'none', etc.
-                />
-              </div>
-            </motion.div>
-          </div>
           </Link>
         </div>
       </div>

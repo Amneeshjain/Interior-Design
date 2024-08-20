@@ -15,19 +15,19 @@ const textData = [
     image: "/plan.png",
     title: "Innovative and Versatile Design Solutions",
     description:
-      "Creative Eye and Attention to Detail: Creating particular, practical designs tailored to commercial areas, ensuring each element is meticulously considered.Keeping Structures Versatile: Designing bendy layouts that can adapt to converting desires and features, that is critical for dynamic industrial environments."
+      "Creative eye and attention to detail: Creating particular and practical designs tailored for commercial areas, ensuring each element is meticulously considered."
   },
   {
     image: "/interior-design.png",
     title: "Trend Awareness and Technological Integration",
     description:
-      "Trend Identification: Staying modern-day with the ultra-modern design developments to keep industrial spaces contemporary and aggressive.Consider Technology Implementation: Integrating advanced technology solutions for progressed functionality, performance, and user experience in business interiors."
+      " Staying up-to-date with the modern design developments to keep industrial spaces contemporary and classy. We also integrate advanced technology solutions for progressed functionality and performance for commercial interiors."
   },
   {
     image: "/project-management.png",
     title: "Client-Centric Project Management",
     description:
-      "Superior Communication: Effectively speaking with clients and stakeholders to make certain the design meets their needs and expectations.Attention to Detail: Managing all layout and implementation components meticulously to make certain excellent consequences."
+      " We effectively communicate with clients and customers to create the designs, which can meet their expectations. We also manage all layout and implementation components carefully to get excellent outcomes."
   }
 ];
 const faqData = [
@@ -70,13 +70,13 @@ const page = () => {
         buttonText="Get in Touch"
         backgroundImage="../../bg-hero.png"
       />
-      <div style={{paddingTop:"100px"}}>
+      <div style={{ paddingTop: "100px" }}>
         <AboutFirm
           imgSrc="/Meeting room.jpg"
           imgAlt="About Firm"
           tagText="About Commercial Interior"
-          title="Crafting WorksSpaces that matters"
-          description="With Colnelz, your go-to source for a premier commercial interior designer, take a step into a world of inspiration and creativity! Your search for a place of employment that elevates beyond the norm and turns into an innovation hub is over if you've been longing for one."
+          title="Crafting WorkSpaces that matters"
+          description="With Colnelz, your go-to source for a premium commercial interior designer, take a step into a world of inspiration and creativity! Your search to elevates your interior dreams and turn into an innovation hub is over if you've been longing for one."
         />
       </div>
       <div style={{ backgroundColor: "#fafafa" }}>

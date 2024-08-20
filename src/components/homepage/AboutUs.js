@@ -47,7 +47,7 @@ const AboutUs = () => {
                 About the firm
               </div>
               <h2>
-                A Colonelz Journey <br />
+                Your Journey <br />
                 to Incredible Spaces
               </h2>
             </div>

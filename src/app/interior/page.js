@@ -59,7 +59,7 @@ const faqData = [
     answer:
       "Of course, a professional designer is required to decorate rooms that make a home more stylish. After a few months or years, the value of that home would increase. In addition, the budget plan, professional insights, color choosing and space of the room evoke the value of a room. Thus, Colonelz decides to provide affordable interior design to all customers.",
   },
-  
+
 ];
 
 const page = () => {
@@ -74,19 +74,19 @@ const page = () => {
         color={"#fff"}
       />
 
-      
+
       <div style={{ paddingTop: "100px" }}>
         <AboutFirm
           imgSrc="COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-156.jpg"
           imgAlt="About Interior"
           tagText="Interior Design"
           title="What We Do?"
-          description="Pledged towards offering our clients what they urge. As client's preferences take top priority. Colonelz strives to provide spaces that meet their needs and surpass their desires. Additionally, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
+          description="Working towards creating dream interior spaces for our clients. As per their preferences, Colonelz take top priority in providing spaces that meet their needs and surpass their desires. Plus, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
         />
       </div>
 
       {/* <cardSection /> */}
-      <Service/>
+      <Service />
       <WhyChooseUs
         title="Comprehensive Architecture Planning"
         tag="EXPERTISE"

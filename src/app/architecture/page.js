@@ -39,21 +39,21 @@ const textData = [
     image: "/arch1.png",
     title: "Innovative Design and Technical Proficiency",
     description:
-      "Creative Eye and Attention to Detail: Developing particular and practical architectural designs with a eager awareness on aesthetics and meticulous detail. Sketching Ability and Computer Knowledge: Proficiency in hand drawing and the use of architectural software program (which includes AutoCAD, Revit, or BIM equipment) to create particular plans, 3-d models, and renderings.",
+      " Developing contemporary and practical designs with a keen attention to details and aesthetics. Proficiency in crafting the use of architectural software program (AutoCAD, Revit, or BIM equipment) to create particular plans, 3D models, and renderings.",
     buttonText: "View service"
   },
   {
     image: "/arch2.png",
-    title: "Sustainable and Technologically Integrated Solutions",
+    title: "Sustainable and  Integrated Solutions",
     description:
-      "Knowledge of Sustainable Practices: Implementing eco-friendly and sustainable architectural principles, along with the use of inexperienced substances, power-green structures, and sustainable creation strategies.Consider Technology Implementation: Integrating superior technologies, which include clever building structures and revolutionary creation techniques, to beautify the capability and performance of structures.",
+      "We use eco-friendly methods, along with the use of natural substances, power-green structures, and sustainable creation strategies. Integrating superior technologies, which include building structures and modern creation techniques, to enhance the capability and performance of structures.",
     buttonText: "View service"
   },
   {
     image: "/arch3.png",
-    title: "Client-Centric Project Management and Safety",
+    title: "Client-Centric Project Management ",
     description:
-      "Superior Communication: Effectively conveying architectural concepts, plans, and development to customers, contractors, and other stakeholders, making sure clean and consistent communique at some point of the task.Attention to Detail: Managing all elements of the layout and construction manner meticulously, from initial concept to very last crowning glory, to make sure terrific results.",
+      "Effectively conveying architectural concepts, plans, and development to customers and vendors, ensuring crisp and clean communication. We manage all elements of the layout and construction meticulously, from beginning to the very end to deliver top-tier results.",
     buttonText: "View service"
   }
 ];

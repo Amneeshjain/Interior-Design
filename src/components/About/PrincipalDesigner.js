@@ -24,7 +24,7 @@ const Team = () => {
           <h1
             className={`text-center col-lg-6 offset-lg-3`}
           >
-            
+
             Naomi Sahay
           </h1>
           <div className="container mt-5 mb-5">
@@ -37,11 +37,11 @@ const Team = () => {
               </div>
               <div className="col-lg-9 py-5">
                 <p className={styling.paraStyling}>
-                  <span className={styling.fw600}>Naomi Sahay</span> holding,{" "}
+                  <span className={styling.fw600}>Naomi Sahay,</span> holding{" "}
                   <span className={styling.fw600}>
-                    Masters in Interior Design from Florence
+                    Masters in Interior Design from Florence,
                   </span>{" "}
-                  excels in Business & Human Capital Management. infuses
+                  excels in Business & Human Capital Management infuses
                   international experience into our projects. Her expertise
                   combines Italian design finesse with a global outlook.
                   Passionate about harmonizing aesthetics and functionality, she
@@ -49,17 +49,17 @@ const Team = () => {
                   and contemporary innovation.
                 </p>
                 <p className={`py-1 ${styling.paraStyling}`}><span className={styling.fw600}>Colonelz</span> is a brand built with the vision of being the differentiator in space designing, wherein
-                your desires and the purse strings have a common meeting ground.</p>
+                  your desires and the purse strings have a common meeting ground.</p>
                 <p className={styling.paraStyling}>
-                  
+
                   <span className={styling.fw600}>
-                  Happy customers- Our Strongest Advertisement.
-                  </span><br/>
+                    Happy customers- Our Strongest Advertisement.
+                  </span><br />
                   We are a brand, working towards providing people exclusive spaces. Spaces designed to
-enhance the everyday life, expressive, and in harmony with the surroundings.
+                  enhance the everyday life, expressive, and in harmony with the surroundings.
                 </p>
-                
-                
+
+
               </div>
             </div>
           </div>

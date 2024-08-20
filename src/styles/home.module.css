@@ -75,6 +75,22 @@
   padding-top: 15px;
   align-items: flex-end;
 }
+.social_facebook {
+  background-color: #000;
+  padding: 10px;
+}
+.social_instagram {
+  background-color: #666;
+  padding: 10px;
+}
+.social_youtube {
+  background-color: #000;
+  padding: 10px;
+}
+.social_linked {
+  background-color: #666;
+  padding: 10px;
+}
 
 /* */
 
@@ -238,6 +254,34 @@
   .textDiv h1 {
     font-size: 30px;
     line-height: 35px;
+  }
+  .social_media_icons {
+    position: fixed;
+    right: 0%;
+    top: 25.6%;
+    z-index: 1;
+  }
+  .socialIcons_111 {
+    text-align: center;
+    list-style: none;
+    padding-top: 10px;
+    align-items: flex-end;
+  }
+  .social_facebook {
+    background-color: #000;
+    padding: 4px;
+  }
+  .social_instagram {
+    background-color: #666;
+    padding: 4px;
+  }
+  .social_youtube {
+    background-color: #000;
+    padding: 4px;
+  }
+  .social_linked {
+    background-color: #666;
+    padding: 4px;
   }
 }
 

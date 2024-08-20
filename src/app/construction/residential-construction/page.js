@@ -8,34 +8,34 @@ import AboutFirm from '../../../components/ResidentialConstruction/AboutFirm'
 import Process from '../../../components/ResidentialConstruction/Process'
 import Services from '../../../components/ResidentialConstruction/Services'
 const page = () => {
-  
+
   return (
-<div>
-<HeroSection
+    <div>
+      <HeroSection
         title="Articles & news"
         buttonText="Get in Touch"
-        backgroundImage="../../bg-hero.png" 
+        backgroundImage="../../bg-hero.png"
       />
 
-    <div className={styles.pdCustomOverall}>
-     <AboutFirm />
+      <div className={styles.pdCustomOverall}>
+        <AboutFirm />
       </div>
 
       <div className={styles.pdCustomOverall}>
-     <Services />
+        <Services />
       </div>
 
       <div className={styles.pdCustomOverall}>
-     <Process />
+        <Process />
       </div>
 
 
       <div className={styles.pdCustomOverall}>
-     <Contact/>
-      
+        <Contact />
+
       </div>
-      
-    
+
+
     </div>
   )
 }

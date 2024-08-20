@@ -51,7 +51,7 @@ const textData = [
   },
   {
     image: "/construction.png",
-    title: "Client-Focused Project Management and Safety",
+    title: "Client-Focused Project Management ",
     description:
       "Superior Communication: Maintaining clear and powerful communique with clients, architects, and subcontractors to make certain project goals and timelines are met.Attention to Detail: Overseeing every section of the construction procedure meticulously to ensure extraordinary workmanship and adherence to specs.",
     buttonText: "View service"
@@ -104,8 +104,8 @@ const page = () => {
           imgSrc="construction2.webp"
           imgAlt="About Construction"
           tagText="Construction Services "
-          title="Exceed of Boundaries of Dimensions "
-          description="Building a new house or Crafting a new workplace, Colonelz is dedicated to making construction convenient. Our expertise lies in providing the best of all. Nowadays, where people opt to purchase flats or commercial places to save themselves from the trouble of construction. We are here for you. With our experts from the field, we try our best to make your dream space’s construction hassle-free"
+          title="Beyond Boundaries and Dimensions "
+          description="Whether it is building a new house or designing a new workplace, Colonelz is dedicated to making construction convenient. Nowadays, where people opt to purchase flats or commercial places to save themselves from the trouble of construction, we are here for you. With our experts from the field, we try our best to make your dream space’s construction hassle-free"
         />
       </div>
 
