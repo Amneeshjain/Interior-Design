@@ -38,7 +38,7 @@ const CompanyUps = () => {
         <div className="container">
           <div className={style.CompanyUpsBg}>
             <div className={style.tag}>
-              <p>Company USP<span style={{ textTransform: "lowercase" }}>'s</span></p>
+              <p>Company USP<span style={{ textTransform: "lowercase" }}>s</span></p>
               <hr />
             </div>
             <div className={style.CompanyUpsItems}>

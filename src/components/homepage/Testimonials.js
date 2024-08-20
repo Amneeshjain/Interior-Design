@@ -80,7 +80,7 @@ const Testimonials = () => {
                     <h3>&ldquo;They did an amazing work for our home&rdquo;</h3>
                     <p>
                       If you are looking for a dedicated team to
-                      look after your interior needs hire Colonelz. They'll
+                      look after your interior needs hire Colonelz. They ll
                       beautify your house with contemporary designs and top-notch quality. I have had an amazing
                       experience getting my new house designed by them and
                       it&apos;s been over a year and all the fittings are super
