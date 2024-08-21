@@ -80,7 +80,7 @@ const OurProjects = () => {
             </Link>
           )}
         </div>
-        <div className={styles.loadMore}>
+        <div className={`${styles.loadMore}`}>
           <button
             style={{ margin: "0 auto" }}
             onClick={handleToggle}

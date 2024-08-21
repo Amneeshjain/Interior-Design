@@ -39,7 +39,8 @@
 
 .loadMore {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 70px;
   text-align: center;
 }
 
@@ -99,6 +100,12 @@
   .loadMore button {
     font-size: 14px;
     padding: 15px;
+  }
+  .loadMore {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
   }
 }
 
