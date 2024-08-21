@@ -11,14 +11,14 @@ const projectData = [
   {
     id: 1,
     title: "Residential Interior",
-    image: "/image (4).png",
+    image: "/image (6).png",
     // description: "Luxurious living spaces in Vasant Kunj.",
     navigate: "/interior/residential-interior"
   },
   {
     id: 2,
     title: "Commercial Interior",
-    image: "/image (5).png",
+    image: "/image (7).png",
     // description: "Elegant dining experience at Sun Moon Restaurant.",
     navigate: "/interior/commercial-interior"
   },

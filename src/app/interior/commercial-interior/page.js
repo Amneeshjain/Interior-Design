@@ -15,19 +15,19 @@ const textData = [
     image: "/plan.png",
     title: "Innovative and Versatile Design Solutions",
     description:
-      "Creative eye and attention to detail: Creating particular and practical designs tailored for commercial areas, ensuring each element is meticulously considered."
+      " Creating practical designs tailored for commercial areas, ensuring each element is meticulously considered."
   },
   {
     image: "/interior-design.png",
-    title: "Trend Awareness and Technological Integration",
+    title: "Trend Awareness and Integration",
     description:
-      " Staying up-to-date with the modern design developments to keep industrial spaces contemporary and classy. We also integrate advanced technology solutions for progressed functionality and performance for commercial interiors."
+      " Keeping track of modern developments to keep industrial spaces contemporary and classy. We also integrate advanced technology solutions for effective performance for commercial interiors."
   },
   {
     image: "/project-management.png",
     title: "Client-Centric Project Management",
     description:
-      " We effectively communicate with clients and customers to create the designs, which can meet their expectations. We also manage all layout and implementation components carefully to get excellent outcomes."
+      " We effectively communicate with clients and customers to create the designs. Plus, we manage all layout and implementation components carefully to get excellent outcomes."
   }
 ];
 const faqData = [

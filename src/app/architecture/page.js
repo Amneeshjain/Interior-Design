@@ -39,21 +39,21 @@ const textData = [
     image: "/arch1.png",
     title: "Innovative Design and Technical Proficiency",
     description:
-      " Developing contemporary and practical designs with a keen attention to details and aesthetics. Proficiency in crafting the use of architectural software program (AutoCAD, Revit, or BIM equipment) to create particular plans, 3D models, and renderings.",
+      " Developing practical designs with a keen attention to details. We prioritise proficiency by using software programs (AutoCAD, Revit, or BIM equipment) to create particular plans and 3D models.",
     buttonText: "View service"
   },
   {
     image: "/arch2.png",
     title: "Sustainable and  Integrated Solutions",
     description:
-      "We use eco-friendly methods, along with the use of natural substances, power-green structures, and sustainable creation strategies. Integrating superior technologies, which include building structures and modern creation techniques, to enhance the capability and performance of structures.",
+      "We use ecological methods, natural substances, power-green structures, and sustainable strategies. And by integrating superior technologies, we enhance the capability and performance of the architechture.",
     buttonText: "View service"
   },
   {
     image: "/arch3.png",
     title: "Client-Centric Project Management ",
     description:
-      "Effectively conveying architectural concepts, plans, and development to customers and vendors, ensuring crisp and clean communication. We manage all elements of the layout and construction meticulously, from beginning to the very end to deliver top-tier results.",
+      "We effectively convey architectural concepts and plans to customers and vendors, ensuring concise communication. We manage all elements of the layout responsibly to deliver top-tier results to the client.",
     buttonText: "View service"
   }
 ];

@@ -38,7 +38,7 @@ const textData = [
     image: "/tools.png",
     title: "Technical Expertise and Innovation",
     description:
-      "Creative Eye and Attention to Detail: Ensuring precision and accuracy in each thing of production, from preliminary blueprints to the final touches.Sketching Ability and Computer Knowledge: Proficiency in using production software (which includes CAD, BIM tools) for planning, modeling, and coping with production tasks.",
+      " Ensuring precision and accuracy in each thing of production. We are proficient by using softwares (CAD, BIM tools) for planning and modeling the production tasks.",
     buttonText: "View service"
   },
 
@@ -46,14 +46,14 @@ const textData = [
     image: "/maintenance.png",
     title: "Sustainable Practices and Adaptability",
     description:
-      "Knowledge of Sustainable Practices: Implementing green creation strategies, the usage of sustainable substances, and making sure power-green constructing practices.Keeping Structures Versatile: Designing and constructing adaptable structures which can meet converting desires and uses, incorporating flexibility into the construction procedure.",
+      " We are increase effeciency by implementing sustainable strategies and using eco-friendly substances. We also design and construct adaptable structures which fulfill client goals and incorporate flexibility into the construction.",
     buttonText: "View service"
   },
   {
     image: "/construction.png",
     title: "Client-Focused Project Management ",
     description:
-      "Superior Communication: Maintaining clear and powerful communique with clients, architects, and subcontractors to make certain project goals and timelines are met.Attention to Detail: Overseeing every section of the construction procedure meticulously to ensure extraordinary workmanship and adherence to specs.",
+      " We maintain clear communications with clients and architects to meet project goals and timelines. Every section of the construction procedure is supervised meticulously to ensure extraordinary workmanship.",
     buttonText: "View service"
   }
 ];

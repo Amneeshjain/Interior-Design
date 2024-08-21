@@ -15,19 +15,19 @@ const textData = [
     image: "/blueprint.png",
     title: "Design Creativity and Technical Skills",
     description:
-      " We keep a check on cohesive designs and pay keen interest to each element while maintaining the aesthetics. For proficiency, we use design softwares (AutoCAD, SketchUp, or Revit) to create special plans, renderings, and visualizations."
+      " We pay keen interest to each element while maintaining the aesthetics. For proficiency, we use design softwares (AutoCAD, SketchUp, or Revit) to create special plans and visualizations."
   },
   {
     image: "/interior-design.png",
     title: "Trend Awareness and Sustainable Practices",
     description:
-      " We keep our tabs on the brand new trends and incorporate contemporary patterns and ideas into execution. We also implement sustainable layout ideas, by picking organic materials and energy-efficient solutions."
+      " We keep our tabs on brand new trends and incorporate contemporary ideas into execution. We also implement sustainable layouts by picking organic materials and energy-efficient solutions."
   },
   {
     image: "/kitchen.png",
     title: "Communication and Project Management",
     description:
-      " We thoroughly convey design layouts and thoughts to our clients, contractors, and vendors, ensuring productive communication. We make sure every aspect of the layout is achieved, from preliminary concept to very last implementation, retaining high standards and client pleasure."
+      " We thoroughly convey designs and thoughts to our clients and vendors, ensuring productive communication. We make sure every aspect of the layout is achieved with perfection, retaining high standards and client pleasure."
   }
 ];
 const faqData = [
