@@ -81,7 +81,7 @@ const HeroSection = () => {
                   technicians. Our expertise ensures the highest
                   quality, made-to-measure details tailored to your vision.
                 </p> */}
-                <div className={style.banner_btn}>
+                <div className={`${style.banner_btn}`}>
                   <Link href="/get-in-touch">
                     <Button variant="secondary">Get in touch</Button>
                   </Link>

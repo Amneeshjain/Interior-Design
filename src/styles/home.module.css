@@ -459,6 +459,10 @@
     margin: 25px 0 35.98px;
   }
 }
+.banner_btn {
+  display: flex;
+  gap: 20px;
+}
 
 @media only screen and (max-width: 768px) {
   .Lorem {
@@ -476,6 +480,10 @@
     margin-top: 30px;
     /* width: 100%; */
   }
+  .banner_btn {
+    display: block;
+    gap: 20px;
+  }
   .broService {
     /* width: 300px; */
     margin-top: 20px;
@@ -490,15 +498,11 @@
   }
 }
 
-.banner_btn {
-  gap: 24.48px;
-}
-
-@media only screen and (max-width: 352px) {
+/* @media only screen and (max-width: 352px) {
   .banner_btn {
-    gap: 10px;
+    gap: 20px;
   }
-}
+} */
 
 /* .buttonsDiv {
   display: flex;
