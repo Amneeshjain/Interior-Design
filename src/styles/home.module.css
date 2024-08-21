@@ -262,18 +262,19 @@
   .rotate {
     width: 50px;
     height: 50px;
-    animation: rotate 10s linear infinite; /* Adjust the duration as needed */
+    margin-left: 20px;
+    animation: rotate 10s linear infinite;
   }
   .centerImg {
     position: absolute;
-    top: 8%;
+    top: -60%;
     left: 55%;
     transform: translateX(-50%);
     z-index: -1;
     width: 100%;
     max-width: -moz-fit-content;
     max-width: fit-content;
-    height: auto;
+    /* height: 100%; */
     border-radius: 100%;
   }
   .heroSection {
@@ -321,8 +322,9 @@
 
 @media only screen and (max-width: 470px) {
   .textDiv h1 {
-    font-size: 27px;
+    font-size: 20px;
     line-height: 45px;
+    margin-top: 4rem;
   }
   .videoIcon {
     position: absolute;
@@ -339,9 +341,54 @@
     overflow-y: hidden;
     margin-top: -140px;
   }
+  .cirleimg img {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    top: -90%;
+    left: 50%;
+  }
 }
+.cirleimg img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 10%;
+  left: 60%;
+}
+@media only screen and (max-width: 374px) {
+  .cirleimg img {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    top: -90%;
+    left: 50%;
+  }
+  /* .starDiv {
+    margin-top: 80px;
+  }
 
-@media only screen and (max-width: 352px) {
+  .rotate {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    animation: rotate 10s linear infinite;
+  }
+  .centerImg {
+    position: absolute;
+    top: -60%;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: 100%;
+    border-radius: 100%;
+  } */
   .textDiv h1 {
     line-height: 34px;
   }
@@ -473,25 +520,25 @@
   .Lorem br {
     display: none;
   }
-  .textDiv {
+  /* .textDiv {
     text-align: center;
   }
   .banner_btm {
     margin-top: 30px;
-    /* width: 100%; */
+    
   }
   .banner_btn {
     display: block;
     gap: 20px;
   }
   .broService {
-    /* width: 300px; */
+    
     margin-top: 20px;
     display: block;
-  }
+  } */
 }
 
-@media only screen and (max-width: 352px) {
+@media only screen and (max-width: 374px) {
   .Lorem {
     line-height: 22px;
     text-align: justify;
@@ -931,10 +978,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .textDiv {
+  /* .textDiv {
     align-items: center;
     margin-top: 200px;
-  }
+  } */
   .videoFrame {
     display: none;
   }

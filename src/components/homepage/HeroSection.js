@@ -91,17 +91,17 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <Image
-              src={"/image_1.png"}
-              width={700}
-              height={700}
-              alt="centerimg"
-              className={`${style.centerImg} ${style.centerImgFade}`}
-              style={{
-                transform: `translate(-50%, 0%) scale(${scale})`,
-                opacity: opacity
-              }}
-            />
+            <div className={style.cirleimg}>
+              <img
+                src="/image_1.png"
+                alt="centerimg"
+                // className={`${style.centerImg} ${style.centerImgFade}`}
+                style={{
+                  transform: `translate(-50%, 0%) scale(${scale})`,
+                  opacity: opacity
+                }}
+              />
+            </div>
           </div>
           {/* <CircularText /> */}
         </div>
