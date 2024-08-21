@@ -10,6 +10,8 @@ import BgInteriar1 from "../../../public/portfolio-1.png";
 import BgInteriar2 from "../../../public/portfolio-2.png";
 import BgInteriar3 from "../../../public/bginterior-3.png"
 import styleA from "../../styles/aboutSection.module.css";
+// import styless from "../../styles/gallary.module.css";
+import styless from "../../styles/video.module.css";
 const Portfolio = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -24,7 +26,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className={`${styles.blackBg}`}>
+      <div className={` pb-5 ${styles.blackBg}`}>
         {/* <div className="container"> */}
         <motion.div className="progress-bar" style={{ scaleX }} />
 
@@ -145,6 +147,9 @@ const Portfolio = () => {
               </motion.div>
             </div>
           </Link>
+        </div>
+        <div className={`mb-5 ${styless.btnContainer}`}>
+          <Link href="/projects">View More</Link>
         </div>
       </div>
       <style jsx>{`

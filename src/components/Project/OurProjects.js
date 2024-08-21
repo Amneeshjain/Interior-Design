@@ -41,7 +41,7 @@ const OurProjects = () => {
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
-        <div
+        {/* <div
           style={{ justifyContent: "center", alignItems: "center" }}
           className={stylesA.sectionTitle}
         >
@@ -65,7 +65,7 @@ const OurProjects = () => {
               Projects
             </h2>
           </div>
-        </div>
+        </div> */}
 
         <div className={`row ${style.projectsCardContainer}`}>
           {projectData.map((project, index) =>

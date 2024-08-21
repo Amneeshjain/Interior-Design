@@ -135,9 +135,9 @@ const Video = () => {
             `}</style>
           </div>
         </div>
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Link href="/get-in-touch">Get in touch</Link>
-        </div>
+        </div> */}
       </div>
     </>
   );

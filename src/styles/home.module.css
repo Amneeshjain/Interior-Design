@@ -1,7 +1,8 @@
 /* Add this CSS */
 .heroSection {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+
   overflow: hidden;
 }
 
@@ -92,6 +93,9 @@
   padding: 10px;
 }
 
+.content_with {
+  width: 100%;
+}
 /* */
 
 .bannerDesignLine:nth-child(1) {
@@ -193,7 +197,7 @@
   line-height: 35px;
   position: relative;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   color: #000;
 }
 .desktopGaping {
@@ -251,6 +255,36 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .starDiv {
+    margin-top: 80px;
+  }
+
+  .rotate {
+    width: 50px;
+    height: 50px;
+    animation: rotate 10s linear infinite; /* Adjust the duration as needed */
+  }
+  .centerImg {
+    position: absolute;
+    top: 8%;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: auto;
+    border-radius: 100%;
+  }
+  .heroSection {
+    position: relative;
+    height: 40vh;
+
+    overflow: hidden;
+  }
+  .textDiv {
+    margin-left: 20px;
+  }
   .textDiv h1 {
     font-size: 30px;
     line-height: 35px;
@@ -366,6 +400,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .content_with {
+    width: auto;
+  }
   .textOutline {
     -webkit-text-stroke: 2px #000 !important;
   }
@@ -376,9 +413,9 @@
     width: 28px;
   }
 
-  .centerImgFade {
+  /* .centerImgFade {
     display: none;
-  }
+  } */
 }
 
 @media only screen and (max-width: 470px) {
@@ -432,6 +469,18 @@
   .Lorem br {
     display: none;
   }
+  .textDiv {
+    text-align: center;
+  }
+  .banner_btm {
+    margin-top: 30px;
+    /* width: 100%; */
+  }
+  .broService {
+    /* width: 300px; */
+    margin-top: 20px;
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 352px) {
@@ -443,7 +492,6 @@
 
 .banner_btn {
   gap: 24.48px;
-  display: flex;
 }
 
 @media only screen and (max-width: 352px) {
@@ -879,6 +927,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .textDiv {
+    align-items: center;
+    margin-top: 200px;
+  }
   .videoFrame {
     display: none;
   }

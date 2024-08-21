@@ -46,23 +46,23 @@ const Career = () => {
         <div className="container">
           <div className="section-tittle" data-aos="zoom-out-up">
             <div className="d-flex align-items-center justify-content-center">
-              <div className={styles.lineLeft}></div>
-              <p
+              {/* <div className={styles.lineLeft}></div> */}
+              {/* <p
                 className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}
               >
                 Get a Job
-              </p>
-              <div className={styles.lineRight}></div>
+              </p> */}
+              {/* <div className={styles.lineRight}></div> */}
             </div>
 
-            <h1 className={`text-center col-lg-6 offset-lg-3`}>
+            {/* <h1 className={`text-center col-lg-6 offset-lg-3`}>
               Become a Part of our <br />
               organization
-            </h1>
+            </h1> */}
           </div>
 
           <div className={style.registerFormContainer}>
-            <h3 className={style.tittle}>register</h3>
+            <h3 className={style.tittle}>Apply for Job</h3>
 
             <form>
               <div className={`row row-gap-4 ${style.cusRow}`}>
@@ -93,66 +93,66 @@ const Career = () => {
 
                   <div className={style.buttonflex}>
 
-                  <div className={style.file}>
-                    <input
-                      type="file"
-                      id="file-upload"
-                      onChange={handleCvFileChange}
-                      multiple
-                      required
-                    />
-                    <label className={style.withdd} htmlFor="file-upload">
-                      Upload Your CV
-                    </label>
-                  </div>
-                  <div
-                    className={`d-flex align-items-center gap-2 mt-3`}
-                  >
-                    <div id="file-upload-filename">{cvFileName}</div>
-                    <div>
-                      {cvFileName && (
-                        <button
-                          style={{ height: "40px" }}
-                          className="btn btn-danger"
-                          onClick={handleRemoveCvFile}
-                          type="button"
-                        >
-                          &times;
-                        </button>
-                      )}
+                    <div className={style.file}>
+                      <input
+                        type="file"
+                        id="file-upload"
+                        onChange={handleCvFileChange}
+                        multiple
+                        required
+                      />
+                      <label className={style.withdd} htmlFor="file-upload">
+                        Upload Your CV
+                      </label>
                     </div>
-                  </div>
-                  
+                    <div
+                      className={`d-flex align-items-center gap-2 mt-3`}
+                    >
+                      <div id="file-upload-filename">{cvFileName}</div>
+                      <div>
+                        {cvFileName && (
+                          <button
+                            style={{ height: "40px" }}
+                            className="btn btn-danger"
+                            onClick={handleRemoveCvFile}
+                            type="button"
+                          >
+                            &times;
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
                   </div>
                   {/* Document Upload */}
                   <div className={style.buttonflex}>
-                  <div className={` ${style.file}`}>
-                    <input
-                      type="file"
-                      id="file-document"
-                      onChange={handleDocumentFileChange}
-                      multiple
-                      required
-                    />
-                    <label className={style.withdd} htmlFor="file-document">
-                      Upload Your Document
-                    </label>
-                  </div>
-                  <div className={`d-flex align-items-center gap-2 mt-3`} >
-                    <div id="file-upload-document" data-bs-toggle="tooltip" title="file" data-bs-placement="top" data-bs-title="file">{documentFileName}</div>
-                    <div>
-                      {documentFileName && (
-                        <button
-                          style={{ height: "40px" }}
-                          className="btn btn-danger"
-                          onClick={handleRemoveDocumentFile}
-                          type="button"
-                        >
-                          &times;
-                        </button>
-                      )}
+                    <div className={` ${style.file}`}>
+                      <input
+                        type="file"
+                        id="file-document"
+                        onChange={handleDocumentFileChange}
+                        multiple
+                        required
+                      />
+                      <label className={style.withdd} htmlFor="file-document">
+                        Upload Your Document
+                      </label>
                     </div>
-                  </div>
+                    <div className={`d-flex align-items-center gap-2 mt-3`} >
+                      <div id="file-upload-document" data-bs-toggle="tooltip" title="file" data-bs-placement="top" data-bs-title="file">{documentFileName}</div>
+                      <div>
+                        {documentFileName && (
+                          <button
+                            style={{ height: "40px" }}
+                            className="btn btn-danger"
+                            onClick={handleRemoveDocumentFile}
+                            type="button"
+                          >
+                            &times;
+                          </button>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

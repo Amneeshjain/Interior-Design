@@ -45,7 +45,7 @@ const HeroSection = () => {
         <div className={style.bannerDesignLine} />
         <div className={`container`}>
           <div className={style.banner_items}>
-            <div style={{ width: "100%" }} className={`content`}>
+            <div className={style.content_with}>
               <div
                 className={style.starDiv}
                 data-aos="fade-up"
@@ -61,7 +61,7 @@ const HeroSection = () => {
               </div>
               <div className={style.textDiv}>
                 <h1 data-aos="fade-up" data-aos-duration="1000">
-                  Transforming Spaces{" "}
+                  Transforming Spaces
                   {/* <span className={style.textOutline}> Spaces</span> */}
                   <br />
                   <div className={style.bannerIcon}>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                     Igniting Emotions
                   </div>
                 </h1>
-                <p
+                {/* <p
                   className={style.Lorem}
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -80,12 +80,12 @@ const HeroSection = () => {
                   contractors, housing skilled craftsmen and innovative
                   technicians. Our expertise ensures the highest
                   quality, made-to-measure details tailored to your vision.
-                </p>
+                </p> */}
                 <div className={style.banner_btn}>
                   <Link href="/get-in-touch">
                     <Button variant="secondary">Get in touch</Button>
                   </Link>
-                  <Link href="#services">
+                  <Link href="#services" className={style.broService}>
                     <Button>Browse services</Button>
                   </Link>
                 </div>
@@ -111,3 +111,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
