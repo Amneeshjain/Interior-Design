@@ -12,24 +12,24 @@ import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
   {
-    title: "PRELIMINARY PLANS",
+    title: "Preliminary Plans/ Programming",
     description:
-      "The process of building architecture designs is adeptly put together for easy bidding of the construction documents. Therefore, setting up a strong foundation for the execution phase.",
+      "During this phase, we grasp and understand the goals of the client, ask questions related to their ideas, and analyse the area of transformation. ",
   },
   {
-    title: "SCHEMATIC DESIGNS",
+    title: "Schematic Design",
     description:
-      "Be it house building plans or commercial, the specifications of building plans are made according to your requirements. Your budget is diligently balanced for an effective interior architecture.",
+      "The information gathered during the preliminary plan is put into a schematic layout in this phase. Design concepts, products, and materials are also discussed with the client before the actual execution",
   },
   {
-    title: "OVERVIEWS",
+    title: "Design Development",
     description:
-      "We arrange overview sessions where schematic designs and preliminary plans are systematically organized. Consequently, you get a clear definition of the scope of the project.",
+      "During this phase, one plan is determined to be followed, however, all the details remain to be worked out. It is when more refining solutions are developed and shared with the client. ",
   },
   {
-    title: "CLEAR BLUEPRINTS",
+    title: "Contract Documentation",
     description:
-      "Our experts offer comprehensive construction documentation, clearly outlining the roles of all included parties to ensure seamless coordination. This helps in effective project management, fostering smooth and efficient progress.",
+      " As we approach contract documentation, the majority of the ideas are finalised and options are explored. Also, 2D and 3D images and necessary information are constructed before the practical execution of the designs. ",
   },
 ];
 
@@ -88,7 +88,7 @@ const page = () => {
       {/* <cardSection /> */}
       <Service />
       <WhyChooseUs
-        title="Comprehensive Architecture Planning"
+        title="Comprehensive Interior Design Planning"
         tag="EXPERTISE"
         items={items}
       />

@@ -11,18 +11,18 @@ const projectData = [
   {
     id: 1,
     title: "Residential Interior",
-    image: "/residentialImage.jpg",
+    image: "/image (4).png",
     // description: "Luxurious living spaces in Vasant Kunj.",
-    navigate:"/interior/residential-interior"
+    navigate: "/interior/residential-interior"
   },
   {
     id: 2,
     title: "Commercial Interior",
-    image: "/residentialimage2.jpg",
+    image: "/image (5).png",
     // description: "Elegant dining experience at Sun Moon Restaurant.",
-    navigate:"/interior/commercial-interior"
+    navigate: "/interior/commercial-interior"
   },
-  
+
 ];
 const Services = () => {
   const [showMore, setShowMore] = useState(false);
@@ -42,8 +42,8 @@ const Services = () => {
       <h1 className={`text-center col-lg-6 offset-lg-3 ${style.paad}`}>
         Tailored to fit your space and style
       </h1>
-      <div className={`container` }>
-      <div className={`row `}>
+      <div className={`container`}>
+        <div className={`row `}>
           {projectData.map((project2, index) =>
             <Link
               href={project2.navigate}
@@ -56,7 +56,7 @@ const Services = () => {
             </Link>
           )}
         </div>
-      
+
       </div>
     </>
   );

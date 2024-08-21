@@ -93,8 +93,8 @@ const HeroSection = () => {
             </div>
             <Image
               src={"/image_1.png"}
-              width={600}
-              height={600}
+              width={700}
+              height={700}
               alt="centerimg"
               className={`${style.centerImg} ${style.centerImgFade}`}
               style={{

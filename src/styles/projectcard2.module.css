@@ -20,6 +20,27 @@
 .fs161 {
   font-size: 12px;
 }
+/* projectcard2.module.css */
+
+.card1 {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card1:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+/* projectcard2.module.css */
+
+.cardImageContainer1 {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardImageContainer1:hover {
+  transform: scale(1.1); /* Slightly enlarges the image */
+}
 
 /* .card1:after {
   content: "";
