@@ -24,19 +24,19 @@ const GetInTouch = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     const formData = new FormData(event.target);
-    
+
     try {
       const response = await fetch('https://mediadynox.in/interior-design-test/email.php', {
         method: 'POST',
         body: formData,
       });
-      
+
       if (!response.ok) {
         throw new Error('Network response was not ok' + response.statusText);
       }
-      
+
       const result = await response.json();
       alert(result.message);
       window.location.reload();
@@ -45,7 +45,7 @@ const GetInTouch = () => {
       alert('An error occurred: ' + error.message);
     }
   };
-  
+
 
   return (
     <>
@@ -71,7 +71,7 @@ const GetInTouch = () => {
           <div className={style.getInTouchFormContainer}>
             <form onSubmit={handleSubmit}>
               <div className={`row row-gap-4 ${style.cusRow}`}>
-               
+
                 <div className="col-lg-6 col-sm-12">
                   <input type="text" name="first_name" placeholder="First Name" required />
                 </div>
@@ -90,9 +90,10 @@ const GetInTouch = () => {
                 <div className="col-lg-12">
                   <select name="category" required>
                     <option value="" disabled selected>Category</option>
-                    <option value="Category 1">Category 1</option>
-                    <option value="Category 2">Category 2</option>
-                    <option value="Category 3">Category 3</option>
+                    <option value="Category 1">Residential interior</option>
+                    <option value="Category 2">Commercial Interior</option>
+                    <option value="Category 3">Architecture</option>
+                    <option value="Category 3">Construction</option>
                   </select>
                 </div>
                 <div className="d-flex align-items-center column-gap-2 col-lg-6 col-12">
@@ -116,8 +117,8 @@ const GetInTouch = () => {
             </form>
           </div>
         </div>
-        <Contact/>
-       
+        <Contact />
+
       </div>
     </>
   );

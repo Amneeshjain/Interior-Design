@@ -1,0 +1,33 @@
+.clientbg {
+  width: 100%;
+  height: 50vh;
+  background-image: url("/projectli.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.client_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.client_group {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.letter {
+  color: red; /* Adjust the color according to your design */
+  font-size: 20px;
+  /* margin-bottom: 10px; */
+}
+
+.names {
+  list-style: none;
+  padding: 0;
+}
+
+.name {
+  font-size: 16px;
+  line-height: 1.6;
+}
