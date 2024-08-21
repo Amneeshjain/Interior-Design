@@ -37,7 +37,7 @@ const clients = [
             "MKM Group",
             "Mrigesh Bhandari"]
     },
-    { letter: "B", names: ["M2K Group"] },
+    { letter: "B", names: ["Bennet Coleman Group"] },
     {
         letter: "C", names: [
             "Caara Hospitality",
@@ -48,7 +48,15 @@ const clients = [
             "Copper Chimney"
         ]
     },
-    { letter: "N", names: ["M2K Group"] },
+    {
+        letter: "N",
+        names: [
+            "Namrata Joshipura",
+            "Nandita Basu",
+            "National Crafts Museum, New Delhi",
+            "Novotel Hotels"
+        ]
+    },
     {
         letter: "D", names: [
             "Devanya",
@@ -59,18 +67,114 @@ const clients = [
             "DLF"
         ]
     },
-    { letter: "O", names: ["M2K Group"] },
-    { letter: "E", names: ["M2K Group"] },
-    { letter: "P", names: ["M2K Group"] },
-    { letter: "F", names: ["M2K Group"] },
-    { letter: "G", names: ["M2K Group"] },
-    { letter: "R", names: ["M2K Group"] },
-    { letter: "H", names: ["M2K Group"] },
-    { letter: "S", names: ["M2K Group"] },
-    { letter: "I", names: ["M2K Group"] },
-    { letter: "T", names: ["M2K Group"] },
-    { letter: "J", names: ["M2K Group"] },
-    { letter: "V", names: ["M2K Group"] },
+    { letter: "O", names: ["Ogaan", "Organic India"] },
+    {
+        letter: "E", names: ["Eicher Motors",
+            "Ekaya Banaras",
+            "Everest Industries"]
+    },
+    {
+        letter: "P",
+        names: [
+            "Parallels IP Holdings GmbH",
+            "Pidilite Group",
+            "Piramal Realty",
+            "Postcard Hotels",
+            "Priya Paul",
+            "Puri Constructions",
+            "PVR Cinemas"
+        ]
+    },
+    {
+        letter: "F", names: ["Fashion Design Council of India",
+            "Fastrack",
+            "Firefox",
+            "FTV",
+            "Future Group"]
+    },
+    {
+        letter: "G",
+        names: [
+            "Gaurav Gupta",
+            "Godrej Properties Ltd",
+            "Good Earth",
+            "Government of India",
+            "Government of Odisha",
+            "Government of Punjab",
+            "Goyal & Co"
+        ]
+    }
+    ,
+    {
+        letter: "R",
+        names: [
+            "RAAS Hotels",
+            "Radisson Hotels",
+            "Rajesh Pratap Singh",
+            "Reliance Industries",
+            "Rishad Currimjee",
+            "Ritu Kumar",
+            "Rohit Bal",
+            "Rohit Gandhi-Rahul Khanna",
+            "Roseate",
+            "Royal Enfield"
+        ]
+    },
+    {
+        letter: "H", names: ["Hard Rock Café",
+            "Hero MotoCorp Ltd",
+            "Hilton Hotels",
+            "Hindustan Unilever",
+            "Hyatt Corporation"]
+    },
+    {
+        letter: "S",
+        names: [
+            "Sagar Ratna",
+            "Salaam Balak Trust",
+            "Shapoorji Pallonji & Co",
+            "Silverglades Holdings",
+            "Subodh Gupta & Bharti Kher",
+            "Sunita Shekhawat"
+        ]
+    }
+    ,
+    {
+        letter: "I",
+        names: [
+            "Indian Institute of Art and Design",
+            "INTACH",
+            "Isprava Vesta"
+        ]
+    }
+    ,
+    {
+        letter: "T",
+        names: [
+            "Taj Hotels",
+            "Tanishq",
+            "Tara & Sahil Vachani",
+            "Tata Sons",
+            "Tata Steel",
+            "The Golkonda Hotel",
+            "The Indian Hotels Company Limited",
+            "The Lakshmi Mills Company Limited",
+            "The Oberoi Group",
+            "The Park Hotels",
+            "Tribe by Amrapali",
+            "Trilegal"
+        ]
+    }
+    ,
+    {
+        letter: "J",
+        names: [
+            "Jamie Oliver Restaurants",
+            "JK Tyres"
+        ]
+    }
+    ,
+    { letter: "V", names: ["Volvo Eicher"] },
 ];
 
 
@@ -81,34 +185,32 @@ const Clients = () => {
                 <div className='row'>
                     <div className='col-lg-12'>
                         <p className='fs-4 mt-5 text-danger'>How we Work</p>
-
                     </div>
                     {contentData.map((item, index) => (
                         <div className='col-lg-6' key={index}>
-                            <h5>{item.title}</h5>
+                            <p className='text-danger fs-4'>{item.title}</p>
                             <p>{item.text}</p>
                         </div>
                     ))}
-
-                    <div className='col-lg-12'>
-                        <h4 className='fs-4 mt-3 text-danger'>Clients</h4>
+                    <div className='col-lg-12 '>
+                        <p className='fs-4 mt-3 text-danger'>Clients</p>
                     </div>
-                    <div className={`${styles.client_list} `}>
-                        {clients.map((clientGroup, index) => (
-                            <div key={index} className="col-lg-6">
-                                <h4 className="letter">{clientGroup.letter}</h4>
-                                <ul className={styles.names}>
-                                    {clientGroup.names.map((name, idx) => (
-                                        <li key={idx} className={styles.name}>{name}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                    <div className='col-lg-12 pb-5'>
+                        <div className={styles.client_list}>
+                            {clients.map((clientGroup, index) => (
+                                <div key={index} className={styles.client_column}>
+                                    <h4 className={styles.letter}>{clientGroup.letter}</h4>
+                                    <ul className={styles.names}>
+                                        {clientGroup.names.map((name, idx) => (
+                                            <li key={idx} className={styles.name}>{name}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     )
 }

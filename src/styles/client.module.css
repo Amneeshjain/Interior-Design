@@ -6,20 +6,19 @@
   background-repeat: no-repeat;
 }
 .client_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  column-count: 2;
+  column-gap: 40px;
 }
 
-.client_group {
-  flex: 1;
-  margin: 0 20px;
+.client_column {
+  break-inside: avoid;
+  margin-bottom: 20px;
 }
 
 .letter {
-  color: red; /* Adjust the color according to your design */
-  font-size: 20px;
-  /* margin-bottom: 10px; */
+  color: #e60000;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .names {
@@ -28,6 +27,7 @@
 }
 
 .name {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
 }
