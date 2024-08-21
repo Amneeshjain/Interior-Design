@@ -62,7 +62,7 @@ const Career = () => {
           </div>
 
           <div className={style.registerFormContainer}>
-            <h3 className={style.tittle}>Apply for Job</h3>
+            <h3 className={style.tittle}>Work With us</h3>
 
             <form>
               <div className={`row row-gap-4 ${style.cusRow}`}>
