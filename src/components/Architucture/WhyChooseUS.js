@@ -19,23 +19,28 @@ const WhyChooseUs = ({ title = "", tag = "", items = [] }) => {
             <hr />
             {tag}
           </div>
-          <h2 className="col-lg-7">
-            {title.split("\n").map((line, index) =>
-              <span key={index}>
-                {line}
-                <br />
-              </span>
-            )}
-          </h2>
+          <div className="col-lg-7 ofset-lg-5 ">
+            <h2>
+              {title.split("\n").map((line, index) =>
+                <span key={index}>
+                  {line}
+                  <br />
+                </span>
+              )}
+            </h2>
+          </div>
         </div>
         <div className={style.chooseItemsWrapper}>
           <div className={style.whyChooseItems}>
             {items.map((item, index) =>
               <div className={style.choosePoints} key={index}>
                 <div className={style.items} data-aos="fade-up">
-                  <h4>
+
+                  <h4 className={style.fonsizess}>
                     {item.title}
                   </h4>
+
+
                   <p>
                     {item.description}
                   </p>

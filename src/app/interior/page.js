@@ -12,7 +12,7 @@ import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
 const items = [
   {
-    title: "Preliminary Plans/ Programming",
+    title: "Preliminary Plans",
     description:
       "During this phase, we grasp and understand the goals of the client, ask questions related to their ideas, and analyse the area of transformation. ",
   },

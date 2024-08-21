@@ -352,20 +352,20 @@
 }
 .cirleimg img {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 550px;
+  height: 550px;
   border-radius: 50%;
-  top: 10%;
-  left: 60%;
+  top: -90%;
+  left: 50%;
 }
 @media only screen and (max-width: 374px) {
   .cirleimg img {
     position: absolute;
-    width: 550px;
-    height: 550px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    top: -90%;
-    left: 50%;
+    top: 10%;
+    left: 60%;
   }
   /* .starDiv {
     margin-top: 80px;
@@ -466,6 +466,14 @@
 }
 
 @media only screen and (max-width: 470px) {
+  .cirleimg img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10%;
+    left: 60%;
+  }
   .bannerIcon img {
     width: 20px;
   }
@@ -539,6 +547,14 @@
 }
 
 @media only screen and (max-width: 374px) {
+  .cirleimg img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10%;
+    left: 60%;
+  }
   .Lorem {
     line-height: 22px;
     text-align: justify;
