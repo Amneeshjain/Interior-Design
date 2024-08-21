@@ -164,8 +164,8 @@ const Navbar = () => {
           Projects
         </Link>
 
-        <Link onClick={toggleMenu} href="/career">
-          Career
+        <Link onClick={toggleMenu} href="/clients">
+          Client
         </Link>
         <Link onClick={toggleMenu} href="/blogs">
           Blogs
