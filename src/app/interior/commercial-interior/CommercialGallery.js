@@ -8,28 +8,39 @@ const CommercialGallery = () => {
     const images = [
         {
             src:
-                "/AboutServiceImg.png",
-            thumb:
-                "/AboutServiceImg.png"
-        },
-
-        {
-            src:
                 "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
             thumb:
                 "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
+                "/1.webp",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg"
+                "/1.webp"
+        },
+
+        {
+            src:
+                "/2.webp",
+            thumb:
+                "/2.webp"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/4.webp",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+                "/4.webp"
+        },
+
+        {
+            src:
+                "/32.webp",
+            thumb:
+                "/32.webp"
+        },
+        {
+            src: "/image 25 (2).png",
+            thumb: "/image 25 (2).png"
         },
         {
             src:
@@ -44,16 +55,8 @@ const CommercialGallery = () => {
             thumb:
                 "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
         },
-        {
-            src: "/image 25 (2).png",
-            thumb: "/image 25 (2).png"
-        },
-        {
-            src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-            thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
-        }
+
+
 
     ];
 

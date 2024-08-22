@@ -6,52 +6,53 @@ const ResidencialGallery = () => {
     const images = [
         {
             src:
-                "/aboutFirm.png",
+                "/rcc1.webp",
             thumb:
-                "/aboutFirm.png"
-        },
-
-        {
-            src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-            thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+                "/rcc1.webp"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
+                "/Untitled-design-28-1.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg"
+                "/Untitled-design-28-1.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/photo-1586023492125-27b2c045efd7.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+                "/photo-1586023492125-27b2c045efd7.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
+                "/res-3.webp",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
-        },
-
-        {
-            src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
-            thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
-        },
-        {
-            src: "/image 25 (2).png",
-            thumb: "/image 25 (2).png"
+                "/res-3.webp"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+                "/furniture-noi-that.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+                "/furniture-noi-that.jpg"
         }
+        ,
+        {
+            src:
+                "/rcc.webp",
+            thumb:
+                "/rcc.webp"
+        },
+
+
+        {
+            src:
+                "/pexels-fotoaibe-1571460.jpg",
+            thumb:
+                "/pexels-fotoaibe-1571460.jpg"
+        },
+        {
+            src: "/images.jpg",
+            thumb: "/images.jpg"
+        },
 
     ];
 

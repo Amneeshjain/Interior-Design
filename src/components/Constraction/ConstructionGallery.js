@@ -10,52 +10,55 @@ const ConstructionGallery = () => {
     const images = [
         {
             src:
-                "/7 final.png",
+                "/rcc.webp",
             thumb:
-                "/7 final.png"
+                "/rcc.webp"
+        },
+        {
+            src:
+                "/32.webp",
+            thumb:
+                "/32.webp"
         },
 
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+                "/ccb.webp",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+                "/ccb.webp"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
+                "/colonelz-office.webp",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg"
+                "/colonelz-office.webp"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-415.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
-        },
-        {
-            src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
-            thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
+                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-415.jpg"
         },
 
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/construction-company.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+                "/construction-company.jpg"
         },
-        {
-            src: "/image 25 (2).png",
-            thumb: "/image 25 (2).png"
-        },
+
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+                "/construction-site-building-building-construction-working.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
-        }
+                "/construction-site-building-building-construction-working.jpg"
+        },
+
+        {
+            src: "/desktop-wallpaper-construction-work-building-construction-work-building-structure.jpg",
+            thumb: "/desktop-wallpaper-construction-work-building-construction-work-building-structure.jpg"
+        },
+
 
     ];
 
