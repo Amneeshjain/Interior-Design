@@ -36,7 +36,6 @@ const HeroSection = () => {
 
   return (
     <>
-
       <div className={style.bg}>
         <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />

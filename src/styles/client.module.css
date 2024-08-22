@@ -46,16 +46,16 @@
   margin-bottom: 20px;
 }
 .heading {
-  color: #e60000;
+  color: #000;
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 4rem;
 }
 
 .letter {
   font-size: 25px;
-  font-weight: 300;
-  color: #f44336;
+  font-weight: 400;
+  color: #000;
 
   margin-bottom: 10px;
 }
@@ -67,20 +67,20 @@
 
 .name {
   font-size: 19px;
-  color: #555555;
+  color: #666;
   line-height: 1.6;
   font-weight: 300;
 }
 .custom_title {
   font-size: 25px;
-  font-weight: 300;
-  color: #f44336;
+  font-weight: 400;
+  color: #000;
   letter-spacing: 1px;
 }
 
 .custom_text {
   font-size: 19px;
-  color: #555555;
+  color: #666;
   line-height: 1.6;
   font-weight: 300;
 }
