@@ -10,7 +10,8 @@ import AboutFirm from "../../components/About/AboutFirm";
 import Faq from "../../components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
-import ImageGallery from "@/components/homepage/ImageGallery";
+// import ImageGallery from "@/components/homepage/ImageGallery";
+import ConstructionGallery from "../../components/Constraction/ConstructionGallery"
 const items = [
   {
     title: "Turnkey ",
@@ -123,7 +124,8 @@ const page = () => {
 
       {/* <Process bg="#FAFAFA" /> */}
       <TimelineCard />
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <ConstructionGallery />
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore

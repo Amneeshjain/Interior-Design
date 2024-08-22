@@ -9,7 +9,8 @@ import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../../components/aboutMore/AboutMore";
 import GetInTouch from "../../../components/homepage/GetInTouch";
 import TimelineCard from "@/components/About/TimelineCard";
-import ImageGallery from "@/components/homepage/ImageGallery";
+// import ImageGallery from "@/components/homepage/ImageGallery";
+import ResidencialGallery from "./ResidencialGallery"
 const textData = [
   {
     image: "/blueprint.png",
@@ -77,7 +78,8 @@ const page = () => {
 
       <TimelineCard />
       {/* <Process /> */}
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <ResidencialGallery />
 
       <Faq faqData={faqData} />
       <GetInTouch />

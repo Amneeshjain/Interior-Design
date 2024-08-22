@@ -9,7 +9,8 @@ import TimelineCard from "@/components/About/TimelineCard";
 import Faq from "@/components/Faq/Faq";
 import AboutFirm from "../../../components/About/AboutFirm";
 import GetInTouch from "../../../components/homepage/GetInTouch";
-import ImageGallery from "@/components/homepage/ImageGallery";
+// import ImageGallery from "@/components/homepage/ImageGallery";
+import CommercialGallery from "./CommercialGallery";
 const textData = [
   {
     image: "/plan.png",
@@ -89,7 +90,8 @@ const page = () => {
 
       {/* <Process /> */}
       <TimelineCard />
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <CommercialGallery />
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore
