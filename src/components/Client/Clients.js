@@ -22,102 +22,109 @@ const contentData = [
     }
 ];
 const clients = [
-    { letter: "A", names: ["Abhishek Gupta", "Aditya Birla Group", "Aga Khan Foundation", "Al Hamra Resort Oman", "Aliel Jewellery DFC Dubai", "Alliance Francaise de Delhi", "Aloft Hotels", "Ambuja Neotia Group", "Anjum Singh", "Ankit Chona", "Antara Dehradun", "Asahi Glass", "Ashish Dhawan", "Ashoka University", "Asian Paints", "Ather Energy", "Atul & Arti Kirloskar"] },
-    { letter: "K", names: ["Kama Ayurveda", "Kanika & Aditya Kapoor", "Karan Paul", "Khaaja Chowk", "Khoj Studios, Khirkee", "Kohler"] },
-    { letter: "L", names: ["Leisure Hotels", "Lemon Tree Hotels", "Levi’s Strauss & Co", "Life Yoga", "Lodha Developers"] },
     {
-        letter: "M", names: ["M2K Group",
-            "Madura Garments",
-            "Manav Gangwani",
-            "Manyata Developers",
-            "Masti Lounge",
-            "Max Estates",
-            "McNROE Consumer Products",
-            "Mehrangarh Museum Trust",
-            "MKM Group",
-            "Mrigesh Bhandari"]
+        letter: "A", names: [
+            "Abhinaya Verma",
+            "Ankit Bhardwaj",
+            "Ashish Gupta",
+            "Ashish Mishra",
+            "Ashwini",
+            "Ashwini Gupta"
+        ]
     },
-    { letter: "B", names: ["Bennet Coleman Group"] },
+    {
+        letter: "K", names: [
+            "Kalyan Velpuri & Jincy Velpuri",
+            "Kishan Kumar",
+            "Krishnan"
+        ]
+    },
+    {
+        letter: "L", names: [
+            "Lakshya Khanna & Ratika Wadhwa",
+            "Lt Col Neeraj Srivastava"
+        ]
+    },
+    {
+        letter: "M", names: [
+            "M/S Rolta",
+            "Maj Ankur & Mrs Vibha Mehra",
+            "Maj Gen Harpal Singh"
+        ]
+    },
+    {
+        letter: "B", names: [
+            "Beverly Park",
+            "Blann Homes",
+            "Brig MS Dhillon",
+            "Brig Nandwani",
+            "Brig Niranjan Kumar"
+        ]
+    },
     {
         letter: "C", names: [
-            "Caara Hospitality",
-            "Café Lota, Crafts Museum",
-            "Carma",
-            "Central Park",
-            "City Palace Jaipur",
-            "Copper Chimney"
+            "Capt (IN) Vijay Kishore",
+            "Capt (IN) Vijay Kishore",
+            "Charul and Chaitanya",
+            "Col JS Pandher",
+            "Col Sanjeev Govila",
+            "Col Subodh Garg",
+            "Col Sudhanshu Sharma",
+            "Col Vineet Prabhat",
+            "Col. Ashok Malik",
+            "Col. Biraj Sahay",
+            "Col. Sanjeev Govila",
+            "Col. Sankay Grover",
+            "Col. Tikaji",
+            "CS Direkt"
         ]
     },
     {
         letter: "N",
         names: [
-            "Namrata Joshipura",
-            "Nandita Basu",
-            "National Crafts Museum, New Delhi",
-            "Novotel Hotels"
+            "Naveen Kanwar",
+            "Neena Lekhi",
+            "Nutan Prakash"
         ]
     },
     {
         letter: "D", names: [
-            "Devanya",
-            "Devi Art Foundation",
-            "Dhun, Jaipur",
-            "Diva by Ritu Dalmia",
-            "Dixon Technologies",
-            "DLF"
+            "Darshan",
+            "Darvesh Panchal",
+            "Deepak Nagpal",
+            "Divya Lal",
+            "Dr Nitish Gupta"
         ]
     },
-    { letter: "O", names: ["Ogaan", "Organic India"] },
-    {
-        letter: "E", names: ["Eicher Motors",
-            "Ekaya Banaras",
-            "Everest Industries"]
-    },
+    // { letter: "O", names: ["Ogaan", "Organic India"] },
+    // {
+    //     letter: "E", names: ["Eicher Motors",
+    //         "Ekaya Banaras",
+    //         "Everest Industries"]
+    // },
     {
         letter: "P",
         names: [
-            "Parallels IP Holdings GmbH",
-            "Pidilite Group",
-            "Piramal Realty",
-            "Postcard Hotels",
-            "Priya Paul",
-            "Puri Constructions",
-            "PVR Cinemas"
+            "Priya Aggarwal & Anurag Aggarwal",
+            "Priya Aggarwal & Anurag Aggarwal",
+            "Priyam Tiwari"
         ]
     },
     {
         letter: "F", names: ["Fashion Design Council of India",
-            "Fastrack",
-            "Firefox",
-            "FTV",
-            "Future Group"]
+            "Fiserve"]
     },
     {
         letter: "G",
         names: [
-            "Gaurav Gupta",
-            "Godrej Properties Ltd",
-            "Good Earth",
-            "Government of India",
-            "Government of Odisha",
-            "Government of Punjab",
-            "Goyal & Co"
+            "Gp Capt KC Sharma"
         ]
     }
     ,
     {
         letter: "R",
         names: [
-            "RAAS Hotels",
-            "Radisson Hotels",
-            "Rajesh Pratap Singh",
-            "Reliance Industries",
-            "Rishad Currimjee",
-            "Ritu Kumar",
-            "Rohit Bal",
-            "Rohit Gandhi-Rahul Khanna",
-            "Roseate",
-            "Royal Enfield"
+            "Rishabh Jain "
         ]
     },
     {
@@ -130,51 +137,48 @@ const clients = [
     {
         letter: "S",
         names: [
-            "Sagar Ratna",
-            "Salaam Balak Trust",
-            "Shapoorji Pallonji & Co",
-            "Silverglades Holdings",
-            "Subodh Gupta & Bharti Kher",
-            "Sunita Shekhawat"
+            "Sanjeev Sahay",
+            "Sanjeev Sahay",
+            "Shakti Singh Rathore",
+            "Shakti Singh Rathore",
+            "Shantanu Prakash",
+            "Shantanu Prakash",
+            "Shantanu Prakash",
+            "Sneha Sharma",
+            "Sneha Singh Nikhil Singh",
+            "Soumya Kanti",
+            "Sujjan Vihar",
+            "Suneja",
+            "Sushil Singh"
         ]
     }
     ,
     {
         letter: "I",
         names: [
-            "Indian Institute of Art and Design",
-            "INTACH",
-            "Isprava Vesta"
+            "Indian Army",
+            "Indian Army",
+
         ]
     }
     ,
     {
         letter: "T",
         names: [
-            "Taj Hotels",
-            "Tanishq",
-            "Tara & Sahil Vachani",
-            "Tata Sons",
-            "Tata Steel",
-            "The Golkonda Hotel",
-            "The Indian Hotels Company Limited",
-            "The Lakshmi Mills Company Limited",
-            "The Oberoi Group",
-            "The Park Hotels",
-            "Tribe by Amrapali",
-            "Trilegal"
+            "Tanmay Mishra"
         ]
     }
     ,
     {
         letter: "J",
         names: [
-            "Jamie Oliver Restaurants",
-            "JK Tyres"
+            "Jitendra",
+            "Just Dial"
         ]
     }
     ,
-    { letter: "V", names: ["Volvo Eicher"] },
+    { letter: "V", names: ["Vineet Gautam", "Vishal Ohri"] },
+    { letter: "Z", names: ["Zia ul Rab",] }
 ];
 
 
