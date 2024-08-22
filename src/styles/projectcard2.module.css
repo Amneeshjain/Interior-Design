@@ -23,7 +23,7 @@
 /* projectcard2.module.css */
 
 .card1 {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .card1:hover {
@@ -38,8 +38,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.cardImageContainer1:hover {
-  transform: scale(1.1); /* Slightly enlarges the image */
+.card1:hover .cardImageContainer1 Image {
+  transform: scale(1.2); /* Slightly enlarges the image */
 }
 
 /* .card1:after {

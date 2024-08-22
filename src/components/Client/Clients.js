@@ -5,20 +5,20 @@ import styles from "../../styles/client.module.css"
 
 const contentData = [
     {
-        title: "An Attitude of Gratitude",
-        text: "No matter what the scale or type of work – it is a privilege for us to work on a project. Giving anything short of our best selves to our work is untrue to ourselves."
+        title: "Transforming space for designing",
+        text: "Our experts work on internal and external room decorations by making adequate space to make them more creative with flawless outcomes. The utmost professionalism of the team grasps ideal choices to recommend space transformation with creative construction methods. "
     },
     {
-        title: "An Attitude of Gratitude",
-        text: "Above all else, we believe in passion as a governing principle that supersedes all logic and bring it as an overriding attitude to all we do."
+        title: "Responsibility in relationships ",
+        text: "Colonelz is always looking for hassle-free solutions for interior design, construction, and room decoration to make a strong and trustworthy relationship with stakeholders and customers. "
     },
     {
-        title: "An Attitude of Gratitude",
-        text: "We deeply respect our clients and their businesses, our collaborators, our vendors, our contractors, our teammates, our society, and above all our planet. To this end, we strive to bring out the best in each of these relationships."
+        title: "Passionate about room decorations ",
+        text: "Luxurious designs, adequate space, construction services, and furniture decorations bring motivation of customers to take the services. Our construction projects are truly remarkable due to crafting soothing and luxurious interiors."
     },
     {
-        title: "An Attitude of Gratitude",
-        text: "Our process works best when each stakeholder contributes their slice of genius to a project – hence success is perceived as a collective accomplishment rather than an act of individual authorship."
+        title: "Project-driven services with teamwork ",
+        text: "Our team is dedicated to fulfilling commitments by delivering the best interior design projects through advanced constructions and architectural methods to satisfy our customers."
     }
 ];
 const clients = [
@@ -184,16 +184,16 @@ const Clients = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-12'>
-                        <p className='fs-4 mt-5 text-danger'>How we Work</p>
+                        <p className={styles.heading}>How we Work</p>
                     </div>
                     {contentData.map((item, index) => (
                         <div className='col-lg-6' key={index}>
-                            <p className='text-danger fs-4'>{item.title}</p>
-                            <p>{item.text}</p>
+                            <p className={styles.custom_title}>{item.title}</p>
+                            <p className={styles.custom_text}>{item.text}</p>
                         </div>
                     ))}
                     <div className='col-lg-12 '>
-                        <p className='fs-4 mt-3 text-danger'>Clients</p>
+                        <p className={styles.heading}>Clients</p>
                     </div>
                     <div className='col-lg-12 pb-5'>
                         <div className={styles.client_list}>
