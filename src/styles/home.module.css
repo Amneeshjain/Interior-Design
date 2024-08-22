@@ -98,6 +98,16 @@
 }
 /* */
 
+.cirleimg img {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  top: -90%;
+  left: 50%;
+  z-index: -1;
+}
+
 .bannerDesignLine:nth-child(1) {
   position: absolute;
   width: 1px;
@@ -176,12 +186,6 @@
   border-radius: 50%;
 }
 
-/* .textDiv {
-  display: flex;
-  
-  z-index
-} */
-
 .banner_items {
   position: relative;
   z-index: 98;
@@ -214,6 +218,7 @@
     border-radius: 50%;
     top: -90%;
     left: 50%;
+    z-index: -1;
   }
   .textDiv h1 {
     font-size: 25px;
