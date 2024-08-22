@@ -9,25 +9,25 @@ const projectData = [
   {
     id: 1,
     title: "Vasant Kunj Residence",
-    image: "/project-img.png",
+    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-080.jpg",
     description: "Luxurious living spaces in Vasant Kunj."
   },
   {
     id: 2,
     title: "Sun Moon Restaurant",
-    image: "/project-img.png",
+    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-309.jpg",
     description: "Elegant dining experience at Sun Moon Restaurant."
   },
   {
     id: 3,
     title: "Hotel Udai Niwas",
-    image: "/project-img.png",
+    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-338.jpg",
     description: "Heritage hotel in the heart of the city."
   },
   {
     id: 4,
     title: "Another Vasant Kunj Residence",
-    image: "/project-img.png",
+    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
     description: "Modern living in Vasant Kunj."
   }
 ];
