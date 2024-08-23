@@ -8,51 +8,51 @@ const ArchitureGallery = () => {
     const images = [
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
+                "/969e29466c4040aa181f7d80e6cac331.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg"
+                "/969e29466c4040aa181f7d80e6cac331.jpg"
         },
 
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+                "/0bd07155c428cb7d7c832a757bcccccc.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+                "/0bd07155c428cb7d7c832a757bcccccc.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
+                "/24bef507d7592b7399108b7a6c670170.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg"
+                "/24bef507d7592b7399108b7a6c670170.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/4aa359d22fe14b635b082924943b54fc.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+                "/4aa359d22fe14b635b082924943b54fc.jpg"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
+                "/caa692263b6916d9bec795a2ec2f2c47.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg"
+                "/caa692263b6916d9bec795a2ec2f2c47.jpg"
         },
 
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
+                "/78bedd051c61eb7249c919f47118c30b.jpg",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg"
+                "/78bedd051c61eb7249c919f47118c30b.jpg"
         },
         {
-            src: "/image 25 (2).png",
-            thumb: "/image 25 (2).png"
+            src: "/842d03e68c671aa86ad7a3ec54b1f2b4 1.png",
+            thumb: "/842d03e68c671aa86ad7a3ec54b1f2b4 1.png"
         },
         {
             src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+                "/09aa1442b06bd93cf690177daa80c487 1.png",
             thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
+                "/09aa1442b06bd93cf690177daa80c487 1.png"
         }
 
     ];

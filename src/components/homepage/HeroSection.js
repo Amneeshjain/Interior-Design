@@ -92,7 +92,7 @@ const HeroSection = () => {
             </div>
             <div className={style.cirleimg}>
               <img
-                src="/image_1.png"
+                src="/HOMEPAGE BANNER.png"
                 alt="centerimg"
                 // className={`${style.centerImg} ${style.centerImgFade}`}
                 style={{

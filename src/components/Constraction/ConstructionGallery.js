@@ -10,54 +10,52 @@ const ConstructionGallery = () => {
     const images = [
         {
             src:
-                "/rcc.webp",
+                "/photo-1542336391-ae2936d8efe4.jpg",
             thumb:
-                "/rcc.webp"
+                "/photo-1542336391-ae2936d8efe4.jpg"
         },
         {
             src:
-                "/32.webp",
+                "/photo-1531834685032-c34bf0d84c77.jpg",
             thumb:
-                "/32.webp"
+                "/photo-1531834685032-c34bf0d84c77.jpg"
         },
 
         {
             src:
-                "/ccb.webp",
+                "/photo-1508450859948-4e04fabaa4ea.jpg",
             thumb:
-                "/ccb.webp"
-        },
-        {
-            src:
-                "/colonelz-office.webp",
-            thumb:
-                "/colonelz-office.webp"
-        },
-        {
-            src:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-415.jpg",
-            thumb:
-                "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-415.jpg"
+                "/photo-1508450859948-4e04fabaa4ea.jpg"
         },
 
         {
             src:
-                "/construction-company.jpg",
+                "/photo-1517089152318-42ec560349c0.jpg",
             thumb:
-                "/construction-company.jpg"
+                "/photo-1517089152318-42ec560349c0.jpg"
+        },
+
+
+
+        {
+            src: "/9b61b85bab638b4201341c10fd74531a.jpg",
+            thumb: "/9b61b85bab638b4201341c10fd74531a.jpg"
+        },
+        {
+            src: "/c5f0ee042932f2859af24f3f86290f3c 1.png",
+            thumb: "/c5f0ee042932f2859af24f3f86290f3c 1.png"
+        },
+        {
+            src: "/4d306add51e83a085fc556b0909309d4 1.png",
+            thumb: "/4d306add51e83a085fc556b0909309d4 1.png"
         },
 
         {
-            src:
-                "/construction-site-building-building-construction-working.jpg",
-            thumb:
-                "/construction-site-building-building-construction-working.jpg"
+            src: "/503dd92be683387f685361f1f6035696 1.png",
+            thumb: "/503dd92be683387f685361f1f6035696 1.png"
         },
 
-        {
-            src: "/desktop-wallpaper-construction-work-building-construction-work-building-structure.jpg",
-            thumb: "/desktop-wallpaper-construction-work-building-construction-work-building-structure.jpg"
-        },
+
 
 
     ];

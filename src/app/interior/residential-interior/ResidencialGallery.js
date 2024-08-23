@@ -8,51 +8,61 @@ const ResidencialGallery = () => {
             src:
                 "/rcc1.webp",
             thumb:
-                "/rcc1.webp"
+                "/rcc1.webp",
+
         },
         {
             src:
                 "/Untitled-design-28-1.jpg",
             thumb:
-                "/Untitled-design-28-1.jpg"
+                "/Untitled-design-28-1.jpg",
+
         },
         {
             src:
                 "/photo-1586023492125-27b2c045efd7.jpg",
             thumb:
-                "/photo-1586023492125-27b2c045efd7.jpg"
+                "/photo-1586023492125-27b2c045efd7.jpg",
+
         },
         {
             src:
                 "/res-3.webp",
             thumb:
-                "/res-3.webp"
+                "/res-3.webp",
+
         },
-        {
-            src:
-                "/furniture-noi-that.jpg",
-            thumb:
-                "/furniture-noi-that.jpg"
-        }
-        ,
         {
             src:
                 "/rcc.webp",
             thumb:
-                "/rcc.webp"
-        },
+                "/rcc.webp",
 
+        },
+        {
+            src: "/premium_photo-1674480165860-f60bcf6aa2f7.jpg",
+            thumb: "/premium_photo-1674480165860-f60bcf6aa2f7.jpg",
+
+        },
 
         {
             src:
-                "/pexels-fotoaibe-1571460.jpg",
+                "/photo-1521783988139-89397d761dce 1.png",
             thumb:
-                "/pexels-fotoaibe-1571460.jpg"
+                "/photo-1521783988139-89397d761dce 1.png",
+
         },
         {
-            src: "/images.jpg",
-            thumb: "/images.jpg"
+            src:
+                "/photo-1678132446331-da900be50e27 1 (1).png",
+            thumb:
+                "/photo-1678132446331-da900be50e27 1 (1).png",
+
         },
+
+
+
+
 
     ];
 
@@ -121,6 +131,8 @@ const ResidencialGallery = () => {
                                             src={image.thumb}
                                             alt={`thumbnail ${index + 1}`}
                                             className={`${style.imagesss}`}
+                                            loading="lazy"
+
                                         />
                                     </a>
                                 // </div>
