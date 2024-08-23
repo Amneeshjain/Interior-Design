@@ -166,7 +166,7 @@ const ImageGallery = () => {
                     {images.map((image, index) =>
                       <div
                         className={`carousel-item text-center ${index ===
-                        activeIndex
+                          activeIndex
                           ? "active"
                           : ""}`}
                         key={index}
@@ -174,7 +174,7 @@ const ImageGallery = () => {
                         <img
                           src={image.src}
                           alt={`image ${index + 1}`}
-                          className={`mh-100 `}
+                          className={`h-100 `}
                         />
                       </div>
                     )}

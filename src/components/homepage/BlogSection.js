@@ -8,19 +8,19 @@ const BlogSection = () => {
   const articles = [
     {
       title: "Green Elegance: How Plants Can Enhance Your Home Interiors",
-      
+
       date: "December 30, 2023",
       image: "/2-768x540.webp",
     },
     {
       title: "Bringing Nature Indoors: The Power of Plants in Home Décor",
-      
+
       date: "December 20, 2023",
       image: "/1-768x540.webp",
     },
     {
       title: "Designing the Perfect Haven: Essential Tips for Elevating Your Apartment’s Interior",
-      
+
       date: "December 6, 2023",
       image: "/R4.webp",
     },
@@ -32,7 +32,7 @@ const BlogSection = () => {
         <div className="container">
           <div
             className={styleA.sectionTitle}
-           
+
           >
             <div className={styleA.left}>
               <div className={styleA.tag} style={{ display: "flex", justifyContent: "start" }}>
@@ -48,7 +48,9 @@ const BlogSection = () => {
               <Link href="/blogs">Browse all articles</Link>
             </div>
           </div>
-          <div className={`row ${styles.bloSectionItems} ${styles.phoneGap}`}>
+
+          {/* ${styles.bloSectionItems} ${styles.phoneGap} */}
+          <div className={`row  d-flex justify-content-between py-5`}>
             {articles.map((article, index) => (
               <div className="col-lg-4" key={index}>
                 <ArticleCard

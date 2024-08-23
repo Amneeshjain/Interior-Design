@@ -152,7 +152,7 @@ const ArchitureGallery = () => {
                                                     <img
                                                         src={image.src}
                                                         alt={`image ${index + 1}`}
-                                                        className={`mh-100 `}
+                                                        className={`h-100 `}
                                                     />
                                                 </div>
                                             )}
