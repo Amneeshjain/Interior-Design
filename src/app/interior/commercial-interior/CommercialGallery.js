@@ -126,6 +126,7 @@ const CommercialGallery = () => {
                                             src={image.thumb}
                                             alt={`thumbnail ${index + 1}`}
                                             className={`${style.imagesss}`}
+                                            loading="lazy"
                                         />
                                     </a>
                                 // </div>
@@ -164,7 +165,7 @@ const CommercialGallery = () => {
                                                     <img
                                                         src={image.src}
                                                         alt={`image ${index + 1}`}
-                                                        className={`h-100 `}
+                                                        style={{ width: "83%", height: "100%", objectFit: "cover", }}
                                                     />
                                                 </div>
                                             )}

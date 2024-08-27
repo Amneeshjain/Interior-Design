@@ -37,15 +37,15 @@ const HeroSection = () => {
   return (
     <>
       <div className={style.bg}>
+        {/* <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
+        <div className={style.bannerDesignLine} /> */}
         <div className={`container`}>
           <div className={style.banner_items}>
             <div className={style.content_with}>
-              <div
+              {/* <div
                 className={style.starDiv}
                 data-aos="fade-up"
                 data-aos-duration="700"
@@ -57,18 +57,18 @@ const HeroSection = () => {
                   height={64}
                   width={64}
                 />
-              </div>
+              </div> */}
               <div className={style.textDiv}>
                 <h1 data-aos="fade-up" data-aos-duration="1000">
                   Transforming Spaces
                   {/* <span className={style.textOutline}> Spaces</span> */}
                   <br />
-                  <div className={style.bannerIcon}>
-                    <figure>
+
+                  {/* <figure>
                       <img src="bannerArrow.svg" alt="icon" />
-                    </figure>
-                    Igniting Emotions
-                  </div>
+                    </figure> */}
+                  Igniting Emotions
+
                 </h1>
                 {/* <p
                   className={style.Lorem}
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className={style.cirleimg}>
+            {/* <div className={style.cirleimg}>
               <img
                 src="/HOMEPAGE BANNER.png"
                 alt="centerimg"
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   opacity: opacity
                 }}
               />
-            </div>
+            </div> */}
           </div>
           {/* <CircularText /> */}
         </div>

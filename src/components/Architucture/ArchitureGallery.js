@@ -152,7 +152,7 @@ const ArchitureGallery = () => {
                                                     <img
                                                         src={image.src}
                                                         alt={`image ${index + 1}`}
-                                                        className={`h-100 `}
+                                                        style={{ width: "83%", height: "100%", objectFit: "cover" }}
                                                     />
                                                 </div>
                                             )}

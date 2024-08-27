@@ -98,18 +98,12 @@ const Homepage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 800,
-  //   });
-  // }, []);
+  
 
   return (
     <div>
