@@ -37,15 +37,39 @@ const HeroSection = () => {
   return (
     <>
       <div className={style.bg}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className={style.textDiv} >
+                <h1 data-aos="fade-up" data-aos-duration="1000">
+                  Transforming Spaces
+                  <br />
+                  Igniting Emotions
+                </h1>
+              </div>
+            </div>
+            <div className="clo-lg-12">
+              <div className={`${style.banner_btn}`} >
+                <Link href="/get-in-touch">
+                  <Button variant="secondary">Get in touch</Button>
+                </Link>
+                <Link href="#services" className={style.broService}>
+                  <Button>Browse services</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+        </div>
         {/* <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
         <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} /> */}
-        <div className={`container`}>
+        <div className={style.bannerDesignLine} />
+        <div className={style.textdata}>
           <div className={style.banner_items}>
             <div className={style.content_with}>
-              {/* <div
+              <div
                 className={style.starDiv}
                 data-aos="fade-up"
                 data-aos-duration="700"
@@ -57,20 +81,20 @@ const HeroSection = () => {
                   height={64}
                   width={64}
                 />
-              </div> */}
+              </div>
               <div className={style.textDiv}>
                 <h1 data-aos="fade-up" data-aos-duration="1000">
                   Transforming Spaces
-                  {/* <span className={style.textOutline}> Spaces</span> */}
+                  <span className={style.textOutline}> Spaces</span>
                   <br />
 
-                  {/* <figure>
+                  <figure>
                       <img src="bannerArrow.svg" alt="icon" />
-                    </figure> */}
+                    </figure>
                   Igniting Emotions
 
                 </h1>
-                {/* <p
+                <p
                   className={style.Lorem}
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -79,7 +103,7 @@ const HeroSection = () => {
                   contractors, housing skilled craftsmen and innovative
                   technicians. Our expertise ensures the highest
                   quality, made-to-measure details tailored to your vision.
-                </p> */}
+                </p>
                 <div className={`${style.banner_btn}`}>
                   <Link href="/get-in-touch">
                     <Button variant="secondary">Get in touch</Button>
@@ -90,7 +114,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={style.cirleimg}>
+            <div className={style.cirleimg}>
               <img
                 src="/HOMEPAGE BANNER.png"
                 alt="centerimg"
@@ -100,10 +124,10 @@ const HeroSection = () => {
                   opacity: opacity
                 }}
               />
-            </div> */}
+            </div>
           </div>
-          {/* <CircularText /> */}
-        </div>
+           <CircularText /> 
+        </div> */}
       </div>
 
     </>);
