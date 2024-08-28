@@ -102,9 +102,7 @@ const Homepage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   
-
   return (
     <div>
       <div className={isScrolled ? "" : "scrolled"}>

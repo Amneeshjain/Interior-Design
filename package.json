@@ -38,6 +38,7 @@
     "react-intersection-observer": "^9.10.3",
     "react-masonry-css": "^1.0.16",
     "react-modal": "^3.16.1",
+    "react-notifications-component": "^4.0.1",
     "react-photo-album": "^3.0.1",
     "react-player": "^2.16.0",
     "react-responsive-masonry": "^2.3.0",
