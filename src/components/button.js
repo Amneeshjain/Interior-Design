@@ -19,7 +19,7 @@ const Button = ({
   );
 
   return (
-    <button type={type} className={`${buttonClass} ${styles.marginTop}`}  onClick={onClick} {...props}>
+    <button type={type} className={`${buttonClass} ${styles.marginTop}`} onClick={onClick} {...props}>
       {children}
     </button>
   );
