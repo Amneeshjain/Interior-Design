@@ -50,12 +50,13 @@ const HeroSection = () => {
             </div>
             <div className="clo-lg-12">
               <div className={`${style.banner_btn}`} >
-                <Link href="/get-in-touch">
-                  <Button variant="secondary">Get in touch</Button>
-                </Link>
                 <Link href="#services" className={style.broService}>
-                  <Button>Browse services</Button>
+                  {/* <Button variant="secondary">Get in touch</Button> */}
+                  <Button variant="secondary">Browse services</Button>
                 </Link>
+                {/* <Link href="#services" className={style.broService}>
+                  <Button>Browse services</Button>
+                </Link> */}
               </div>
             </div>
           </div>
