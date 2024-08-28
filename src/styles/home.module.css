@@ -2,7 +2,6 @@
 .heroSection {
   position: relative;
   height: 100vh;
-
   overflow: hidden;
 }
 
@@ -287,13 +286,13 @@
 @media only screen and (max-width: 768px) {
   .textDiv {
     position: absolute;
-    top: 51%;
-    left: 13%;
+    top: 68%;
+    left: 5%;
   }
   .banner_btn {
     position: absolute;
-    top: 72%;
-    left: 14%;
+    top: 80%;
+    left: 5%;
   }
   .cirleimg img {
     position: absolute;
@@ -331,13 +330,13 @@
 
     overflow: hidden;
   }
-  .textDiv {
+  /* .textDiv {
     margin-left: 20px;
-  }
-  .textDiv h1 {
+  } */
+  /* .textDiv h1 {
     font-size: 30px;
     line-height: 35px;
-  }
+  } */
   .social_media_icons {
     position: fixed;
     right: 0%;
@@ -369,11 +368,6 @@
 }
 
 @media only screen and (max-width: 470px) {
-  .textDiv h1 {
-    font-size: 20px;
-    line-height: 40px;
-    margin-top: 4rem;
-  }
   .videoIcon {
     position: absolute;
     top: 45%;
@@ -497,13 +491,17 @@
 @media only screen and (max-width: 768px) {
   .textDiv {
     position: absolute;
-    top: 51%;
-    left: 13%;
+    top: 68%;
+    left: 5%;
   }
   .banner_btn {
     position: absolute;
-    top: 72%;
-    left: 14%;
+    top: 80%;
+    left: 5%;
+  }
+  .textDiv h1 {
+    font-size: 20px;
+    line-height: 40px;
   }
   .content_with {
     width: auto;
@@ -537,9 +535,9 @@
     top: 21px;
     left: 60%;
   }
-  .bannerIcon img {
+  /* .bannerIcon img {
     width: 20px;
-  }
+  } */
 
   .bg {
     height: 100%;
@@ -551,18 +549,18 @@
   }
 }
 
-.textDiv figure {
+/* .textDiv figure {
   display: contents;
   width: 50.99px;
   height: 50.99px;
   overflow: hidden;
   margin-left: 37.49px;
-}
+} */
 
-.textDiv figure img {
+/* .textDiv figure img {
   width: 20px;
   object-fit: contain;
-}
+} */
 
 .Lorem {
   width: 395px;
@@ -585,13 +583,13 @@
 @media only screen and (max-width: 768px) {
   .textDiv {
     position: absolute;
-    top: 51%;
-    left: 13%;
+    top: 68%;
+    left: 5%;
   }
   .banner_btn {
     position: absolute;
-    top: 72%;
-    left: 14%;
+    top: 80%;
+    left: 5%;
   }
   .Lorem {
     width: 100%;
@@ -1077,13 +1075,13 @@
 @media only screen and (max-width: 768px) {
   .textDiv {
     position: absolute;
-    top: 51%;
-    left: 13%;
+    top: 68%;
+    left: 5%;
   }
   .banner_btn {
     position: absolute;
-    top: 72%;
-    left: 14%;
+    top: 80%;
+    left: 5%;
   }
   .cirleimg img {
     position: absolute;
@@ -1096,10 +1094,10 @@
   .videoFrame {
     display: none;
   }
-  .textDiv figure img {
+  /* .textDiv figure img {
     width: 23px;
     object-fit: contain;
-  }
+  } */
 }
 
 .scale:hover {
