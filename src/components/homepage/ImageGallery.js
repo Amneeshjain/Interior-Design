@@ -60,7 +60,7 @@ const ImageGallery = () => {
       {
         src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
         width: 500,
-        height: 640,
+        height: 700,
         alt: "Boaton Calm Water",
       }
     ]

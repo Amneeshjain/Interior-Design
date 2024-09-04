@@ -2,6 +2,8 @@ import { useState,  } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 
 const ProjectGallery = () => {
     const imageGroups = [
@@ -99,38 +101,36 @@ const ProjectGallery = () => {
             <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
           </div>
         </div>
-
         {imageGroups.map((group, groupIndex) => (
 
-<div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12 ">
-  {group.map((image, imageIndex) => (
-    <a
-      key={imageIndex}
-      onClick={(e) => {
-        e.preventDefault();
-        handleSelect(groupIndex, imageIndex);
-      }}
-      href="#"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleLightbox"
-      className={`mb-3 ${style.masonry_item}`}
-      data-aos="zoom-in"
-      data-aos-duration="1000"
+          <div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12  ">
+            {group.map((image, imageIndex) => (
+              <a
+                key={imageIndex}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSelect(groupIndex, imageIndex);
+                }}
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleLightbox"
+                className={`mb-3 ${style.masonry_item}`}
+                data-aos="zoom-in"
+                data-aos-duration="1000"
 
-    >
-      <Image
-        src={image.thumb || image.src}
-        width={image.width}
-        height={image.height}
-        layout="responsive"
-        style={{ objectFit: "cover", }}
-        className=" shadow-1-strong  mb-3"
-        alt={image.alt}
-      />
-    </a>
-  ))}
-</div>
-))}
+              >
+                <Image
+                 src={image.thumb || image.src}
+                 width={image.width}
+                 height={image.height}
+                 layout="cover"
+                 className="w-100 shadow-1-strong  mb-2 mt-1"
+                 alt={image.alt}
+                />
+              </a>
+            ))}
+          </div>
+        ))}
 
         <div
           className="modal fade"
