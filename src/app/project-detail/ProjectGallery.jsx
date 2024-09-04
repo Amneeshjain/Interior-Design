@@ -3,76 +3,75 @@ import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
 
-const ImageGallery = () => {
-  const imageGroups = [
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg",
-        width: 500,
-        height: 500,
-        alt: "Boat on Calm Water",
-      },
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
-        width: 500,
-        height: 500,
-        alt: "Yosemite National Park",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-        width: 500,
-        height: 500,
-        alt: "Wintry Mountain Landscape",
-      }
-      ,
-      ,
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
-        width: 500,
-        height: 500,
-        alt: "Boat on Calm Water",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
-        width: 500,
-        height: 350,
-        alt: "Boat on Calm Water",
-      },
-      {
-        src: "/image 25 (2).png",
-        width: 500,
-        height: 650,
-        alt: "Yosemite National Park",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
-        width: 500,
-        height: 360,
-        alt: "Mountains in the Clouds",
-      },
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-        width: 500,
-        height: 640,
-        alt: "Boaton Calm Water",
-      }
-    ]
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
+const ProjectGallery = () => {
+    const imageGroups = [
+        [
+          {
+            src:   "/project1gallary1.jpg",
+            width: 500,
+            height: 500,
+            alt: "Boat on Calm Water",
+          },
+          {
+            src:  "/project3.jpg",
+            width: 500,
+            height: 500,
+            alt: "Yosemite National Park",
+          }
+        ],
+        [
+          {
+            src:"/project2.jpg",
+            width: 500,
+            height: 550,
+            alt: "Wintry Mountain Landscape",
+          }
+          ,
+          ,
+          {
+            src:  "/project4.jpg",
+            width: 500,
+            height: 450,
+            alt: "Boat on Calm Water",
+          }
+        ],
+        [
+          {
+            src:  "/project4.jpg",
+            width: 500,
+            height: 450,
+            alt: "Boat on Calm Water",
+          },
+          {
+            src: "/project3.jpg",
+            width: 500,
+            height: 550,
+            alt: "Yosemite National Park",
+          }
+        ],
+        [
+          {
+            src:  "/project1gallary1.jpg",
+            width: 500,
+            height: 400,
+            alt: "Mountains in the Clouds",
+          },
+          {
+            src:  "/project1gallary1.jpg",
+            width: 500,
+            height: 600,
+            alt: "Boaton Calm Water",
+          }
+        ]
+      ];
+      const [activeIndex, setActiveIndex] = useState(0);
   const [selectedGroup, setSelectedGroup] = useState(null);
 
   const handleSelect = (groupIndex, imageIndex) => {
     setSelectedGroup(groupIndex);
     setActiveIndex(imageIndex);
   };
-
+    
   return (
     <div className={`container-fluid px-0 ${style.imageGalleryContainer}`}>
       <div className={`row ${style.image_row}`}>
@@ -204,8 +203,7 @@ const ImageGallery = () => {
         </div>
       </div>
     </div>
+  )
+}
 
-  );
-};
-
-export default ImageGallery;
+export default ProjectGallery

@@ -1,6 +1,6 @@
 import Homepage from "./homepage/page";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "react-notifications-component/dist/theme.css";
+// import "react-notifications-component/dist/theme.css";
 
 export const metadata = {
   title: "Homepage",

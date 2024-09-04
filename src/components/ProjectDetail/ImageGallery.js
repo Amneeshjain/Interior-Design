@@ -58,19 +58,7 @@ const ImageGallery = () => {
       thumb:
         "/project1gallary1.jpg"
     },
-    // {
-    //   src:
-    //     "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg",
-    //   thumb:
-    //     "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg"
-    // },
 
-    // {
-    //   src:
-    //     "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-    //   thumb:
-    //     "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg"
-    // }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

@@ -23,6 +23,7 @@ html {
 .container {
   padding: 0 25px !important;
 }
+
 .modal-body {
   padding: 0 !important;
 }
@@ -56,7 +57,7 @@ html {
   color: #fff;
 }
 .slick-dots li button:before {
-  font-family: 'slick';
+  font-family: "slick";
   font-size: 10px !important;
   line-height: 20px;
   position: absolute;
@@ -64,9 +65,9 @@ html {
   left: 0;
   width: 20px;
   height: 20px;
-  content: '•';
+  content: "•";
   text-align: center;
-  opacity: .25;
+  opacity: 0.25;
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,6 +93,7 @@ body {
 } */
 
 :root {
+  --bs-gutter-x: 1rem;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",

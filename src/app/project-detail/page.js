@@ -7,7 +7,8 @@ import AboutProjects from "../../components/AboutProjects";
 import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
 // import TwoVideoSection from "../../components/About/TwoVideoSection";
-import ImageGallery from "@/components/ProjectDetail/ImageGallery";
+// import ImageGallery from "@/components/ProjectDetail/ImageGallery";
+import ProjectGallery from "./ProjectGallery";
 import Specification from "../../components/ProjectDetail/Specification";
 
 const page = () => {
@@ -25,7 +26,8 @@ const page = () => {
 
       {/* <TwoVideoSection /> */}
       <Specification />
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <ProjectGallery />
       {/* <Galary bg="#FAFAFA" /> */}
       <Video />
       {/* <Contact /> */}
