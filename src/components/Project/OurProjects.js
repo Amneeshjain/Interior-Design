@@ -9,7 +9,7 @@ const projectData = [
   {
     id: 1,
     title: "Vasant Kunj Residence",
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
+    image: "/project1.jpg",
     description: "Luxurious living spaces in Vasant Kunj."
   },
   {
