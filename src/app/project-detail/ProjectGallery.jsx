@@ -122,8 +122,9 @@ const ProjectGallery = () => {
                   src={image.thumb || image.src}
                   width={image.width}
                   height={image.height}
-                  className="w-100 shadow-1-strong object-cover mb-3"
+                  className="w-100 shadow-1-strong  mb-3"
                   alt={image.alt}
+                  style={{objectFit:"cover"}}
                 />
               </a>
             ))}

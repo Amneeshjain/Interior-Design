@@ -1,4 +1,4 @@
-import { useState,  } from "react";
+import { useState, } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
@@ -123,7 +123,8 @@ const ImageGallery = () => {
                   src={image.thumb || image.src}
                   width={image.width}
                   height={image.height}
-                  className="w-100 shadow-1-strong object-cover mb-3"
+                  style={{ objectFit: "cover" }}
+                  className="w-100 shadow-1-strong  mb-3"
                   alt={image.alt}
                 />
               </a>
