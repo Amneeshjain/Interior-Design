@@ -39,6 +39,7 @@
 .imageGalleryContainer {
   width: 100%;
   background-color: #ededed;
+  overflow-x: hidden;
 }
 .cover_image {
   /* width: 100%;

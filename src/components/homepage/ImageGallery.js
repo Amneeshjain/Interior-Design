@@ -2,6 +2,7 @@ import { useState, } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const ImageGallery = () => {
   const imageGroups = [
@@ -103,7 +104,7 @@ const ImageGallery = () => {
 
         {imageGroups.map((group, groupIndex) => (
 
-          <div key={groupIndex} className="col-lg-3 col-md-12  ">
+          <div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12 ">
             {group.map((image, imageIndex) => (
               <a
                 key={imageIndex}
@@ -114,7 +115,7 @@ const ImageGallery = () => {
                 href="#"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleLightbox"
-                className="masonry_item mb-3"
+                className={`mb-3 ${style.masonry_item}`}
                 data-aos="zoom-in"
                 data-aos-duration="1000"
 
@@ -123,8 +124,9 @@ const ImageGallery = () => {
                   src={image.thumb || image.src}
                   width={image.width}
                   height={image.height}
-                  style={{ objectFit: "cover" }}
-                  className="w-100 shadow-1-strong  mb-3"
+                  layout="responsive"
+                  style={{ objectFit: "cover", }}
+                  className=" shadow-1-strong  mb-3"
                   alt={image.alt}
                 />
               </a>
@@ -204,7 +206,7 @@ const ImageGallery = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
 
   );
 };

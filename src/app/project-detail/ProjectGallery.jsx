@@ -102,34 +102,35 @@ const ProjectGallery = () => {
 
         {imageGroups.map((group, groupIndex) => (
 
-          <div key={groupIndex} className="col-lg-3 col-md-12  ">
-            {group.map((image, imageIndex) => (
-              <a
-                key={imageIndex}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSelect(groupIndex, imageIndex);
-                }}
-                href="#"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleLightbox"
-                className="masonry_item mb-3"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
+<div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12 ">
+  {group.map((image, imageIndex) => (
+    <a
+      key={imageIndex}
+      onClick={(e) => {
+        e.preventDefault();
+        handleSelect(groupIndex, imageIndex);
+      }}
+      href="#"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleLightbox"
+      className={`mb-3 ${style.masonry_item}`}
+      data-aos="zoom-in"
+      data-aos-duration="1000"
 
-              >
-                <Image
-                  src={image.thumb || image.src}
-                  width={image.width}
-                  height={image.height}
-                  className="w-100 shadow-1-strong  mb-3"
-                  alt={image.alt}
-                  style={{objectFit:"cover"}}
-                />
-              </a>
-            ))}
-          </div>
-        ))}
+    >
+      <Image
+        src={image.thumb || image.src}
+        width={image.width}
+        height={image.height}
+        layout="responsive"
+        style={{ objectFit: "cover", }}
+        className=" shadow-1-strong  mb-3"
+        alt={image.alt}
+      />
+    </a>
+  ))}
+</div>
+))}
 
         <div
           className="modal fade"
