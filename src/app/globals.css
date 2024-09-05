@@ -422,3 +422,39 @@ a {
     font-size: 16px;
   }
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.galleryImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .gallery {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    gap: 20px;
+  }
+}

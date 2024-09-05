@@ -1,79 +1,76 @@
-import { useState,  } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-
 const ProjectGallery = () => {
-    const imageGroups = [
-        [
-          {
-            src:   "/project1gallary1.jpg",
-            width: 500,
-            height: 500,
-            alt: "Boat on Calm Water",
-          },
-          {
-            src:  "/project1gallary5.jpg",
-            width: 500,
-            height: 500,
-            alt: "Yosemite National Park",
-          }
-        ],
-        [
-          {
-            src:"/project1gallary2.jpg",
-            width: 500,
-            height: 550,
-            alt: "Wintry Mountain Landscape",
-          }
-          ,
-          
-          {
-            src:  "/project1gallary6.jpg",
-            width: 500,
-            height: 450,
-            alt: "Boat on Calm Water",
-          }
-        ],
-        [
-          {
-            src:  "/project1gallary3.jpg",
-            width: 500,
-            height: 450,
-            alt: "Boat on Calm Water",
-          },
-          {
-            src: "/project1gallary7.jpg",
-            width: 500,
-            height: 550,
-            alt: "Yosemite National Park",
-          }
-        ],
-        [
-          {
-            src:  "/project1gallary4.jpg",
-            width: 500,
-            height: 400,
-            alt: "Mountains in the Clouds",
-          },
-          {
-            src:  "/project1gallary8.jpg",
-            width: 500,
-            height: 600,
-            alt: "Boaton Calm Water",
-          }
-        ]
-      ];
-      const [activeIndex, setActiveIndex] = useState(0);
+  const imageGroups = [
+    [
+      {
+        src: "/project1gallary1.jpg",
+        width: 500,
+        height: 500,
+        alt: "Boat on Calm Water",
+      },
+      {
+        src: "/project1gallary5.jpg",
+        width: 500,
+        height: 500,
+        alt: "Yosemite National Park",
+      },
+    ],
+    [
+      {
+        src: "/project1gallary2.jpg",
+        width: 500,
+        height: 550,
+        alt: "Wintry Mountain Landscape",
+      },
+      {
+        src: "/project1gallary6.jpg",
+        width: 500,
+        height: 450,
+        alt: "Boat on Calm Water",
+      },
+    ],
+    [
+      {
+        src: "/project1gallary3.jpg",
+        width: 500,
+        height: 450,
+        alt: "Boat on Calm Water",
+      },
+      {
+        src: "/project1gallary7.jpg",
+        width: 500,
+        height: 550,
+        alt: "Yosemite National Park",
+      },
+    ],
+    [
+      {
+        src: "/project1gallary4.jpg",
+        width: 500,
+        height: 400,
+        alt: "Mountains in the Clouds",
+      },
+      {
+        src: "/project1gallary8.jpg",
+        width: 500,
+        height: 600,
+        alt: "Boaton Calm Water",
+      },
+    ],
+  ];
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedGroup, setSelectedGroup] = useState(null);
 
   const handleSelect = (groupIndex, imageIndex) => {
     setSelectedGroup(groupIndex);
     setActiveIndex(imageIndex);
   };
-    
+
   return (
     <div className={`container-fluid px-0 ${style.imageGalleryContainer}`}>
       <div className={`row ${style.image_row}`}>
@@ -102,7 +99,6 @@ const ProjectGallery = () => {
           </div>
         </div>
         {imageGroups.map((group, groupIndex) => (
-
           <div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12  ">
             {group.map((image, imageIndex) => (
               <a
@@ -117,15 +113,14 @@ const ProjectGallery = () => {
                 className={`mb-3 ${style.masonry_item}`}
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-
               >
                 <Image
-                 src={image.thumb || image.src}
-                 width={image.width}
-                 height={image.height}
-                 layout=" scale-down"
-                 className="w-100 shadow-1-strong  mb-3"
-                 alt={image.alt}
+                  src={image.thumb || image.src}
+                  width={image.width}
+                  height={image.height}
+                  layout=" scale-down"
+                  className="w-100 shadow-1-strong  mb-3"
+                  alt={image.alt}
                 />
               </a>
             ))}
@@ -150,20 +145,27 @@ const ProjectGallery = () => {
                     aria-label="Close"
                   />
                   <div className="carousel-inner ratio ratio-16x9 bg-dark">
-                    {selectedGroup !== null && imageGroups[selectedGroup].map((image, index) => (
-                      <div
-                        className={`carousel-item text-center ${index === activeIndex ? "active" : ""}`}
-                        key={index}
-                      >
-                        <Image
-                          src={image.src}
-                          alt={`image ${index + 1}`}
-                          width={1200}
-                          height={800}
-                          style={{ width: "81%", height: "100%", objectFit: "cover" }}
-                        />
-                      </div>
-                    ))}
+                    {selectedGroup !== null &&
+                      imageGroups[selectedGroup].map((image, index) => (
+                        <div
+                          className={`carousel-item text-center ${
+                            index === activeIndex ? "active" : ""
+                          }`}
+                          key={index}
+                        >
+                          <Image
+                            src={image.src}
+                            alt={`image ${index + 1}`}
+                            width={1200}
+                            height={800}
+                            style={{
+                              width: "81%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        </div>
+                      ))}
                   </div>
                   <button
                     className="carousel-control-prev"
@@ -173,8 +175,9 @@ const ProjectGallery = () => {
                     onClick={() =>
                       setActiveIndex(
                         (activeIndex - 1 + imageGroups[selectedGroup].length) %
-                        imageGroups[selectedGroup].length
-                      )}
+                          imageGroups[selectedGroup].length
+                      )
+                    }
                   >
                     <span
                       className="carousel-control-prev-icon"
@@ -190,7 +193,8 @@ const ProjectGallery = () => {
                     onClick={() =>
                       setActiveIndex(
                         (activeIndex + 1) % imageGroups[selectedGroup].length
-                      )}
+                      )
+                    }
                   >
                     <span
                       className="carousel-control-next-icon"
@@ -205,7 +209,7 @@ const ProjectGallery = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectGallery
+export default ProjectGallery;
