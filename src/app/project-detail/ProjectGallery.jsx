@@ -15,7 +15,7 @@ const ProjectGallery = () => {
             alt: "Boat on Calm Water",
           },
           {
-            src:  "/project3.jpg",
+            src:  "/project1gallary5.jpg",
             width: 500,
             height: 500,
             alt: "Yosemite National Park",
@@ -23,15 +23,15 @@ const ProjectGallery = () => {
         ],
         [
           {
-            src:"/project2.jpg",
+            src:"/project1gallary2.jpg",
             width: 500,
             height: 550,
             alt: "Wintry Mountain Landscape",
           }
           ,
-          ,
+          
           {
-            src:  "/project4.jpg",
+            src:  "/project1gallary6.jpg",
             width: 500,
             height: 450,
             alt: "Boat on Calm Water",
@@ -39,13 +39,13 @@ const ProjectGallery = () => {
         ],
         [
           {
-            src:  "/project4.jpg",
+            src:  "/project1gallary3.jpg",
             width: 500,
             height: 450,
             alt: "Boat on Calm Water",
           },
           {
-            src: "/project3.jpg",
+            src: "/project1gallary7.jpg",
             width: 500,
             height: 550,
             alt: "Yosemite National Park",
@@ -53,13 +53,13 @@ const ProjectGallery = () => {
         ],
         [
           {
-            src:  "/project1gallary1.jpg",
+            src:  "/project1gallary4.jpg",
             width: 500,
             height: 400,
             alt: "Mountains in the Clouds",
           },
           {
-            src:  "/project1gallary1.jpg",
+            src:  "/project1gallary8.jpg",
             width: 500,
             height: 600,
             alt: "Boaton Calm Water",
