@@ -20,6 +20,9 @@
 html {
   scroll-behavior: smooth !important;
 }
+.row {
+  --bs-gutter-x: 1rem !important;
+}
 .container {
   padding: 0 25px !important;
 }

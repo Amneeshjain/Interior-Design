@@ -123,8 +123,8 @@ const ProjectGallery = () => {
                  src={image.thumb || image.src}
                  width={image.width}
                  height={image.height}
-                 layout="cover"
-                 className="w-100 shadow-1-strong  mb-2 mt-1"
+                 layout=" scale-down"
+                 className="w-100 shadow-1-strong  mb-3"
                  alt={image.alt}
                 />
               </a>
