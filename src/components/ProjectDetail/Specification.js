@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import styles from "../../styles/specification.module.css";
 
@@ -58,72 +58,35 @@ const Specification = () => {
             recommend Colonelz to anyone in need of outstanding interior design
             and construction services.
           </p>
-          {/* <ul className={`list-unstyled ${styles.specificationsList}`}>
-            <li>
-              <div className={styles.specificationItem}>
-                <span className={styles.icon}>
-                  <i className="fas fa-wind" />
-                </span>
-                <span>Daikin All Weather Inverter VRV/VRF ACs.</span>
-              </div>
-            </li>
-            <hr />
-            <li>
-              <div className={styles.specificationItem}>
-                <span className={styles.icon}>
-                  <i className="fas fa-square" />
-                </span>
-                <span>Italian Marble/Laminated Wooden Flooring.</span>
-              </div>
-            </li>
-            <hr />
-            <li>
-              <div className={styles.specificationItem}>
-                <span className={styles.icon}>
-                  <i className="fas fa-utensils" />
-                </span>
-                <span>Kitchen Fully Loaded with Siemens appliances.</span>
-              </div>
-            </li>
-            <hr />
-            <li>
-              <div className={styles.specificationItem}>
-                <span className={styles.icon}>
-                  <i className="fas fa-bath" />
-                </span>
-                <span>Fully Fitted Toilets/Bathrooms.</span>
-              </div>
-            </li>
-            <hr />
-          </ul> */}
+
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12  ">
           {!isPlaying
             ? <div className={styles.video_overlay} onClick={handlePlay}>
-                <img src="/video.png" alt="Video Thumbnail" />
-                <button className="play-button">
-                  <svg
-                    width="64"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="32" cy="32" r="32" fill="white" />
-                    <path d="M25 20L45 32L25 44V20Z" fill="black" />
-                  </svg>
-                </button>
-              </div>
+              <img src="/video.png" alt="Video Thumbnail" />
+              <button className="play-button">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="32" cy="32" r="32" fill="white" />
+                  <path d="M25 20L45 32L25 44V20Z" fill="black" />
+                </svg>
+              </button>
+            </div>
             : <div className="iframe-container">
-                <ReactPlayer
-                  url="https://www.youtube.com/embed/qUOYp0-tm0Y"
-                  controls
-                  playing={isPlaying}
-                  height={playerHeight} 
-                  // className={styles.reactPlayer}
-                
-                />
-              </div>}
+              <ReactPlayer
+                url="https://www.youtube.com/embed/qUOYp0-tm0Y"
+                controls
+                playing={isPlaying}
+                height={playerHeight}
+              // className={styles.reactPlayer}
+
+              />
+            </div>}
           <style jsx>{`
             .play-button {
               position: absolute;
@@ -164,9 +127,9 @@ const Specification = () => {
             }
           `}</style>
         </div>
-        </div>
       </div>
-  
+    </div>
+
   );
 };
 

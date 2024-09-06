@@ -2,7 +2,6 @@
 import React from "react";
 import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
-import Galary from "../../components/ProjectDetail/Galary";
 import AboutProjects from "../../components/AboutProjects";
 import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
@@ -23,12 +22,11 @@ const page = () => {
         background={"#fff"}
       />
       <AboutProjects />
-
       {/* <TwoVideoSection /> */}
       <Specification />
       {/* <ImageGallery /> */}
-      <ProjectGallery />
-      {/* <Galary bg="#FAFAFA" /> */}
+      <ProjectGallery />  
+
       <Video />
       {/* <Contact /> */}
       <GetInTouch />

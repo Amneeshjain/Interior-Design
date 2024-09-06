@@ -9,26 +9,30 @@ const projectData = [
   {
     id: 1,
     title: "Vasant Kunj Residence",
-    image: "/project1gallary6.jpg",
-    description: "Luxurious living spaces in Vasant Kunj."
+    image: "/project1gallary6 (1).jpg",
+    description: "Luxurious living spaces in Vasant Kunj.",
+    href: "/project-detail"
   },
   {
     id: 2,
     title: "Sun Moon Restaurant",
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-309.jpg",
-    description: "Elegant dining experience at Sun Moon Restaurant."
+    image: "/CAFE-01/tye_274.jpg",
+    description: "Elegant dining experience at Sun Moon Restaurant.",
+    href: "/projectdetail1"
   },
   {
     id: 3,
     title: "Hotel Udai Niwas",
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-338.jpg",
-    description: "Heritage hotel in the heart of the city."
+    image: "/CAFE 02/tye_141.jpg",
+    description: "Heritage hotel in the heart of the city.",
+    href: "/projectdetail2"
   },
   {
     id: 4,
     title: "Another Vasant Kunj Residence",
     image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
-    description: "Modern living in Vasant Kunj."
+    description: "Modern living in Vasant Kunj.",
+    href: "/projectdetail3"
   }
 ];
 
@@ -41,36 +45,10 @@ const OurProjects = () => {
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
-        {/* <div
-          style={{ justifyContent: "center", alignItems: "center" }}
-          className={stylesA.sectionTitle}
-        >
-          <div
-            className={stylesA.left}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center"
-            }}
-          >
-            <div className={stylesA.tag}>
-              <hr />
-              Our Projects
-              <hr />
-            </div>
-            <h2>
-              Browse Our Latest <br />
-              Projects
-            </h2>
-          </div>
-        </div> */}
-
         <div className={`row ${style.projectsCardContainer}`}>
           {projectData.map((project, index) =>
             <Link
-              href="/project-detail"
+              href={project.href}
               key={project.id}
               className={`col-lg-6  ${style.gap} ${index % 2 === 0
                 ? style.even
