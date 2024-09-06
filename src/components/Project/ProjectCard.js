@@ -15,11 +15,11 @@ const ProjectCard = ({ project }) =>
           <Image
             src={project.image}
             alt={project.title}
-
             layout="fill"
+
+
           />
         </div>
-
         <div className={styles.content}>
           <div className={styles.contentText}>
             <h2 className={`${style.fs26} ${style.fw300}`}>
