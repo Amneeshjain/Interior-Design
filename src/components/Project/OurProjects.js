@@ -9,7 +9,7 @@ const projectData = [
   {
     id: 1,
     title: "Vasant Kunj Residence",
-    image: "/project1 (1).jpg",
+    image: "/project1gallary6.jpg",
     description: "Luxurious living spaces in Vasant Kunj."
   },
   {
