@@ -9,42 +9,58 @@ const ProjectGallery = () => {
       {
         src: "/CAFE-01/tye_274.jpg",
           thumb:
-               "/CAFE-01/tye_274.jpg"
+               "/CAFE-01/tye_274.jpg",
+               colSpan: 1,
+               rowSpan: 3,
       },
     {
       src: "/CAFE-01/tye_204.jpg",
         thumb:
-            "/CAFE-01/tye_204.jpg"
+            "/CAFE-01/tye_204.jpg",
+            colSpan: 1,
+            rowSpan: 2,
     },
     {
         src: "/CAFE-01/tye_299.jpg",
-          thumb:"/CAFE-01/tye_299.jpg"
+          thumb:"/CAFE-01/tye_299.jpg",
+          colSpan: 1,
+          rowSpan: 3,
       },
 
     
     {
       src: "/CAFE-01/tye_213.jpg",
         thumb:
-           "/CAFE-01/tye_213.jpg"
+           "/CAFE-01/tye_213.jpg",
+           colSpan: 1,
+           rowSpan: 2,
     },
 
     {
       src: "/CAFE-01/tye_246.jpg",
-        thumb:"/CAFE-01/tye_246.jpg"
+        thumb:"/CAFE-01/tye_246.jpg",
+        colSpan: 1,
+        rowSpan: 3,
     },
     {
       src: "/CAFE-01/tye_280.jpg",
-        thumb: "/CAFE-01/tye_280.jpg"
+        thumb: "/CAFE-01/tye_280.jpg",
+        colSpan: 1,
+        rowSpan: 3,
     },
     {
-      src: "/CAFE-01/tye_254.jpg",
-        thumb:  "/CAFE-01/tye_254.jpg"
+      src: "    /CAFE-01/tye_222.jpg",
+        thumb:  "   /CAFE-01/tye_222.jpg",
+        colSpan: 1,
+        rowSpan: 2,
     },
 
     {
         src: "/CAFE-01/tye_274.jpg",
           thumb:
-               "/CAFE-01/tye_274.jpg"
+               "/CAFE-01/tye_274.jpg",
+               colSpan: 1,
+               rowSpan: 2,
       },
 ];
 const [activeIndex, setActiveIndex] = useState(0);
@@ -60,7 +76,7 @@ const handleSelect = index => {
 
 if (!isClient) return null;
   return (
-    <div className={`container-fluid px-0  ${style.imageGalleryContainer}`}>
+    <div className={`container-fluid px-0  ${style.imageGalleryContainer1}`}>
     <div className={` ${style.image_row}`}>
         <div
             style={{ justifyContent: "center", alignItems: "center" }}
@@ -86,7 +102,38 @@ if (!isClient) return null;
                 <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
             </div>
         </div>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
+        <div className={style.imageGalleryContainer}>
+        {images.map((image, index) => (
+        <div
+          key={index}
+          className={`${style.gallery_container} ${style[`w_${image.colSpan}`]} ${style[`h_${image.rowSpan}`]}`}
+        >
+            <div className={style.gallery_item}>
+            <div className={style.image}>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              handleSelect(index);
+            }}
+            data-bs-toggle="modal"
+            data-bs-target="#exampleLightbox"
+            className={style.masonry_item}
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <img
+              src={image.thumb}
+              alt={`thumbnail ${index + 1}`}
+              
+            />
+          </a>
+        </div>
+        </div>
+        </div>
+      ))}
+    </div>
+        {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
             <Masonry gutter="15px">
                
                 {images.map(
@@ -116,7 +163,7 @@ if (!isClient) return null;
                 
       
             </Masonry>
-        </ResponsiveMasonry>
+        </ResponsiveMasonry> */}
         <div
             className={`modal fade `}
             id="exampleLightbox"
