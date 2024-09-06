@@ -30,3 +30,4 @@ const AboutFirm = ({ imgSrc, imgAlt, tagText, title, description }) => {
 };
 
 export default AboutFirm;
+// changes
