@@ -76,7 +76,7 @@ const ConstructionGallery = () => {
     return (
         <>
 
-            <div className={`container-fluid px-0  ${style.imageGalleryContainer}`}>
+            <div className={`container-fluid px-0  ${style.imageGalleryContainer1}`}>
                 <div className={` ${style.image_row}`}>
                     <div
                         style={{ justifyContent: "center", alignItems: "center" }}
