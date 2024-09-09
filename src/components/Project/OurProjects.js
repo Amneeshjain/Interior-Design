@@ -8,9 +8,9 @@ import styles from "../../styles/gallary.module.css";
 const projectData = [
   {
     id: 1,
-    title: "Vasant Kunj Residence",
+    title: "House of Colour, Tata Primanti",
     image: "/project1gallary6 (1).jpg",
-    description: "Luxurious living spaces in Vasant Kunj.",
+    description: "Built-up Area: 2000 sq.ft, Carpet Area: 1650 sq.ft ",
     href: "/project-detail"
   },
   {

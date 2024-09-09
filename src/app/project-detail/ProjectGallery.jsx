@@ -92,7 +92,7 @@ if (!isClient) return null;
                     Our Gallery
                     <hr />
                 </div>
-                <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
+                <h2 className="col-lg-12 mt-4 mb-5">Explore Our Project</h2>
             </div>
         </div>
         <div className={style.imageGalleryContainer}>

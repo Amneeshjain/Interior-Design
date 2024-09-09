@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => (
             <h2 className={`${style.fs26} ${style.fw300}`}>
               {project.title}
             </h2>
-            <p className={`${style.fs16} ${style.fw300}`}>
+            <p className={`${style.fs16} ${style.fw300} `}>
               {project.description}
             </p>
           </div>
