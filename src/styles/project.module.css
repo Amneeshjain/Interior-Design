@@ -1,6 +1,21 @@
 /* components/Project/ProjectCard.module.css */
 /* .projectMainContainer {
 } */
+/* Add this to project.module.css or home.module.css as needed */
+.cardImageContainer,
+.cardImageContainer2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cardImageContainer img,
+.cardImageContainer2 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .projectsCardContainer {
   padding-top: 90px;

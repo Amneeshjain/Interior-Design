@@ -23,7 +23,7 @@ const projectData = [
   {
     id: 3,
     title: "Hotel Udai Niwas",
-    image: "/CAFE 02/tye_141.jpg",
+    image: "/CAFE 02/tye_141 (2).jpg",
     description: "Heritage hotel in the heart of the city.",
     href: "/projectdetail2"
   },

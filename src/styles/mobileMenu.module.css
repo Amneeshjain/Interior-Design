@@ -17,7 +17,7 @@
 .smNavItems {
   padding: 15px;
   backdrop-filter: blur(5px);
-  background-color: #000;
+  background-color: #fff;
 }
 
 .smNavItems {
@@ -29,11 +29,7 @@
 .hamburger {
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
-}
-
-.sm_logo {
-  filter: brightness(0) invert(1);
+  color: #000;
 }
 
 .sm_logo figure {
