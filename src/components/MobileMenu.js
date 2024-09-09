@@ -46,7 +46,7 @@ const Navbar = () => {
           <Link href="/">
             <figure>
               <img
-                src="/COLONELZ_22png_artboard16.png"
+                src="/COLONELZ_22png_artboard16 (1).png"
                 alt=""
                 width={"150px"}
               />
