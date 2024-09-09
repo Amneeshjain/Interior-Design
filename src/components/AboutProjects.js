@@ -1,29 +1,39 @@
-// import style from "../../styles/process.module.css";
+import { useState } from "react";
 import style from "../styles/process.module.css";
 import stylesA from "../styles/aboutSection.module.css";
 import Link from "next/link";
+
 const ABOUT_PROJECT_DATA = [
   {
     id: 1,
-    title: "Inspiration",
-    description:
-      "We have beautiful renovation and natural decoration skills to design rooms and inspire our customers with the best interior designs.",
+    title: "Client Brief",
+    description: `A colourful minimalistic home with the walls designed to be the art in the space. 
+    The young couple sought to transform their apartment into a personal homage, to the journey they embarked on as college mates to becoming a successful vibrant couple in business and corporate. With a unique vision and aspiration for an abode personifying their individual contrasting personalities and also comfortable for their elderly parents.`,
   },
   {
     id: 2,
-    title: "Space Planning",
-    description:
-      "Customization makes our work more innovative by including custom modular systems and layout designs with maximum potential. ",
+    title: "Concept Brief",
+    description: `The home was designed to depict the clear straightforward personality of the husband, highlighting the bold and vibrance of the lady. Each space was tailored to provide its own specific function and utility, uplifting the aesthetics and concept for the residence.`,
   },
   {
     id: 3,
-    title: "Decoration",
-    description:
-      "Space transformation and architecture rejuvenation thrive on the excellent look for all residential rooms to decore creatively.",
+    title: "Design Process",
+    description: `Space transformation and architecture rejuvenation thrive on the excellent look for all residential rooms to decore creatively.`,
   },
 ];
 
 const AboutProjects = () => {
+  const [expanded, setExpanded] = useState({});
+
+  const toggleReadMore = (id) => {
+    setExpanded((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
+  const MAX_CHAR_COUNT = 150;
+
   return (
     <>
       <div className={style.processMainContainer}>
@@ -56,13 +66,22 @@ const AboutProjects = () => {
             style={{ paddingBottom: "0" }}
           >
             {ABOUT_PROJECT_DATA.map(({ id, title, description }) => {
+              const isExpanded = expanded[id];
+              const displayDescription = isExpanded
+                ? description
+                : description.slice(0, MAX_CHAR_COUNT) + "...";
+
               return (
-                <>
-                  <div key={id} className={style.processCard}>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                  </div>
-                </>
+                <div key={id} className={style.processCard}>
+                  <h3>{title}</h3>
+                  <p>{displayDescription}</p>
+                  <button
+                    onClick={() => toggleReadMore(id)}
+                    className={style.readMoreButton}
+                  >
+                    {isExpanded ? "Read Less" : "Read More"}
+                  </button>
+                </div>
               );
             })}
           </div>

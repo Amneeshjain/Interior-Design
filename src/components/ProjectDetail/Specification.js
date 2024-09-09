@@ -49,14 +49,10 @@ const Specification = () => {
             </div>
           </div>
           <p className={styles.videoP}>
-            I recently had the pleasure of working with Colonelz, an exceptional
-            interior design and construction company. Their team of
-            professionals turned my dream space into a reality with their
-            impeccable design expertise and flawless execution. From concept to
-            completion, Colonelz exceeded my expectations with their attention
-            to detail and commitment to quality craftsmanship. I highly
-            recommend Colonelz to anyone in need of outstanding interior design
-            and construction services.
+            Each space has been designed with a feature colour, varying between the furniture and walls, with rest of the space allowing the signature to capture the attention. The ceilings were designed simple, throwing focus on the highlights of the space.
+            The living room was an expression of simplicity with colour, with the walls panelled in a geometric grey pattern and the vibrant furniture capturing all the attention.The same detail was carried to the powder room for the guests.
+            The parents’ room was in soft ivory and youthful sky- blue tones.The puja was designed to aid circulation in the entertainment room with pocket doors that looked seamless when closed, combining well with the rest of the theme, seeming one with the storage.
+            The master bedroom was with strong hues of blue and wood with a concrete texture highlighting the bedroom wall.
           </p>
 
         </div>

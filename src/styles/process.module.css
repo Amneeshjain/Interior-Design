@@ -9,6 +9,21 @@
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
+.readMoreButton {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #000; /* Set your desired color */
+  font-size: 16px; /* Make the font size equal */
+  cursor: pointer;
+  text-align: left;
+  display: inline;
+}
+
+.readMoreButton:hover {
+  text-decoration: underline;
+}
+
 .box h2 {
   font-size: 20px;
 }

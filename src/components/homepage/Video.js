@@ -37,7 +37,7 @@ const Video = () => {
             >
               <div className={stylesA.tag}>
                 <hr />
-                Watch video
+                Project Video
                 <hr />
               </div>
               <h2>Converting Spaces Into Stunning Reality</h2>
@@ -65,7 +65,7 @@ const Video = () => {
             ) : (
               <div className="iframe-container">
                 <ReactPlayer
-                  url="https://www.youtube.com/embed/qUOYp0-tm0Y"
+                  url="/video/2904 WT.mov"
                   playing={isPlaying}
                   controls
                   width="100%"

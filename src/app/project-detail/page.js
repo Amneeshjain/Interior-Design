@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div>
       <HeroSection
-        title="Vasant Kunj Residence"
+        title="House of Colour, Tata Primanti"
         //buttonText="Get in Touch"
         backgroundImage="../../project-details.png"
         text="Project Details"
@@ -25,7 +25,7 @@ const page = () => {
       {/* <TwoVideoSection /> */}
       <Specification />
       {/* <ImageGallery /> */}
-      <ProjectGallery />  
+      <ProjectGallery />
 
       <Video />
       {/* <Contact /> */}
