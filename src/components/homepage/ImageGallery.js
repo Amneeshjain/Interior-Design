@@ -75,7 +75,7 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className={`container-fluid px-0 ${style.imageGalleryContainer}`}>
+    <div className={`container-fluid px-0 ${style.imageGalleryContainer1}`}>
       <div className={`row ${style.image_row}`}>
         <div
           style={{ justifyContent: "center", alignItems: "center" }}
