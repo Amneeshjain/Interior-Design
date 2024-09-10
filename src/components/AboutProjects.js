@@ -18,7 +18,7 @@ const ABOUT_PROJECT_DATA = [
   {
     id: 3,
     title: "Design Process",
-    description: `Space transformation and architecture rejuvenation thrive on the excellent look for all residential rooms to decore creatively.`,
+    description: `Each space has been designed with a feature colour, varying between the furniture and walls, with rest of the space allowing the signature to capture the attention. The ceilings were designed simple, throwing focus on the highlights of the space. The living room was an expression of simplicity with colour, with the walls panelled in a geometric grey pattern and the vibrant furniture capturing all the attention.The same detail was carried to the powder room for the guests. The parents’ room was in soft ivory and youthful sky- blue tones.The puja was designed to aid circulation in the entertainment room with pocket doors that looked seamless when closed, combining well with the rest of the theme, seeming one with the storage. The master bedroom was with strong hues of blue and wood with a concrete texture highlighting the bedroom wall.`,
   },
 ];
 
@@ -32,7 +32,7 @@ const AboutProjects = () => {
     }));
   };
 
-  const MAX_CHAR_COUNT = 150;
+  const MAX_CHAR_COUNT = 140;
 
   return (
     <>

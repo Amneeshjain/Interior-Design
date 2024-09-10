@@ -23,12 +23,12 @@ const page = () => {
       />
       <AboutProjects />
       {/* <TwoVideoSection /> */}
-      <Specification />
+      <Video />
       {/* <ImageGallery /> */}
       <ProjectGallery />
 
-      <Video />
       {/* <Contact /> */}
+      <Specification />
       <GetInTouch />
       {/* <ImageGallery /> */}
     </div>
