@@ -23,9 +23,9 @@ const page = () => {
       />
       <AboutProjects />
       {/* <TwoVideoSection /> */}
-      <Video />
       {/* <ImageGallery /> */}
       <ProjectGallery />
+      <Video />
 
       {/* <Contact /> */}
       <Specification />

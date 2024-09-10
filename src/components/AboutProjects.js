@@ -32,7 +32,7 @@ const AboutProjects = () => {
     }));
   };
 
-  const MAX_CHAR_COUNT = 140;
+  const MAX_CHAR_COUNT = 126;
 
   return (
     <>
