@@ -98,7 +98,7 @@ const ProjectGallery = () => {
             ))}
         </div>
 
-        <div className="text-center mt-4 d-none">
+        <div className="text-center mt-4 ">
           <button
             className="btn btn-dark py-3 px-3 rounded-none"
             onClick={toggleShowMore}
