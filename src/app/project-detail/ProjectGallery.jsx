@@ -2,27 +2,28 @@ import { useState, useEffect } from "react";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
 import styleb from "../../styles/process.module.css";
+import styles from "../../styles/gallary.module.css";
 
 const ProjectGallery = () => {
   const images = [
-    { id: 1, src: "/project1gallary1.jpg", thumb: "/project1gallary1.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 2, src: "/project1gallary2.jpg", thumb: "/project1gallary2.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 3, src: "/project1gallary3.jpg", thumb: "/project1gallary3.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 4, src: "/project1gallary4.jpg", thumb: "/project1gallary4.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 5, src: "/project1gallary5.jpg", thumb: "/project1gallary5.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 6, src: "/project1gallary6.jpg", thumb: "/project1gallary6.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 7, src: "/projectgallery7.jpg", thumb: "/projectgallery7.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 8, src: "/project1gallary8.jpg", thumb: "/project1gallary8.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 9, src: "/project1gallary1.jpg", thumb: "/project1gallary1.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 10, src: "/project1gallary2.jpg", thumb: "/project1gallary2.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 11, src: "/project1gallary3.jpg", thumb: "/project1gallary3.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 12, src: "/project1gallary4.jpg", thumb: "/project1gallary4.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 13, src: "/project1gallary5.jpg", thumb: "/project1gallary5.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 14, src: "/project1gallary6.jpg", thumb: "/project1gallary6.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 15, src: "/projectgallery7.jpg", thumb: "/projectgallery7.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 16, src: "/project1gallary8.jpg", thumb: "/project1gallary8.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 17, src: "/project1gallary1.jpg", thumb: "/project1gallary1.jpg", colSpan: 2, rowSpan: 3 },
-    { id: 18, src: "/project1gallary2.jpg", thumb: "/project1gallary2.jpg", colSpan: 2, rowSpan: 3 },
+    { id: 1, src: "/T2,TATA PRIMANTI/1.jpg", thumb: "/T2,TATA PRIMANTI/1.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 2, src: "/T2,TATA PRIMANTI/2.jpg", thumb: "/T2,TATA PRIMANTI/2.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 3, src: "/T2,TATA PRIMANTI/3.jpg", thumb: "/T2,TATA PRIMANTI/3.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 4, src: "/T2,TATA PRIMANTI/4.jpg", thumb: "/T2,TATA PRIMANTI/4.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 5, src: "/T2,TATA PRIMANTI/5.jpg", thumb: "/T2,TATA PRIMANTI/5.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 6, src:"/T2,TATA PRIMANTI/6.jpg", thumb: "/T2,TATA PRIMANTI/6.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 7, src: "/T2,TATA PRIMANTI/7.jpg", thumb: "/T2,TATA PRIMANTI/7.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 8, src: "/T2,TATA PRIMANTI/8.jpg", thumb: "/T2,TATA PRIMANTI/8.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 9, src: "/T2,TATA PRIMANTI/9.jpg", thumb: "/T2,TATA PRIMANTI/9.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 10, src: "/T2,TATA PRIMANTI/10.jpg", thumb: "/T2,TATA PRIMANTI/10.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 11, src: "/T2,TATA PRIMANTI/11.jpg", thumb: "/T2,TATA PRIMANTI/11.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 12, src: "/T2,TATA PRIMANTI/12.jpg", thumb: "/T2,TATA PRIMANTI/12.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 13, src: "/T2,TATA PRIMANTI/13.jpg", thumb: "/T2,TATA PRIMANTI/13.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 14, src: "/T2,TATA PRIMANTI/14.jpg", thumb: "/T2,TATA PRIMANTI/14.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 15, src: "/T2,TATA PRIMANTI/15.jpg", thumb: "/T2,TATA PRIMANTI/15.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 16, src: "/T2,TATA PRIMANTI/16.jpg", thumb: "/T2,TATA PRIMANTI/16.jpg", colSpan: 1, rowSpan: 2 },
+    { id: 17, src: "/T2,TATA PRIMANTI/17.jpg", thumb: "/T2,TATA PRIMANTI/17.jpg", colSpan: 1, rowSpan: 3 },
+    { id: 18, src: "/T2,TATA PRIMANTI/18.jpg", thumb: "/T2,TATA PRIMANTI/18.jpg", colSpan: 1, rowSpan: 3 },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -98,12 +99,13 @@ const ProjectGallery = () => {
             ))}
         </div>
 
-        <div className="text-center mt-4 ">
+        <div className={`${styles.loadMore}`}>
           <button
-            className="btn btn-dark py-3 px-3 rounded-none"
+            style={{ margin: "0 auto" }}
             onClick={toggleShowMore}
+            className={`${styles.toggleButton}`}
           >
-            {showMore ? "Show Less" : "View More"}
+            {showMore ? "Show Less" : "See More"}
           </button>
         </div>
 
