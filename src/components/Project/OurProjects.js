@@ -23,24 +23,24 @@ const projectData = [
   },
   {
     id: 3,
-    title: "Hotel Udai Niwas",
+    title: "Panda 18, Ardee Mall",
     image: "/CAFE 02/tye_141 (2).jpg",
-    description: "Heritage hotel in the heart of the city.",
+    description: "Built-up Area:200 sq.ft,Carpet Area:1050 sq.ft ",
     href: "/projectdetail2"
   },
   {
     id: 4,
-    title: "Another Vasant Kunj Residence",
+    title: "Plymaarque",
     image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
-    description: "Modern living in Vasant Kunj.",
+    description: "Built-up Area:2400 SQFT,Carpet Area:2200 SQFT",
     href: "/projectdetail3"
   },
   {
     id: 5,
     title: "Another Vasant Kunj Residence",
-    image: "/Untitled-design-28-1.jpg",
+    image: "/C3 SOBHA CITY-20240911T070417Z-001/C3 SOBHA CITY/View-03.jpg",
     description: "Modern living in Vasant Kunj.",
-    href: "/projectdetail3"
+    href: "/projectdetail4"
   }
 ];
 
