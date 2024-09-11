@@ -42,6 +42,13 @@ const projectData = [
     description: "Modern living in Vasant Kunj.",
     href: "/projectdetail4"
   }
+  , {
+    id: 6,
+    title: "Sobha City",
+    image: "/C3 SOBHA CITY-20240911T070417Z-001/C3 SOBHA CITY/View-03.jpg",
+    description: "Modern living in Vasant Kunj.",
+    href: "/projectdetail5"
+  }
 ];
 
 const OurProjects = () => {
