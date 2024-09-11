@@ -2,7 +2,8 @@ import { useState,useEffect  } from "react";
 import Image from "next/image";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import styles from "../../styles/gallary.module.css";
 
 const ProjectGallery = () => {
  
@@ -58,16 +59,22 @@ const ProjectGallery = () => {
       ];
       
     
-const [activeIndex, setActiveIndex] = useState(0);
-const [isClient, setIsClient] = useState(false);
+      const [activeIndex, setActiveIndex] = useState(0);
+      const [isClient, setIsClient] = useState(false);
+      const [showMore, setShowMore] = useState(false);
 
 useEffect(() => {
     setIsClient(true);
 }, []);
 
-const handleSelect = index => {
-    setActiveIndex(index);
+const handleSelect = (index) => {
+  setActiveIndex(index);
 };
+
+const toggleShowMore = () => {
+  setShowMore(!showMore);
+};
+
 
 if (!isClient) return null;
   return (
@@ -99,36 +106,44 @@ if (!isClient) return null;
         </div>
         {/* ================================= */}
         <div className={style.imageGalleryContainer}>
-        {images.map((image, index) => (
-        <div
-          key={index}
-          className={`${style.gallery_container} ${style[`w_${image.colSpan}`]} ${style[`h_${image.rowSpan}`]}`}
-        >
-            <div className={style.gallery_item}>
-            <div className={style.image}>
-          <a
-            href="#"
-            onClick={e => {
-              e.preventDefault();
-              handleSelect(index);
-            }}
-            data-bs-toggle="modal"
-            data-bs-target="#exampleLightbox"
-            className={style.masonry_item}
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            <img
-              src={image.thumb}
-              alt={`thumbnail ${index + 1}`}
-              
-            />
-          </a>
-        </div>
-        </div>
-        </div>
-      ))}
+        {images
+            .slice(0, showMore ? images.length : 8) // Show 8 initially, or all if showMore is true
+            .map((image, index) => (
+              <div
+                key={index}
+                className={`${style.gallery_container} ${style[`w_${image.colSpan}`]} ${style[`h_${image.rowSpan}`]}`}
+              >
+                <div className={style.gallery_item}>
+                  <div className={style.image}>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSelect(index);
+                      }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleLightbox"
+                      className={style.masonry_item}
+                      data-aos="zoom-in"
+                      data-aos-duration="1000"
+                    >
+                      <img src={image.thumb} alt={`thumbnail ${index + 1}`} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
     </div>
+  
+    <div className={`${styles.loadMore}`}>
+          <button
+            style={{ margin: "0 auto" }}
+            onClick={toggleShowMore}
+            className={`${styles.toggleButton}`}
+          >
+            {showMore ? "Show Less" : "See More"}
+          </button>
+        </div>
         <div
             className={`modal fade `}
             id="exampleLightbox"

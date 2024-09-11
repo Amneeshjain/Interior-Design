@@ -18,9 +18,9 @@ const page = () => {
                 background={"#fff"}
             />
             <AboutProject />
-            <Specification />
             <ProjectGallery />
             <Video />
+            <Specification />
             <GetInTouch />
         </div>
     );
