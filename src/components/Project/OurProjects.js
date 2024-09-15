@@ -23,9 +23,9 @@ const projectData = [
   },
   {
     id: 3,
-    title: "Panda 18, Ardee Mall",
+    title: "Bani Square",
     image: "/CAFE 02/tye_141 (2).jpg",
-    description: "Built-up Area:200 sq.ft,Carpet Area:1050 sq.ft ",
+    description: "Built-up Area:385 sq.ft,Carpet Area:310 sq.ft ",
     href: "/projectdetail2"
   },
   {
@@ -45,7 +45,7 @@ const projectData = [
   , {
     id: 6,
     title: "Sobha City",
-    image: "/C3 SOBHA CITY-20240911T070417Z-001/C3 SOBHA CITY/View-03.jpg",
+    image: "/B1, SOBHA CITY/3.jpg",
     description: "Modern living in Vasant Kunj.",
     href: "/projectdetail5"
   }
