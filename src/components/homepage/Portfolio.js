@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import whiteButton from "../../../public/button-white.png";
-import BgInteriar1 from "../../../public/portfolio-1.png";
+import BgInteriar1 from "../../../public/T2,TATA PRIMANTI/3.jpg";
 import BgInteriar2 from "../../../public/portfolio-2.png";
 import BgInteriar3 from "../../../public/bginterior-3.png"
 import styleA from "../../styles/aboutSection.module.css";
