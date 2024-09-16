@@ -7,8 +7,8 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import whiteButton from "../../../public/button-white.png";
 import BgInteriar1 from "../../../public/T2,TATA PRIMANTI/3.jpg";
-import BgInteriar2 from "../../../public/portfolio-2.png";
-import BgInteriar3 from "../../../public/bginterior-3.png"
+import BgInteriar2 from "../../../public/CAFE-01/tye_299.jpg";
+import BgInteriar3 from "../../../public/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg"
 import styleA from "../../styles/aboutSection.module.css";
 // import styless from "../../styles/gallary.module.css";
 import styless from "../../styles/video.module.css";
@@ -51,9 +51,9 @@ const Portfolio = () => {
             <div className={` ${styles.greyBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  <p className={style.colorWhite}>STUDIO APARTMENT,
+                  <p className={style.colorWhite}>Plymaarque
                   </p>
-                  <p className={style.colorWhite}>GURGAON</p>
+                  {/* <p className={style.colorWhite}>GURGAON</p> */}
                 </div>
 
                 <div>
@@ -88,8 +88,8 @@ const Portfolio = () => {
             <div className={`${styles.greenBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  <p className={style.colorWhite}>EF</p>
-                  <p className={style.colorWhite}>TATA PRIMANTI
+                  {/* <p className={style.colorWhite}>EF</p> */}
+                  <p className={style.colorWhite}>Panda 18, Ardee Mall
                   </p>
                 </div>
                 <div>
@@ -119,9 +119,9 @@ const Portfolio = () => {
             <div className={` ${styles.greyBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  <p className={style.colorWhite}>BPTP,
-                  </p>
-                  <p className={style.colorWhite}>SECTOR 102</p>
+                  {/* <p className={style.colorWhite}>BPTP,
+                  </p> */}
+                  <p className={style.colorWhite}>House of Colour, Tata Primanti</p>
                 </div>
 
                 <div>
