@@ -25,7 +25,6 @@ const ProjectGallery = () => {
     { id: 17, src: "/T2,TATA PRIMANTI/17.jpg", thumb: "/T2,TATA PRIMANTI/17.jpg", colSpan: 1, rowSpan: 3 },
     { id: 18, src: "/T2,TATA PRIMANTI/18.jpg", thumb: "/T2,TATA PRIMANTI/18.jpg", colSpan: 1, rowSpan: 3 },
   ];
-
   const [activeIndex, setActiveIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
   const [showMore, setShowMore] = useState(false);

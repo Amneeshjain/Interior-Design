@@ -26,7 +26,6 @@ const page = () => {
       {/* <ImageGallery /> */}
       <ProjectGallery />
       <Video />
-
       {/* <Contact /> */}
       <Specification />
       <GetInTouch />
