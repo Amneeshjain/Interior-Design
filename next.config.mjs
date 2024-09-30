@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  //   output: "export",
+  images: {
+    domains: ['s3-us-west-2.amazonaws.com'],
+  },
 };
 
 export default nextConfig;

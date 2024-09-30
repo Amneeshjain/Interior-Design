@@ -1,44 +1,38 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from 'axios';
 import style from "../styles/header.module.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
   const [activeSubLink, setActiveSubLink] = useState("");
-  const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
+  const [data, setData] = useState([]);
 
   const handleClick = (link, subLink = "") => {
     setActiveLink(link);
     setActiveSubLink(subLink);
   };
 
-  const toggleProjectsDropdown = () => {
-    setShowProjectsDropdown(!showProjectsDropdown);
+  const getdata = async () => {
+    try {
+      const response = await axios.get("http://localhost:7000/projects");
+      setData(response.data);  // Set the actual data from the response
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+    }
   };
-  const menuItems = [
-    {
-      label: 'Projects',
-      items: [
-        'Apartment',
-        'Villas',
-        'Offices',
-        'Resorts & Hotels',
-        'Restaurants & Cafes',
-        'Retail & Showroom',
-        'Builder Floor',
-        'Farm House',
-        'Commercial Complex',
-        'Industrial Units',
-      ],
-    },
-  ];
+
+  useEffect(() => {
+    getdata();
+  }, []);
+
   return (
     <>
       <div className={style.headerMainContainer}>
         <div className="container-fluid">
           <div className={style.headerInnerItems}>
+            {/* Logo Section */}
             <div className={style.left}>
               <div className="d-flex justify-content-between gap-4">
                 <div className="mt-3">
@@ -62,18 +56,13 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+            {/* Menu Section */}
             <div className={style.right}>
               <ul className={style.menuListOpt}>
-                <li
-                  onClick={() => handleClick("/")}
-                  className={activeLink === "/" ? "active" : "inactive"}
-                >
+                <li onClick={() => handleClick("/")} className={activeLink === "/" ? "active" : "inactive"}>
                   <Link href="/">Home</Link>
                 </li>
-                <li
-                  onClick={() => handleClick("/about")}
-                  className={activeLink === "/about" ? "active" : "inactive"}
-                >
+                <li onClick={() => handleClick("/about")} className={activeLink === "/about" ? "active" : "inactive"}>
                   <Link href="/about">About</Link>
                 </li>
                 <li
@@ -126,39 +115,35 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-
-                {/* Projects with Dropdown */}
+                {/* Projects Dropdown */}
                 <li className={`${style.projectMenu}`}>
                   <Link href="/projects" onClick={() => handleClick("/projects")}>
                     Projects
-                    <img className={style.dropIcon} src="dropDownArrow.png" alt="Dropdown Icon" />
+                    <img className={style.dropIcon} src="dropDownArrow.png" />
                   </Link>
-
-                  {/* Projects Dropdown */}
+                  {/* Dropdown for Projects */}
                   <ul className={style.projectSubMenu}>
-                    {menuItems[0].items.map((project, index) => (
-                      <li key={index}>
-                        <Link
-                          href={`/projects/${project.toLowerCase().replace(/\s+/g, '-')}`}
-                          onClick={() => handleClick(`/projects/${project.toLowerCase().replace(/\s+/g, '-')}`)}
-                        >
-                          {project.toUpperCase()}
-                        </Link>
-                      </li>
-                    ))}
+                    {data.length > 0 ? (
+                      data.map((project, index) => (
+                        <li key={index}>
+                          <Link
+                            href={`/projects/${project.header_route}`}
+                            onClick={() => handleClick(`/projects/${project.header_route}`)}
+                          >
+                            {project.category_name.toUpperCase()}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <li>Loading...</li>
+                    )}
                   </ul>
                 </li>
 
-                <li
-                  onClick={() => handleClick("/clients")}
-                  className={activeLink === "/clients" ? "active" : "inactive"}
-                >
+                <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
                   <Link href="/clients">Clients</Link>
                 </li>
-                <li
-                  onClick={() => handleClick("/blogs")}
-                  className={activeLink === "/blogs" ? "active" : "inactive"}
-                >
+                <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
                   <Link href="/blogs">Blog</Link>
                 </li>
                 <li className={style.headerBtn}>

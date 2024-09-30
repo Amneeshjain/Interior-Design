@@ -54,7 +54,7 @@ const Counter = () => {
 
     return (
         <div className="container px-1">
-            <div className={`row rounded ${style.bgcolor} py-5`}>
+            <div className={`row rounded  py-5`}>
                 {counterData.map((item, index) => (
                     <div className="col-lg-3 col-md-6 mb-4" key={index}>
                         <div className="text-center p-4 bg-white rounded shadow">

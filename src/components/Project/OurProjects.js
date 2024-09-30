@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import stylesA from "../../styles/aboutSection.module.css";
 import ProjectCard from "../../components/Project/ProjectCard";
 import style from "../../styles/project.module.css";
 import Link from "next/link";
-
 import styles from "../../styles/gallary.module.css";
 const projectData = [
   {
@@ -56,10 +54,7 @@ const OurProjects = () => {
   const handleToggle = () => {
     setShowMore(!showMore);
   };
-
-  // Determine how many projects to show based on `showMore` state
   const visibleProjects = showMore ? projectData : projectData.slice(0, 4);
-
   return (
     <div className={style.projectMainContainer}>
       <div className="container">

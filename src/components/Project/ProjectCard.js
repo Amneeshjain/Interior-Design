@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => (
             src={project.image}
             alt={project.title}
             layout="fill"
-            objectFit="cover" // Ensure the image covers the container
+            objectFit="cover" 
           />
         </div>
         <div className={styles.content}>
@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => (
             alt={project.title}
             layout="fill"
             className={styles.image}
-            objectFit="cover" // Ensure the image covers the container
+            objectFit="cover" 
           />
           <div className={styles.titleOverlay}>
             {project.title}
