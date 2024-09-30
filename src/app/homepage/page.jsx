@@ -12,6 +12,7 @@ import styles from "../../styles/home.module.css";
 import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import ImageGallery from "../../components/homepage/ImageGallery";
+import AllProjects from "../../components/homepage/AllProjects";
 // import ThreeSixtyCompo from "../../components/homepage/ThreeSixty";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
@@ -22,7 +23,7 @@ const textData = [
     description:
       "Architectural services include design, preparation of construction documents,  administration.",
     buttonText: "View service",
-    url: "/architecture"
+    url: "/architecture",
   },
   {
     image: "/fi_8172688.png",
@@ -30,7 +31,7 @@ const textData = [
     description:
       "Tailored residential and commercial interior services, transforming spaces with style and personalized design.",
     buttonText: "View service",
-    url: "/interior"
+    url: "/interior",
   },
   {
     image: "/fi_10365450.png",
@@ -38,8 +39,8 @@ const textData = [
     description:
       "Expert construction services, delivering exceptional quality, unmatched efficiency, and precise execution.",
     buttonText: "View service",
-    url: "/construction"
-  }
+    url: "/construction",
+  },
 ];
 const cards = [
   {
@@ -47,43 +48,43 @@ const cards = [
     image: "/slide-1.jpg",
     tag: "Web Design",
     title: "Color Integration",
-    date: 2023
+    date: 2023,
   },
   {
     id: 2,
     image: "/slide-2.jpg",
     tag: "Mobile Software",
     title: "Color Integration",
-    date: 2023
+    date: 2023,
   },
   {
     id: 3,
     image: "/slide-3.jpg",
     tag: "Web Design",
     title: "New Gadgets",
-    date: 2023
+    date: 2023,
   },
   {
     id: 4,
     image: "/slide-4.jpg",
     tag: "Web Design",
     title: "Digital Platform",
-    date: 2023
+    date: 2023,
   },
   {
     id: 5,
     image: "/slide-5.jpg",
     tag: "Web Design",
     title: "Branding Process",
-    date: 2023
+    date: 2023,
   },
   {
     id: 6,
     image: "/slide-6.jpg",
     tag: "Web Design",
     title: "Branding Process",
-    date: 2023
-  }
+    date: 2023,
+  },
 ];
 const Homepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -102,7 +103,7 @@ const Homepage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
     <div>
       <div className={isScrolled ? "" : "scrolled"}>
@@ -110,8 +111,8 @@ const Homepage = () => {
           <HeroSection />
         </div>
       </div>
-
       <AboutUs />
+      <AllProjects />
       {/* <Slide cards={cards}/> */}
       <Services
         title="Services We Offer"

@@ -6,18 +6,18 @@ import Link from "next/link";
 const ABOUT_PROJECT_DATA = [
   {
     id: 1,
-    title: "Client Brief",
+    title: "Elegance",
     description: `A colourful minimalistic home with the walls designed to be the art in the space. 
     The young couple sought to transform their apartment into a personal homage, to the journey they embarked on as college mates to becoming a successful vibrant couple in business and corporate. With a unique vision and aspiration for an abode personifying their individual contrasting personalities and also comfortable for their elderly parents.`,
   },
   {
     id: 2,
-    title: "Concept Brief",
+    title: "Color",
     description: `The home was designed to depict the clear straightforward personality of the husband, highlighting the bold and vibrance of the lady. Each space was tailored to provide its own specific function and utility, uplifting the aesthetics and concept for the residence.`,
   },
   {
     id: 3,
-    title: "Design Process",
+    title: "Customer Brief",
     description: `Each space has been designed with a feature colour, varying between the furniture and walls, with rest of the space allowing the signature to capture the attention. The ceilings were designed simple, throwing focus on the highlights of the space. The living room was an expression of simplicity with colour, with the walls panelled in a geometric grey pattern and the vibrant furniture capturing all the attention.The same detail was carried to the powder room for the guests. The parents’ room was in soft ivory and youthful sky- blue tones.The puja was designed to aid circulation in the entertainment room with pocket doors that looked seamless when closed, combining well with the rest of the theme, seeming one with the storage. The master bedroom was with strong hues of blue and wood with a concrete texture highlighting the bedroom wall.`,
   },
 ];
@@ -54,10 +54,10 @@ const AboutProjects = () => {
             >
               <div className={stylesA.tag}>
                 <hr />
-                About Project
+                Initial Concept
                 <hr />
               </div>
-              <h2>The Initial Concepts</h2>
+              {/* <h2>Customer Brief  Smart Space</h2> */}
             </div>
           </div>
 

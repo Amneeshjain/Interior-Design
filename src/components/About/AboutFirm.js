@@ -9,7 +9,7 @@ const AboutFirm = ({ imgSrc, imgAlt, tagText, title, description }) => {
           <div className={style.left} data-aos="fade-right">
             <div className={style.img}>
               <figure>
-                <img src={imgSrc} alt={imgAlt} />
+                <img src={imgSrc} alt={imgAlt} loading="lazy" />
               </figure>
             </div>
           </div>

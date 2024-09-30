@@ -6,24 +6,132 @@ import styles from "../../styles/gallary.module.css";
 
 const ProjectGallery = () => {
   const images = [
-    { id: 1, src: "/T2,TATA PRIMANTI/1.jpg", thumb: "/T2,TATA PRIMANTI/1.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 2, src: "/T2,TATA PRIMANTI/2.jpg", thumb: "/T2,TATA PRIMANTI/2.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 3, src: "/T2,TATA PRIMANTI/3.jpg", thumb: "/T2,TATA PRIMANTI/3.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 4, src: "/T2,TATA PRIMANTI/4.jpg", thumb: "/T2,TATA PRIMANTI/4.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 5, src: "/T2,TATA PRIMANTI/5.jpg", thumb: "/T2,TATA PRIMANTI/5.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 6, src:"/T2,TATA PRIMANTI/6.jpg", thumb: "/T2,TATA PRIMANTI/6.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 7, src: "/T2,TATA PRIMANTI/7.jpg", thumb: "/T2,TATA PRIMANTI/7.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 8, src: "/T2,TATA PRIMANTI/8.jpg", thumb: "/T2,TATA PRIMANTI/8.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 9, src: "/T2,TATA PRIMANTI/9.jpg", thumb: "/T2,TATA PRIMANTI/9.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 10, src: "/T2,TATA PRIMANTI/10.jpg", thumb: "/T2,TATA PRIMANTI/10.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 11, src: "/T2,TATA PRIMANTI/11.jpg", thumb: "/T2,TATA PRIMANTI/11.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 12, src: "/T2,TATA PRIMANTI/12.jpg", thumb: "/T2,TATA PRIMANTI/12.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 13, src: "/T2,TATA PRIMANTI/13.jpg", thumb: "/T2,TATA PRIMANTI/13.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 14, src: "/T2,TATA PRIMANTI/14.jpg", thumb: "/T2,TATA PRIMANTI/14.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 15, src: "/T2,TATA PRIMANTI/15.jpg", thumb: "/T2,TATA PRIMANTI/15.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 16, src: "/T2,TATA PRIMANTI/16.jpg", thumb: "/T2,TATA PRIMANTI/16.jpg", colSpan: 1, rowSpan: 2 },
-    { id: 17, src: "/T2,TATA PRIMANTI/17.jpg", thumb: "/T2,TATA PRIMANTI/17.jpg", colSpan: 1, rowSpan: 3 },
-    { id: 18, src: "/T2,TATA PRIMANTI/18.jpg", thumb: "/T2,TATA PRIMANTI/18.jpg", colSpan: 1, rowSpan: 3 },
+    {
+      id: 1,
+      src: "/T2,TATA PRIMANTI/1.jpg",
+      thumb: "/T2,TATA PRIMANTI/1.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 2,
+      src: "/T2,TATA PRIMANTI/2.jpg",
+      thumb: "/T2,TATA PRIMANTI/2.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 3,
+      src: "/T2,TATA PRIMANTI/3.jpg",
+      thumb: "/T2,TATA PRIMANTI/3.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 4,
+      src: "/T2,TATA PRIMANTI/4.jpg",
+      thumb: "/T2,TATA PRIMANTI/4.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 5,
+      src: "/T2,TATA PRIMANTI/5.jpg",
+      thumb: "/T2,TATA PRIMANTI/5.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 6,
+      src: "/T2,TATA PRIMANTI/6.jpg",
+      thumb: "/T2,TATA PRIMANTI/6.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 7,
+      src: "/T2,TATA PRIMANTI/7.jpg",
+      thumb: "/T2,TATA PRIMANTI/7.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 8,
+      src: "/T2,TATA PRIMANTI/8.jpg",
+      thumb: "/T2,TATA PRIMANTI/8.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 9,
+      src: "/T2,TATA PRIMANTI/9.jpg",
+      thumb: "/T2,TATA PRIMANTI/9.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 10,
+      src: "/T2,TATA PRIMANTI/10.jpg",
+      thumb: "/T2,TATA PRIMANTI/10.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 11,
+      src: "/T2,TATA PRIMANTI/11.jpg",
+      thumb: "/T2,TATA PRIMANTI/11.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 12,
+      src: "/T2,TATA PRIMANTI/12.jpg",
+      thumb: "/T2,TATA PRIMANTI/12.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 13,
+      src: "/T2,TATA PRIMANTI/13.jpg",
+      thumb: "/T2,TATA PRIMANTI/13.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 14,
+      src: "/T2,TATA PRIMANTI/14.jpg",
+      thumb: "/T2,TATA PRIMANTI/14.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 15,
+      src: "/T2,TATA PRIMANTI/15.jpg",
+      thumb: "/T2,TATA PRIMANTI/15.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 16,
+      src: "/T2,TATA PRIMANTI/16.jpg",
+      thumb: "/T2,TATA PRIMANTI/16.jpg",
+      colSpan: 1,
+      rowSpan: 2,
+    },
+    {
+      id: 17,
+      src: "/T2,TATA PRIMANTI/17.jpg",
+      thumb: "/T2,TATA PRIMANTI/17.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
+    {
+      id: 18,
+      src: "/T2,TATA PRIMANTI/18.jpg",
+      thumb: "/T2,TATA PRIMANTI/18.jpg",
+      colSpan: 1,
+      rowSpan: 3,
+    },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -65,7 +173,7 @@ const ProjectGallery = () => {
               Our Gallery
               <hr />
             </div>
-            <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
+            <h2 className="col-lg-12 mt-4 mb-5">Explore Our Project</h2>
           </div>
         </div>
         <div className={style.imageGalleryContainer}>
@@ -74,7 +182,9 @@ const ProjectGallery = () => {
             .map((image, index) => (
               <div
                 key={index}
-                className={`${style.gallery_container} ${style[`w_${image.colSpan}`]} ${style[`h_${image.rowSpan}`]}`}
+                className={`${style.gallery_container} ${
+                  style[`w_${image.colSpan}`]
+                } ${style[`h_${image.rowSpan}`]}`}
               >
                 <div className={style.gallery_item}>
                   <div className={style.image}>
@@ -133,7 +243,11 @@ const ProjectGallery = () => {
                         }`}
                         key={index}
                       >
-                        <img src={image.src} alt={`image ${index + 1}`} className={`h-100`} />
+                        <img
+                          src={image.src}
+                          alt={`image ${index + 1}`}
+                          className={`h-100`}
+                        />
                       </div>
                     ))}
                   </div>
@@ -143,7 +257,9 @@ const ProjectGallery = () => {
                     data-bs-target="#lightboxExampleCarousel"
                     data-bs-slide="prev"
                     onClick={() =>
-                      handleSelect((activeIndex - 1 + images.length) % images.length)
+                      handleSelect(
+                        (activeIndex - 1 + images.length) % images.length
+                      )
                     }
                   >
                     <span

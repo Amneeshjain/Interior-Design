@@ -1,7 +1,8 @@
+"use client"
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import style from "../../styles/aboutSection.module.css";
-
+import Counter from "../../components/homepage/Counter"
 const AboutUs = () => {
   const imagesRef = useRef([]);
 
@@ -34,8 +35,8 @@ const AboutUs = () => {
 
   return (
     <>
-      <div id="about" className={style.aboutMainContainer}>
-        <div className="container">
+      <div id="about" className={` ${style.aboutMainContainer}`}>
+        <div className="container ">
           <div
             className={style.sectionTitle}
             data-aos="fade-up"
@@ -44,11 +45,10 @@ const AboutUs = () => {
             <div className={style.left}>
               <div className={style.tag} style={{ display: "flex", justifyContent: "start" }}>
                 <hr />
-                About the firm
+                Our Projects
               </div>
               <h2>
-                Your Journey <br />
-                to Incredible Spaces
+                A Variety of Projects
               </h2>
             </div>
             <div className={style.right}>
@@ -56,26 +56,55 @@ const AboutUs = () => {
             </div>
           </div>
           <div className={style.aboutInnerItems}>
-            <div className={style.left}>
-              <figure data-aos="zoom-in">
-                <img ref={(el) => el && imagesRef.current.push(el)} src="slide-1.jpg" alt="" />
+            <div className={style.left} style={{ position: 'relative' }}>
+              <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
+                <img
+                  ref={(el) => el && imagesRef.current.push(el)}
+                  src="slide-1.jpg"
+                  alt=""
+                  style={{ width: '100%' }}
+                />
               </figure>
+              <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: 0, width: '100%' }}>
+                <div className={style.contbox}>
+                  <p>Residential</p>
+                </div>
+              </div>
             </div>
+
+
             <div className={style.right}>
               <ul>
                 <li>
-                  <figure data-aos="zoom-in">
-                    <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-2.jpg" alt="" />
-                  </figure>
+                  <div style={{ position: 'relative' }}>
+
+                    <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
+                      <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-2.jpg" alt="" />
+                    </figure>
+                    <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
+                      <div className={style.contbox}>
+                        <p>Residential</p>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <figure data-aos="zoom-in">
-                    <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-3.jpg" alt="" />
-                  </figure>
+                  <div style={{ position: 'relative' }}>
+
+                    <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
+                      <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-3.jpg" alt="" />
+                    </figure>
+                    <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
+                      <div className={style.contbox}>
+                        <p>Residential</p>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
+          <Counter />
         </div>
       </div>
     </>

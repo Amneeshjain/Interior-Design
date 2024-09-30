@@ -17,7 +17,7 @@ const page = () => {
         title="House of Colour, Tata Primanti"
         //buttonText="Get in Touch"
         backgroundImage="../../project-details.png"
-        text="Project Details"
+        text="Apartments"
         color={"#fff"}
         background={"#fff"}
       />
