@@ -1,5 +1,5 @@
 .aboutMainContainer {
-  padding: 146px 0;
+  padding: 70px 0;
 }
 
 .sectionTitle {
@@ -7,7 +7,33 @@
   align-items: flex-end;
   justify-content: space-between;
 }
-
+.bgcolor {
+  background-color: #fafafa;
+  color: #000;
+  margin-top: 30px;
+  padding: 30px;
+}
+.imgContent {
+  color: white;
+  text-align: center;
+  /* padding: 30px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+.contbox {
+  background-color: #ededed;
+  color: #000;
+  padding-top: 13px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.contbox p {
+  font-size: 22px;
+  font-weight: 600;
+}
 .sectionTitle .left .tag {
   gap: 19.28px;
   display: flex;
@@ -55,6 +81,7 @@
   overflow: hidden;
   padding-top: 64.83px;
   align-items: flex-start;
+  position: relative;
 }
 
 .aboutInnerItems img {

@@ -1,0 +1,30 @@
+{
+  "project-types": [
+    {
+      "id": 1,
+      "name": "Residential"
+    },
+    {
+      "id": 2,
+      "name": "Commercial"
+    },
+    {
+      "id": 3,
+      "name": "Industrial"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Residential Project 1",
+      "type": "Residential",
+      "description": "Description for Residential Project 1"
+    },
+    {
+      "id": 2,
+      "title": "Commercial Project 1",
+      "type": "Commercial",
+      "description": "Description for Commercial Project 1"
+    }
+  ]
+}

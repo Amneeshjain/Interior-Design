@@ -125,7 +125,7 @@ const Team = () => {
             <p
               className={`text-center ${styles.uppercase} ${styles.textStylingLine}`}
             >
-              Meet Our Team
+              The Team
             </p>
             <div className={styles.lineRight}></div>
           </div>
@@ -139,31 +139,26 @@ const Team = () => {
           <div className={style.teamSliderItems}>
             <div className={style.teamSliderContainer}>
               <Slider className={style.sliderDiv} {...settings}>
-                {TeamSliderData.map(
-                  ({ id, image, title, profile, descrip }) => {
-                    return (
-                      <>
-                        <div key={id} className={style.team_card}>
-                          <figure>
-                            <img src={image} alt="" />
-                          </figure>
-                          <div className={style.detail_boxhover}>
-                            <h3>{title}</h3>
-                            <p className={style.profile}>{profile}</p>
-                            <p className={style.descrip}>{descrip}</p>
-                          </div>
+                {TeamSliderData.map(({ id, image, title, profile, descrip }) => (
+                  <div key={id} className={style.team_card}>
+                    <figure>
+                      <img src={image} alt="" />
+                    </figure>
+                    <div className={style.detail_boxhover}>
+                      <h3>{title}</h3>
+                      <p className={style.profile}>{profile}</p>
+                      <p className={style.descrip}>{descrip}</p>
+                    </div>
 
-                          <div className={style.detail_box}>
-                            <h3>{title}</h3>
-                            <p className={style.profile}>{profile}</p>
-                          </div>
-                        </div>
-                      </>
-                    );
-                  }
-                )}
+                    <div className={style.detail_box}>
+                      <h3>{title}</h3>
+                      <p className={style.profile}>{profile}</p>
+                    </div>
+                  </div>
+                ))}
               </Slider>
             </div>
+
           </div>
         </div>
       </div>

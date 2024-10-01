@@ -77,16 +77,17 @@
 }
 
 .content {
-  padding: 16px;
+  /* padding: 16px; */
+  margin-left: 10px;
   color: #fff;
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   bottom: 40px;
   height: 100%;
   cursor: pointer;
   opacity: 0;
   transition: 0.4s ease-in-out;
-  z-index: 9999;
+  z-index: 9999; */
 }
 
 .card:hover .content {

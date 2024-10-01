@@ -1,40 +1,21 @@
-import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
+
+import Image from "next/image";
 import styles from "../../styles/specification.module.css";
 
 const Specification = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [playerHeight, setPlayerHeight] = useState('700px');
+    const imageData = [
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 1" },
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 2" },
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 3" },
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 4" },
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 5" },
+        { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 6" }
+    ];
 
-    const handlePlay = () => {
-        setIsPlaying(true);
-    };
-
-    const handleEnded = () => {
-        setIsPlaying(false);
-    };
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 768) {
-                // Mobile view
-                setPlayerHeight(''); // Remove height
-            } else {
-                // Desktop view
-                setPlayerHeight('700px'); // Set height to 700px
-            }
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
     return (
-        <div className={`container  ${styles.specificationsContainer}`}>
-            <div
-                className={`row align-items-center ${styles.specificationsContainerRow}`}
-            >
-                <div className="col-md-6  ">
+        <div className={`container ${styles.specificationsContainer}`}>
+            <div className={`row align-items-center ${styles.specificationsContainerRow}`}>
+                <div className="col-lg-6">
                     <div
                         className={styles.sectionTitle2}
                         data-aos="fade-up"
@@ -43,94 +24,43 @@ const Specification = () => {
                         <div className={styles.left2}>
                             <div className={styles.tag2}>
                                 <hr />
-                                <span className={styles.spannn}>REVAMP THE ELEGANCE </span>
+                                <span className={styles.spannn}>Design Process </span>
                             </div>
-                            <h2>Crafting Luxurious</h2>
+                            <h2 className={styles.h2}>Crafting Luxurious</h2>
                         </div>
                     </div>
                     <p className={styles.videoP}>
-                        I recently had the pleasure of working with Colonelz, an exceptional
-                        interior design and construction company. Their team of
-                        professionals turned my dream space into a reality with their
-                        impeccable design expertise and flawless execution. From concept to
-                        completion, Colonelz exceeded my expectations with their attention
-                        to detail and commitment to quality craftsmanship. I highly
-                        recommend Colonelz to anyone in need of outstanding interior design
-                        and construction services.
-
+                        Each space has been designed with a feature colour, varying between the furniture and walls, with rest of the space allowing the signature to capture the attention. The ceilings were designed simple, throwing focus on the highlights of the space.
+                        The living room was an expression of simplicity with colour, with the walls panelled in a geometric grey pattern and the vibrant furniture capturing all the attention.The same detail was carried to the powder room for the guests.
+                        The parents’ room was in soft ivory and youthful sky- blue tones.The puja was designed to aid circulation in the entertainment room with pocket doors that looked seamless when closed, combining well with the rest of the theme, seeming one with the storage.
+                        The master bedroom was with strong hues of blue and wood with a concrete texture highlighting the bedroom wall.
                     </p>
-
                 </div>
-                <div className="col-lg-6 col-md-12 col-sm-12  ">
-                    {!isPlaying
-                        ? <div className={styles.video_overlay} onClick={handlePlay}>
-                            <img src="/video.png" alt="Video Thumbnail" />
-                            <button className="play-button">
-                                <svg
-                                    width="64"
-                                    height="64"
-                                    viewBox="0 0 64 64"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <circle cx="32" cy="32" r="32" fill="white" />
-                                    <path d="M25 20L45 32L25 44V20Z" fill="black" />
-                                </svg>
-                            </button>
-                        </div>
-                        : <div className="iframe-container">
-                            <ReactPlayer
-                                url="https://www.youtube.com/embed/qUOYp0-tm0Y"
-                                controls
-                                playing={isPlaying}
-                                height={playerHeight}
-                            // className={styles.reactPlayer}
-
-                            />
-                        </div>}
-                    <style jsx>{`
-            .play-button {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              background: none;
-              border: none;
-              cursor: pointer;
-              animation: scaleUpDown 1.5s infinite ease-in-out;
-            }
-            .play-button svg {
-              width: 64px;
-              height: 64px;
-            }
-            @keyframes scaleUpDown {
-              0%,
-              100% {
-                transform: translate(-50%, -50%) scale(1);
-              }
-              50% {
-                transform: translate(-50%, -50%) scale(1.2);
-              }
-            }
-            .iframe-container {
-              width: 100%;
-              position: relative;
-              overflow: hidden;
-              margin-top: 16px;
-            }
-            .iframe-container iframe {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              border: 0;
-            }
-          `}</style>
+                <div className="col-lg-6">
+                    <figure className={styles.imgclass}>
+                        <Image src="/T2,TATA PRIMANTI/1.jpg" alt="img" width={700} height={500} />
+                    </figure>
                 </div>
             </div>
-        </div>
 
+            <div>
+                {Array(2).fill().map((_, rowIndex) => (
+                    <div key={rowIndex} className="d-flex justify-content-between gap-3 mt-4">
+                        {imageData.slice(rowIndex * 3, rowIndex * 3 + 3).map((image, index) => (
+                            <figure key={index} className={styles.imgclass1}>
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={300}
+                                    height={200}
+                                    layout="responsive"
+                                />
+                            </figure>
+                        ))}
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 

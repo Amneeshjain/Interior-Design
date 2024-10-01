@@ -94,7 +94,7 @@ const ArchitureGallery = () => {
                                 Our Gallery
                                 <hr />
                             </div>
-                            <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
+                            <h2 className="col-lg-12 mt-4 mb-5">Explore Our Projects</h2>
                         </div>
                     </div>
                     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>

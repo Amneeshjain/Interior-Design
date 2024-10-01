@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   z-index: 99;
+  padding: 20px;
   border-bottom: 1px solid #dadada;
 }
 .menuli {
@@ -28,6 +29,8 @@
 }
 
 .headerInnerItems .left a figure {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
@@ -51,7 +54,7 @@
   gap: 5px;
   transition: 0.4s ease-in-out;
   text-transform: uppercase;
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .headerInnerItems .right .menuListOpt li a:hover {
@@ -214,47 +217,6 @@
   opacity: 0.6;
 }
 
-.projectMenu {
-  position: relative;
-}
-
-.projectMenu .projectSubMenu {
-  position: absolute;
-  /* right: -361px; */
-  bottom: -94px;
-  min-width: 336px;
-  background-color: #0d0d0d;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px !important;
-  flex-direction: column;
-}
-
-.projectMenu .projectSubMenu li {
-  padding: 0 !important;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.projectMenu .projectSubMenu li a {
-  color: #fff !important;
-}
-
-.projectMenu .projectSubMenu li img {
-  filter: brightness(1) invert(1);
-  transform: rotate(-90deg);
-}
-
-.projectMenu:hover .projectSubMenu {
-  visibility: visible;
-  opacity: 1;
-}
-
 @media only screen and (max-width: 1200px) {
   .headerInnerItems .right .menuListOpt {
     gap: 28.25px;
@@ -273,4 +235,61 @@
   .headerMainContainer {
     display: none;
   }
+}
+/* Projects Dropdown Menu Styles */
+.projectMenu {
+  position: relative;
+}
+.projectMenu li a {
+  font-size: 15.18px;
+  line-height: 17.14px;
+  letter-spacing: 0.77px;
+  color: #0d0d0d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.4s ease-in-out;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.projectMenu .projectSubMenu {
+  position: absolute;
+  top: 70px;
+  min-width: 300px;
+  background-color: #0d0d0d;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s ease-in-out;
+}
+
+/* Menu item styles */
+.projectMenu .projectSubMenu li {
+  padding: 10px !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Link styles */
+.projectMenu .projectSubMenu li a {
+  color: #fff !important; /* White text */
+  transition: 0.5s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Icon styles */
+.projectMenu .projectSubMenu li img {
+  filter: brightness(1) invert(1); /* Change icon color */
+  transform: rotate(-90deg); /* Rotate icon */
+}
+
+/* Hover effects */
+.projectMenu:hover .projectSubMenu {
+  visibility: visible; /* Show the dropdown on hover */
+  opacity: 1; /* Fully opaque */
+  transition-delay: 0s; /* Remove delay when showing */
+}
+/* Hover effect for links */
+.projectMenu .projectSubMenu li a:hover {
+  opacity: 0.6;
 }

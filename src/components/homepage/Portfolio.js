@@ -22,14 +22,10 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
-
-
   return (
     <>
       <div className={` pb-5 ${styles.blackBg}`}>
-        {/* <div className="container"> */}
         <motion.div className="progress-bar" style={{ scaleX }} />
-
         <div
           style={{ color: "#fff" }}
           className={styleA.sectionTitle}
@@ -38,11 +34,10 @@ const Portfolio = () => {
         >
           <div style={{ width: "100%" }} className={styleA.left}>
             <div style={{ justifyContent: "center" }} className={styleA.tag}>
-              {/* <hr style={{ border: "1px solid #fff" }} /> */}
               Our portfolio
             </div>
             <h2 style={{ color: "#fff", textAlign: "center" }}>
-              Explore Our Portfolio <br /> to fuel Your Inspiration.
+              Explore Our Portfolio <br />
             </h2>
           </div>
         </div>
@@ -51,14 +46,15 @@ const Portfolio = () => {
             <div className={` ${styles.greyBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  <p className={style.colorWhite}>Plymaarque
+                  <p className={style.colorWhite}>Apartment
                   </p>
-                  {/* <p className={style.colorWhite}>GURGAON</p> */}
+                  <p className={style.colorWhite}>Tata Primanti
+                  </p>
+                  <p className={style.colorWhite}>GURGAON
+                  </p>
                 </div>
 
                 <div>
-                  {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-
                 </div>
               </div>
               <motion.div
@@ -67,29 +63,58 @@ const Portfolio = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-
-
                 <div className={styles.imageHeight} >
                   <Image
                     src={BgInteriar3}
                     alt="Description"
                     layout="fill"
                     objectFit="cover"
-
                   // or 'contain', 'none', etc.
                   />
                 </div>
-
-
               </motion.div>
             </div>
           </Link>
           <Link href="/projects">
+            <div className={` ${styles.greyBg} ${styles.sticky}`}>
+              <div className={styles.info}>
+                <div>
+                  <p className={style.colorWhite}>Office</p>
+                  <p className={style.colorWhite}>HFi</p>
+                  <p className={style.colorWhite}>Dwarka</p>
+                </div>
+                <div>
+                  <Link href="/projects">
+                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
+                  </Link>
+                </div>
+              </div>
+              <motion.div
+                className={styles.mtTopCustom}
+                initial={{ y: 75, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className={styles.imageHeight}>
+                  <Image
+                    src={BgInteriar1}
+                    alt="Description"
+                    layout="fill"
+                    objectFit="cover" // or 'contain', 'none', etc.
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </Link>
+
+          <Link href="/projects">
             <div className={`${styles.greenBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  {/* <p className={style.colorWhite}>EF</p> */}
-                  <p className={style.colorWhite}>Panda 18, Ardee Mall
+                  <p className={style.colorWhite}>Cafe</p>
+                  <p className={style.colorWhite}>Panda 18
+                  </p>
+                  <p className={style.colorWhite}>GURGAON
                   </p>
                 </div>
                 <div>
@@ -115,38 +140,8 @@ const Portfolio = () => {
               </motion.div>
             </div>
           </Link>
-          <Link href="/projects">
-            <div className={` ${styles.greyBg} ${styles.sticky}`}>
-              <div className={styles.info}>
-                <div>
-                  {/* <p className={style.colorWhite}>BPTP,
-                  </p> */}
-                  <p className={style.colorWhite}>House of Colour, Tata Primanti</p>
-                </div>
 
-                <div>
-                  <Link href="/projects">
-                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-                  </Link>
-                </div>
-              </div>
-              <motion.div
-                className={styles.mtTopCustom}
-                initial={{ y: 75, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <div className={styles.imageHeight}>
-                  <Image
-                    src={BgInteriar1}
-                    alt="Description"
-                    layout="fill"
-                    objectFit="cover" // or 'contain', 'none', etc.
-                  />
-                </div>
-              </motion.div>
-            </div>
-          </Link>
+
         </div>
         <div className={`mb-5 ${styless.btnContainer}`}>
           <Link href="/projects">View More</Link>

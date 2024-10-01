@@ -16,14 +16,8 @@ const ProjectCard2 = ({ project2 }) => {
             layout="fill"
           />
         </div>
-
         <div className={styles.content1}>
           <div className={styles.contentText1}>
-
-
-
-
-
           </div>
         </div>
       </div>

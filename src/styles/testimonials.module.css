@@ -10,6 +10,36 @@
   justify-content: space-between;
 }
 
+/* Slider.module.css */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  height: 200px;
+  width: 100%;
+  margin: auto;
+  /* overflow: hidden; */
+  position: relative;
+  /* width: auto; */
+}
+
+.slideTrack {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 100%;
+}
+
 .sectionTittle h1 {
   width: 100%;
 }

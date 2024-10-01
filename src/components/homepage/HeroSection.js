@@ -1,138 +1,54 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import style from "../../styles/home.module.css";
-import Button from "../button";
-import CircularText from "../../components/homepage/CircularText";
+import Carousel from 'react-bootstrap/Carousel';
 
+// Array of slide data
+const slides = [
+  {
+    id: 1,
+    src: "/Group 39522.png",
+    alt: "First slide",
+    label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
+    caption: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  },
+  {
+    id: 2,
+    src: "/Group 39522.png",
+    alt: "Second slide",
+    label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
+    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 3,
+    src: "/Group 39522.png",
+    alt: "Third slide",
+    label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
+    caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+  },
+];
 
-import Link from "next/link";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-const HeroSection = () => {
-  const [opacity, setOpacity] = useState(1);
-  const [scale, setScale] = useState(1);
-
-  const handleScrollImg = () => {
-    const scrollPosition = window.scrollY;
-    const scaleCalc = 1 + scrollPosition / window.innerHeight * 1.5;
-    const opacityCalc = 1 - scrollPosition / window.innerHeight * 1.5;
-    setOpacity(Math.max(0, opacityCalc));
-    setScale(scaleCalc);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScrollImg);
-    return () => {
-      window.removeEventListener("scroll", handleScrollImg);
-    };
-  }, []);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800
-    });
-  }, []);
-
+function HeroSection() {
   return (
-    <>
-      <div className={style.bg}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className={style.textDiv} >
-                <h1 data-aos="fade-up" data-aos-duration="1000">
-                  Transforming Spaces
-                  <br />
-                  Igniting Emotions
-                </h1>
-              </div>
-            </div>
-            <div className="clo-lg-12">
-              <div className={`${style.banner_btn}`} >
-                <Link href="#services" className={style.broService}>
-                  {/* <Button variant="secondary">Get in touch</Button> */}
-                  <Button variant="secondary">Browse services</Button>
-                </Link>
-                {/* <Link href="#services" className={style.broService}>
-                  <Button>Browse services</Button>
-                </Link> */}
-              </div>
-            </div>
+    <Carousel interval={3000} controls={true} indicators={false}>
+      {slides.map((slide) => (
+        <Carousel.Item key={slide.id}>
+          <div style={{ width: '100%', }}>
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              style={{ width: '100%', objectFit: "cover" }}
+            />
           </div>
-
-        </div>
-        {/* <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
-        <div className={style.bannerDesignLine} />
-        <div className={style.textdata}>
-          <div className={style.banner_items}>
-            <div className={style.content_with}>
-              <div
-                className={style.starDiv}
-                data-aos="fade-up"
-                data-aos-duration="700"
-              >
-                <Image
-                  src={"/image_2.png"}
-                  className={style.rotate}
-                  alt="star"
-                  height={64}
-                  width={64}
-                />
-              </div>
-              <div className={style.textDiv}>
-                <h1 data-aos="fade-up" data-aos-duration="1000">
-                  Transforming Spaces
-                  <span className={style.textOutline}> Spaces</span>
-                  <br />
-
-                  <figure>
-                      <img src="bannerArrow.svg" alt="icon" />
-                    </figure>
-                  Igniting Emotions
-
-                </h1>
-                <p
-                  className={style.Lorem}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  We are a team of seasoned interior designers, architects, and
-                  contractors, housing skilled craftsmen and innovative
-                  technicians. Our expertise ensures the highest
-                  quality, made-to-measure details tailored to your vision.
-                </p>
-                <div className={`${style.banner_btn}`}>
-                  <Link href="/get-in-touch">
-                    <Button variant="secondary">Get in touch</Button>
-                  </Link>
-                  <Link href="#services" className={style.broService}>
-                    <Button>Browse services</Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className={style.cirleimg}>
-              <img
-                src="/HOMEPAGE BANNER.png"
-                alt="centerimg"
-                // className={`${style.centerImg} ${style.centerImgFade}`}
-                style={{
-                  transform: `translate(-50%, 0%) scale(${scale})`,
-                  opacity: opacity
-                }}
-              />
-            </div>
+          <div>
+            <Carousel.Caption cl>
+              <h3>{slide.label}</h3>
+              {/* <p>{slide.caption}</p> */}
+            </Carousel.Caption>
           </div>
-           <CircularText /> 
-        </div> */}
-      </div>
+        </Carousel.Item>
+      ))
+      }
 
-    </>);
-};
+    </Carousel >
+  );
+}
 
 export default HeroSection;
-

@@ -37,10 +37,10 @@ const Video = () => {
             >
               <div className={stylesA.tag}>
                 <hr />
-                Project Video
+                Customer Stories
                 <hr />
               </div>
-              <h2>Converting Spaces Into Stunning Reality</h2>
+              <h2>Hear From Our Customers</h2>
             </div>
           </div>
           <div className={styles.vedioSectionMain}>
