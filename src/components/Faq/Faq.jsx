@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import styles from "../../styles/faq.module.css";
 import styleA from "../../styles/aboutSection.module.css";

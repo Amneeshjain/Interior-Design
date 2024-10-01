@@ -9,6 +9,7 @@ import Newprocess from "../../components/About/Newprocess"
 import CompanyUps from "../../components/About/CompanyUps";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import AboutCompany from "../../components/About/AboutCompany"
+import Counter from "@/components/homepage/Counter";
 // import Process from "../../components/About/Process";
 // import Contact from "../../components/About/Contact";
 // import WhyChooseUS from "../../components/About/WhyChooseUS";
@@ -36,6 +37,7 @@ const About = () => {
         title="Fabricating Finesse Since 2004"
         description=" We make the client's preferences our top most priority. Colonelz strives to provide spaces that meet their needs and surpass their desired visions. Additionally, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
       />
+      <Counter />
       <AboutCompany />
       <Team />
       {/* <Process /> */}

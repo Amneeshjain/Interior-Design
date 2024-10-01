@@ -88,6 +88,7 @@ const AllProjects = () => {
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>

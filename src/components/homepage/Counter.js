@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import style from "../../styles/aboutSection.module.css";
+import styles from "../../styles/counter.module.css"
 import CountUp from "react-countup";
 import { FaClock, FaBuilding, FaUsers, FaCheckCircle } from "react-icons/fa";
 const Counter = () => {
@@ -53,8 +53,8 @@ const Counter = () => {
     ];
 
     return (
-        <div className="container px-1">
-            <div className={`row rounded  py-5`}>
+        <div className={`container ${styles.margin}`}>
+            <div className={`row rounded  py-3`}>
                 {counterData.map((item, index) => (
                     <div className="col-lg-3 col-md-6 mb-4" key={index}>
                         <div className="text-center p-4 bg-white rounded shadow">

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import style from "../../styles/aboutSection.module.css";
-import Counter from "../../components/homepage/Counter"
+
 const AboutUs = () => {
   const imagesRef = useRef([]);
 
@@ -104,7 +104,7 @@ const AboutUs = () => {
               </ul>
             </div>
           </div>
-          <Counter />
+
         </div>
       </div>
     </>

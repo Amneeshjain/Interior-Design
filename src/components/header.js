@@ -2,55 +2,38 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from 'axios';
-import { useRouter } from "next/navigation";
 import style from "../styles/header.module.css";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
-  const [categories, setCategories] = useState([]);  // State to store project categories
-  const router = useRouter();
+  const [activeSubLink, setActiveSubLink] = useState("");
+  const [data, setData] = useState([]);
 
-  // Set the active link on click
-  const handleClick = (link) => {
+  const handleClick = (link, subLink = "") => {
     setActiveLink(link);
+    setActiveSubLink(subLink);
   };
 
-  const handleTypeClick = (type) => {
-    router.push(`/projects?type=${type}`);
-  };
-
-  // Fetch project types dynamically from the backend or db.json
-  const fetchProjectTypes = async () => {
+  const getdata = async () => {
     try {
-      const response = await axios.get("http://localhost:7000/project-types");  // Adjust URL to your endpoint
-      setCategories(response.data["project-types"]); // Assuming the response contains an array of project types
+      const response = await axios.get("http://localhost:7000/projects");
+      setData(response.data);  // Set the actual data from the response
     } catch (error) {
-      console.error('Error fetching project types:', error);
+      console.error('There has been a problem with your fetch operation:', error);
     }
   };
 
-  // Fetch categories on component mount
   useEffect(() => {
-    fetchProjectTypes();
+    getdata();
   }, []);
 
   return (
-    <div className={style.headerMainContainer}>
-      <div className="container-fluid">
-        <div className={style.headerInnerItems}>
-          {/* Logo Section */}
-          <div className={style.left}>
-            <div className="d-flex justify-content-between gap-4">
-              <div className="mt-3">
-                <form className="flex" role="search">
-                  <input
-                    className="form-control me-2 w-full px-4 py-2 text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                </form>
-              </div>
+    <>
+      <div className={style.headerMainContainer}>
+        <div className="container ">
+          <div className={style.headerInnerItems}>
+            {/* Logo Section */}
+            <div className={style.left}>
               <Link
                 id={style.Logo}
                 className={activeLink === "/" ? "active" : "inactive"}
@@ -61,45 +44,116 @@ const Header = () => {
                 </figure>
               </Link>
             </div>
-          </div>
 
-          {/* Menu Section */}
-          <div className={style.right}>
-            <ul className={style.menuListOpt}>
-              <li onClick={() => handleClick("/")} className={activeLink === "/" ? "active" : "inactive"}>
-                <Link href="/">Home</Link>
-              </li>
-              <li onClick={() => handleClick("/about")} className={activeLink === "/about" ? "active" : "inactive"}>
-                <Link href="/about">About</Link>
-              </li>
-
-              {/* Projects Dropdown */}
-              <li className={`${style.projectMenu}`}>
-                <Link href="/projects" onClick={() => handleClick("/projects")}>
-                  Projects
-                  <img className={style.dropIcon} src="dropDownArrow.png" alt="Dropdown Icon" />
-                </Link>
-
-                {/* Dropdown for Projects Categories */}
-                <ul className={style.projectSubMenu}>
-                  {categories.map((projectType) => (
-                    <li key={projectType.id}>
-                      <a onClick={() => handleTypeClick(projectType.name)}>{projectType.name}</a>
+            {/* Menu Section */}
+            <div className={`${style.right} d-flex align-items-center justify-content-end`}>
+              <ul className={style.menuListOpt}>
+                <li onClick={() => handleClick("/")} className={activeLink === "/" ? "active" : "inactive"}>
+                  <Link href="/">Home</Link>
+                </li>
+                <li onClick={() => handleClick("/about")} className={activeLink === "/about" ? "active" : "inactive"}>
+                  <Link href="/about">About</Link>
+                </li>
+                <li
+                  className={`${style.serviceMenu} ${activeLink.startsWith("/interior") ||
+                    activeLink === "/architecture" ||
+                    activeLink === "/constraction"
+                    ? "active"
+                    : "inactive"
+                    }`}
+                >
+                  <Link href="" onClick={() => handleClick("/services")}>
+                    Services
+                    <img className={style.dropIcon} src="dropDownArrow.png" />
+                  </Link>
+                  {/* services sub menu */}
+                  <ul className={style.serviceSubMenu}>
+                    <li className={style.interiorDesMenu}>
+                      <Link className={style.menuli} href="/interior" onClick={() => handleClick("/interior")}>
+                        INTERIOR DESIGN
+                      </Link>
+                      <img src="right-arrow.png" alt="" />
+                      <div className={style.desktop_View}>
+                        <ul className={style.interiorDesSubMenu}>
+                          <li>
+                            <Link className={style.menuli} href="/interior/residential-interior"
+                              onClick={() => handleClick("/interior", "/interior/residential-interior")}>
+                              - Residential Interior
+                            </Link>
+                          </li>
+                          <li>
+                            <Link className={style.menuli} href="/interior/commercial-interior"
+                              onClick={() => handleClick("/interior", "/interior/commercial-interior")}>
+                              - Commercial Interior
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
                     </li>
-                  ))}
-                </ul>
-              </li>
+                    <li className={`${style.architectureMenu}`}>
+                      <Link className={style.menuli} href="/architecture"
+                        onClick={() => handleClick("/architecture")}>
+                        ARCHITECTURE
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={style.menuli} href="/construction"
+                        onClick={() => handleClick("/construction")}>
+                        CONSTRUCTION
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* Projects Dropdown */}
+                <li className={`${style.projectMenu}`}>
+                  <Link href="/projects" onClick={() => handleClick("/projects")}>
+                    Projects
+                    <img className={style.dropIcon} src="dropDownArrow.png" />
+                  </Link>
+                  {/* Dropdown for Projects */}
+                  <ul className={style.projectSubMenu}>
+                    {data.length > 0 ? (
+                      data.map((project, index) => (
+                        <li key={index}>
+                          <Link
+                            href={`/projects/${project.header_route}`}
+                            onClick={() => handleClick(`/projects/${project.header_route}`)}
+                          >
+                            {project.category_name.toUpperCase()}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <li>Loading...</li>
+                    )}
+                  </ul>
+                </li>
 
-              <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
-                <Link href="/clients">Clients</Link>
-              </li>
-              <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
-                <Link href="/blogs">Blog</Link>
-              </li>
-              <li className={style.headerBtn}>
-                <Link href="/get-in-touch">Get in touch</Link>
-              </li>
-            </ul>
+                <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
+                  <Link href="/clients">Clients</Link>
+                </li>
+                <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
+                  <Link href="/blogs">Blog</Link>
+                </li>
+
+                {/* Search and Get in touch section */}
+                <div className="d-flex align-items-center">
+                  <form className="d-flex me-3" role="search">
+                    <input
+                      className="form-control ms-3 w-24 px-1 py-2 text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </form>
+
+
+                  <li className={style.headerBtn}>
+                    <Link href="/get-in-touch">Get in touch</Link>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +166,7 @@ const Header = () => {
           border-bottom: 3px solid transparent;
         }
       `}</style>
-    </div>
+    </>
   );
 };
 
