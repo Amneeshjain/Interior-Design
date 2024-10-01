@@ -7,26 +7,77 @@ import style from "../styles/header.module.css";
 const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
   const [activeSubLink, setActiveSubLink] = useState("");
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   const handleClick = (link, subLink = "") => {
     setActiveLink(link);
     setActiveSubLink(subLink);
   };
 
-  const getdata = async () => {
-    try {
-      const response = await axios.get("http://localhost:7000/projects");
-      setData(response.data);  // Set the actual data from the response
-    } catch (error) {
-      console.error('There has been a problem with your fetch operation:', error);
+  // const getdata = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:7000/projects");
+  //     setData(response.data);  // Set the actual data from the response
+  //   } catch (error) {
+  //     console.error('There has been a problem with your fetch operation:', error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getdata();
+  // }, []);
+const data= [
+    {
+      "id": 1,
+      "category_name": "Apartment",
+      "header_route": "apartment"
+    },
+    {
+      "id": 2,
+      "category_name": "Villas",
+      "header_route": "villas"
+    },
+    {
+      "id": 3,
+      "category_name": "Offices",
+      "header_route": "offices"
+    },
+    {
+      "id": 4,
+      "category_name": "Resorts & Hotels",
+      "header_route": "resorts-hotels"
+    },
+    {
+      "id": 5,
+      "category_name": "Restaurants & Cafes",
+      "header_route": "restaurants-cafes"
+    },
+    {
+      "id": 6,
+      "category_name": "Retail & Showroom",
+      "header_route": "retail-showroom"
+    },
+    {
+      "id": 7,
+      "category_name": "Builder Floor",
+      "header_route": "builder-floor"
+    },
+    {
+      "id": 8,
+      "category_name": "Farm House",
+      "header_route": "farm-house"
+    },
+    {
+      "id": 9,
+      "category_name": "Commercial Complex",
+      "header_route": "commercial-complex"
+    },
+    {
+      "id": 10,
+      "category_name": "Industrial Units",
+      "header_route": "industrial-units"
     }
-  };
-
-  useEffect(() => {
-    getdata();
-  }, []);
-
+  ]
   return (
     <>
       <div className={style.headerMainContainer}>
