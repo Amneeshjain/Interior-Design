@@ -50,7 +50,6 @@ const projectData = [
 
 const OurProjects = () => {
   const [showMore, setShowMore] = useState(false);
-
   const handleToggle = () => {
     setShowMore(!showMore);
   };

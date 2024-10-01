@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from "react";
+
 import Image from "next/image";
 import styles from "../../styles/specification.module.css";
 
 const Specification = () => {
-  const [playerHeight, setPlayerHeight] = useState('700px');
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        // Mobile view
-        setPlayerHeight(''); // Remove height
-      } else {
-        // Desktop view
-        setPlayerHeight('700px');
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   const imageData = [
     { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 1" },
     { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 2" },
