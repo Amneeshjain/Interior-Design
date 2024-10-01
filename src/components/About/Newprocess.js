@@ -45,6 +45,9 @@ const Newprocess = () => {
                                         </div>
                                     </div>
                                 ))}
+                                <h2 className=" text-capitalize text-center mt-4 mb-4" >
+                                    Average Timeline of Projects <br />6 To 12 Weeks
+                                </h2>
                             </div>
                         </div>
                     </div>

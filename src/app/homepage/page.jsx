@@ -4,7 +4,6 @@ import HeroSection from "../../components/homepage/HeroSection";
 import BlogSection from "../../components/homepage/BlogSection";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import AboutUs from "../../components/homepage/AboutUs";
-import Slide from "../../components/homepage/Slide";
 import Testimonials from "../../components/homepage/Testimonials";
 import Video from "../../components/homepage/Video";
 import Portfolio from "../../components/homepage/Portfolio";
@@ -12,10 +11,8 @@ import styles from "../../styles/home.module.css";
 import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import ImageGallery from "../../components/homepage/ImageGallery";
-import AllProjects from "../../components/homepage/AllProjects";
-// import ThreeSixtyCompo from "../../components/homepage/ThreeSixty";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import Counter from "@/components/homepage/Counter";
+
 const textData = [
   {
     image: "/fi_10365082.png",
@@ -112,7 +109,8 @@ const Homepage = () => {
         </div>
       </div>
       <AboutUs />
-      <AllProjects />
+      <Counter />
+      {/* <AllProjects /> */}
       {/* <Slide cards={cards}/> */}
       <Services
         title="Services We Offer"
@@ -130,7 +128,6 @@ const Homepage = () => {
         content="From costly materials to seamless functionality, we create interiors that stand the check of time and increase your dwelling experience. Discover how our designs can transform your area right into a haven of grace and style."
         mainText="At Colonelz, we turn your imagination and prescience into facts with designs that mix traditional beauty and contemporary sophistication. Our expert crew crafts each area with attention to detail, making sure each detail reflects timeless elegance."
       />
-      {/* <ThreeSixtyCompo /> */}
     </div>
   );
 };

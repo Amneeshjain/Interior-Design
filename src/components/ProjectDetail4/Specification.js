@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import styles from "../../styles/specification.module.css";
-
 const Specification = () => {
     const imageData = [
         { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 1" },
@@ -11,7 +10,6 @@ const Specification = () => {
         { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 5" },
         { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 6" }
     ];
-
     return (
         <div className={`container ${styles.specificationsContainer}`}>
             <div className={`row align-items-center ${styles.specificationsContainerRow}`}>
@@ -42,7 +40,6 @@ const Specification = () => {
                     </figure>
                 </div>
             </div>
-
             <div>
                 {Array(2).fill().map((_, rowIndex) => (
                     <div key={rowIndex} className="d-flex justify-content-between gap-3 mt-4">

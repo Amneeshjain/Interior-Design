@@ -1,6 +1,6 @@
 "use client";
 import { Inter } from "next/font/google";
-import SocialMedia from "../components/homepage/Socialmedia"
+// import SocialMedia from "../components/homepage/Socialmedia"
 import "./globals.css";
 import MobileMenu from "../components/MobileMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <Header />
-          <SocialMedia />
+          {/* <SocialMedia /> */}
 
           <MobileMenu />
 

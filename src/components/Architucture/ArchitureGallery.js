@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";

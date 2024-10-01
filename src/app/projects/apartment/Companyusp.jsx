@@ -1,5 +1,4 @@
-import style from "../../styles/companyUSPS.module.css";
-import Counter from "../../components/homepage/Counter"
+import style from "../../../styles/companyUSPS.module.css";
 
 const CompanyUps = () => {
   const UPSP_DATA = [
@@ -30,7 +29,10 @@ const CompanyUps = () => {
         <div className="container">
           <div className={style.CompanyUpsBg}>
             <div className={style.tag}>
-              <p>Why Colonelz<span style={{ textTransform: "lowercase" }}>s</span></p>
+              <p>
+                Why Colonelz
+                <span style={{ textTransform: "lowercase" }}>s</span>
+              </p>
               <hr />
             </div>
             <div className={style.CompanyUpsItems}>
@@ -48,21 +50,22 @@ const CompanyUps = () => {
               ))}
             </div>
 
-            {/* <div className="text-center py-3">
+            <div className="text-center py-3">
               <p>
-                At Colonelz, we prioritize our clients preferences, ensuring that every space we create
-                aligns with their unique vision. With a focus on eco-friendly designs,
-                we use non-toxic, sustainable materials, carefully selected by our experts.
-                Our team works meticulously to craft interiors that are both functional
-                and aesthetically pleasing, going beyond expectations. Founded on the principle
-                of delivering top-quality results, we bring years of experience and a passion for design
-                innovation. Whether residential or commercial, Colonelz is dedicated to shaping environments
-                that inspire comfort, creativity, and well-being for every client we serve.
+                At Colonelz, we prioritize our clients preferences, ensuring
+                that every space we create aligns with their unique vision. With
+                a focus on eco-friendly designs, we use non-toxic, sustainable
+                materials, carefully selected by our experts. Our team works
+                meticulously to craft interiors that are both functional and
+                aesthetically pleasing, going beyond expectations. Founded on
+                the principle of delivering top-quality results, we bring years
+                of experience and a passion for design innovation. Whether
+                residential or commercial, Colonelz is dedicated to shaping
+                environments that inspire comfort, creativity, and well-being
+                for every client we serve.
               </p>
-
-            </div> */}
+            </div>
           </div>
-
         </div>
       </div>
     </>
