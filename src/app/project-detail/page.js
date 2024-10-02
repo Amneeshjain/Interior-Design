@@ -5,6 +5,7 @@ import AboutProjects from "../../components/AboutProjects";
 import Video from "@/components/homepage/Video";
 import GetInTouch from "../../components/homepage/GetInTouch";
 import ProjectGallery from "./ProjectGallery";
+import AllProjects from "../../components/homepage/AllProjects"
 import Specification from "../../components/ProjectDetail/Specification";
 
 const page = () => {
@@ -18,6 +19,7 @@ const page = () => {
         background={"#fff"}
       />
       <AboutProjects />
+      <AllProjects />
       <ProjectGallery />
       <Video />
       <Specification />

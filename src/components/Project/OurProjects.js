@@ -6,42 +6,42 @@ import styles from "../../styles/gallary.module.css";
 const projectData = [
   {
     id: 1,
-    title: "House of Colour, Tata Primanti",
+    title: "Apartment Project 1",
     image: "/T2,TATA PRIMANTI/3.jpg",
     description: "Built-up Area: 2000 sq.ft, Carpet Area: 1650 sq.ft ",
     href: "/project-detail"
   },
   {
     id: 2,
-    title: "Panda 18, Ardee Mall ",
+    title: "Apartment Project 2",
     image: "/CAFE-01/tye_299.jpg",
     description: "Built-up Area:200 sq.ft,Carpet Area:1050 sq.ft ",
     href: "/project-detail1"
   },
   {
     id: 3,
-    title: "Bani Square",
+    title: "Apartment Project 3",
     image: "/CAFE 02/tye_141 (2).jpg",
     description: "Built-up Area:385 sq.ft,Carpet Area:310 sq.ft ",
     href: "/project-detail2"
   },
   {
     id: 4,
-    title: "Plymaarque",
+    title: "Apartment Project 4",
     image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
     description: "Built-up Area:2400 SQFT,Carpet Area:2200 SQFT",
     href: "/project-detail3"
   },
   {
     id: 5,
-    title: "Another Vasant Kunj Residence",
+    title: "Apartment Project 5",
     image: "/C3 SOBHA CITY-20240911T070417Z-001/C3 SOBHA CITY/View-03.jpg",
     description: "Modern living in Vasant Kunj.",
     href: "/project-detail4"
   }
   , {
     id: 6,
-    title: "Sobha City",
+    title: "Apartment Project 6",
     image: "/B1, SOBHA CITY/3.jpg",
     description: "Modern living in Vasant Kunj.",
     href: "/project-detail5"

@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from "../../styles/AllProjects.module.css"
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'; // Import useRouter from Next.js
+import styles from "../../styles/AllProjects.module.css"; // Ensure you have the correct CSS module path
 
 const cardData = [
     {
@@ -8,6 +9,7 @@ const cardData = [
         title: "Cozy Apartment",
         description: "A cozy apartment with modern amenities.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/apartment"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
@@ -15,6 +17,7 @@ const cardData = [
         title: "Luxury Villa",
         description: "A luxury villa with stunning views.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/villas"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
@@ -22,6 +25,7 @@ const cardData = [
         title: "Modern Office Space",
         description: "A modern office space for productive work.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/offices"
     },
     {
         image: "https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1",
@@ -29,6 +33,7 @@ const cardData = [
         title: "Beach Resort",
         description: "A beach resort with all-inclusive packages.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/resorts-hotels"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
@@ -36,6 +41,7 @@ const cardData = [
         title: "Charming Cafe",
         description: "A charming cafe serving delicious coffee.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/restaurants-cafes"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
@@ -43,6 +49,7 @@ const cardData = [
         title: "Modern Showroom",
         description: "A modern showroom with the latest products.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/retail-showroom"
     },
     {
         image: "https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1",
@@ -50,6 +57,7 @@ const cardData = [
         title: "Spacious Builder Floor",
         description: "A spacious builder floor for family living.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/builder-floor"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
@@ -57,6 +65,7 @@ const cardData = [
         title: "Charming Farm House",
         description: "A charming farm house with a beautiful garden.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
+        menuRoute: "/farm-house"
     },
     {
         image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
@@ -64,12 +73,13 @@ const cardData = [
         title: "Modern Commercial Complex",
         description: "A modern commercial complex with various shops.",
         avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-    },
-
+        menuRoute: "/commercial-complex"
+    }
 ];
 
-
 const AllProjects = () => {
+
+
     return (
         <div className={styles.wrapperGrey}>
             <div className="container">
@@ -77,18 +87,20 @@ const AllProjects = () => {
                 <div className="row">
                     {cardData.map((card, index) => (
                         <div className="col-lg-4" key={index}>
-                            <div className={styles.card} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${card.image})` }}>
-                                {/* <div className={styles.cardCategory}>{card.category}</div> */}
+                            <div
+
+                                className={styles.card}
+                                style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${card.image})` }}
+
+                            >
                                 <div className={styles.cardDescription}>
                                     <h2>{card.title}</h2>
                                     <p>{card.description}</p>
                                 </div>
-                                {/* <img className={`${styles.cardUser} ${styles.avatarLarge}`} src={card.avatar} alt="User Avatar" /> */}
-                                <a className={styles.cardLink} href="#"></a>
+                                <a className={styles.cardLink} href={`/project-detail/${card.menuRoute}`}></a>
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
         </div>

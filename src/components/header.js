@@ -26,56 +26,56 @@ const Header = () => {
   // useEffect(() => {
   //   getdata();
   // }, []);
-const data= [
+  const data = [
     {
       "id": 1,
       "category_name": "Apartment",
-      "header_route": "apartment"
+      "header_route": "projects"
     },
     {
       "id": 2,
       "category_name": "Villas",
-      "header_route": "villas"
+      "header_route": "projects"
     },
     {
       "id": 3,
       "category_name": "Offices",
-      "header_route": "offices"
+      "header_route": "projects"
     },
     {
       "id": 4,
       "category_name": "Resorts & Hotels",
-      "header_route": "resorts-hotels"
+      "header_route": "projects"
     },
     {
       "id": 5,
       "category_name": "Restaurants & Cafes",
-      "header_route": "restaurants-cafes"
+      "header_route": "projects"
     },
     {
       "id": 6,
       "category_name": "Retail & Showroom",
-      "header_route": "retail-showroom"
+      "header_route": "projects"
     },
     {
       "id": 7,
       "category_name": "Builder Floor",
-      "header_route": "builder-floor"
+      "header_route": "projects"
     },
     {
       "id": 8,
       "category_name": "Farm House",
-      "header_route": "farm-house"
+      "header_route": "projects"
     },
     {
       "id": 9,
       "category_name": "Commercial Complex",
-      "header_route": "commercial-complex"
+      "header_route": "projects"
     },
     {
       "id": 10,
       "category_name": "Industrial Units",
-      "header_route": "industrial-units"
+      "header_route": "projects"
     }
   ]
   return (
@@ -95,7 +95,6 @@ const data= [
                 </figure>
               </Link>
             </div>
-
             {/* Menu Section */}
             <div className={`${style.right} d-flex align-items-center justify-content-end`}>
               <ul className={style.menuListOpt}>
@@ -167,7 +166,7 @@ const data= [
                       data.map((project, index) => (
                         <li key={index}>
                           <Link
-                            href={`/projects/${project.header_route}`}
+                            href={`${project.header_route}`}
                             onClick={() => handleClick(`/projects/${project.header_route}`)}
                           >
                             {project.category_name.toUpperCase()}
@@ -188,21 +187,21 @@ const data= [
                 </li>
 
                 {/* Search and Get in touch section */}
-                <div className="d-flex align-items-center">
-                  <form className="d-flex me-3" role="search">
+                <div className="d-flex align-items-center text-center">
+                  <form className="d-flex me-2" role="search">
                     <input
-                      className="form-control ms-3 w-24 px-1 py-2 text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="form-control ms-3 w-24 px-1 py-2 text-center text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       type="search"
                       placeholder="Search"
                       aria-label="Search"
                     />
                   </form>
 
-
                   <li className={style.headerBtn}>
                     <Link href="/get-in-touch">Get in touch</Link>
                   </li>
                 </div>
+
               </ul>
             </div>
           </div>
