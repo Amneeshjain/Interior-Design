@@ -130,57 +130,23 @@ const Navbar = () => {
                 <Link href="/interior" onClick={toggleMenu}>
                   interior design
                 </Link>
-                <img
-                  src="dropDownArrow.svg"
-                  alt=""
-                  onClick={() => toggleDropdown("interiorDesign")}
-                />
               </button>
-              <div
-                className={`${styles.dropdownContent} ${dropdowns.interiorDesign
-                  ? styles.open
-                  : ""}`}
-              >
-                <Link
-                  onClick={toggleMenu}
-                  href="/interior/residential-interior"
-                >
-                  Residential Interior
-                </Link>
-                <Link onClick={toggleMenu} href="/interior/commercial-interior">
-                  Commercial Interior
-                </Link>
-              </div>
+              
             </div>
 
             <div className={styles.dropdown}>
               <Link href="/architecture" onClick={toggleMenu}>
                 Architecture
-                {/* <img src="dropDownArrow.svg" alt="" /> */}
               </Link>
-
             </div>
             <div className={styles.dropdown}>
               <Link href="/construction" onClick={toggleMenu}>
                 Construction
-                {/* <img src="dropDownArrow.svg" alt="" /> */}
               </Link>
-
             </div>
           </div>
         </div>
-        {/* <Link onClick={toggleMenu} href="/projects">
-          Projects
-        </Link> */}
-        {/* Projects Dropdown */}
         <li className={`${style.projectMenu}`}>
-          {/* <Link href="/projects" onClick={() => handleClick("/projects")}>
-            Projects
-            <img
-              src="dropDownArrow.svg"
-              alt=""
-            // onClick={() => toggleDropdown("interiorDesign")}
-            />          </Link> */}
           <button className={styles.menuOnly}>
             <Link href="/projects" onClick={() => handleClick("/projects")}>
               Projects
@@ -188,10 +154,8 @@ const Navbar = () => {
             <img
               src="dropDownArrow.svg"
               alt=""
-            // onClick={() => toggleDropdown("interiorDesign")}
             />
           </button>
-          {/* Dropdown for Projects */}
           <ul className={style.projectSubMenu}>
             {data.length > 0 ? (
               data.map((project, index) => (

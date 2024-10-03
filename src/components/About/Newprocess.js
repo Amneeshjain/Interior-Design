@@ -11,26 +11,22 @@ const data = [
     { number: "06.", title: "Tender", description: "As the detailed design stages complete, the tender process begins. We issue the tender pack and develop the construction program." },
     { number: "07.", title: "Mobilisation", description: "Once the contractor is appointed, we'll review the design proposals and assist them in mobilizing resources as required." },
     { number: "08.", title: "Construction", description: "While the project is on-site, we work with contractors to ensure successful implementation of the design." },
-    { number: "09.", title: "Post PC", description: "At the project's conclusion, we'll inspect the works and prepare the final certificate for completion." }
+    // { number: "09.", title: "Post PC", description: "At the project's conclusion, we'll inspect the works and prepare the final certificate for completion." }
 ];
 
 const Newprocess = () => {
     return (
         <>
             <div className={`${styles.bg_color} py-5`} style={{ backgroundColor: "#000", color: "#fff" }}>
-                <div className="container mt-5">
+                <div className="container ">
                     <div className="row">
-                        {/* Vertical Heading */}
-                        <div className="col-lg-2 d-flex align-items-center justify-content-center">
-                            <h3 className="vertical-heading text-uppercase" style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", fontWeight: "bold", letterSpacing: "3px", color: "#fff" }}>
-                                OUR DESIGN PROCESS
-                            </h3>
+                        <div className="text-center py-4">
+                            <h2>OUR DESIGN PROCESS</h2>
                         </div>
-                        {/* Process Boxes */}
-                        <div className="col-lg-10">
+                        <div className="col-lg-12">
                             <div className="row">
                                 {data.map((stage, index) => (
-                                    <div key={index} className="col-lg-4 col-md-6 p-2">
+                                    <div key={index} className="col-lg-3 col-md-6 p-2">
                                         <div className="process-box p-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "10px", transition: "transform 0.3s ease", cursor: "pointer" }}>
                                             <div className="d-flex justify-content-start align-items-start">
                                                 <h4 style={{ color: "#f39c12", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>

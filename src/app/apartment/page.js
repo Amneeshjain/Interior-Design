@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../../../components/About/HeroSection'
+import HeroSection from '../../components/About/HeroSection'
 import Projectlist from "./Projectlist"
 import Newprocess from './Newprocess'
 import Faq from "@/components/Faq/Faq";
@@ -7,7 +7,7 @@ import GetInTouch from '@/components/homepage/GetInTouch'
 import Companyusp from './Companyusp'
 import AboutMore from '@/components/aboutMore/AboutMore'
 import TimelineCard from '@/components/About/TimelineCard'
-import ArchitureGallery from "../../../components/Architucture/ArchitureGallery";
+import ArchitureGallery from "../../components/Architucture/ArchitureGallery";
 const faqData = [
     {
         question: "1). What services do we offer as an Architect?",

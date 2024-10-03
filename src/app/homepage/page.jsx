@@ -8,7 +8,7 @@ import Testimonials from "../../components/homepage/Testimonials";
 import Video from "../../components/homepage/Video";
 import Portfolio from "../../components/homepage/Portfolio";
 import styles from "../../styles/home.module.css";
-import Services from "../../components/homepage/Services";
+// import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import ImageGallery from "../../components/homepage/ImageGallery";
 import Counter from "@/components/homepage/Counter";
@@ -112,11 +112,11 @@ const Homepage = () => {
       <Counter />
       {/* <AllProjects /> */}
       {/* <Slide cards={cards}/> */}
-      <Services
+      {/* <Services
         title="Services We Offer"
         subtitle="Explore Our Specialized Services"
         text={textData}
-      />
+      /> */}
       <Portfolio />
       <Video />
       <Testimonials />
