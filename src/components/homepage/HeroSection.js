@@ -30,11 +30,11 @@ function HeroSection() {
     <Carousel interval={3000} controls={true} indicators={false}>
       {slides.map((slide) => (
         <Carousel.Item key={slide.id}>
-          <div style={{ width: '100%', }}>
+          <div>
             <img
               src={slide.src}
               alt={slide.alt}
-              style={{ width: '100%', objectFit: "cover" }}
+
             />
           </div>
           <div>
