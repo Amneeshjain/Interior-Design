@@ -2,6 +2,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "../styles/mobileMenu.module.css";
+import style from "../styles/header.module.css";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -35,7 +36,58 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const data = [
+    {
+      "id": 1,
+      "category_name": "Apartment",
+      "header_route": "projects"
+    },
+    {
+      "id": 2,
+      "category_name": "Villas",
+      "header_route": "projects"
+    },
+    {
+      "id": 3,
+      "category_name": "Offices",
+      "header_route": "projects"
+    },
+    {
+      "id": 4,
+      "category_name": "Resorts & Hotels",
+      "header_route": "projects"
+    },
+    {
+      "id": 5,
+      "category_name": "Restaurants & Cafes",
+      "header_route": "projects"
+    },
+    {
+      "id": 6,
+      "category_name": "Retail & Showroom",
+      "header_route": "projects"
+    },
+    {
+      "id": 7,
+      "category_name": "Builder Floor",
+      "header_route": "projects"
+    },
+    {
+      "id": 8,
+      "category_name": "Farm House",
+      "header_route": "projects"
+    },
+    {
+      "id": 9,
+      "category_name": "Commercial Complex",
+      "header_route": "projects"
+    },
+    {
+      "id": 10,
+      "category_name": "Industrial Units",
+      "header_route": "projects"
+    }
+  ]
   return (
     <nav
       id="targetElement"
@@ -64,7 +116,6 @@ const Navbar = () => {
         <Link href="/about" onClick={toggleMenu}>
           About
         </Link>
-
         <div className={styles.dropdown}>
           <button onClick={() => toggleDropdown("services")}>
             Services <img src="dropDownArrow.svg" alt="" />
@@ -107,62 +158,57 @@ const Navbar = () => {
                 Architecture
                 {/* <img src="dropDownArrow.svg" alt="" /> */}
               </Link>
-              {/* <div
-                className={`${styles.dropdownContent} ${
-                  dropdowns.architecture ? styles.open : ""
-                }`}
-              >
-                <Link
-                  onClick={toggleMenu}
-                  href="/architecture/residential-architucture"
-                >
-                  Residential Architecture
-                </Link>
-              </div> */}
+
             </div>
             <div className={styles.dropdown}>
               <Link href="/construction" onClick={toggleMenu}>
                 Construction
                 {/* <img src="dropDownArrow.svg" alt="" /> */}
               </Link>
-              {/* <div
-                className={`${styles.dropdownContent} ${
-                  dropdowns.construction ? styles.open : ""
-                }`}
-              >
-                <Link
-                  onClick={toggleMenu}
-                  href="/constraction/residential-constraction"
-                >
-                  Residential Construction
-                </Link>
-              </div> */}
+
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.dropdown}>
-          <button onClick={() => toggleDropdown("projects")}>
-            projects <img src="dropDownArrow.svg" alt="" />
-          </button>
-          <div
-            className={`${styles.dropdownContent} ${
-              dropdowns.projects ? styles.open : ""
-            }`}
-          >
-            <Link onClick={toggleMenu} href="/projects">
-              projects
-            </Link>
-
-            <Link onClick={toggleMenu} href="/project-detail">
-              projects details
-            </Link>
-          </div>
-        </div> */}
-
-        <Link onClick={toggleMenu} href="/projects">
+        {/* <Link onClick={toggleMenu} href="/projects">
           Projects
-        </Link>
+        </Link> */}
+        {/* Projects Dropdown */}
+        <li className={`${style.projectMenu}`}>
+          {/* <Link href="/projects" onClick={() => handleClick("/projects")}>
+            Projects
+            <img
+              src="dropDownArrow.svg"
+              alt=""
+            // onClick={() => toggleDropdown("interiorDesign")}
+            />          </Link> */}
+          <button className={styles.menuOnly}>
+            <Link href="/projects" onClick={() => handleClick("/projects")}>
+              Projects
+            </Link>
+            <img
+              src="dropDownArrow.svg"
+              alt=""
+            // onClick={() => toggleDropdown("interiorDesign")}
+            />
+          </button>
+          {/* Dropdown for Projects */}
+          <ul className={style.projectSubMenu}>
+            {data.length > 0 ? (
+              data.map((project, index) => (
+                <li key={index}>
+                  <Link
+                    href={`${project.header_route}`}
+                    onClick={() => handleClick(`/projects/${project.header_route}`)}
+                  >
+                    {project.category_name.toUpperCase()}
+                  </Link>
+                </li>
+              ))
+            ) : (
+              <li>Loading...</li>
+            )}
+          </ul>
+        </li>
 
         <Link onClick={toggleMenu} href="/clients">
           Client

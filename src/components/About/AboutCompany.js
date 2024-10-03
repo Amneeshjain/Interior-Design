@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import styles from "../../styles/AboutCompany.module.css";
 import styless from "../../styles/home.module.css";
 
@@ -9,18 +10,18 @@ const AboutCompany = () => {
             <div className="container">
                 {/* Section Title */}
                 <div className="row">
-                    <div className="col-lg-12 col-md-6 col-sm-12">
-                        <div className="d-flex align-items-center justify-content-center">
-                            <div className={`${styless.lineLeft} ${styles.lineStyling}`}></div>
-                            <p className={`text-center ${styless.uppercase} ${styless.textStylingLine} ${styles.title}`}>
+                    <div className="col-lg-12 col-md-12 col-sm-12 text-center">
+
+                        {/* <div className={`d-flex justify-content-center ${styless.lineLeft} ${styles.lineStyling}`}></div> */}
+                        <div className="d-flex justify-content-center">
+                            <hr />
+                            <p className={` ${styless.uppercase} ${styless.textStylingLine} ${styles.title}`}>
                                 Meet Our Founder
                             </p>
-                            <div className={`${styless.lineRight} ${styles.lineStyling}`}></div>
+                            <hr />
                         </div>
-                    </div>
+                        {/* <div className={`${styless.lineRight} ${styles.lineStyling}`}></div> */}
 
-                    {/* Paragraph Section */}
-                    <div className="col-lg-12 col-md-6 col-sm-6 d-flex justify-content-center text-center">
                         <div className={`${styles.para} py-3 px-5`}>
                             <p style={{ fontSize: "18px", color: "#666", lineHeight: "1.7" }}>
                                 We make the client’s preferences our topmost priority. Colonelz strives to provide spaces that meet their needs and surpass their desired visions. Additionally, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space.
@@ -28,24 +29,32 @@ const AboutCompany = () => {
                         </div>
                     </div>
 
+
+
                     {/* Founder Images Section */}
                     <div className="d-flex justify-content-evenly">
 
                         <figure className={styles.imageContainer}>
-                            <img
+                            <Image
                                 src="/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-008.jpg"
                                 alt="Founder Image"
-                                className={styles.founderImage}
+                                layout="responsive"
+                                width={400}
+                                height={400}
+
                             />
                         </figure>
 
 
 
                         <figure className={styles.imageContainer}>
-                            <img
+                            <Image
                                 src="/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-008.jpg"
                                 alt="Founder Image"
-                                className={styles.founderImage}
+                                layout="responsive"
+                                width={400}
+                                height={400}
+
                             />
                         </figure>
                     </div>
