@@ -1,16 +1,13 @@
 "use client";
-import HeroSection from "@/components/About/HeroSection";
 import styles from "../../styles/home.module.css";
 import style from "../../styles/gitInTouch.module.css";
-import styling from "../../styles/footer.module.css";
-import style2 from "../../styles/contactSection.module.css"
-import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
-import Contact from "../../components/About/Contact"
+import Contact from "../../components/About/Contact";
+import Swal from 'sweetalert2';
 
 const GetInTouch = () => {
   const [fileName, setFileName] = useState("");
+
   const handleFileChange = (event) => {
     const input = event.target;
     const uploadedFileName = input.files[0].name;
@@ -24,27 +21,40 @@ const GetInTouch = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     const formData = new FormData(event.target);
-
     try {
-      const response = await fetch('https://mediadynox.in/interior-design-test/email.php', {
+      const response = await fetch('https://backend-interior.onrender.com/api/contact/submit', {
         method: 'POST',
         body: formData,
       });
+
 
       if (!response.ok) {
         throw new Error('Network response was not ok' + response.statusText);
       }
 
+
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        window.location.reload();
+      });
+
       const result = await response.json();
       alert(result.message);
       window.location.reload();
+
     } catch (error) {
-      console.error('There has been a problem with your fetch operation:', error);
-      alert('An error occurred: ' + error.message);
+      Swal.fire({
+        title: 'Error!',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
   };
+
 
 
   return (
@@ -69,9 +79,8 @@ const GetInTouch = () => {
 
         <div className="container">
           <div className={style.getInTouchFormContainer}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="post" encType="multipart/form-data">
               <div className={`row row-gap-4 ${style.cusRow}`}>
-
                 <div className="col-lg-6 col-sm-12">
                   <input type="text" name="first_name" placeholder="First Name" required />
                 </div>

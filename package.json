@@ -55,6 +55,7 @@
     "sharp": "^0.33.5",
     "skrollr": "^0.6.26",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.14.1",
     "swiper": "^11.1.14",
     "webpack": "^5.95.0",
     "yet-another-react-lightbox": "^3.21.6"
