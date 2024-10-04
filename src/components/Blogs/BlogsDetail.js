@@ -9,6 +9,9 @@ const BlogsDetail = () => {
     const fetchBlogs = async () => {
       try {
         const response = await fetch('https://backend-interior.onrender.com/api/blogs/get-all-blog');
+
+
+        console.log("resssss", response)
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

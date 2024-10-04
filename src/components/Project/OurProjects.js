@@ -1,83 +1,58 @@
 import React, { useState } from "react";
-import ProjectCard from "../../components/Project/ProjectCard";
-import style from "../../styles/project.module.css";
+import ProjectCard from "./ProjectCard";
+import style from "@/styles/project.module.css";
 import Link from "next/link";
-import styles from "../../styles/gallary.module.css";
-const projectData = [
-  {
-    id: 1,
-    title: "Apartment Project 1",
-    image: "/T2,TATA PRIMANTI/3.jpg",
-    description: "Built-up Area: 2000 sq.ft, Carpet Area: 1650 sq.ft ",
-    href: "/project-detail"
-  },
-  {
-    id: 2,
-    title: "Apartment Project 2",
-    image: "/CAFE-01/tye_299.jpg",
-    description: "Built-up Area:200 sq.ft,Carpet Area:1050 sq.ft ",
-    href: "/project-detail1"
-  },
-  {
-    id: 3,
-    title: "Apartment Project 3",
-    image: "/CAFE 02/tye_141 (2).jpg",
-    description: "Built-up Area:385 sq.ft,Carpet Area:310 sq.ft ",
-    href: "/project-detail2"
-  },
-  {
-    id: 4,
-    title: "Apartment Project 4",
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg",
-    description: "Built-up Area:2400 SQFT,Carpet Area:2200 SQFT",
-    href: "/project-detail3"
-  },
-  {
-    id: 5,
-    title: "Apartment Project 5",
-    image: "/C3 SOBHA CITY-20240911T070417Z-001/C3 SOBHA CITY/View-03.jpg",
-    description: "Modern living in Vasant Kunj.",
-    href: "/project-detail4"
-  }
-  , {
-    id: 6,
-    title: "Apartment Project 6",
-    image: "/B1, SOBHA CITY/3.jpg",
-    description: "Modern living in Vasant Kunj.",
-    href: "/project-detail5"
-  }
-];
+import styles from "@/styles/gallary.module.css";
 
-const OurProjects = () => {
+const OurProjects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
   const handleToggle = () => {
     setShowMore(!showMore);
+    console.log("Show More toggled:", showMore);
   };
-  const visibleProjects = showMore ? projectData : projectData.slice(0, 4);
+
+  if (!projects || projects.length === 0) {
+    return <div className={style.projectMainContainer}>No projects found.</div>;
+  }
+
+  const typeDescription = projects[0]?.projectType?.type_description || "";
+
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
+        <div className={style.heading}>
+          <h4>{typeDescription}</h4>
+        </div>
         <div className={`row ${style.projectsCardContainer}`}>
-          {visibleProjects.map((project, index) => (
+          {projects.slice(0, showMore ? projects.length : 2).map((project, index) => (
             <Link
-              href={project.href}
-              key={project.id}
-              className={`col-lg-6 ${style.gap} ${index % 2 === 0 ? style.even : style.odd
-                }`}
+              href={`/project-detail/${project.project_slug}`}
+              key={project.project_slug}
+              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0 ? style.even : style.odd}`}
             >
-              <ProjectCard project={project} />
+              <ProjectCard
+                project={{
+                  id: project.project_slug,
+                  title: project.projectName,
+                  image: project.projectImage,
+                  description: project.projectShortDescription,
+                }}
+              />
             </Link>
           ))}
         </div>
-        <div className={`${styles.loadMore}`}>
-          <button
-            style={{ margin: "0 auto" }}
-            onClick={handleToggle}
-            className={`${styles.toggleButton}`}
-          >
-            {showMore ? "Show Less" : "See More"}
-          </button>
-        </div>
+
+        {projects.length > 2 && (
+          <div className={`${styles.loadMore}`}>
+            <button
+              style={{ margin: "0 auto", display: "block" }}
+              onClick={handleToggle}
+              className={styles.toggleButton}
+            >
+              {showMore ? "Show Less" : "See More"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

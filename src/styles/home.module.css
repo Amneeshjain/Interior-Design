@@ -379,10 +379,10 @@
     height: 30px;
   }
   .overflowXCustom {
-    height: 111vh;
+    /* height: 100vh; */
     overflow-x: hidden !important;
     overflow-y: hidden;
-    margin-top: -140px;
+    /* margin-top: -140px; */
   }
   .cirleimg img {
     position: absolute;
@@ -436,7 +436,7 @@
     line-height: 34px;
   }
   .overflowXCustom {
-    height: 111vh;
+    /* height: 111vh; */
     overflow-x: hidden !important;
     overflow-y: hidden;
     margin-top: -110px;
@@ -963,7 +963,7 @@
   margin-left: 15px;
 }
 .overflowXCustom {
-  height: 100vh;
+  /* height: 100vh;  */
   overflow-x: hidden !important;
   overflow-y: hidden;
 }

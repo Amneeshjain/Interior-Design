@@ -1,102 +1,62 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import Link from "next/link";
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 import style from "../styles/header.module.css";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
   const [activeSubLink, setActiveSubLink] = useState("");
-  // const [data, setData] = useState([]);
+  const [projectTypes, setProjectTypes] = useState([]);
+  const pathname = usePathname();
 
   const handleClick = (link, subLink = "") => {
     setActiveLink(link);
     setActiveSubLink(subLink);
   };
+  useEffect(() => {
+    const fetchProjectTypes = async () => {
+      try {
+        const response = await fetch("https://backend-interior.onrender.com/api/project/project-types");
+        const data = await response.json();
+        if (data.success) {
+          setProjectTypes(data.data);
+        } else {
+          console.error("Failed to fetch project types:", data.message);
+        }
+      } catch (error) {
+        console.error("Error fetching project types:", error);
+      }
+    };
+    fetchProjectTypes();
+  }, []);
 
-  // const getdata = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:7000/projects");
-  //     setData(response.data);  // Set the actual data from the response
-  //   } catch (error) {
-  //     console.error('There has been a problem with your fetch operation:', error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getdata();
-  // }, []);
-  const data = [
-    {
-      "id": 1,
-      "category_name": "Apartment",
-      "header_route": "projects"
-    },
-    {
-      "id": 2,
-      "category_name": "Villas",
-      "header_route": "projects"
-    },
-    {
-      "id": 3,
-      "category_name": "Offices",
-      "header_route": "projects"
-    },
-    {
-      "id": 4,
-      "category_name": "Resorts & Hotels",
-      "header_route": "projects"
-    },
-    {
-      "id": 5,
-      "category_name": "Restaurants & Cafes",
-      "header_route": "projects"
-    },
-    {
-      "id": 6,
-      "category_name": "Retail & Showroom",
-      "header_route": "projects"
-    },
-    {
-      "id": 7,
-      "category_name": "Builder Floor",
-      "header_route": "projects"
-    },
-    {
-      "id": 8,
-      "category_name": "Farm House",
-      "header_route": "projects"
-    },
-    {
-      "id": 9,
-      "category_name": "Commercial Complex",
-      "header_route": "projects"
-    },
-    {
-      "id": 10,
-      "category_name": "Industrial Units",
-      "header_route": "projects"
+  useEffect(() => {
+    setActiveLink(pathname);
+    if (pathname.startsWith('/projects/type/')) {
+      setActiveSubLink(pathname);
     }
-  ]
+  }, [pathname]);
+
   return (
     <>
       <div className={style.headerMainContainer}>
-        <div className="container ">
+        <div className="container-fluid">
           <div className={style.headerInnerItems}>
-            {/* Logo Section */}
             <div className={style.left}>
               <Link
                 id={style.Logo}
+                onClick={() => handleClick("/")}
                 className={activeLink === "/" ? "active" : "inactive"}
                 href="/"
               >
                 <figure>
-                  <img src="/COLONELZ_22png-02.png" alt="" />
+                  <img src="/COLONELZ_22png-02.png" alt="Logo" />
                 </figure>
               </Link>
             </div>
-            {/* Menu Section */}
-            <div className={`${style.right} d-flex align-items-center justify-content-end`}>
+            <div className={style.right}>
               <ul className={style.menuListOpt}>
                 <li onClick={() => handleClick("/")} className={activeLink === "/" ? "active" : "inactive"}>
                   <Link href="/">Home</Link>
@@ -104,89 +64,55 @@ const Header = () => {
                 <li onClick={() => handleClick("/about")} className={activeLink === "/about" ? "active" : "inactive"}>
                   <Link href="/about">About</Link>
                 </li>
-                <li
-                  className={`${style.serviceMenu} ${activeLink.startsWith("/interior") ||
-                    activeLink === "/architecture" ||
-                    activeLink === "/constraction"
-                    ? "active"
-                    : "inactive"
-                    }`}
-                >
-                  <Link href="" onClick={() => handleClick("/services")}>
+                <li className={`${style.serviceMenu} ${activeLink.startsWith("/interior") || activeLink === "/architecture" || activeLink === "/construction" ? "active" : "inactive"}`}>
+                  <Link href="#" onClick={() => handleClick("/services")}>
                     Services
-                    <img className={style.dropIcon} src="dropDownArrow.png" />
+                    <img className={style.dropIcon} src="/dropDownArrow.png" alt="Dropdown" />
                   </Link>
-                  {/* services sub menu */}
                   <ul className={style.serviceSubMenu}>
                     <li className={style.interiorDesMenu}>
                       <Link className={style.menuli} href="/interior" onClick={() => handleClick("/interior")}>
                         INTERIOR DESIGN
                       </Link>
-                      <img src="right-arrow.png" alt="" />
-                      <div className={style.desktop_View}>
-                        <ul className={style.interiorDesSubMenu}>
-                          <li>
-                            <Link className={style.menuli} href="/interior/residential-interior"
-                              onClick={() => handleClick("/interior", "/interior/residential-interior")}>
-                              - Residential Interior
-                            </Link>
-                          </li>
-                          <li>
-                            <Link className={style.menuli} href="/interior/commercial-interior"
-                              onClick={() => handleClick("/interior", "/interior/commercial-interior")}>
-                              - Commercial Interior
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
+
                     </li>
                     <li className={`${style.architectureMenu}`}>
-                      <Link className={style.menuli} href="/architecture"
-                        onClick={() => handleClick("/architecture")}>
+                      <Link className={style.menuli} href="/architecture" onClick={() => handleClick("/architecture")}>
                         ARCHITECTURE
                       </Link>
                     </li>
                     <li>
-                      <Link className={style.menuli} href="/construction"
-                        onClick={() => handleClick("/construction")}>
+                      <Link className={style.menuli} href="/construction" onClick={() => handleClick("/construction")}>
                         CONSTRUCTION
                       </Link>
                     </li>
                   </ul>
                 </li>
-                {/* Projects Dropdown */}
-                <li className={`${style.projectMenu}`}>
-                  <Link href="/projects" onClick={() => handleClick("/projects")}>
-                    Projects
-                    <img className={style.dropIcon} src="dropDownArrow.png" />
+                <li className={`${style.serviceMenu} ${activeLink.startsWith("/projects") ? "active" : "inactive"}`}>
+                  <Link href="#" onClick={() => handleClick("/projects")}>
+                    Project
+                    <img className={style.dropIcon} src="/dropDownArrow.png" alt="Dropdown" />
                   </Link>
-                  {/* Dropdown for Projects */}
-                  <ul className={style.projectSubMenu}>
-                    {data.length > 0 ? (
-                      data.map((project, index) => (
-                        <li key={index}>
-                          <Link
-                            href={`${project.header_route}`}
-                            onClick={() => handleClick(`/projects/${project.header_route}`)}
-                          >
-                            {project.category_name.toUpperCase()}
-                          </Link>
-                        </li>
-                      ))
-                    ) : (
-                      <li>Loading...</li>
-                    )}
+                  <ul className={style.serviceSubMenu}>
+                    {projectTypes.map((type) => (
+                      <li key={type._id}>
+                        <Link
+                          className={`${style.menuli} ${activeSubLink === `/projects/type/${type._id}` ? "active" : ""}`}
+                          href={`/projects/type/${type._id}`}
+                          onClick={() => handleClick(`/projects/type/${type._id}`)}
+                        >
+                          {type.project_type}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </li>
-
                 <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
-                  <Link href="/clients">Clients</Link>
+                  <Link href="/clients">Customer Service</Link>
                 </li>
                 <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
                   <Link href="/blogs">Blog</Link>
                 </li>
-
-                {/* Search and Get in touch section */}
                 <div className="d-flex align-items-center text-center">
                   <form className="d-flex me-2" role="search">
                     <input
@@ -196,7 +122,6 @@ const Header = () => {
                       aria-label="Search"
                     />
                   </form>
-
                   <li className={style.headerBtn}>
                     <Link href="/get-in-touch">Get in touch</Link>
                   </li>
@@ -207,7 +132,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         .active {
           border-bottom: 3px solid #0d0d0d;

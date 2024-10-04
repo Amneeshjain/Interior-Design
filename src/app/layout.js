@@ -1,21 +1,21 @@
 "use client";
 import { Inter } from "next/font/google";
-// import SocialMedia from "../components/homepage/Socialmedia"
 import "./globals.css";
 import MobileMenu from "../components/MobileMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import IpadHeader from "@/components/IpadHeader";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   useEffect(() => {
-    // Dynamically import the Bootstrap JS bundle
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -26,14 +26,11 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <Header />
-          {/* <SocialMedia /> */}
-
+          <IpadHeader />
           <MobileMenu />
-
           {children}
           <Footer />
         </div>
-
       </body>
     </html>
   );

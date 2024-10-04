@@ -1,0 +1,41 @@
+/* Custom styles for Customer Story */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.customerLink {
+  font-size: 1rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.customerLink:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.cardHover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardHover:hover {
+  transform: translateY(-10px);
+}
+
+/* Add background color and padding to the card */
+.cardBackground {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 1rem; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners */
+}

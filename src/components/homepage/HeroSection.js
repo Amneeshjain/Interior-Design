@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
 
 // Array of slide data
 const slides = [
@@ -30,24 +31,21 @@ function HeroSection() {
     <Carousel interval={3000} controls={true} indicators={false}>
       {slides.map((slide) => (
         <Carousel.Item key={slide.id}>
-          <div>
+          <div
+            className="d-flex justify-content-center align-items-center"
+          >
             <img
               src={slide.src}
               alt={slide.alt}
-
+              style={{ objectFit: 'cover', width: "100%", height: "100%" }}
             />
           </div>
-          <div>
-            <Carousel.Caption cl>
-              <h3>{slide.label}</h3>
-              {/* <p>{slide.caption}</p> */}
-            </Carousel.Caption>
-          </div>
+          <Carousel.Caption className="d-flex flex-column align-items-center text-center">
+            <h3 className="responsive-heading">{slide.label}</h3>
+          </Carousel.Caption>
         </Carousel.Item>
-      ))
-      }
-
-    </Carousel >
+      ))}
+    </Carousel>
   );
 }
 

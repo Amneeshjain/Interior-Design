@@ -269,70 +269,10 @@ const TimelineCard = () => {
                 </h2>
               </div>
             </div>
-            {/* <div className={styles.timeline}>
-          {timelineData.map((item, index) =>
-            <div
-              className={styles.timelineItem}
-              key={index}
-            >
-              <div className={styles.arrowEnd} />
-                <div><img src="public/arrow-down.png"  /></div>
-              <div className={styles.contentHalfCircle} />
-              <div className={styles.bubleContent}>
-                {index % 2 === 0 || index % 2 !== 0
-                  ? <div className={styles.contentYear}>
-                      {item.content}
-                    </div>
-                      : null}
-                      <div
-                className={styles.circle}
-                style={{ backgroundColor: item.color }}
-              >
-                <div
-                  className={styles.innerCircle}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: "1.5rem",
-                    color: "black"
-                  }}
-                >
-                  {index + 1}
-                </div>
-              </div>
-                <div className={styles.content}>
-                  <p>
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-              
-            </div>
-          )}
-        </div> */}
-
-            {/* <div className="d-flex justify-content-center">
-    <img src="/down-arrow.png" alt="icon" style={{ width: "24px", height: "24px" }} />
-  </div>
-  <div className="d-flex justify-content-center">
-    <h4 style={{ width: "50px", height: "50px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#fff" }}>
-      1
-    </h4>
-  </div>
-  <div className="col-sm-6 mb-3 mb-sm-0 d-flex justify-content-center">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div> */}
-
             <div className="mb-5">
               {Data.map((item, index) => (
                 <div key={index}>
-                  <div className="d-flex justify-content-center">
+                  <div className={`row d-flex justify-content-center ${styles.md}`}>
                     {index !== 0 && (
                       <figure>
                         <img src={item.icon} alt="icon" style={{ width: "24px", height: "24px" }} />
@@ -344,7 +284,7 @@ const TimelineCard = () => {
                       {index + 1}
                     </h4>
                   </div>
-                  <div className="col-sm-6 mt-3 mb-sm-0">
+                  <div className="col-sm-12 mt-3 mb-sm-0">
                     <div className={styles.carddata}>
                       <div className="">
                         <div className="text-white d-flex justify-content-center" style={{ backgroundColor: "#666", padding: "8px", height: "40px", borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>

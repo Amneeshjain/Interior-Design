@@ -15,14 +15,6 @@ import Counter from "@/components/homepage/Counter";
 
 const textData = [
   {
-    image: "/fi_10365082.png",
-    title: "Architecture",
-    description:
-      "Architectural services include design, preparation of construction documents,  administration.",
-    buttonText: "View service",
-    url: "/architecture",
-  },
-  {
     image: "/fi_8172688.png",
     title: "Interior Design",
     description:
@@ -30,6 +22,15 @@ const textData = [
     buttonText: "View service",
     url: "/interior",
   },
+  {
+    image: "/fi_10365082.png",
+    title: "Architecture",
+    description:
+      "Architectural services include design, preparation of construction documents,  administration.",
+    buttonText: "View service",
+    url: "/architecture",
+  },
+
   {
     image: "/fi_10365450.png",
     title: "Construction",
