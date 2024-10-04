@@ -23,29 +23,29 @@ const Newprocess = () => {
                         <div className="text-center py-4">
                             <h2>OUR DESIGN PROCESS</h2>
                         </div>
-                        <div className="col-lg-12">
-                            <div className="row">
-                                {data.map((stage, index) => (
-                                    <div key={index} className="col-lg-3 col-md-6 p-2">
-                                        <div className="process-box p-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "10px", transition: "transform 0.3s ease", cursor: "pointer" }}>
-                                            <div className="d-flex justify-content-start align-items-start">
-                                                <h4 style={{ color: "#f39c12", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>
-                                                    {stage.number}
-                                                </h4>
-                                                <div>
-                                                    <h4 style={{ fontWeight: "600", fontSize: "20px" }}>{stage.title}</h4>
-                                                    <p style={{ color: "#bbb", fontSize: "16px" }}>{stage.description}</p>
-                                                    <hr style={{ borderColor: "#fff" }} />
-                                                </div>
+
+                        <div className="row">
+                            {data.map((stage, index) => (
+                                <div key={index} className="col-lg-6 col-md-6 p-2">
+                                    <div className="process-box py-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "10px", transition: "transform 0.3s ease", cursor: "pointer" }}>
+                                        <div className="d-flex justify-content-start align-items-start">
+                                            <h4 style={{ color: "#f39c12", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>
+                                                {stage.number}
+                                            </h4>
+                                            <div>
+                                                <h4 style={{ fontWeight: "600", fontSize: "20px" }}>{stage.title}</h4>
+                                                <p style={{ color: "#bbb", fontSize: "16px" }}>{stage.description}</p>
+                                                <hr style={{ borderColor: "#fff" }} />
                                             </div>
                                         </div>
                                     </div>
-                                ))}
-                                <h2 className=" text-capitalize text-center mt-4 mb-4" >
-                                    Average Timeline of Projects <br />6 To 12 Weeks
-                                </h2>
-                            </div>
+                                </div>
+                            ))}
+                            <h2 className=" text-capitalize text-center mt-4 mb-4" >
+                                Average Timeline of Projects <br />6 To 12 Weeks
+                            </h2>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -56,33 +56,8 @@ const cardData = [
         avatar:
             "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
     },
-    {
-        image:
-            "https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1",
-        category: "Builder Floor",
-        title: "Spacious Builder Floor",
-        description: "A spacious builder floor for family living.",
-        avatar:
-            "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-    },
-    {
-        image:
-            "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
-        category: "Farm House",
-        title: "Charming Farm House",
-        description: "A charming farm house with a beautiful garden.",
-        avatar:
-            "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-    },
-    {
-        image:
-            "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
-        category: "Commercial Complex",
-        title: "Modern Commercial Complex",
-        description: "A modern commercial complex with various shops.",
-        avatar:
-            "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-    },
+
+
 ];
 
 const Allprojectlist = () => {

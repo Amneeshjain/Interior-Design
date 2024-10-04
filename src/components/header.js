@@ -15,7 +15,6 @@ const Header = () => {
     setActiveLink(link);
     setActiveSubLink(subLink);
   };
-
   useEffect(() => {
     const fetchProjectTypes = async () => {
       try {
@@ -30,7 +29,6 @@ const Header = () => {
         console.error("Error fetching project types:", error);
       }
     };
-
     fetchProjectTypes();
   }, []);
 
@@ -124,7 +122,6 @@ const Header = () => {
                       aria-label="Search"
                     />
                   </form>
-
                   <li className={style.headerBtn}>
                     <Link href="/get-in-touch">Get in touch</Link>
                   </li>

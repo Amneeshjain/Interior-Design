@@ -6,21 +6,21 @@ import styles from "@/styles/gallary.module.css";
 
 const OurProjects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
-
   const handleToggle = () => {
     setShowMore(!showMore);
+    console.log("Show More toggled:", showMore);
   };
 
   if (!projects || projects.length === 0) {
     return <div className={style.projectMainContainer}>No projects found.</div>;
   }
-  const typeDescription = projects[0].projectType.type_description;
+
+  const typeDescription = projects[0]?.projectType?.type_description || "";
 
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
-        <div className="text-center mt-5 fw-4">
-          {/* Display the type description */}
+        <div className={style.heading}>
           <h4>{typeDescription}</h4>
         </div>
         <div className={`row ${style.projectsCardContainer}`}>
@@ -41,10 +41,11 @@ const OurProjects = ({ projects }) => {
             </Link>
           ))}
         </div>
+
         {projects.length > 2 && (
           <div className={`${styles.loadMore}`}>
             <button
-              style={{ margin: "0 auto" }}
+              style={{ margin: "0 auto", display: "block" }}
               onClick={handleToggle}
               className={styles.toggleButton}
             >

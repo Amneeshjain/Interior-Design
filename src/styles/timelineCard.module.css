@@ -196,3 +196,10 @@
     border-radius: 5px;
   }
 }
+@media (max-width: 1024px) {
+  .md figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

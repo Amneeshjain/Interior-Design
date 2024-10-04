@@ -104,14 +104,48 @@
 .dropdownContent.open {
   display: flex;
 }
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem; /* Adjust the spacing as needed */
+}
 
-@media only screen and (max-width: 992px) {
+.custom_button {
+  display: block;
+  padding: 10px 20px;
+  background-color: #000; /* Adjust color as needed */
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom_button:hover {
+  background-color: #000000; /* Hover effect */
+  color: #fff; /* Keep text white on hover */
+}
+
+.custom_button:active {
+  background-color: #000; /* Active effect */
+}
+
+.custom_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.4); /* Focus ring */
+}
+
+@media only screen and (max-width: 1024px) {
   .navbar {
-    display: none;
+    display: block;
   }
 }
 @media only screen and (max-width: 768px) {
   .navbar {
-    display: block;
+    display: none;
   }
 }

@@ -10,9 +10,8 @@ const ArticleCard = ({ title, category, date, image, description }) => {
         href="/blog-detail-content"
       >
         <Image
-          src={`https://backend-interior.onrender.com/${image}`}
+          src={image}
           alt={title}
-          layout="responsive"
           className={styles.cardImage}
           width={400}
           height={100}

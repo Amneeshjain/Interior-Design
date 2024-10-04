@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['s3-us-west-2.amazonaws.com', 'backend-interior.onrender.com'],
+    domains: ['s3-us-west-2.amazonaws.com', 'backend-interior.onrender.com', 'res.cloudinary.com'],
   },
   env: {
     BACKEND_URL: process.env.NEXT_PUBLIC_BACKEND_URL,

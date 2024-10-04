@@ -8,7 +8,7 @@ import ProjectGallery from "@/app/project-detail/ProjectGallery";
 import Specification from "@/app/project-detail/Specification";
 
 const ProjectDetailPage = ({ params }) => {
-  const { slug } = params;
+  const { slug } = params || {};
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,8 +36,8 @@ const ProjectDetailPage = ({ params }) => {
   }, [slug]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  if (!project) return <div>No project found</div>;
+  // if (error) return <div>Error: {error}</div>;
+  // if (!project) return <div>No project found</div>;
 
   return (
     <div>

@@ -1,34 +1,41 @@
-.category_title {
-  color: red;
+/* Custom styles for Customer Story */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  color: #000000;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.customer_link {
-  color: blue;
+.customerLink {
+  font-size: 1rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
   text-decoration: none;
 }
 
-.customer_link:hover {
+.customerLink:hover {
+  color: #000;
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .category_title {
-    font-size: 1.2rem;
-  }
-
-  .customer_link {
-    font-size: 0.9rem;
-  }
+.cardHover {
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 576px) {
-  .category_title {
-    font-size: 1rem;
-  }
+.cardHover:hover {
+  transform: translateY(-10px);
+}
 
-  .customer_link {
-    font-size: 0.8rem;
-  }
+/* Add background color and padding to the card */
+.cardBackground {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 1rem; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners */
 }

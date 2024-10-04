@@ -2,14 +2,14 @@ import Image from "next/image";
 import styles from "../../styles/specification.module.css";
 
 const Specification = ({ additionalMedia }) => {
-  const imageData = [
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 1" },
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 2" },
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 3" },
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 4" },
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 5" },
-    { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 6" },
-  ];
+  // const imageData = [
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 1" },
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 2" },
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 3" },
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 4" },
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 5" },
+  //   { src: "/T2,TATA PRIMANTI/1.jpg", alt: "Image 6" },
+  // ];
 
   return (
     <div className={`container ${styles.specificationsContainer}`}>
@@ -36,17 +36,15 @@ const Specification = ({ additionalMedia }) => {
         </div>
         <div className="col-lg-6">
           <figure className={styles.imgclass}>
-            <Image
+            <img
               src="/T2,TATA PRIMANTI/1.jpg"
               alt="Main image"
-              width={700}
-              height={500}
-              layout="responsive"
+              // layout="responsive"
             />
           </figure>
         </div>
       </div>
-
+      {/* 
       <div>
         {Array(2)
           .fill()
@@ -70,9 +68,9 @@ const Specification = ({ additionalMedia }) => {
                 ))}
             </div>
           ))}
-      </div>
+      </div> */}
 
-      {additionalMedia.videoLink && (
+      {/* {additionalMedia.videoLink && (
         <div className={styles.videoWrapper}>
           <iframe
             width="100%"
@@ -83,7 +81,7 @@ const Specification = ({ additionalMedia }) => {
             allowFullScreen
           ></iframe>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
