@@ -144,6 +144,11 @@
     display: block;
   }
 }
+@media only screen and (max-width: 1380px) {
+  .navbar {
+    display: block;
+  }
+}
 @media only screen and (max-width: 768px) {
   .navbar {
     display: none;
