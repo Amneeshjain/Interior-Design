@@ -1,15 +1,18 @@
 "use client";
 import React from "react";
-import styles from "../../styles/home.module.css";
-import Contact from "../../components/About/Contact";
+// import styles from "../../styles/home.module.css";
+// import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
-import Service from "../../components/Interior/Service";
-import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
+// import Service from "../../components/Interior/Service";
+// import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
 import AboutFirm from "@/components/About/AboutFirm";
 import Faq from "../../components/Faq/Faq";
+import TimelineCard from "../../components/About/TimelineCard";
+
 // import cardSection from "../../app/interior/cardSection"
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
+import AllProjects from "@/components/homepage/AllProjects"
 const items = [
   {
     title: "Preliminary Plans",
@@ -86,12 +89,15 @@ const page = () => {
       </div>
 
       {/* <cardSection /> */}
-      <Service />
-      <WhyChooseUs
+      {/* <Service /> */}
+      {/* <WhyChooseUs
         title="Comprehensive Interior Design Planning"
         tag="EXPERTISE"
         items={items}
-      />
+      /> */}
+      <AllProjects />
+      <TimelineCard />
+
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore

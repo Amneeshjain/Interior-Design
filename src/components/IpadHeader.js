@@ -67,8 +67,8 @@ const IpadHeader = () => {
                 <div className="d-flex align-items-center text-center">
                     <form className="d-flex me-2" role="search">
                         <input
-                            className="form-control ms-3 w-24 px-1 py-2 text-center text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            type="search"
+                            className={`form-control ms-3 ${styles.custom_search_input} px-1 py-2 text-center text-gray-700 border  `}
+                            type="search" go-500
                             placeholder="Search"
                             aria-label="Search"
                         />
@@ -80,6 +80,8 @@ const IpadHeader = () => {
                         </Link>
                     </div>
                 </div>
+
+
 
                 <div className={styles.hamburger} onClick={toggleMenu}>
                     ☰

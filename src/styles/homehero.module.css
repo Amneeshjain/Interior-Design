@@ -1,0 +1,30 @@
+/* Carousel media container, ensuring full-screen view */
+.carousel_media_container {
+  width: 100%;
+  height: 100vh; /* Full height of the viewport for desktop */
+}
+
+.carousel_video,
+.carousel_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .carousel_media_container {
+    height: 50vh; /* Adjust video/image height for mobile */
+  }
+
+  .carousel_video,
+  .carousel_image {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh; /* Make video/image cover 50% of the viewport height */
+  }
+
+  .carousel_caption h3 {
+    font-size: 1.2rem; /* Smaller text for mobile */
+  }
+}

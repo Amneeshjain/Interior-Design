@@ -1,4 +1,55 @@
-/* .para {
-  padding-left: 80px;
-  padding-right: 80px;
-} */
+.backgroundSection {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+
+.lineStyling {
+  height: 4px;
+  background-color: #f39c12;
+  width: 80px;
+  margin: 0 10px;
+}
+
+.hrLine {
+  width: 50px;
+  border: none;
+  border-top: 2px solid red;
+  margin: 0;
+}
+
+.imageContainer {
+  margin: 20px;
+}
+.imageContainer Image {
+  width: 100%;
+  height: 300px;
+}
+
+.founderImage {
+  border-radius: 10px;
+  width: 100%;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.founderImage:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .para p {
+    padding: 0;
+    font-size: 14px;
+  }
+  .title {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+  }
+}

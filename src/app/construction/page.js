@@ -1,15 +1,17 @@
 "use client";
 import React from "react";
-import Contact from "../../components/About/Contact";
+// import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
-import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
-import Services from "../../components/homepage/Services";
+// import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
+// import Services from "../../components/homepage/Services";
 // import Process from "../../components/About/Process";
 import TimelineCard from "../../components/About/TimelineCard";
 import AboutFirm from "../../components/About/AboutFirm";
 import Faq from "../../components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
+import AllProjects from "@/components/homepage/AllProjects"
+
 // import ImageGallery from "@/components/homepage/ImageGallery";
 import ConstructionGallery from "../../components/Constraction/ConstructionGallery"
 const items = [
@@ -116,13 +118,14 @@ const page = () => {
       items={items}
     /> */}
 
-      <Services
+      {/* <Services
         title="Expertise "
         subtitle="Our Construction Capabilities"
         text={textData}
-      />
+      /> */}
 
       {/* <Process bg="#FAFAFA" /> */}
+      <AllProjects />
       <TimelineCard />
       {/* <ImageGallery /> */}
       <ConstructionGallery />

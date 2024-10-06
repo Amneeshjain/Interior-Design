@@ -11,12 +11,12 @@ const BlogsDetail = () => {
         const response = await fetch('https://backend-interior.onrender.com/api/blogs/get-all-blog');
 
 
-        console.log("resssss", response)
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const result = await response.json();
         if (result.success) {
+          console.log("resssss", result.data)
           setArticles(result.data);
         } else {
           console.error('Error fetching blogs:', result.message);

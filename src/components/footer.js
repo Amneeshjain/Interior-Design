@@ -17,7 +17,7 @@ const Footer = () => {
                 </Link>
 
                 <p>
-                Colonelz Constructions offers an array of products & services; from construction to interior designing, architectural services, modern executive/designer furniture.
+                  Colonelz Constructions offers an array of products & services; from construction to interior designing, architectural services, modern executive/designer furniture.
                 </p>
 
                 <ul className={style.socialIcons}>
@@ -45,7 +45,7 @@ const Footer = () => {
                   <li>
                     <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
                       <figure>
-                        <img src="/linked.png" alt="" width="22px"/>
+                        <img src="/linked.png" alt="" width="22px" />
                       </figure>
                     </Link>
                   </li>
@@ -76,7 +76,7 @@ const Footer = () => {
                   <li>
                     <Link href="/about">About</Link>
                   </li>
-                  
+
                   <li>
                     <Link href="/career">Careers</Link>
                   </li>
@@ -94,7 +94,7 @@ const Footer = () => {
               <div className={style.footerRow}>
                 <p className={style.tag}>Services</p>
                 <ul>
-                <li>
+                  <li>
                     <Link href="/interior/residential-interior">Residential Interior</Link>
                   </li>
                   <li>
@@ -103,11 +103,11 @@ const Footer = () => {
                   <li>
                     <Link href="/architecture">Architecture</Link>
                   </li>
-                  
+
                   <li>
                     <Link href="/construction">Construction</Link>
                   </li>
-                   <li>
+                  <li>
                     <Link href="/projects">Projects</Link>
                   </li>
                 </ul>
@@ -115,7 +115,7 @@ const Footer = () => {
               <div className={style.footerRow}>
                 <p className={style.tag}>Visit Us</p>
                 <ul>
-                <Link className={`${style.colorWhite}`} href="/get-in-touch"><Button variant="secondary">Get In Touch</Button></Link>
+                  <Link className={`${style.colorWhite}`} href="/get-in-touch"><Button variant="secondary">Get In Touch</Button></Link>
                   <li>
                     <figure>
                       <img src="/Email.svg" alt="" />
@@ -139,7 +139,7 @@ const Footer = () => {
                       <Link
                         href="https://maps.app.goo.gl/uXjo914FmXRjWFrr9"
                         target="_blank"
-                      
+
                       >
                         D-11, Vipul World, Sector-48 Gurugram – 18, Haryana,
                         India
@@ -148,13 +148,13 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              
+
             </div>
           </div>
           <div className={style.footerStyle}>
-                <p className={style.footerText}>© 2024 Colonelz Inc. All rights reserved.</p>
-                <p className={style.footerText}>Created and Maintained by <Link href="https://mediadynox.com/">Media Dynox.</Link></p>
-              </div>
+            <p className={style.footerText}>© 2024 Colonelz Inc. All rights reserved.</p>
+            <p className={style.footerText}>Created and Maintained by <Link href="https://mediadynox.com/">Media Dynox.</Link></p>
+          </div>
         </div>
       </div>
     </>

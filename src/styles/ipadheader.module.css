@@ -10,6 +10,11 @@
 .menuOnly {
   padding: 0 10px 0 0px !important;
 }
+.custom_search_input {
+  width: 400px; /* Set your custom width */
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+}
+
 .scrollClass {
   /* backdrop-filter: blur(0); */
   background-color: #0d0d0d; /* Styles to apply when class is toggled */

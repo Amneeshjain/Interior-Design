@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import style from "@/styles/project.module.css";
 import Link from "next/link";
 import styles from "@/styles/gallary.module.css";
+import Para from "@/components/Project/Para"
 
 const OurProjects = ({ projects }) => {
   const [showMore, setShowMore] = useState(false);
@@ -20,15 +21,13 @@ const OurProjects = ({ projects }) => {
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
-        <div className={style.heading}>
-          <h4>{typeDescription}</h4>
-        </div>
+        <Para textdata={typeDescription} />
         <div className={`row ${style.projectsCardContainer}`}>
           {projects.slice(0, showMore ? projects.length : 2).map((project, index) => (
             <Link
               href={`/project-detail/${project.project_slug}`}
               key={project.project_slug}
-              className={`col-lg-6 col-6 ${style.gap} ${index % 2 === 0 ? style.even : style.odd}`}
+              className={`col-lg-6  ${style.gap} ${index % 2 === 0 ? style.even : style.odd}`}
             >
               <ProjectCard
                 project={{
@@ -40,9 +39,6 @@ const OurProjects = ({ projects }) => {
               />
             </Link>
           ))}
-        </div>
-
-        {projects.length > 2 && (
           <div className={`${styles.loadMore}`}>
             <button
               style={{ margin: "0 auto", display: "block" }}
@@ -52,7 +48,10 @@ const OurProjects = ({ projects }) => {
               {showMore ? "Show Less" : "See More"}
             </button>
           </div>
-        )}
+        </div>
+
+
+
       </div>
     </div>
   );
