@@ -78,58 +78,50 @@ const timelineData = [
 ];
 const Data = [
   {
-    description:
-      "We start by discussing your vision and needs to fully grasp your design preferences and requirements. This helps us create custom design plans.",
+    logo: "/understanding.png",
     content: "Understanding",
     icon: "/arrow-down.png"
   },
   {
-    description:
-      "We present our design ideas and concepts to you, showcasing how they meet your needs. This stage allows you to provide feedback.",
+    logo: "/presentation.png",
     content: "Pitch Presentation",
     icon: "/arrow-down.png"
 
   },
   {
-    description:
-      " Once you're happy with the design, we finalize the contract and require an advance payment to begin the project.",
+    logo: "/contract.png",
     content: "Contract",
     icon: "/arrow-down.png"
   },
   {
-    description:
-      "We visit your space to take precise measurements and existing conditions. This ensures that our design fits perfectly.",
+    logo: "/measuring.png",
     content: "Site Measurement",
     icon: "/arrow-down.png"
 
   },
   {
-    description:
-      "We provide a detailed timeline and a tentative estimate for the project. This helps you understand the scope of work.",
+    logo: "/estimation.png",
     content: " Estimate",
     icon: "/arrow-down.png"
 
 
   },
   {
-    description:
-      "Our team creates detailed design plans and 3D renderings based on your feedback. This phase focuses on perfecting every detail of your design.",
+    logo: "/design.png",
     content: "Design",
     icon: "/arrow-down.png"
 
 
   },
   {
-    description:
-      "We begin the actual work, coordinating with contractors and suppliers to bring your design to life. This involves construction, installation, and final touches.",
+    logo: "/execute.png",
     content: "Execution",
     icon: "/arrow-down.png"
 
 
   },
   {
-    description:
-      "After completing the project, we conduct a thorough review with you to ensure everything meets your expectations. We hand over the space ready for you to enjoy.",
+    logo: "/completed-task -1.png",
     content: "Handover",
     icon: "/arrow-down.png"
 
@@ -146,12 +138,10 @@ const TimelineCard = () => {
           style={{ backgroundColor: `#f5f5f5` }}
           className={style.processMainContainer}
         >
-
           <div className="container">
             <div
               style={{ justifyContent: "center", alignItems: "center" }}
               className={stylesA.sectionTitle}
-
             >
               <div
                 className={stylesA.left}
@@ -165,13 +155,13 @@ const TimelineCard = () => {
               >
                 <div className={stylesA.tag}>
                   <hr />
-                  Our Designing Process
+                  Our Timeline Process
                   <hr />
                 </div>
-                <h2>
+                {/* <h2>
                   A Simple, yet <br />
                   Effective Process
-                </h2>
+                </h2> */}
               </div>
             </div>
 
@@ -179,7 +169,7 @@ const TimelineCard = () => {
               {timelineData.map((item, index) => (
                 <div
                   className={styles.timelineItem_111}
-                  // style={{ zIndex: 9000 - index }}
+
                   key={index}
                 >
                   <div className={styles.arrowEnd_no_use} />
@@ -188,23 +178,18 @@ const TimelineCard = () => {
                   <div className={styles.bubleContent_1}>
                     <div
                       className={styles.contentYear1}
-                    // style={{ backgroundColor: item.color }}
                     >
                       {item.content}
                     </div>
                     <div className={styles.content1}>
                       <div style={{
                         marginTop: "10px",
-                        //   width:"30px",
-                        //   height:"30px",
-                        // backgroundColor:"red"
                       }}>
                         <Image
                           src={item.icon}
                           alt={`Image `}
                           width="85"
                           height="85"
-                          // className={styles.sliderImage}
                           loading="lazy"
                         />
                       </div>
@@ -215,7 +200,6 @@ const TimelineCard = () => {
                     style={{ backgroundColor: item.color }}
                   >
                     <div
-
                       className={styles.innerCircle1}
                       style={{
                         display: "flex",
@@ -223,7 +207,6 @@ const TimelineCard = () => {
                         alignItems: "center",
                         fontSize: "1.5rem",
                         fontWeight: "600",
-                        // boxShadow:"0 2px 4px rgba(0, 0, 0, 0.1);"
                         border: "3px solid rgb(245, 245, 245)"
 
                       }}
@@ -260,13 +243,13 @@ const TimelineCard = () => {
               >
                 <div className={stylesA.tag}>
                   <hr />
-                  Our Designing Process
+                  Our Timeline Process
                   <hr />
                 </div>
-                <h2>
+                {/* <h2>
                   A Simple, yet <br />
                   Effective Process
-                </h2>
+                </h2> */}
               </div>
             </div>
             <div className="mb-5">
@@ -290,7 +273,15 @@ const TimelineCard = () => {
                         <div className="text-white d-flex justify-content-center" style={{ backgroundColor: "#666", padding: "8px", height: "40px", borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
                           <h5>{item.content}</h5>
                         </div>
-                        <p className="text-center p-3">{item.description}</p>
+                        <figure className="d-flex justify-content-center py-4">
+                          <Image
+                            src={item.logo}
+                            alt={`Image `}
+                            width="85"
+                            height="85"
+                            loading="lazy"
+                          />
+                        </figure>
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ import TimelineCard from "@/components/About/TimelineCard";
 import AboutMore from "@/components/aboutMore/AboutMore";
 import Faq from "@/components/Faq/Faq";
 import ArchitureGallery from "@/components/Architucture/ArchitureGallery";
-
+import AllProjects from "@/components/homepage/AllProjects";
 const ProjectTypePage = ({ params }) => {
   const { id } = params || "";
   const [projects, setProjects] = useState([]);
@@ -90,7 +90,8 @@ const ProjectTypePage = ({ params }) => {
         background="#fff"
       />
       {loading ? <div>Loading...</div> : <OurProjects projects={projects} />}
-      {/* {loading ? <div>Loading...</div> : <Allprojectlist projects={projects} />} */}
+
+      <AllProjects />
       <TimelineCard />
 
       <ArchitureGallery />

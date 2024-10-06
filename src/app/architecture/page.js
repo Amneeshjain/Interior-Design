@@ -1,16 +1,18 @@
 "use client";
 
 import React from "react";
-import Contact from "../../components/About/Contact";
+// import Contact from "../../components/About/Contact";
 import HeroSection from "../../components/About/HeroSection";
-import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
-import Services from "../../components/homepage/Services";
+// import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
+// import Services from "../../components/homepage/Services";
 // import Process from "@/components/About/Process";
 import AboutFirm from "@/components/About/AboutFirm";
 import TimelineCard from "../../components/About/TimelineCard";
 import Faq from "@/components/Faq/Faq";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import GetInTouch from "../../components/homepage/GetInTouch";
+import AllProjects from "@/components/homepage/AllProjects"
+
 // import ImageGallery from "@/components/homepage/ImageGallery";
 import ArchitureGallery from "../../components/Architucture/ArchitureGallery";
 const items = [
@@ -106,9 +108,11 @@ const page = () => {
           description="Believes in switching vision to visuals, we shape buildings and afterward building shapes our lives. Our team integrates exceptional architectural craftsmen with their innovative designs. We customize an exclusive interior design with your vision for every inch of your space. From concept to completion, experience seamless integration of style and functionality. Partner with one of the leading architecture firms to flourish your spaces with luxury."
         />
       </div>
+      <AllProjects />
+
       <TimelineCard />
 
-      <WhyChooseUs
+      {/* <WhyChooseUs
         title="COMPREHENSIVE ARCHITECTURE PLANNING"
         tag="EXPERTISE"
         items={items}
@@ -117,7 +121,7 @@ const page = () => {
         title="EXPERTISE"
         subtitle="Shaping Dreams Into Skylines"
         text={textData}
-      />
+      /> */}
       {/* <Process bg="#FAFAFA" /> */}
       {/* <ImageGallery /> */}
       <ArchitureGallery />

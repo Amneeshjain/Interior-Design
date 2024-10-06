@@ -9,12 +9,17 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
   const [activeSubLink, setActiveSubLink] = useState("");
   const [projectTypes, setProjectTypes] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchResults, setSearchResults] = useState([]); 
+  const [isSearching, setIsSearching] = useState(false); 
   const pathname = usePathname();
 
   const handleClick = (link, subLink = "") => {
     setActiveLink(link);
     setActiveSubLink(subLink);
   };
+
+  // Fetch project types from API
   useEffect(() => {
     const fetchProjectTypes = async () => {
       try {
@@ -39,10 +44,36 @@ const Header = () => {
     }
   }, [pathname]);
 
+  // Handle search input change
+  const handleSearchInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  // Handle search form submission
+  const handleSearchSubmit = async (e) => {
+    e.preventDefault();
+    if (!searchQuery) return;
+
+    setIsSearching(true);
+    try {
+      const response = await fetch(`https://backend-interior.onrender.com/api/project/search?query=${searchQuery}`);
+      const data = await response.json();
+      if (data.success) {
+        setSearchResults(data.data);
+      } else {
+        console.error("Search failed:", data.message);
+      }
+    } catch (error) {
+      console.error("Error searching projects:", error);
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
   return (
     <>
       <div className={style.headerMainContainer}>
-        <div className="container-fluid">
+        <div className="container-fluid px-5">
           <div className={style.headerInnerItems}>
             <div className={style.left}>
               <Link
@@ -58,6 +89,7 @@ const Header = () => {
             </div>
             <div className={style.right}>
               <ul className={style.menuListOpt}>
+                {/* Menu Items */}
                 <li onClick={() => handleClick("/")} className={activeLink === "/" ? "active" : "inactive"}>
                   <Link href="/">Home</Link>
                 </li>
@@ -74,7 +106,6 @@ const Header = () => {
                       <Link className={style.menuli} href="/interior" onClick={() => handleClick("/interior")}>
                         INTERIOR DESIGN
                       </Link>
-
                     </li>
                     <li className={`${style.architectureMenu}`}>
                       <Link className={style.menuli} href="/architecture" onClick={() => handleClick("/architecture")}>
@@ -88,6 +119,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
+                {/* Project Types */}
                 <li className={`${style.serviceMenu} ${activeLink.startsWith("/projects") ? "active" : "inactive"}`}>
                   <Link href="#" onClick={() => handleClick("/projects")}>
                     Project
@@ -113,13 +145,18 @@ const Header = () => {
                 <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
                   <Link href="/blogs">Blog</Link>
                 </li>
-                <div className="d-flex align-items-center text-center">
-                  <form className="d-flex me-2" role="search">
+
+                {/* Search Form */}
+                <div className="d-flex align-items-center ">
+                  <form className="d-flex   me-2" role="search" onSubmit={handleSearchSubmit}>
                     <input
-                      className="form-control ms-3 w-24 px-1 py-2 text-center text-gray-700 border focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="form-control ms-2 w-24 px-1   text-gray-700 border outline-none"
                       type="search"
                       placeholder="Search"
                       aria-label="Search"
+                      value={searchQuery}
+                      style={{ padding: "11px" }}
+                      onChange={handleSearchInputChange}
                     />
                   </form>
                   <li className={style.headerBtn}>
@@ -131,6 +168,22 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        {/* Display search results */}
+        {isSearching && <p>Searching...</p>}
+        {searchResults.length > 0 && (
+          <div className={style.searchResults}>
+            <ul>
+              {searchResults.map((result) => (
+                <li key={result._id}>
+                  <Link href={`/projects/${result.project_slug}`}>
+                    {result.projectName}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <style jsx>{`
         .active {
@@ -138,6 +191,15 @@ const Header = () => {
         }
         .inactive {
           border-bottom: 3px solid transparent;
+        }
+        .searchResults {
+          position: absolute;
+          background: white;
+          border: 1px solid #ccc;
+          z-index: 1000;
+          width: 100%;
+          max-height: 300px;
+          overflow-y: auto;
         }
       `}</style>
     </>

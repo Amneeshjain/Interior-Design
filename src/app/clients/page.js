@@ -1,5 +1,5 @@
 import React from 'react'
-import Clients from "../../components/Client/Clients"
+// import Clients from "../../components/Client/Clients"
 import Herosection from "../../components/Client/Herosection"
 import CustomerStory from "../../components/Client/CustomerStory"
 import TimelineCard from '@/components/About/TimelineCard'
@@ -47,7 +47,7 @@ function page() {
             <Paragraph />
             <CustomerStory />
             <TimelineCard />
-            <Clients />
+            {/* <Clients /> */}
             <ArchitureGallery />
             <Faq faqData={faqData} />
             <GetInTouch />

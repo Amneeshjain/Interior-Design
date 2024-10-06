@@ -49,7 +49,7 @@ const ProjectDetailPage = ({ params }) => {
         background="#fff"
       />
       <AboutProjects sections={project.sections} />
-      <ProjectGallery gallery={project.gallery} />
+      {/* <ProjectGallery gallery={project.gallery} /> */}
       <Video projectDetails={project.projectDetails} />
       <Specification additionalMedia={project.additionalMedia} />
       <GetInTouch />

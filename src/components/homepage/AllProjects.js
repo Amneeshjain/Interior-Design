@@ -1,88 +1,85 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router'; 
-import styles from "../../styles/AllProjects.module.css"; 
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router'; // Import useRouter
+import axios from 'axios';
+import styles from '../../styles/AllProjects.module.css';
 
-const cardData = [
-    {
-        image: "https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1",
-        category: "Apartment",
-        title: "Cozy Apartment",
-        description: "A cozy apartment with modern amenities.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/apartment"
-    },
-    {
-        image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
-        category: "Villas",
-        title: "Luxury Villa",
-        description: "A luxury villa with stunning views.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/villas"
-    },
-    {
-        image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
-        category: "Offices",
-        title: "Modern Office Space",
-        description: "A modern office space for productive work.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/offices"
-    },
-    {
-        image: "https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1",
-        category: "Resorts & Hotels",
-        title: "Beach Resort",
-        description: "A beach resort with all-inclusive packages.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/resorts-hotels"
-    },
-    {
-        image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1",
-        category: "Restaurants & Cafes",
-        title: "Charming Cafe",
-        description: "A charming cafe serving delicious coffee.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/restaurants-cafes"
-    },
-    {
-        image: "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1",
-        category: "Retail & Showroom",
-        title: "Modern Showroom",
-        description: "A modern showroom with the latest products.",
-        avatar: "https://github.com/lewagon/bootstrap-challenges/blob/master/11-Airbnb-search-form/images/anne.jpg?raw=true",
-        menuRoute: "/retail-showroom"
-    },
+const Projects = () => {
+    const [projects, setProjects] = useState([]);
+    const [projectTypes, setProjectTypes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
-];
+    // Fetch project types from the first API
+    useEffect(() => {
+        const fetchProjectTypes = async () => {
+            try {
+                const response = await fetch("https://backend-interior.onrender.com/api/project/project-types");
+                const data = await response.json();
+                if (data.success) {
+                    setProjectTypes(data.data);
+                } else {
+                    console.error("Failed to fetch project types:", data.message);
+                }
+            } catch (error) {
+                console.error("Error fetching project types:", error);
+            }
+        };
+        fetchProjectTypes();
+    }, []);
 
-const AllProjects = () => {
+    // Fetch projects from the second API
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await axios.get('https://backend-interior.onrender.com/api/project/projects');
+                setProjects(response.data.data); // Set the projects data
+                setLoading(false);
+            } catch (error) {
+                console.error("Error fetching projects:", error);
+                setLoading(false);
+            }
+        };
+        fetchProjects();
+    }, []);
 
+    // Display loading state
+    if (loading) {
+        return <p>Loading projects...</p>;
+    }
 
     return (
-        <div className={styles.wrapperGrey}>
-            <div className="container">
-                <h2 className="text-center">Projects Categories</h2>
-                <div className="row">
-                    {cardData.map((card, index) => (
-                        <div className="col-lg-4" key={index}>
-                            <div
+        <div className="container py-5">
+            <div className="text-center mb-4">
+                <h2>Explore Our Projects</h2>
+            </div>
 
-                                className={styles.card}
-                                style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${card.image})` }}
+            {/* Render merged project cards */}
+            <div className="row justify-content-center">
+                {projectTypes.map((project) => (
+                    <div key={project._id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div className={styles.card}>
+                            {/* Display image from the projects API */}
+                            <Image
+                                src={projects[0]?.projectImage || '/default-image.jpg'} // Display image or fallback to default
+                                alt={projects[0]?.projectName || 'Project Image'}
+                                layout="responsive"
+                                width={300}
+                                height={200}
+                                // onClick={() => handleClick(project._id)} 
+                                className={styles.projectImage}
+                            />
 
-                            >
-                                <div className={styles.cardDescription}>
-                                    <h2>{card.title}</h2>
-                                    <p>{card.description}</p>
-                                </div>
-                                <a className={styles.cardLink} href={`/project-detail/${card.menuRoute}`}></a>
+                            {/* Overlay content with project type and name */}
+                            <div className={styles.overlay}>
+                                <h4 className={styles.projectTitle}>{project.project_type}</h4>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
 };
 
-export default AllProjects;
+export default Projects;

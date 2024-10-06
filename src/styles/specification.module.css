@@ -136,3 +136,31 @@
     object-fit: cover;
   }
 }
+
+/* Custom Styles for Projects Section */
+.subText {
+  font-size: 16px;
+  color: #1f3d7a; /* Blue color for subtitle */
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Hover effect for card */
+}
+
+.projectImage {
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.projectTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}

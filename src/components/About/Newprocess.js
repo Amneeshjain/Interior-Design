@@ -29,9 +29,12 @@ const Newprocess = () => {
                                 <div key={index} className="col-lg-6 col-md-6 p-2">
                                     <div className="process-box py-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "10px", transition: "transform 0.3s ease", cursor: "pointer" }}>
                                         <div className="d-flex justify-content-start align-items-start">
-                                            <h4 style={{ color: "#f39c12", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>
+                                            <h4 style={{ color: "red", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>
+
                                                 {stage.number}
                                             </h4>
+
+
                                             <div>
                                                 <h4 style={{ fontWeight: "600", fontSize: "20px" }}>{stage.title}</h4>
                                                 <p style={{ color: "#bbb", fontSize: "16px" }}>{stage.description}</p>
@@ -48,7 +51,7 @@ const Newprocess = () => {
 
                     </div>
                 </div>
-            </div>
+            </div >
             <style jsx>{`
         .vertical-heading {
           text-transform: uppercase;
