@@ -10,6 +10,41 @@
   width: 100%;
   height: 100%;
 }
+.carousel_media_container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden; /* Hide overflow for media */
+}
+
+.carousel_video,
+.carousel_image {
+  object-fit: cover; /* Ensures media covers the container */
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+}
+
+.carousel_caption {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align center */
+  z-index: 10; /* Ensure it's on top of the media */
+  color: white;
+  text-align: center;
+}
+
+.responsive_heading {
+  font-size: 2.5rem; /* Adjust size based on design */
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .responsive_heading {
+    font-size: 1.5rem; /* Responsive text for smaller screens */
+  }
+}
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {

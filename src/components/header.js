@@ -9,9 +9,9 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState("/");
   const [activeSubLink, setActiveSubLink] = useState("");
   const [projectTypes, setProjectTypes] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(""); 
-  const [searchResults, setSearchResults] = useState([]); 
-  const [isSearching, setIsSearching] = useState(false); 
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
   const pathname = usePathname();
 
   const handleClick = (link, subLink = "") => {
@@ -52,12 +52,16 @@ const Header = () => {
   // Handle search form submission
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
-    if (!searchQuery) return;
+    if (!searchQuery) {
+      alert("Please enter a search query");
+      return;
+    }
 
     setIsSearching(true);
     try {
-      const response = await fetch(`https://backend-interior.onrender.com/api/project/search?query=${searchQuery}`);
+      const response = await fetch(`https://backend-interior.onrender.com/api/project/search?query=${encodeURIComponent(searchQuery)}`);
       const data = await response.json();
+      console.log("Search Results:", data); // For debugging: log the API response
       if (data.success) {
         setSearchResults(data.data);
       } else {
@@ -83,7 +87,7 @@ const Header = () => {
                 href="/"
               >
                 <figure>
-                  <img src="/COLONELZ_22png-02.png" alt="Logo" />
+                  <img src="/Colonelz new logo.png" alt="Logo" />
                 </figure>
               </Link>
             </div>
@@ -140,17 +144,17 @@ const Header = () => {
                   </ul>
                 </li>
                 <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
-                  <Link href="/clients">Customer Service</Link>
+                  <Link href="/clients">Customer Story</Link>
                 </li>
                 <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
                   <Link href="/blogs">Blog</Link>
                 </li>
 
                 {/* Search Form */}
-                <div className="d-flex align-items-center ">
-                  <form className="d-flex   me-2" role="search" onSubmit={handleSearchSubmit}>
+                <div className="d-flex align-items-center">
+                  <form className="d-flex me-2" role="search" onSubmit={handleSearchSubmit}>
                     <input
-                      className="form-control ms-2 w-24 px-1   text-gray-700 border outline-none"
+                      className="form-control ms-2 w-24 px-1 text-gray-700 border outline-none"
                       type="search"
                       placeholder="Search"
                       aria-label="Search"
@@ -163,7 +167,6 @@ const Header = () => {
                     <Link href="/get-in-touch">Get in touch</Link>
                   </li>
                 </div>
-
               </ul>
             </div>
           </div>

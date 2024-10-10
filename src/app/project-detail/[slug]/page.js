@@ -51,7 +51,7 @@ const ProjectDetailPage = ({ params }) => {
       <AboutProjects sections={project.sections} />
       {/* <ProjectGallery gallery={project.gallery} /> */}
       <Video projectDetails={project.projectDetails} />
-      <Specification additionalMedia={project.additionalMedia} />
+      <Specification additionalMedia={project.additionalMedia} gallery={project.gallery} />
       <GetInTouch />
     </div>
   );

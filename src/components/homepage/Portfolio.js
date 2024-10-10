@@ -1,16 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "../../styles/portfolio.module.css";
 import style from "../../styles/home.module.css";
 import Link from "next/link";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, } from "framer-motion";
 import Image from "next/image";
-import whiteButton from "../../../public/button-white.png";
 import BgInteriar1 from "../../../public/T2,TATA PRIMANTI/3.jpg";
 import BgInteriar2 from "../../../public/CAFE-01/tye_299.jpg";
 import BgInteriar3 from "../../../public/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg"
 import styleA from "../../styles/aboutSection.module.css";
-// import styless from "../../styles/gallary.module.css";
 import styless from "../../styles/video.module.css";
 const Portfolio = () => {
   const ref = useRef();
@@ -22,6 +20,26 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
+
+  const [projectTypes, setProjectTypes] = useState([]);
+
+  useEffect(() => {
+    const fetchProjectTypes = async () => {
+      try {
+        const response = await fetch("https://backend-interior.onrender.com/api/project/project-types");
+        const data = await response.json();
+        if (data.success) {
+          setProjectTypes(data.data);
+          console.log("portfolio", data.data);
+        } else {
+          console.error("Failed to fetch project types:", data.message);
+        }
+      } catch (error) {
+        console.error("Error fetching project types:", error);
+      }
+    };
+    fetchProjectTypes();
+  }, []);
   return (
     <>
       <div className={` pb-5 ${styles.blackBg}`}>
@@ -75,7 +93,7 @@ const Portfolio = () => {
               </motion.div>
             </div>
           </Link>
-          <Link href="/projects">
+          <Link href={`/projects/${projectTypes._id}`}>
             <div className={` ${styles.greyBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>

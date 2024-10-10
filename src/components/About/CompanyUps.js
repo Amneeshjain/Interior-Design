@@ -6,7 +6,7 @@ const CompanyUps = () => {
     {
       id: 1,
       icon: "/Ups1.png",
-      title: "Createive & Adaptibility",
+      title: "Creative & Adaptibility",
     },
     {
       id: 2,
@@ -41,8 +41,8 @@ const CompanyUps = () => {
                       <img src={icon} alt="" loading="lazy" />
                     </figure>
                   </div>
-                  <div>
-                    <h3>{title}</h3>
+                  <div className="mt-2">
+                    <h3 style={{ fontSize: "20px" }}>{title}</h3>
                   </div>
                 </div>
               ))}

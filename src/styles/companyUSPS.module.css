@@ -1,5 +1,6 @@
 .CompanyUpsMainContainer {
   margin-bottom: 57px;
+  margin-top: 57px;
 }
 
 .CompanyUpsMainContainer .CompanyUpsBg {
@@ -47,8 +48,8 @@
 }
 
 .upsCard .icon figure {
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
 }
 
 .upsCard .icon figure img {

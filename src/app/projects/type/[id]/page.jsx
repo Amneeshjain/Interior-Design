@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "@/components/About/HeroSection";
 import OurProjects from "@/components/Project/OurProjects";
 import GetInTouch from "@/components/homepage/GetInTouch";
-// import Allprojectlist from "@/components/Apartment/Allprojectlist";
+
 import TimelineCard from "@/components/About/TimelineCard";
 import AboutMore from "@/components/aboutMore/AboutMore";
 import Faq from "@/components/Faq/Faq";
 import ArchitureGallery from "@/components/Architucture/ArchitureGallery";
-import AllProjects from "@/components/homepage/AllProjects";
+
 const ProjectTypePage = ({ params }) => {
   const { id } = params || "";
   const [projects, setProjects] = useState([]);
@@ -91,11 +91,10 @@ const ProjectTypePage = ({ params }) => {
       />
       {loading ? <div>Loading...</div> : <OurProjects projects={projects} />}
 
-      <AllProjects />
       <TimelineCard />
 
       <ArchitureGallery />
-      {/* <Allprojectlist /> */}
+
       <Faq faqData={faqData} />
       <GetInTouch />
       <AboutMore

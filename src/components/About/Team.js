@@ -10,69 +10,78 @@ import styles from "../../styles/home.module.css";
 const TeamSliderData = [
   {
     id: 1,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-015.jpg",
-    title: "Vartika Sharma",
-    profile: "SR. ARCHITECT",
+    image: "/TEAM PHOTOS/01 AKASHDEEP- Project Architect.JPG",
+    title: "AKSHDEEP",
+    profile: "PROJECT ARCHITECT",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Transforming visions into reality with practical and aesthetically appealing design solutions."
   },
   {
     id: 2,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-018.jpg",
-    title: "Priyanshu Prajapati",
-    profile: "PROJECT ARCHITECT",
+    image: "/TEAM PHOTOS/01 ARPITA-Jr.Designer Intern.JPG",
+    title: "ARPITA",
+    profile: "Jr.Designer Intern",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Supporting architects and designers with fresh ideas and enthusiasm."
   },
   {
     id: 3,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-017.jpg",
-    title: "Shaily",
-    profile: "PROJECT ARCHITECT",
+    image: "/TEAM PHOTOS/01 JATIN-Site Engineer.JPG",
+    title: "JATIN",
+    profile: " SITE-Engineer",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Ensuring on-site execution meets design standards with precision and quality."
   },
   {
     id: 4,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-016.jpg",
+    image: "/TEAM PHOTOS/01 KUSHAL-3d Visualizer.JPG",
     title: "Kushal Yamujala",
-    profile: "3D VISUALIZER",
+    profile: " KUSHAL-3d Visualizer",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Creating immersive 3D walkthroughs and leading marketing efforts with visual excellence."
   },
   {
     id: 5,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-019.jpg",
-    title: "Akshita Kalia",
-    profile: "JR. INTERIOR DESIGNER",
+    image: "/TEAM PHOTOS/01 PRIYANKA.JPG",
+    title: " PRIYANKA",
+    profile: "hr executive & Admin",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Efficiently managing operations, HR, and team support for outstanding results."
   },
   {
     id: 6,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-021.jpg",
-    title: "Anubhav Sharma",
-    profile: "EXECUTIVE ASSISTANT",
+    image: "/TEAM PHOTOS/01 SHAILY-Project Architect.JPG",
+    title: "SHAILY",
+    profile: "Project Architect",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Expert in space planning and innovative design with meticulous attention to detail."
   },
   {
     id: 7,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-020.jpg",
-    title: "Shivanshi Verma",
-    profile: "JR. INTERIOR DESIGNER",
+    image: "/TEAM PHOTOS/01 SHIVANSHI-Jr.Designer.JPG",
+    title: "SHIVANSHIa",
+    profile: "JR.  DESIGNER",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Crafting personalized interior spaces reflecting clients' unique styles with creative flair."
   },
   {
     id: 8,
-    image: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-012.jpg",
-    title: "Priyanka Yadav",
-    profile: "JR. EXECUTIVE HR & MARKETING",
+    image: "/TEAM PHOTOS/01 TARUSH-Jr.Architect.JPG",
+    title: "TARUSH",
+    profile: "Jr.Architect",
     descrip:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Crafting spaces with precision, bridging client expectations and project delivery."
+  },
+  {
+    id: 9,
+    image: "/TEAM PHOTOS/01 VARTIKA-Sr.Architect.JPG",
+    title: "VARTIKA",
+    profile: "Sr.Architect",
+    descrip:
+      "Seasoned architect and project manager ensuring seamless execution and client satisfaction.",
   },
 ];
+
 
 const Team = () => {
   const settings = {
@@ -80,7 +89,7 @@ const Team = () => {
     infinite: true,
     autoplay: true,
     // speed: 500,
-    slidesToShow: 3, // Default number of slides to show
+    slidesToShow: 3,
     slidesToScroll: 2,
 
     autoplaySpeed: 3000,
@@ -89,7 +98,7 @@ const Team = () => {
     // nextArrow: leftIcon,
     responsive: [
       {
-        breakpoint: 1024, // Settings for screens <= 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -98,7 +107,7 @@ const Team = () => {
         },
       },
       {
-        breakpoint: 600, // Settings for screens <= 600px
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -106,7 +115,7 @@ const Team = () => {
         },
       },
       {
-        breakpoint: 480, // Settings for screens <= 480px
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

@@ -12,7 +12,8 @@ import Services from "../../components/homepage/Services";
 import AboutMore from "../../components/aboutMore/AboutMore";
 import ImageGallery from "../../components/homepage/ImageGallery";
 import Counter from "@/components/homepage/Counter";
-
+import Para1 from "@/components/homepage/Para1";
+import LogoSlider from "@/components/homepage/LogoSlider";
 const textData = [
   {
     image: "/fi_8172688.png",
@@ -109,6 +110,7 @@ const Homepage = () => {
           <HeroSection />
         </div>
       </div>
+      <Para1 />
       <AboutUs />
       <Counter />
       {/* <AllProjects /> */}
@@ -121,6 +123,7 @@ const Homepage = () => {
       <Portfolio />
       <Video />
       <Testimonials />
+      {/* <LogoSlider /> */}
       <GetInTouch />
       <ImageGallery />
       <BlogSection />

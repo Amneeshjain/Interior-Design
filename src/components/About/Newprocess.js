@@ -3,14 +3,14 @@ import React from "react";
 import styles from "../../styles/myprocess.module.css";
 
 const data = [
-    { number: "01.", title: "Feasibility", description: "This initial phase of the project includes preliminary studies of the site or property. We'll work with you to build a detailed briefly." },
-    { number: "02.", title: "Concept", description: "Concept Design is the beginning of the creative process. Through design workshops, we'll develop architectural layouts for your property." },
-    { number: "03.", title: "Development", description: "Throughout the design development stage we get into the detail of the scheme, refining layouts, materials, and lighting concepts." },
-    { number: "04.", title: "Technical", description: "With the design signed off, we move onto the Technical Design stage where we prepare fully detailed construction packs." },
-    { number: "05.", title: "Production", description: "We've completed the construction details, and we develop detailed finishes schedules and specifications for every area." },
-    { number: "06.", title: "Tender", description: "As the detailed design stages complete, the tender process begins. We issue the tender pack and develop the construction program." },
-    { number: "07.", title: "Mobilisation", description: "Once the contractor is appointed, we'll review the design proposals and assist them in mobilizing resources as required." },
-    { number: "08.", title: "Construction", description: "While the project is on-site, we work with contractors to ensure successful implementation of the design." },
+    { number: "01.", title: "Understanding the Client's Requirements", description: "We prioritize understanding the client’s vision and needs through detailed discussions, defining the project scope, and assessing spaces to ensure alignment with the client’s goals from the start." },
+    { number: "02.", title: "Pitch Presentation & Tentative Estimate", description: "We present a curated mood board and a ballpark cost estimate to gauge the client’s design preferences and budget." },
+    { number: "03.", title: "Contract Signing & Advance Payment", description: "A formal contract is signed outlining the project scope, terms, and conditions. An advance payment is collected to officially start the project." },
+    { number: "04.", title: " Site Measurements & Documentation", description: "Within 48 hours of signing the contract, we conduct a site visit to take detailed measurements and document existing conditions, ensuring transparency." },
+    { number: "05.", title: " Project Timeline & Detailed Estimate", description: "We provide a project timeline and a comprehensive estimate based on the final scope of work, keeping clients informed and organized." },
+    { number: "06.", title: "Design Phase", description: "Our design team creates 3D models and layouts, incorporating client feedback to ensure the design captures the client’s vision perfectly." },
+    { number: "07.", title: "Execution Phase", description: "Upon client approval, on-site work begins within 3-4 working days, with regular updates provided to ensure efficient execution." },
+    { number: "08.", title: " Handover", description: "The project concludes with a handover certificate, support documents, warranty information, and final design boards, ensuring the client has all necessary references." },
     // { number: "09.", title: "Post PC", description: "At the project's conclusion, we'll inspect the works and prepare the final certificate for completion." }
 ];
 
@@ -44,7 +44,7 @@ const Newprocess = () => {
                                     </div>
                                 </div>
                             ))}
-                            <h2 className=" text-capitalize text-center mt-4 mb-4" >
+                            <h2 className=" text-uppercase text-center mt-4 mb-4" >
                                 Average Timeline of Projects <br />6 To 12 Weeks
                             </h2>
                         </div>
