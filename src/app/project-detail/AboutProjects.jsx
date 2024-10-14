@@ -12,7 +12,7 @@ const AboutProject = ({ sections }) => {
     }));
   };
 
-  const MAX_CHAR_COUNT = 126;
+  const MAX_CHAR_COUNT = 110;
 
   const ABOUT_PROJECT_DATA = [
     { id: "sub_sections_one", ...sections.sub_sections_one },

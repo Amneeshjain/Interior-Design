@@ -123,7 +123,7 @@ const Homepage = () => {
       <Portfolio />
       <Video />
       <Testimonials />
-      {/* <LogoSlider /> */}
+      <LogoSlider />
       <GetInTouch />
       <ImageGallery />
       <BlogSection />
