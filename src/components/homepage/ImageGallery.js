@@ -1,82 +1,43 @@
-import { useState, } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+
 import style from "../../styles/imageGallery.module.css";
 import stylesA from "../../styles/aboutSection.module.css";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import styles from "../../styles/gallary.module.css";
 
 const ImageGallery = () => {
-  const imageGroups = [
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-236 (1).jpg",
-        width: 500,
-        height: 500,
-        alt: "Boat on Calm Water",
-      },
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-351.jpg",
-        width: 500,
-        height: 500,
-        alt: "Yosemite National Park",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-        width: 500,
-        height: 500,
-        alt: "Wintry Mountain Landscape",
-      }
-      ,
-      ,
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
-        width: 500,
-        height: 500,
-        alt: "Boat on Calm Water",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-320.jpg",
-        width: 500,
-        height: 350,
-        alt: "Boat on Calm Water",
-      },
-      {
-        src: "/image 25 (2).png",
-        width: 500,
-        height: 650,
-        alt: "Yosemite National Park",
-      }
-    ],
-    [
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-324.jpg",
-        width: 500,
-        height: 360,
-        alt: "Mountains in the Clouds",
-      },
-      {
-        src: "/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-383.jpg",
-        width: 500,
-        height: 700,
-        alt: "Boaton Calm Water",
-      }
-    ]
+  const images = [
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/4.JPG", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/4.JPG", colSpan: 1, rowSpan: 3 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/20230911_150200.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/20230911_150200.jpg", colSpan: 1, rowSpan: 2 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/cww_142.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/cww_142.jpg", colSpan: 1, rowSpan: 3 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/IMG_20231104_144848 (2).jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/IMG_20231104_144848 (2).jpg", colSpan: 1, rowSpan: 2 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/IMG-20230904-WA0032.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/IMG-20230904-WA0032.jpg", colSpan: 1, rowSpan: 3 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/tye_132.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/tye_132.jpg", colSpan: 1, rowSpan: 3 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/tye_254.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/tye_254.jpg", colSpan: 1, rowSpan: 2 },
+    { src: "/photo gallery-20241009T061648Z-001/photo gallery/View-01.jpg", thumb: "/photo gallery-20241009T061648Z-001/photo gallery/View-01.jpg", colSpan: 1, rowSpan: 2 },
+
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedGroup, setSelectedGroup] = useState(null);
+  const [isClient, setIsClient] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-  const handleSelect = (groupIndex, imageIndex) => {
-    setSelectedGroup(groupIndex);
-    setActiveIndex(imageIndex);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleSelect = (index) => {
+    setActiveIndex(index);
   };
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
+  if (!isClient) return null;
 
   return (
     <div className={`container-fluid px-0 ${style.imageGalleryContainer1}`}>
-      <div className={`row ${style.image_row}`}>
+      <div className={`${style.image_row}`}>
         <div
           style={{ justifyContent: "center", alignItems: "center" }}
           className={stylesA.sectionTitle}
@@ -102,40 +63,48 @@ const ImageGallery = () => {
           </div>
         </div>
 
-        {imageGroups.map((group, groupIndex) => (
-
-          <div key={groupIndex} className="col-lg-3 col-md-12 col-sm-12 ">
-            {group.map((image, imageIndex) => (
-              <a
-                key={imageIndex}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSelect(groupIndex, imageIndex);
-                }}
-                href="#"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleLightbox"
-                className={`mb-3 ${style.masonry_item}`}
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-
+        <div className={style.imageGalleryContainer}>
+          {images
+            .slice(0, showMore ? images.length : 8)
+            .map((image, index) => (
+              <div
+                key={index}
+                className={`${style.gallery_container} ${style[`w_${image.colSpan}`]} ${style[`h_${image.rowSpan}`]}`}
               >
-                <Image
-                  src={image.thumb || image.src}
-                  width={image.width}
-                  height={image.height}
-                  layout="responsive"
-                  style={{ objectFit: "cover", }}
-                  className=" shadow-1-strong  mb-3"
-                  alt={image.alt}
-                />
-              </a>
+                <div className={style.gallery_item}>
+                  <div className={style.image}>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSelect(index);
+                      }}
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleLightbox"
+                      className={style.masonry_item}
+                      data-aos="zoom-in"
+                      data-aos-duration="1000"
+                    >
+                      <img src={image.thumb} alt={`thumbnail ${index + 1}`} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             ))}
-          </div>
-        ))}
+        </div>
+
+        <div className={`${styles.loadMore}`}>
+          <button
+            style={{ margin: "0 auto" }}
+            onClick={toggleShowMore}
+            className={`${styles.toggleButton}`}
+          >
+            {showMore ? "Show Less" : "See More"}
+          </button>
+        </div>
 
         <div
-          className="modal fade"
+          className={`modal fade`}
           id="exampleLightbox"
           tabIndex="-1"
           aria-labelledby="exampleLightboxLabel"
@@ -143,7 +112,7 @@ const ImageGallery = () => {
         >
           <div className="modal-dialog modal-xl modal-dialog-centered">
             <div className="modal-content">
-              <div className="modal-body">
+              <div className={`modal-body`}>
                 <div id="lightboxExampleCarousel" className="carousel slide">
                   <img
                     src="/close.png"
@@ -152,18 +121,13 @@ const ImageGallery = () => {
                     aria-label="Close"
                   />
                   <div className="carousel-inner ratio ratio-16x9 bg-dark">
-                    {selectedGroup !== null && imageGroups[selectedGroup].map((image, index) => (
+                    {images.map((image, index) => (
                       <div
-                        className={`carousel-item text-center ${index === activeIndex ? "active" : ""}`}
+                        className={`carousel-item text-center ${index === activeIndex ? "active" : ""
+                          }`}
                         key={index}
                       >
-                        <Image
-                          src={image.src}
-                          alt={`image ${index + 1}`}
-                          width={1200}
-                          height={800}
-                          style={{ width: "81%", height: "100%", objectFit: "cover" }}
-                        />
+                        <img src={image.src} alt={`image ${index + 1}`} className="h-100" />
                       </div>
                     ))}
                   </div>
@@ -173,15 +137,10 @@ const ImageGallery = () => {
                     data-bs-target="#lightboxExampleCarousel"
                     data-bs-slide="prev"
                     onClick={() =>
-                      setActiveIndex(
-                        (activeIndex - 1 + imageGroups[selectedGroup].length) %
-                        imageGroups[selectedGroup].length
-                      )}
+                      handleSelect((activeIndex - 1 + images.length) % images.length)
+                    }
                   >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    />
+                    <span className="carousel-control-prev-icon" aria-hidden="true" />
                     <span className="visually-hidden">Previous</span>
                   </button>
                   <button
@@ -189,15 +148,9 @@ const ImageGallery = () => {
                     type="button"
                     data-bs-target="#lightboxExampleCarousel"
                     data-bs-slide="next"
-                    onClick={() =>
-                      setActiveIndex(
-                        (activeIndex + 1) % imageGroups[selectedGroup].length
-                      )}
+                    onClick={() => handleSelect((activeIndex + 1) % images.length)}
                   >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    />
+                    <span className="carousel-control-next-icon" aria-hidden="true" />
                     <span className="visually-hidden">Next</span>
                   </button>
                 </div>
@@ -206,8 +159,7 @@ const ImageGallery = () => {
           </div>
         </div>
       </div>
-    </div >
-
+    </div>
   );
 };
 

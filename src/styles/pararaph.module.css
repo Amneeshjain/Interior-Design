@@ -1,5 +1,28 @@
+.p1 h2 {
+  font-size: 3rem; /* Adjust the heading size */
+  font-weight: bold;
+  color: #333; /* A subtle dark color */
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  padding: 10px 0;
+  background-color: rgb(215, 8, 8);
+  -webkit-background-clip: text;
+  color: transparent; /* Text inside the gradient */
+}
 @media only screen and (max-width: 768px) {
-  .p1 p {
-    font-size: 14px;
+  .p1 h2 {
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+    line-height: 1.4;
+
+    background-color: rgb(215, 8, 8);
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }

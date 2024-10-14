@@ -1,5 +1,4 @@
-import React from 'react'
-// import Clients from "../../components/Client/Clients"
+"use client"
 import Herosection from "../../components/Client/Herosection"
 import CustomerStory from "../../components/Client/CustomerStory"
 import TimelineCard from '@/components/About/TimelineCard'
@@ -7,7 +6,8 @@ import GetInTouch from '../project-detail/GetInTouch'
 import AboutMore from '../../components/aboutMore/AboutMore'
 import Paragraph from "../../components/Client/Paragraph"
 import Faq from "@/components/Faq/Faq";
-import ArchitureGallery from "../../components/Architucture/ArchitureGallery";
+import ImageGallery from "../../components/homepage/ImageGallery";
+
 const faqData = [
     {
         question: "1). What services do we offer as an Architect?",
@@ -41,14 +41,13 @@ function page() {
     return (
         <div>
             <Herosection style={{ color: "#fff !important" }}
-                title="Customer Service "
-                text="Customer Service ?"
+                title="Customer Story "
+                text="Customer Story ?"
                 backgroundImage="../../bg-hero.png" />
             <Paragraph />
             <CustomerStory />
             <TimelineCard />
-            {/* <Clients /> */}
-            <ArchitureGallery />
+            <ImageGallery />
             <Faq faqData={faqData} />
             <GetInTouch />
             <AboutMore

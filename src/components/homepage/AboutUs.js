@@ -60,14 +60,14 @@ const AboutUs = () => {
               <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
                 <img
                   ref={(el) => el && imagesRef.current.push(el)}
-                  src="slide-1.jpg"
+                  src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/cww_25.jpg"
                   alt=""
                   style={{ width: '100%' }}
                 />
               </figure>
               <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: 0, width: '100%' }}>
                 <div className={style.contbox}>
-                  <p>Residential</p>
+                  <p>APARTMENT & VILLA</p>
                 </div>
               </div>
             </div>
@@ -79,11 +79,12 @@ const AboutUs = () => {
                   <div style={{ position: 'relative' }}>
 
                     <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
-                      <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-2.jpg" alt="" />
+                      <img ref={(el) => el && imagesRef.current.push(el)} src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/tye_144.jpg" alt="" />
                     </figure>
                     <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
                       <div className={style.contbox}>
-                        <p>Residential</p>
+                        <p>RESTAURANT AND CAFE’S
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -91,12 +92,13 @@ const AboutUs = () => {
                 <li>
                   <div style={{ position: 'relative' }}>
 
+
                     <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
-                      <img ref={(el) => el && imagesRef.current.push(el)} src="gallery-3.jpg" alt="" />
+                      <img ref={(el) => el && imagesRef.current.push(el)} src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/DSC_1674.JPG" alt="" />
                     </figure>
                     <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
                       <div className={style.contbox}>
-                        <p>Residential</p>
+                        <p>OFFICES & RETAIL</p>
                       </div>
                     </div>
                   </div>

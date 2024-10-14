@@ -1,26 +1,27 @@
 import React from "react";
-
 import HeroSection from "../../components/About/HeroSection";
-import BlogContent  from "../../components/BlogDetailContent/BlogContent"
-import Contact  from "../../components/About/Contact";
+import BlogContent from "../../components/BlogDetailContent/BlogContent";
 import GetInTouch from "../../components/homepage/GetInTouch";
 
-
-const BlogDetailContent = () => {
-  
+const BlogDetailContent = ({ article }) => {
   return (
     <>
       <HeroSection
-        title="Articles & news"
+        title={article.title}
         text="Blogs"
-        //buttonText="Get in Touch"
-        backgroundImage="../../blog-detail.png"
-        background={"#fff"}
+        backgroundImage="/blog-detail.png"
+        background="#fff"
         color="#fff"
       />
-      <BlogContent/>
-      <GetInTouch/>
-      {/* <Contact /> */}
+      <BlogContent
+        slug={article.slug}
+        title={article.title}
+        date={article.createdAt}
+        category={article.category}
+        image={article.blog_image}
+        content={article.content}
+      />
+      <GetInTouch />
     </>
   );
 };

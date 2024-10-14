@@ -47,27 +47,33 @@ const Testimonials = () => {
   const testimonials = [
     {
       image: "/testimonial-1.png",
-      quote: "They did an amazing work for our home",
-      description: "If you are looking for a dedicated team to look after your interior needs hire Colonelz. They ll beautify your house with contemporary designs and top-notch quality. I have had an amazing experience getting my new house designed by them and it s been over a year and all the fittings are super sturdy. They also offer services after the completion of the project giving end-to-end solutions to their customers. A big thanks to Colonelz team and hope you guys grow with leaps and bounds.",
+      quote: "Exceptional Design, Unwavering Support",
+      description: "I highly recommend Colonelz for exceptional interior design services. Their team's thoroughness and dedication delivered a breathtakingly beautiful home with contemporary designs and top-notch quality. One year on, the fittings remain sturdy, a testament to their craftsmanship. What impresses me most is their unwavering support even after project completion, offering priceless peace of mind. Thank you, Colonelz, for an outstanding experience! Wishing you continued growth and success.",
       author: "Vineet Gautam",
     },
     {
       image: "/testimonial_2.png",
-      quote: "Great designs by Colonelz transformed my home",
-      description: "It was a wonderful experience to see Naomi leading her team for the Interior Designing of my flat in Panchkula. The project was completed successfully within the agreed time and cost. Everyone who visits my flat appreciates the work done. I feel lucky and blessed to have availed services from Naomi and Colonelz Constructions. So, without a second thought, contact Colonelz to transform your house into a beautiful space.",
+      quote: "Flawless Interior Design Execution",
+      description: "It was a wonderful experience to see Naomi leading her team in doing up the Project related to Interior Designing and Executing at my flat in Panchkula. The project was completed successfully within the agreed time and cost. Everyone who visits my flat appreciates the work done. I feel lucky and blessed to have availed services of Naomi and Colonelz Constructions. I wish Naomi and Colonelz Constructions all the best in all their endeavours.",
       author: "Jagrant S Pandher",
     },
     {
       image: "/testimonial_2.png",
-      quote: "Got my dream home with Colonelz",
-      description: "Colonelz has a unique ability to turn visions into reality. Their team worked closely with me to understand my design preferences and goals, and then brought them to life in the most beautiful and precise way. The creativity, attention to detail, and craftsmanship displayed during the construction project were truly remarkable. Colonelz's dedication to their craft and commitment to delivering outstanding results make them the ideal choice for anyone seeking a truly personalized and exceptional design experience.",
-      author: "Aditi Singh",
+      quote: "Dream Home, Exceptional Experience",
+      description: "We collaborated with Naomi and the Colonelz team to bring our dream home to life. Their innovative design suggestions, from strategic wardrobe placement to expert civil modifications, exceeded our expectations. The vendors they introduced us to, particularly the lighting specialist, delivered outstanding services. What truly impresses us is Colonelz's long-term commitment to customer satisfaction, providing seamless after-sales support even a year after project completion. Their exceptional design expertise and reliability have led us to enthusiastically recommend Colonelz to friends and family.",
+      author: "RATIKA WADHWA",
     },
     {
       image: "/testimonial-1.png",
-      quote: "Amazing transformation of my place by Colonelz",
-      description: "Colonelz truly went above and beyond to curate a space that captured my personal style and preferences. Their team of dedicated professionals took the time to understand my needs and transformed them into customized designs that surpassed my expectations. The commitment to exceptional service, combined with their expertise in interior design and construction, made the entire process enjoyable and stress-free. I am grateful to Colonelz for creating a space I can truly call my own.",
-      author: "Satish Pandey",
+      quote: "Transforming Business with Immersive Design",
+      description: "I chose Colonelz for my showroom interiors because Principal Designer Naomi understood my vision perfectly. Post-renovation, my business has flourished. Now, East Delhi's most unique showroom, Plymaarque, stands out. Customers and architects appreciate the immersive experience, easily visualizing products in their spaces.Working with Colonelz was seamless: well-managed teams, timely execution, and transparent payment structures. I highly recommend Colonelz for exceptional design and service.",
+      author: "RISHAB JAIN",
+    },
+    {
+      image: "/testimonial-1.png",
+      quote: "Harmonious Blend of Form and Function",
+      description: "Colonel Sahay's team expertly translated our desire for a naturally lit, simple yet functional home into reality. Their design process was marked by openness, commitment, and a genuine understanding of our needs. The result: a harmonious blend of form and function. We enthusiastically endorse Colonelz for their outstanding expertise and client-centric approach.",
+      author: "TEJINDER SINGH DHILLON",
     },
   ];
 
@@ -127,36 +133,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="container-fluid">
-        <div className={styles.slider}>
-          <div className={styles.slideTrack}>
-            {imageUrls.map((url, index) => (
-              <div key={index} className={styles.slide}>
-                <Image
-                  src={url}
-                  alt={`Slide ${index + 1}`}
-                  width={200}
-                  height={100}
-                  layout="responsive"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-            {imageUrls.map((url, index) => (
-              <div key={index + imageUrls.length} className={styles.slide}>
-                <Image
-                  src={url}
-                  alt={`Slide ${index + 1}`}
-                  width={200}
-                  height={100}
-                  layout="responsive"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    
     </>
   );
 };

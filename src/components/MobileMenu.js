@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link href="/clients" onClick={toggleMenu}>Customer Service</Link>
+        <Link href="/clients" onClick={toggleMenu}>Customer Story</Link>
         <Link href="/blogs" onClick={toggleMenu}>Blogs</Link>
         <Link href="/get-in-touch" onClick={toggleMenu}>Get in touch</Link>
         <div className=" text-center">

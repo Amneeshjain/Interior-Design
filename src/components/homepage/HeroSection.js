@@ -1,12 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
-import styles from "../../styles/homehero.module.css"
+import styles from "../../styles/homehero.module.css";
 
 // Array of slide data
 const slides = [
   {
     id: 1,
     type: "video",
-    src: "/video/animation-video.mp4",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/Untitled design (1).mp4",
     alt: "First slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
     caption: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
@@ -14,24 +14,32 @@ const slides = [
   {
     id: 2,
     type: "image",
-    src: "/Group 39522.png",
-    alt: "Second slide",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/RESIDENCES.jpg",
+    alt: "Third slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
-    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
   },
   {
     id: 3,
     type: "image",
-    src: "/Group 39522.png",
-    alt: "Third slide",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/RESTAURANT & CAFE.jpg",
+    alt: "Fourth slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
     caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+  },
+  {
+    id: 4,
+    type: "image",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/OFFICES & RETAIL.jpg",
+    alt: "Second slide",
+    label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
+    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
 function HeroSection() {
   return (
-    <Carousel interval={3000} controls={true} indicators={false}>
+    <Carousel interval={3000} controls={true} indicators={false} style={{ overflow: 'hidden' }}>
       {slides.map((slide) => (
         <Carousel.Item key={slide.id}>
           <div
@@ -56,8 +64,8 @@ function HeroSection() {
               />
             )}
           </div>
-          {/* <Carousel.Caption className="d-flex flex-column align-items-center text-center">
-            <h3 className="responsive-heading">{slide.label}</h3>
+          {/* <Carousel.Caption className={`${styles.carousel_caption}`}>
+            <h3 className={styles.responsive_heading}>{slide.label}</h3>
           </Carousel.Caption> */}
         </Carousel.Item>
       ))}

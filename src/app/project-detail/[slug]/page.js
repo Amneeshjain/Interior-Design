@@ -21,6 +21,7 @@ const ProjectDetailPage = ({ params }) => {
 
         if (data.success) {
           setProject(data.data);
+          console.log(data.data);
         } else {
           throw new Error(data.message);
         }
@@ -51,7 +52,7 @@ const ProjectDetailPage = ({ params }) => {
       <AboutProjects sections={project.sections} />
       {/* <ProjectGallery gallery={project.gallery} /> */}
       <Video projectDetails={project.projectDetails} />
-      <Specification additionalMedia={project.additionalMedia} />
+      <Specification additionalMedia={project.additionalMedia} gallery={project.gallery} bgimage={project.projectImage} />
       <GetInTouch />
     </div>
   );

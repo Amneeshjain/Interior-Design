@@ -53,7 +53,7 @@ const Counter = () => {
     ];
 
     return (
-        <div className={`container ${styles.margin}`}>
+        <div className={`container py-3 ${styles.margin}`}>
             <div className={`row rounded  py-3`}>
                 {counterData.map((item, index) => (
                     <div className="col-lg-3 col-md-6 mb-4" key={index}>

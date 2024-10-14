@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/specification.module.css";
 
-const Specification = ({ additionalMedia }) => {
+const Specification = ({ additionalMedia, gallery, bgimage }) => {
   const projectData = [
     {
       imageSrc: "/T2,TATA PRIMANTI/1.jpg",
@@ -22,7 +22,7 @@ const Specification = ({ additionalMedia }) => {
       imageSrc: "/T2,TATA PRIMANTI/1.jpg",
     },
   ];
-
+  // console.log(gallery);
   return (
     <div className={`container ${styles.specificationsContainer}`}>
       <div
@@ -49,7 +49,7 @@ const Specification = ({ additionalMedia }) => {
         <div className="col-lg-6">
           <figure className={styles.imgclass}>
             <img
-              src="/T2,TATA PRIMANTI/1.jpg"
+              src={bgimage}
               alt="Main image"
               // layout="responsive"
             />
@@ -57,37 +57,15 @@ const Specification = ({ additionalMedia }) => {
         </div>
       </div>
 
-      <div className="container py-5 px-0">
-        <div className="row d-flex justify-content-center">
-          {projectData.map((project) => (
-            <div key={project.id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-              <div className={styles.card}>
-                <Image
-                  src={project.imageSrc}
-                  alt={project.title}
-                  layout="responsive"
-                  width={300}
-                  height={200}
-                  className={styles.projectImage}
-                />
-              </div>
+      <div className="row " style={{ marginBottom: "40px" }}>
+        {gallery.images.map((project) => (
+          <div key={project.id} className="col-lg-4 py-2">
+            <div className={styles.card}>
+              <img src={project} alt={project} />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-      {/* {additionalMedia.videoLink && (
-        <div className={styles.videoWrapper}>
-          <iframe
-            width="100%"
-            height="315"
-            src={additionalMedia.videoLink}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      )} */}
     </div>
   );
 };

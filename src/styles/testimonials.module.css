@@ -22,22 +22,20 @@
 
 .slider {
   height: 200px;
-  width: 100%;
-  margin: auto;
-  /* overflow: hidden; */
-  position: relative;
-  /* width: auto; */
 }
 
 .slideTrack {
-  animation: scroll 40s linear infinite;
+  animation: scroll 25s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
 
 .slide {
-  height: 100px;
-  width: 100%;
+  height: 80px;
+  width: auto;
+  display: flex;
+  gap: 70px;
+  justify-content: space-around;
 }
 
 .sectionTittle h1 {

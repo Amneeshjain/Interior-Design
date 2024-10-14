@@ -125,7 +125,7 @@ const IpadHeader = () => {
                     </div>
                 </div>
 
-                <Link href="/clients" onClick={toggleMenu}>Client</Link>
+                <Link href="/clients" onClick={toggleMenu}>Customer Story</Link>
                 <Link href="/blogs" onClick={toggleMenu}>Blogs</Link>
             </div>
         </nav>
