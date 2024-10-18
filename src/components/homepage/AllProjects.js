@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'; // Import Link
+import Link from 'next/link';
 import axios from 'axios';
 import styles from '../../styles/AllProjects.module.css';
 
@@ -17,7 +17,6 @@ const Projects = () => {
                 const data = await response.json();
                 if (data.success) {
                     setProjectTypes(data.data);
-                    console.log(data.data);
                 } else {
                     console.error("Failed to fetch project types:", data.message);
                 }
@@ -34,7 +33,6 @@ const Projects = () => {
             try {
                 const response = await axios.get('https://backend-interior.onrender.com/api/project/projects');
                 setProjects(response.data.data);
-                console.log(response.data.data);
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching projects:", error);
@@ -57,31 +55,42 @@ const Projects = () => {
 
             {/* Render merged project cards */}
             <div className="row justify-content-center">
-                {projectTypes.map((project) => (
-                    <div key={project._id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div className={styles.card}>
-                            {/* Wrap the Image with Link component */}
-                            <Link href={`/projects/type/${project._id}`}>
-                                <div>
-                                    {/* Display image from the projects API */}
-                                    <Image
-                                        src={projects[0]?.projectImage || '/default-image.jpg'}
-                                        alt={projects[0]?.projectName || 'Project Image'}
-                                        layout="responsive"
-                                        width={300}
-                                        height={200}
-                                        className={styles.projectImage}
-                                    />
-                                </div>
-                            </Link>
+                {projectTypes.map((projectType) => {
+                    console.log("Current Project Type ID:", projectType._id); // Log current project type ID
 
-                            {/* Overlay content with project type and name */}
-                            <div className={styles.overlay}>
-                                <h4 className={styles.projectTitle}>{project.project_type}</h4>
+                    // Find the first project that matches the current project type's _id
+                    const firstProject = projects.find(p => {
+                        console.log("Comparing:", p.projectType._id, projectType._id); // Log the comparison
+                        return p.projectType._id === projectType._id;
+                    });
+
+                    console.log("First Project for type:", firstProject); // Debugging log
+
+                    return (
+                        <div key={projectType._id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div className={styles.card}>
+                                {/* Wrap the Image with Link component */}
+                                <Link href={`/projects/type/${projectType._id}`}>
+                                    <div>
+                                        {/* Display the image of the first project of the current project type */}
+                                        <img
+                                            src={firstProject?.projectImage || '/default-image.jpg'}
+                                            alt={firstProject?.projectName || 'Project Image'}
+                                            layout="responsive"
+
+                                            className={styles.projectImage}
+                                        />
+                                    </div>
+                                </Link>
+
+                                {/* Overlay content with project type */}
+                                <div className={styles.overlay}>
+                                    <h4 className={styles.projectTitle}>{projectType.project_type}</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );

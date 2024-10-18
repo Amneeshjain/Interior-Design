@@ -62,7 +62,7 @@ const Navbar = () => {
           <Link href="/">
             <figure>
               {/* <img src="/COLONELZ_22png_artboard16 (1).png" alt="" width={"150px"} /> */}
-              <img src="/COLONELZ_22png-02.png" alt="Logo" width={"150px"} />
+              <img src="/Colonelz new logo.png" alt="Logo" width={"150px"} />
             </figure>
           </Link>
         </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link href="/clients" onClick={toggleMenu}>Customer Story</Link>
+        <Link href="/clients" onClick={toggleMenu}>Customer Stories</Link>
         <Link href="/blogs" onClick={toggleMenu}>Blogs</Link>
         <Link href="/get-in-touch" onClick={toggleMenu}>Get in touch</Link>
         <div className=" text-center">

@@ -12,7 +12,8 @@ const Testimonials = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    dots: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -47,14 +48,14 @@ const Testimonials = () => {
   const testimonials = [
     {
       image: "/testimonial-1.png",
-      quote: "Exceptional Design, Unwavering Support",
-      description: "I highly recommend Colonelz for exceptional interior design services. Their team's thoroughness and dedication delivered a breathtakingly beautiful home with contemporary designs and top-notch quality. One year on, the fittings remain sturdy, a testament to their craftsmanship. What impresses me most is their unwavering support even after project completion, offering priceless peace of mind. Thank you, Colonelz, for an outstanding experience! Wishing you continued growth and success.",
+      quote: "Exceptional Design, Reliable Support",
+      description: "I highly recommend Colonelz for their exceptional interior design services. Their team's dedication resulted in a stunning home featuring contemporary designs and top-notch quality. A year later, the fittings remain sturdy, showcasing their craftsmanship. What impresses me most is their unwavering support even after project completion, providing invaluable peace of mind. Thank you, Colonelz, for an outstanding experience! Wishing you continued success!.",
       author: "Vineet Gautam",
     },
     {
       image: "/testimonial_2.png",
       quote: "Flawless Interior Design Execution",
-      description: "It was a wonderful experience to see Naomi leading her team in doing up the Project related to Interior Designing and Executing at my flat in Panchkula. The project was completed successfully within the agreed time and cost. Everyone who visits my flat appreciates the work done. I feel lucky and blessed to have availed services of Naomi and Colonelz Constructions. I wish Naomi and Colonelz Constructions all the best in all their endeavours.",
+      description: "It was a wonderful experience to see Naomi leading her team on the interior design project at my flat in Panchkula. The project was completed successfully within the agreed time and budget. Everyone who visits appreciates the work done. I feel lucky to have availed myself of the services of Naomi and Colonelz Constructions. Wishing Naomi and Colonelz all the best in their future endeavors",
       author: "Jagrant S Pandher",
     },
     {
@@ -105,7 +106,7 @@ const Testimonials = () => {
             <div className={styles.TestimonialSlider}>
               <Slider className={style.sliderMain} {...settings}>
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className={`col-lg-6 ${styles.testiCard}`}>
+                  <div key={index} className={`col-lg-6 px-0 ${styles.testiCard}`}>
                     <figure className={styles.slideImg}>
                       <Image
                         src={testimonial.image}
@@ -118,7 +119,7 @@ const Testimonials = () => {
                     <div className={styles.cardContent}>
                       <div className={styles.left} />
                       <div className={styles.right}>
-                        <h3>&ldquo;{testimonial.quote}&rdquo;</h3>
+                        <h3>{testimonial.quote}</h3>
                         <p>{testimonial.description}</p>
                         <h4>
                           <hr /> {testimonial.author}
@@ -133,7 +134,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-    
+
     </>
   );
 };

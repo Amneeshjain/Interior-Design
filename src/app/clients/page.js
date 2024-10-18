@@ -41,8 +41,8 @@ function page() {
     return (
         <div>
             <Herosection style={{ color: "#fff !important" }}
-                title="Customer Story "
-                text="Customer Story ?"
+                title="Customer Stories "
+                text="Customer Stories ?"
                 backgroundImage="../../bg-hero.png" />
             <Paragraph />
             <CustomerStory />

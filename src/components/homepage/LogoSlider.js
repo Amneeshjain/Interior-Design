@@ -6,68 +6,75 @@ const LogoSlider = () => {
 
     return (
         <div className={`container-fluid ${styles.mrp}`}  >
-            <div class={styles.slider} style={{ overflowX: "hidden" }}>
+            <div class={styles.slider} style={{ overflow: "hidden" }}>
                 <div class={styles.slide_track}>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/Ardee mall.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Ardee.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/bptp.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/bptp.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/DLF.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/DLF.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/EMAAR.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Emaar.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/FINSERV.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Fiserv.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/HFI.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/HFI.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/Indian Army.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/indian army.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/JUST DIAL.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Justdial.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/SIERA.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Samsara.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/sobha city.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Sierra.webp" alt='img' />
                     </div>
                     {/* <!-- same 9 slides doubled (duplicate) --> */}
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/Ardee mall.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Sobha.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/bptp.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Ardee.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/DLF.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/bptp.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/EMAAR.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/DLF.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/FINSERV.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Emaar.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/HFI.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Fiserv.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/Indian Army.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/HFI.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/JUST DIAL.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/indian army.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/SIERA.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Justdial.webp" alt='img' />
                     </div>
                     <div class={styles.slide}>
-                        <img src="/Logo's in home page-20241009T121317Z-001/Logo_s in home page/sobha city.png" alt='img' />
+                        <img src="/New logo_s 200 x 200/Samsara.webp" alt='img' />
+                    </div>
+                    <div class={styles.slide}>
+                        <img src="/New logo_s 200 x 200/Sierra.webp" alt='img' />
+                    </div>
+                    {/* <!-- same 9 slides doubled (duplicate) --> */}
+                    <div class={styles.slide}>
+                        <img src="/New logo_s 200 x 200/Sobha.webp" alt='img' />
                     </div>
                 </div>
             </div>
