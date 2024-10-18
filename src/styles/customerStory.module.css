@@ -5,6 +5,16 @@
   color: #333;
   margin-bottom: 3rem;
 }
+.projectName {
+  color: #000;
+  transition: color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; /* Smooth transition for color, shadow, and padding */
+}
+
+.projectName:hover {
+  color: #0d0d0d;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
 
 .categoryTitle {
   color: #000000;

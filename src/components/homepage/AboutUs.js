@@ -65,7 +65,7 @@ const AboutUs = () => {
                   style={{ width: '100%' }}
                 />
               </figure>
-              <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: 0, width: '100%' }}>
+              <div className={style.imgContent} style={{ position: 'absolute', top: 15, left: 0, width: '100%' }}>
                 <div className={style.contbox}>
                   <p>APARTMENT & VILLA</p>
                 </div>

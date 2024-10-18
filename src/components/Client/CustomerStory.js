@@ -62,7 +62,7 @@ const CustomerStory = () => {
                                     .filter((project) => project.projectType._id === type._id)
                                     .map((project) => (
                                         <div key={project._id} className="mt-3">
-                                           
+
                                             <Link href={`/project-detail/${project.project_slug}`}>
                                                 <h6 className={styles.projectName}>{project.projectName}</h6>
                                             </Link>

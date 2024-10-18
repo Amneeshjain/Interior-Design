@@ -14,7 +14,7 @@ const slides = [
   {
     id: 2,
     type: "image",
-    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/RESIDENCES.jpg",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/2.webp",
     alt: "Third slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
     caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
@@ -22,7 +22,7 @@ const slides = [
   {
     id: 3,
     type: "image",
-    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/RESTAURANT & CAFE.jpg",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/1.webp",
     alt: "Fourth slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
     caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
@@ -30,7 +30,7 @@ const slides = [
   {
     id: 4,
     type: "image",
-    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/OFFICES & RETAIL.jpg",
+    src: "/COVER PAGE CAROUSAL-20241009T062547Z-001/COVER PAGE CAROUSAL/3.webp",
     alt: "Second slide",
     label: "INTERIOR | ARCHITECTURE | CONSTRUCTION",
     caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

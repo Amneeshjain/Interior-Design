@@ -144,7 +144,7 @@ const Header = () => {
                   </ul>
                 </li>
                 <li onClick={() => handleClick("/clients")} className={activeLink === "/clients" ? "active" : "inactive"}>
-                  <Link href="/clients">Customer Story</Link>
+                  <Link href="/clients">Customer Stories</Link>
                 </li>
                 <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
                   <Link href="/blogs">Blog</Link>

@@ -60,7 +60,7 @@ const IpadHeader = () => {
                 <div className={styles.sm_logo}>
                     <Link href="/">
                         <figure>
-                            <img src="/COLONELZ_22png_artboard16 (1).png" alt="" width={"150px"} />
+                            <img src="/Colonelz new logo.png" alt="Logo" width={"150px"} />
                         </figure>
                     </Link>
                 </div>
