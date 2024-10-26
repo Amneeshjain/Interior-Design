@@ -13,7 +13,7 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     dots: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -47,31 +47,31 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      image: "/testimonial-1.png",
+      image: "/TESTIMONIALS/Vineet Gautam.webp",
       quote: "Exceptional Design, Reliable Support",
       description: "I highly recommend Colonelz for their exceptional interior design services. Their team's dedication resulted in a stunning home featuring contemporary designs and top-notch quality. A year later, the fittings remain sturdy, showcasing their craftsmanship. What impresses me most is their unwavering support even after project completion, providing invaluable peace of mind. Thank you, Colonelz, for an outstanding experience! Wishing you continued success!.",
       author: "Vineet Gautam",
     },
     {
-      image: "/testimonial_2.png",
+      image: "/TESTIMONIALS/Jagrant S Pandher.webp",
       quote: "Flawless Interior Design Execution",
       description: "It was a wonderful experience to see Naomi leading her team on the interior design project at my flat in Panchkula. The project was completed successfully within the agreed time and budget. Everyone who visits appreciates the work done. I feel lucky to have availed myself of the services of Naomi and Colonelz Constructions. Wishing Naomi and Colonelz all the best in their future endeavors",
       author: "Jagrant S Pandher",
     },
     {
-      image: "/testimonial_2.png",
+      image: "/TESTIMONIALS/Ratika Wadhwa.webp",
       quote: "Dream Home, Exceptional Experience",
       description: "We collaborated with Naomi and the Colonelz team to bring our dream home to life. Their innovative design suggestions, from strategic wardrobe placement to expert civil modifications, exceeded our expectations. The vendors they introduced us to, particularly the lighting specialist, delivered outstanding services. What truly impresses us is Colonelz's long-term commitment to customer satisfaction, providing seamless after-sales support even a year after project completion. Their exceptional design expertise and reliability have led us to enthusiastically recommend Colonelz to friends and family.",
       author: "RATIKA WADHWA",
     },
     {
-      image: "/testimonial-1.png",
+      image: "/TESTIMONIALS/Rishab jain.webp",
       quote: "Transforming Business with Immersive Design",
       description: "I chose Colonelz for my showroom interiors because Principal Designer Naomi understood my vision perfectly. Post-renovation, my business has flourished. Now, East Delhi's most unique showroom, Plymaarque, stands out. Customers and architects appreciate the immersive experience, easily visualizing products in their spaces.Working with Colonelz was seamless: well-managed teams, timely execution, and transparent payment structures. I highly recommend Colonelz for exceptional design and service.",
       author: "RISHAB JAIN",
     },
     {
-      image: "/testimonial-1.png",
+      image: "/TESTIMONIALS/Tejinder Singh Dhillon.webp",
       quote: "Harmonious Blend of Form and Function",
       description: "Colonel Sahay's team expertly translated our desire for a naturally lit, simple yet functional home into reality. Their design process was marked by openness, commitment, and a genuine understanding of our needs. The result: a harmonious blend of form and function. We enthusiastically endorse Colonelz for their outstanding expertise and client-centric approach.",
       author: "TEJINDER SINGH DHILLON",
@@ -108,11 +108,9 @@ const Testimonials = () => {
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className={`col-lg-6 px-0 ${styles.testiCard}`}>
                     <figure className={styles.slideImg}>
-                      <Image
+                      <img
                         src={testimonial.image}
                         alt={`Testimonial ${index + 1}`}
-                        width={1200}
-                        height={900}
                         layout="responsive"
                       />
                     </figure>

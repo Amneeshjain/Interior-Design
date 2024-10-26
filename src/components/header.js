@@ -87,7 +87,9 @@ const Header = () => {
                 href="/"
               >
                 <figure>
-                  <img src="/Colonelz new logo.png" alt="Logo" />
+                  {/* <img src="/Colonelz new logo.png" alt="Logo" /> */}
+                  <img src="/logo 2 (2).png" alt="Logo" />
+
                 </figure>
               </Link>
             </div>
@@ -147,7 +149,7 @@ const Header = () => {
                   <Link href="/clients">Customer Stories</Link>
                 </li>
                 <li onClick={() => handleClick("/blogs")} className={activeLink === "/blogs" ? "active" : "inactive"}>
-                  <Link href="/blogs">Blog</Link>
+                  <Link href="/blogs">Resources</Link>
                 </li>
 
                 {/* Search Form */}

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import style from "../../styles/aboutSection.module.css";
 
 const AboutUs = () => {
@@ -17,7 +17,7 @@ const AboutUs = () => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust this value as needed
+      { threshold: 0.5 }
     );
 
     const validElements = imagesRef.current.filter((img) => img instanceof Element);
@@ -34,82 +34,73 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <>
-      <div id="about" className={` ${style.aboutMainContainer}`}>
-        <div className="container ">
-          <div
-            className={style.sectionTitle}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div className={style.left}>
-              <div className={style.tag} style={{ display: "flex", justifyContent: "start" }}>
-                <hr />
-                Our Projects
-              </div>
-              <h2>
-                A Variety of Projects
-              </h2>
+    <div id="about" className={style.aboutMainContainer}>
+      <div className="container">
+        {/* Section Title */}
+        <div className={style.sectionTitle} data-aos="fade-up" data-aos-duration="1000">
+          <div className={style.left}>
+            <div className={style.tag} style={{ display: "flex", justifyContent: "start" }}>
+              <hr />
+              Our Projects
             </div>
-            <div className={style.right}>
-              <Link href="/about">MORE ABOUT US</Link>
+            <h2>A Variety of Projects</h2>
+          </div>
+          <div className={style.right}>
+            <Link href="/about">MORE ABOUT US</Link>
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="row mt-4">
+          {/* Left Side: Apartment & Villa */}
+          <div className="col-lg-7">
+            <div className={style.imgdata1}>
+              <img
+               ref={(el) => el && imagesRef.current.push(el)}
+                src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/cww_25.jpg"
+                alt="Apartment and Villa"
+              />
+              <div className={style.overlay}>
+                <h5 className="text-white">APARTMENT & VILLAS</h5>
+              </div>
             </div>
           </div>
-          <div className={style.aboutInnerItems}>
-            <div className={style.left} style={{ position: 'relative' }}>
-              <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
-                <img
+
+          {/* Right Side: Restaurant and Offices */}
+          <div className="col-lg-5">
+            <div className="row">
+              {/* Restaurant and Cafe */}
+              <div className={`col-12 ${style.mb}`}>
+                <div className={style.imgdata2}>
+                  <img
                   ref={(el) => el && imagesRef.current.push(el)}
-                  src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/cww_25.jpg"
-                  alt=""
-                  style={{ width: '100%' }}
-                />
-              </figure>
-              <div className={style.imgContent} style={{ position: 'absolute', top: 15, left: 0, width: '100%' }}>
-                <div className={style.contbox}>
-                  <p>APARTMENT & VILLA</p>
+                    src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/tye_144.jpg"
+                    alt="Restaurant and Cafe"
+                  />
+                  <div className={style.overlay1}>
+                    <h5 className="text-white">RESTAURANT AND CAFES</h5>
+                  </div>
+                </div>
+              </div>
+
+              {/* Offices & Retail */}
+              <div className="col-12 mt-3">
+                <div className={style.imgdata2}>
+                  <img
+                  ref={(el) => el && imagesRef.current.push(el)} 
+                    src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/DSC_1674.JPG"
+                    alt="Offices and Retail"
+                  />
+                  <div className={style.overlay1}>
+                    <h5 className="text-white">OFFICES & RETAIL</h5>
+                  </div>
                 </div>
               </div>
             </div>
-
-
-            <div className={style.right}>
-              <ul>
-                <li>
-                  <div style={{ position: 'relative' }}>
-
-                    <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
-                      <img ref={(el) => el && imagesRef.current.push(el)} src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/tye_144.jpg" alt="" />
-                    </figure>
-                    <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
-                      <div className={style.contbox}>
-                        <p>RESTAURANT AND CAFE’S
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div style={{ position: 'relative' }}>
-
-
-                    <figure data-aos="zoom-in" style={{ overflow: 'hidden' }}>
-                      <img ref={(el) => el && imagesRef.current.push(el)} src="/3 photos black to colour -20241009T062338Z-001/3 photos black to colour/DSC_1674.JPG" alt="" />
-                    </figure>
-                    <div className={style.imgContent} style={{ position: 'absolute', bottom: 0, left: -7, width: '100%' }}>
-                      <div className={style.contbox}>
-                        <p>OFFICES & RETAIL</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
-
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
