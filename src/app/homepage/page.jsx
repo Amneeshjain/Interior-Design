@@ -113,8 +113,6 @@ const Homepage = () => {
       <Para1 />
       <AboutUs />
       <Counter />
-      {/* <AllProjects /> */}
-      {/* <Slide cards={cards}/> */}
       <Services
         title="Services We Offer"
         subtitle="Explore Our Specialized Services"
