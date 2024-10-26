@@ -10,46 +10,14 @@ import styles from "../../styles/home.module.css";
 const TeamSliderData = [
   {
     id: 1,
-    image: "/TEAM PHOTOS/01 AKASHDEEP- Project Architect.JPG",
-    title: "AKSHDEEP",
-    profile: "PROJECT ARCHITECT",
+    image: "/TEAM PHOTOS/01 VARTIKA-Sr.Architect.JPG",
+    title: "VARTIKA SHARMA",
+    profile: "Sr.Architect",
     descrip:
-      "Transforming visions into reality with practical and aesthetically appealing design solutions."
+      "Seasoned architect and project manager ensuring seamless execution and client satisfaction.",
   },
   {
     id: 2,
-    image: "/TEAM PHOTOS/01 ARPITA-Jr.Designer Intern.JPG",
-    title: "ARPITA",
-    profile: "Jr.Designer Intern",
-    descrip:
-      "Supporting architects and designers with fresh ideas and enthusiasm."
-  },
-  {
-    id: 3,
-    image: "/TEAM PHOTOS/01 JATIN-Site Engineer.JPG",
-    title: "JATIN",
-    profile: " SITE-Engineer",
-    descrip:
-      "Ensuring on-site execution meets design standards with precision and quality."
-  },
-  {
-    id: 4,
-    image: "/TEAM PHOTOS/01 KUSHAL-3d Visualizer.JPG",
-    title: "Kushal Yamujala",
-    profile: " KUSHAL-3d Visualizer",
-    descrip:
-      "Creating immersive 3D walkthroughs and leading marketing efforts with visual excellence."
-  },
-  {
-    id: 5,
-    image: "/TEAM PHOTOS/01 PRIYANKA.JPG",
-    title: " PRIYANKA",
-    profile: "hr executive & Admin",
-    descrip:
-      "Efficiently managing operations, HR, and team support for outstanding results."
-  },
-  {
-    id: 6,
     image: "/TEAM PHOTOS/01 SHAILY-Project Architect.JPG",
     title: "SHAILY",
     profile: "Project Architect",
@@ -57,29 +25,65 @@ const TeamSliderData = [
       "Expert in space planning and innovative design with meticulous attention to detail."
   },
   {
-    id: 7,
-    image: "/TEAM PHOTOS/01 SHIVANSHI-Jr.Designer.JPG",
-    title: "SHIVANSHIa",
-    profile: "JR.  DESIGNER",
+    id: 3,
+    image: "/TEAM PHOTOS/01 AKASHDEEP- Project Architect.JPG",
+    title: "AKASHDEEP SINGH",
+    // profile: "PROJECT ARCHITECT",
+    profile: "Project Architect",
     descrip:
-      "Crafting personalized interior spaces reflecting clients' unique styles with creative flair."
+      "Transforming visions into reality with practical and aesthetically appealing design solutions."
   },
   {
-    id: 8,
+    id: 4,
+    image: "/TEAM PHOTOS/01 KUSHAL-3d Visualizer.JPG",
+    title: "KUSHAL YAMUJALA",
+    profile: "3d Visualizer",
+    descrip:
+      "Creating immersive 3D walkthroughs and leading marketing efforts with visual excellence."
+  },
+  {
+    id: 5,
+    image: "/TEAM PHOTOS/01 PRIYANKA.JPG",
+    title: " PRIYANKA YADAV",
+    profile: "Hr Executive & Admin",
+    descrip:
+      "Efficiently managing operations, HR, and team support for outstanding results."
+  },
+  {
+    id: 6,
     image: "/TEAM PHOTOS/01 TARUSH-Jr.Architect.JPG",
-    title: "TARUSH",
+    title: "TARUSH MEHTANI",
     profile: "Jr.Architect",
     descrip:
       "Crafting spaces with precision, bridging client expectations and project delivery."
   },
+   
+  {
+    id: 7,
+    image: "/TEAM PHOTOS/01 SHIVANSHI-Jr.Designer.JPG",
+    title: "SHIVANSHI VERMA",
+    profile: "Jr.  Designer",
+    descrip:
+      "Crafting personalized interior spaces reflecting clients' unique styles with creative flair."
+  },
+
+  {
+    id: 8,
+    image: "/TEAM PHOTOS/01 JATIN-Site Engineer.JPG",
+    title: "JATIN KUMAR",
+    profile: " Site-Engineer",
+    descrip:
+      "Ensuring on-site execution meets design standards with precision and quality."
+  },
   {
     id: 9,
-    image: "/TEAM PHOTOS/01 VARTIKA-Sr.Architect.JPG",
-    title: "VARTIKA",
-    profile: "Sr.Architect",
+    image: "/TEAM PHOTOS/01 ARPITA-Jr.Designer Intern.JPG",
+    title: "ARPITA CHAUHAN",
+    profile: "Jr.Designer Intern",
     descrip:
-      "Seasoned architect and project manager ensuring seamless execution and client satisfaction.",
+      "Supporting architects and designers with fresh ideas and enthusiasm."
   },
+  
 ];
 
 

@@ -32,7 +32,7 @@ const AboutCompany = () => {
                                 </figure>
                             </div>
                             <div className="col-lg-8 px-4 mt-3">
-                                <div className="">
+                                <div className={styles.ppp}>
                                     <p>
                                         <b>Colonelz Constructions Pvt. Limited</b>  was founded by <b>Col Sahay,</b> whose journey began with humble beginnings in Jharkhand. Educated at <b> Sainik School Tilaiya</b> and later the prestigious <b> National Defence Academy (NDA),</b> Col Sahay s career in the Indian Armed Forces instilled in him the values of discipline, integrity, and a deep sense of duty. Having served a distinguished tenure in the United Nations and commanded his parent unit, Col Sahay is recognized for his leadership and commitment to excellence.
 
@@ -52,9 +52,9 @@ const AboutCompany = () => {
                         <div className="row">
 
                             <div className="col-lg-8 px-4 mt-3">
-                                <div className="">
+                                <div className={styles.ppp}>
                                     <p>
-                                        Carrying forward the legacy of <b>Colonelz Constructions,</b> the next generation is led by <b>Ms. Naomi Sahay,</b> the company’s <b>Principal Designer.</b> Initially pursuing conventional academics, she completed her <b style={{ color: "blue" }}> B.Com</b> <b> Hons</b> from <b>Delhi University.</b> However, while working alongside her father in building the fledgling company, Naomi discovered her true passion for design and art.
+                                        Carrying forward the legacy of <b>Colonelz Constructions,</b> the next generation is led by <b>Ms. Naomi Sahay,</b> the company’s <b>Principal Designer.</b> Initially pursuing conventional academics, she completed her <b> B.Com</b> <b> Hons</b> from <b>Delhi University.</b> However, while working alongside her father in building the fledgling company, Naomi discovered her true passion for design and art.
 
                                         Taking a bold step, she shifted her focus to interior design, eventually earning a<b> Master s in Interior Design</b> from <b> Florence, Italy,</b> renowned as the art capital of the world. Her education and exposure to global design trends deeply influence her work, bringing a unique blend of creativity and functionality to every project.
 

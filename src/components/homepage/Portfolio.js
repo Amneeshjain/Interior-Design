@@ -5,9 +5,9 @@ import style from "../../styles/home.module.css";
 import Link from "next/link";
 import { motion, useScroll, useSpring, } from "framer-motion";
 import Image from "next/image";
-import BgInteriar1 from "../../../public/T2,TATA PRIMANTI/3.jpg";
-import BgInteriar2 from "../../../public/CAFE-01/tye_299.jpg";
-import BgInteriar3 from "../../../public/COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-364.jpg"
+import BgInteriar1 from "../../../public/OUR PORTFOLIO/3.jpg";
+import BgInteriar2 from "../../../public/OUR PORTFOLIO/2.jpg";
+import BgInteriar3 from "../../../public/OUR PORTFOLIO/1.jpg"
 import styleA from "../../styles/aboutSection.module.css";
 import styless from "../../styles/video.module.css";
 const Portfolio = () => {
@@ -60,15 +60,16 @@ const Portfolio = () => {
           </div>
         </div>
         <div className={styles.slideContainer}>
-          <Link href="/projects">
+          <Link href="/project-detail/house-of-colour,-tata-primanti">
             <div className={` ${styles.greyBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
                   <p className={style.colorWhite}>Apartment
                   </p>
-                  <p className={style.colorWhite}>Tata Primanti
+                  <p className={style.colorWhite}>House of Colours,Tata Primanti
+
                   </p>
-                  <p className={style.colorWhite}>GURGAON
+                  <p className={style.colorWhite}>Area - 2000 Sqft
                   </p>
                 </div>
 
@@ -93,46 +94,14 @@ const Portfolio = () => {
               </motion.div>
             </div>
           </Link>
-          <Link href={`/projects/${projectTypes._id}`}>
-            <div className={` ${styles.greyBg} ${styles.sticky}`}>
-              <div className={styles.info}>
-                <div>
-                  <p className={style.colorWhite}>Office</p>
-                  <p className={style.colorWhite}>HFi</p>
-                  <p className={style.colorWhite}>Dwarka</p>
-                </div>
-                <div>
-                  <Link href="/projects">
-                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
-                  </Link>
-                </div>
-              </div>
-              <motion.div
-                className={styles.mtTopCustom}
-                initial={{ y: 75, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <div className={styles.imageHeight}>
-                  <Image
-                    src={BgInteriar1}
-                    alt="Description"
-                    layout="fill"
-                    objectFit="cover" // or 'contain', 'none', etc.
-                  />
-                </div>
-              </motion.div>
-            </div>
-          </Link>
-
-          <Link href="/projects">
+          <Link href="/project-detail/panda-18,-ardee-mall-">
             <div className={`${styles.greenBg} ${styles.sticky}`}>
               <div className={styles.info}>
                 <div>
-                  <p className={style.colorWhite}>Cafe</p>
-                  <p className={style.colorWhite}>Panda 18
+                  <p className={style.colorWhite}>RESTAURANT AND CAFE</p>
+                  <p className={style.colorWhite}>Panda 18,Ardee Mall
                   </p>
-                  <p className={style.colorWhite}>GURGAON
+                  <p className={style.colorWhite}>Area - 1050 Sqft
                   </p>
                 </div>
                 <div>
@@ -158,6 +127,41 @@ const Portfolio = () => {
               </motion.div>
             </div>
           </Link>
+          <Link href={`/projects/${projectTypes._id}`}>
+            <div className={` ${styles.greyBg} ${styles.sticky}`}>
+              <div className={styles.info}>
+                <div>
+                  <p className={style.colorWhite}>OFFICE</p>
+                  <p className={style.colorWhite}>Taggd, Gurugram
+                  </p>
+                  <p className={style.colorWhite}>Area - 5200 Sqft
+                  </p>
+                </div>
+                <div>
+                  <Link href="/projects">
+                    {/* <Image src={whiteButton} alt="Button" height={60} width={60} /> */}
+                  </Link>
+                </div>
+              </div>
+              <motion.div
+                className={styles.mtTopCustom}
+                initial={{ y: 75, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className={styles.imageHeight}>
+                  <Image
+                    src={BgInteriar1}
+                    alt="Description"
+                    layout="fill"
+                    objectFit="cover" // or 'contain', 'none', etc.
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </Link>
+
+         
 
 
         </div>
