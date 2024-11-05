@@ -2,26 +2,7 @@ import Image from "next/image";
 import styles from "../../styles/specification.module.css";
 
 const Specification = ({ additionalMedia, gallery, bgimage }) => {
-  const projectData = [
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-    {
-      imageSrc: "/T2,TATA PRIMANTI/1.jpg",
-    },
-  ];
+
   // console.log(gallery);
   return (
     <div className={`container ${styles.specificationsContainer}`}>
@@ -51,21 +32,29 @@ const Specification = ({ additionalMedia, gallery, bgimage }) => {
             <img
               src={bgimage}
               alt="Main image"
-              // layout="responsive"
+            // layout="responsive"
             />
           </figure>
         </div>
       </div>
 
-      <div className="row " style={{ marginBottom: "40px" }}>
+      <div className="row" style={{ marginBottom: "40px" }}>
         {gallery.images.map((project) => (
           <div key={project.id} className="col-lg-4 py-2">
             <div className={styles.card}>
-              <img src={project} alt={project} />
+              <img
+                src={
+                  project.startsWith("https://res.cloudinary.com")
+                    ? project
+                    : `https://backend-interior.onrender.com/${project}`
+                }
+                alt="Project Image"
+              />
             </div>
           </div>
         ))}
       </div>
+
     </div>
   );
 };

@@ -33,10 +33,13 @@ const OurProjects = ({ projects }) => {
                 project={{
                   id: project.project_slug,
                   title: project.projectName,
-                  image: project.projectImage,
+                  image: project.projectImage.startsWith("https://res.cloudinary.com")
+                    ? project.projectImage
+                    : `https://backend-interior.onrender.com/${project.projectImage}`,
                   description: project.projectShortDescription,
                 }}
               />
+
             </Link>
           ))}
           <div className={`${styles.loadMore}`}>

@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Project from "./type/[id]/page";
-import Script from "next/script";
 
 export const metadata = {
   title: "Projects",
