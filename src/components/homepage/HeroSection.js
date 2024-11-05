@@ -64,9 +64,6 @@ function HeroSection() {
               />
             )}
           </div>
-          {/* <Carousel.Caption className={`${styles.carousel_caption}`}>
-            <h3 className={styles.responsive_heading}>{slide.label}</h3>
-          </Carousel.Caption> */}
         </Carousel.Item>
       ))}
     </Carousel>

@@ -161,9 +161,6 @@ const Portfolio = () => {
             </div>
           </Link>
 
-         
-
-
         </div>
         <div className={`mb-5 ${styless.btnContainer}`}>
           <Link href="/projects">View More</Link>

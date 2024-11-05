@@ -110,7 +110,7 @@ const ImageGallery = () => {
           aria-labelledby="exampleLightboxLabel"
           aria-hidden="true"
         >
-          <div className="modal-dialog modal-xl modal-dialog-centered">
+          <div className="modal-dialog modal-fullscreen modal-dialog-centered" >
             <div className="modal-content">
               <div className={`modal-body`}>
                 <div id="lightboxExampleCarousel" className="carousel slide">

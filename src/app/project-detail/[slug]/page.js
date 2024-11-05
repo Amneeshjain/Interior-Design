@@ -37,22 +37,35 @@ const ProjectDetailPage = ({ params }) => {
   }, [slug]);
 
   if (loading) return <div>Loading...</div>;
-  // if (error) return <div>Error: {error}</div>;
-  // if (!project) return <div>No project found</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!project) return <div>No project found</div>;
 
   return (
     <div>
       <HeroSection
         title={project.projectName}
-        backgroundImage={project.projectImage}
+        backgroundImage={
+          project.projectImage.startsWith("https://res.cloudinary.com")
+            ? project.projectImage
+            : `https://backend-interior.onrender.com/${project.projectImage}`
+        }
         text={project.projectType.project_type}
         color="#fff"
         background="#fff"
       />
+
       <AboutProjects sections={project.sections} />
       {/* <ProjectGallery gallery={project.gallery} /> */}
       <Video projectDetails={project.projectDetails} />
-      <Specification additionalMedia={project.additionalMedia} gallery={project.gallery} bgimage={project.projectImage} />
+      <Specification
+        additionalMedia={project.additionalMedia}
+        gallery={project.gallery}
+        bgimage={
+          project.projectImage.startsWith("https://res.cloudinary.com")
+            ? project.projectImage
+            : `https://backend-interior.onrender.com/${project.projectImage}`
+        }
+      />
       <GetInTouch />
     </div>
   );
