@@ -4,6 +4,8 @@ import styles from "../../styles/project.module.css";
 import style from "../../styles/home.module.css";
 
 const ProjectCard = ({ project }) => {
+  console.log("Image URL------:", project.image); // Check if the URL is correct
+
   return (
     <>
       <div className={styles.desktopView}>
