@@ -18,6 +18,7 @@ const ProjectDetailPage = ({ params }) => {
       try {
         const response = await fetch(`https://backend-interior.onrender.com/api/project/projects/${slug}`);
         const data = await response.json();
+        console.log("data-------", data);
 
         if (data.success) {
           setProject(data.data);
@@ -40,15 +41,25 @@ const ProjectDetailPage = ({ params }) => {
   if (error) return <div>Error: {error}</div>;
   if (!project) return <div>No project found</div>;
 
+  // Get image URL logic
+  const getImageUrl = (imagePath) => {
+    if (imagePath.startsWith("https://res.cloudinary.com")) {
+      return imagePath;
+    } else if (imagePath.startsWith("https://backend-interior.onrender.com")) {
+      return imagePath;
+    } else if (imagePath.startsWith("https://postimg.cc/") || imagePath.startsWith("http")) {
+      console.log("Image URL", imagePath)
+      return imagePath; // Don't prepend the base URL for postimg.cc or direct URLs
+    } else {
+      return `https://backend-interior.onrender.com/${imagePath}`; // For other cases, prepend base URL
+    }
+  };
+
   return (
     <div>
       <HeroSection
         title={project.projectName}
-        backgroundImage={
-          project.projectImage.startsWith("https://res.cloudinary.com")
-            ? project.projectImage
-            : `https://backend-interior.onrender.com/${project.projectImage}`
-        }
+        backgroundImage={getImageUrl(project.projectImage)}
         text={project.projectType.project_type}
         color="#fff"
         background="#fff"
@@ -59,13 +70,13 @@ const ProjectDetailPage = ({ params }) => {
       <Video projectDetails={project.projectDetails} />
       <Specification
         additionalMedia={project.additionalMedia}
-        gallery={project.gallery}
-        bgimage={
-          project.projectImage.startsWith("https://res.cloudinary.com")
-            ? project.projectImage
-            : `https://backend-interior.onrender.com/${project.projectImage}`
-        }
+        gallery={{
+          ...project.gallery,
+          images: project.gallery.images.map((imagePath) => getImageUrl(imagePath)) // Apply getImageUrl to each image in the gallery
+        }}
+        bgimage={getImageUrl(project.projectImage)}
       />
+
       <GetInTouch />
     </div>
   );

@@ -24,6 +24,7 @@
     "flickr-justified-gallery": "^2.2.0",
     "framer-motion": "^11.9.0",
     "gsap": "^3.12.5",
+    "html-react-parser": "^5.1.18",
     "jquery": "^3.7.1",
     "justified-layout": "^4.1.0",
     "lightgallery": "^2.7.2",

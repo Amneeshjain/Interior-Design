@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/specification.module.css";
+import parse from 'html-react-parser';
 
 const Specification = ({ additionalMedia, gallery, bgimage }) => {
 
@@ -25,7 +26,7 @@ const Specification = ({ additionalMedia, gallery, bgimage }) => {
               </h2>
             </div>
           </div>
-          <p className={styles.videoP}>{additionalMedia.description}</p>
+          <p className={styles.videoP}>{parse(additionalMedia.description)}</p>
         </div>
         <div className="col-lg-6">
           <figure className={styles.imgclass}>
@@ -39,21 +40,15 @@ const Specification = ({ additionalMedia, gallery, bgimage }) => {
       </div>
 
       <div className="row" style={{ marginBottom: "40px" }}>
-        {gallery.images.map((project) => (
-          <div key={project.id} className="col-lg-4 py-2">
+        {gallery.images.map((project, index) => (
+          <div key={index} className="col-lg-4 py-2">
             <div className={styles.card}>
-              <img
-                src={
-                  project.startsWith("https://res.cloudinary.com")
-                    ? project
-                    : `https://backend-interior.onrender.com/${project}`
-                }
-                alt="Project Image"
-              />
+              <img src={project} alt={`Gallery Image ${index + 1}`} />
             </div>
           </div>
         ))}
       </div>
+
 
     </div>
   );

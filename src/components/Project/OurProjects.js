@@ -18,6 +18,18 @@ const OurProjects = ({ projects }) => {
 
   const typeDescription = projects[0]?.projectType?.type_description || "";
 
+   const getImageUrl = (imagePath) => {
+    if (imagePath.startsWith("https://res.cloudinary.com")) {
+      return imagePath;
+    } else if (imagePath.startsWith("https://backend-interior.onrender.com")) {
+      return imagePath;
+    } else if (imagePath.startsWith("https://postimg.cc/") || imagePath.startsWith("http")) {
+      console.log("Image URL", imagePath)
+      return imagePath; // Don't prepend the base URL for postimg.cc or direct URLs
+    } else {
+      return `https://backend-interior.onrender.com/${imagePath}`; // For other cases, prepend base URL
+    }
+  };
   return (
     <div className={style.projectMainContainer}>
       <div className="container">
@@ -33,9 +45,7 @@ const OurProjects = ({ projects }) => {
                 project={{
                   id: project.project_slug,
                   title: project.projectName,
-                  image: project.projectImage.startsWith("https://res.cloudinary.com")
-                    ? project.projectImage
-                    : `https://backend-interior.onrender.com/${project.projectImage}`,
+                  image:getImageUrl(project.projectImage), // Use getImageUrl here
                   description: project.projectShortDescription,
                 }}
               />
