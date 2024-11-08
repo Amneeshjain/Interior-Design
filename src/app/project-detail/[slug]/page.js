@@ -18,7 +18,7 @@ const ProjectDetailPage = ({ params }) => {
       try {
         const response = await fetch(`https://backend-interior.onrender.com/api/project/projects/${slug}`);
         const data = await response.json();
-        console.log("data-------", data);
+        // console.log("data-------", data);
 
         if (data.success) {
           setProject(data.data);
@@ -74,7 +74,7 @@ const ProjectDetailPage = ({ params }) => {
           ...project.gallery,
           images: project.gallery.images.map((imagePath) => getImageUrl(imagePath)) // Apply getImageUrl to each image in the gallery
         }}
-        bgimage={getImageUrl(project.projectImage)}
+        bgimage={getImageUrl(project?.additionalMedia?.additional_image)}
       />
 
       <GetInTouch />
