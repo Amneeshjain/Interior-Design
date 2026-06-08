@@ -1,5 +1,4 @@
 import Homepage from "./homepage/page";
-import "bootstrap/dist/css/bootstrap.min.css";
 // import "react-notifications-component/dist/theme.css";
 
 export const metadata = {
@@ -9,7 +8,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="home">
+    <div>
       <Homepage />
     </div>
   );

@@ -1,42 +1,55 @@
-import React from 'react'
-import style from "../../styles/home.module.css"
-import Link from 'next/link'
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
 
 const Socialmedia = () => {
-    return (
-        <div className={style.social_media_icons}>
-            <ul className={style.socialIcons_111}>
-                <li className={style.social_facebook} >
-                    <Link href="https://www.facebook.com/ColonelzConstructions" target="_blank">
+  const socials = [
+    {
+      href: "https://www.facebook.com/ColonelzConstructions",
+      icon: "/Facebook.svg",
+      alt: "Facebook",
+    },
+    {
+      href: "https://www.instagram.com/colonelzconstructions/",
+      icon: "/instagram.svg",
+      alt: "Instagram",
+    },
+    {
+      href: "https://www.youtube.com/@ColonelzConstruction",
+      icon: "/YouTube.svg",
+      alt: "YouTube",
+    },
+    {
+      href: "https://www.linkedin.com/company/colonelz/?originalSubdomain=in",
+      icon: "/linked.png",
+      alt: "LinkedIn",
+    },
+  ];
 
-                        <img src="/Facebook.svg" alt="" />
+  return (
+    <div className="flex justify-center">
+      <ul className="flex items-center gap-4">
+        {socials.map((item, index) => (
+          <li key={index}>
+            <Link
+              href={item.href}
+              target="_blank"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-black transition group"
+            >
+              <Image
+                src={item.icon}
+                alt={item.alt}
+                width={20}
+                height={20}
+                className="transition group-hover:invert"
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-                    </Link>
-                </li>
-                <li className={style.social_instagram}>
-                    <Link href="https://www.instagram.com/colonelzconstructions/" target="_blank">
-
-                        <img src="/instagram.svg" alt="" />
-
-                    </Link>
-                </li>
-                <li className={style.social_youtube} >
-                    <Link href="https://www.youtube.com/@ColonelzConstruction" target="_blank">
-
-                        <img src="/YouTube.svg" alt="" />
-
-                    </Link>
-                </li>
-                <li className={style.social_linked} >
-                    <Link href="https://www.linkedin.com/company/colonelz/?originalSubdomain=in" target="_blank">
-
-                        <img src="/linked.png" alt="" width="22px" />
-
-                    </Link>
-                </li>
-            </ul>
-        </div>
-    )
-}
-
-export default Socialmedia
+export default Socialmedia;

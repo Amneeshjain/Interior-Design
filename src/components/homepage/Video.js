@@ -1,145 +1,137 @@
-import React, { useState } from "react";
-import styles from "../../styles/video.module.css";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import ReactPlayer from "react-player";
-import stylesA from "../../styles/aboutSection.module.css";
 import Link from "next/link";
 
 const Video = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
-
-  const handleEnded = () => {
-    setIsPlaying(false);
-  };
-
   return (
-    <>
-      <div className={styles.videoMainContainer}>
-        <div className="container">
-          <div
-            style={{ justifyContent: "center", alignItems: "center" }}
-            className={stylesA.sectionTitle}
-            data-aos="fade-up"
-            data-aos-duration="1000"
+    <section className="py-12 bg-gradient-to-b from-white to-orange-50/30">
+      <div className="max-w-4xl mx-auto px-5">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <span
+            className="
+            inline-flex
+            rounded-full
+            bg-orange-100
+            px-4 py-1.5
+            text-xs
+            font-medium
+            text-orange-600
+          "
           >
-            <div
-              className={stylesA.left}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
-            >
-              <div className={stylesA.tag}>
-                <hr />
-                Customer Stories
-                <hr />
-              </div>
-              <h2>Hear From Our Customers</h2>
-            </div>
-          </div>
-          <div className={styles.vedioSectionMain}>
-            {!isPlaying ? (
-              <div className="video-overlay" onClick={handlePlay}>
-                <img src="/video.png" alt="Video Thumbnail" />
-                <button className="play-button">
-                  <svg
-                    width="64"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="32" cy="32" r="32" fill="white" />
-                    <path d="M25 20L45 32L25 44V20Z" fill="black" />
-                  </svg>
-                </button>
-              </div>
+            Customer Stories
+          </span>
 
+          <h2 className="mt-4 text-2xl md:text-4xl font-bold text-gray-900">
+            Hear From Our Customers
+          </h2>
 
-            ) : (
-              <div className="iframe-container">
-                <ReactPlayer
-                  url="/video/2904 WT.mov"
-                  playing={isPlaying}
-                  controls
-                  width="100%"
-                  height="700px"
-                  className={styles.reactPlayer}
-                  onEnded={handleEnded}
-                />
-              </div>
-            )}
-            <style jsx>{`
-              .video-section {
-             
-                display: flex;
-                flex-direction: row;
-                gap:100px;
-                align-items: start;
-                text-align: start;
-              }
-              .video-overlay {
-                position: relative;
-                cursor: pointer;
-              
-               
-              }
-              .video-overlay img {
-                width: 100%;
-                height: auto;
-              }
-                
-              .play-button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: none;
-                border: none;
-                cursor: pointer;
-                animation: scaleUpDown 1.5s infinite ease-in-out;
-              }
-              .play-button svg {
-                width: 64px;
-                height: 64px;
-              }
-              @keyframes scaleUpDown {
-                0%,
-                100% {
-                  transform: translate(-50%, -50%) scale(1);
-                }
-                50% {
-                  transform: translate(-50%, -50%) scale(1.2);
-                }
-              }
-              .iframe-container {
-                width: 100%;
-                position: relative;
-                overflow: hidden;
-                margin-top: 16px;
-              }
-              .iframe-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: 0;
-              }
-            `}</style>
-          </div>
+          <p className="mt-3 text-sm text-gray-500 max-w-xl mx-auto">
+            Real experiences from clients who trusted us with their dream
+            spaces.
+          </p>
         </div>
-        <div className={styles.btnContainer}>
-          <Link href="/get-in-touch">Get in touch</Link>
+
+        {/* Video */}
+        <div
+          className="
+          relative
+          overflow-hidden
+          rounded-lg
+          border
+          bg-white
+          shadow-xl
+          shadow-orange-100
+        "
+        >
+          {!isPlaying ? (
+            <div
+              onClick={() => setIsPlaying(true)}
+              className="relative aspect-video cursor-pointer group"
+            >
+              <Image
+                src="/video.png"
+                alt="Video Thumbnail"
+                fill
+                className="
+                object-cover
+                transition-transform
+                duration-700
+                group-hover:scale-105
+              "
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30" />
+
+              {/* Play Button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div
+                  className="
+                  w-16 h-16
+                  rounded-full
+                  bg-orange-500
+                  text-white
+                  flex
+                  items-center
+                  justify-center
+  
+                  shadow-lg
+                  shadow-orange-500/30
+  
+                  group-hover:scale-110
+                  transition-all
+                  duration-300
+                "
+                >
+                  ▶
+                </div>
+              </div>
+            </div>
+          ) : (
+            <ReactPlayer
+              url="/video/2904 WT.mov"
+              playing
+              controls
+              width="100%"
+              height="100%"
+            />
+          )}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-6">
+          <Link
+            href="/get-in-touch"
+            className="
+            inline-flex
+            items-center
+            gap-2
+  
+            rounded-full
+            bg-orange-500
+  
+            px-5
+            py-2.5
+  
+            text-sm
+            font-medium
+            text-white
+  
+            hover:bg-orange-600
+            transition
+          "
+          >
+            Get In Touch →
+          </Link>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

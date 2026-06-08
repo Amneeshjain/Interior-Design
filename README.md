@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Colonelz Interior Design Website
 
-## Getting Started
+A modern and responsive Interior Design & Architecture portfolio website built with **Next.js 14**, **React 18**, and **Tailwind CSS**.
 
-First, run the development server:
+The project showcases residential, commercial, office, and hospitality projects with a premium user experience, smooth animations, and modern UI components.
+
+---
+
+## ✨ Features
+
+- Modern responsive UI
+- Premium glassmorphism navigation
+- Dynamic Projects Gallery
+- Beautiful Blog Section
+- Team Showcase Slider
+- Testimonials Carousel
+- Services Section
+- About Company & Founders
+- Terms & Conditions Page
+- Mobile Friendly Design
+- Smooth Hover Animations
+- SEO Friendly Next.js Routing
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js 14
+- React 18
+- Tailwind CSS
+- Framer Motion
+- Swiper.js
+- React Slick
+- Lucide React Icons
+- Axios
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+├── about/
+├── blog/
+│   ├── page.jsx
+│   └── blogdetail/
+│       └── [id]/
+├── projects/
+│   ├── page.jsx
+│   └── [id]/
+├── services/
+├── terms/
+├── contact/
+├── layout.jsx
+└── page.jsx
+
+components/
+├── Navbar.jsx
+├── Footer.jsx
+├── Hero.jsx
+├── Services.jsx
+├── Portfolio.jsx
+├── Team.jsx
+├── Testimonials.jsx
+└── BlogCard.jsx
+
+public/
+├── TEAM PHOTOS/
+├── OUR PORTFOLIO/
+├── logo.png
+└── assets...
+```
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/interior-design.git
+```
+
+Move into the project folder:
+
+```bash
+cd interior-design
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 📦 Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🎨 Main Sections
 
-## Deploy on Vercel
+- Home
+- About Us
+- Services
+- Projects
+- Blog
+- Team
+- Testimonials
+- Contact
+- Terms & Conditions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📱 Responsive Design
+
+The website is fully optimized for:
+
+- Mobile Devices
+- Tablets
+- Laptops
+- Desktop Screens
+
+---
+
+## ⚡ Performance
+
+- Next.js Image Optimization
+- Lazy Loading
+- Optimized Animations
+- Responsive Assets
+- Clean Component Structure
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push the branch
+5. Create a Pull Request
+
+---
+
+## 📄 License
+
+This project is intended for portfolio and business showcase purposes.
+
+---
+
+## 👨‍💻 Developed By
+
+**Amneesh Jain**
+
+Modern Interior Design & Architecture Website built using Next.js and Tailwind CSS.

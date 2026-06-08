@@ -1,5 +1,3 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import GetInTouch from "./GetInTouch";
 
 export const metadata = {
@@ -16,6 +14,7 @@ const page = () => {
   return (
     <>
       <GetInTouch />
+
     </>
   );
 };

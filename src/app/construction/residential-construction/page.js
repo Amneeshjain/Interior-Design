@@ -1,43 +1,33 @@
+"use client";
 
-"use client"
-import React from 'react';
-import styles from '../../../styles/home.module.css'
-import Contact from "../../../components/About/Contact"
-import HeroSection from '../../../components/About/HeroSection'
-import AboutFirm from '../../../components/ResidentialConstruction/AboutFirm'
-import Process from '../../../components/ResidentialConstruction/Process'
-import Services from '../../../components/ResidentialConstruction/Services'
-const page = () => {
+import React from "react";
+import Contact from "@/components/About/Contact";
+import HeroSection from "@/components/About/HeroSection";
+import AboutFirm from "@/components/ResidentialConstruction/AboutFirm";
+import Process from "@/components/ResidentialConstruction/Process";
+import Services from "@/components/ResidentialConstruction/Services";
 
+const Page = () => {
   return (
-    <div>
+    <div className="bg-black text-white">
+
+      {/* Hero */}
       <HeroSection
-        title="Articles & news"
+        title="Articles & News"
         buttonText="Get in Touch"
-        backgroundImage="../../bg-hero.png"
+        backgroundImage="/bg-hero.png" // ✅ fixed path
       />
 
-      <div className={styles.pdCustomOverall}>
+      {/* Sections */}
+      <div className="space-y-20 py-20">
         <AboutFirm />
-      </div>
-
-      <div className={styles.pdCustomOverall}>
         <Services />
-      </div>
-
-      <div className={styles.pdCustomOverall}>
         <Process />
-      </div>
-
-
-      <div className={styles.pdCustomOverall}>
         <Contact />
-
       </div>
-
 
     </div>
-  )
-}
+  );
+};
 
-export default page;
+export default Page;

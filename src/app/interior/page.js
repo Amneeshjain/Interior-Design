@@ -1,114 +1,80 @@
 "use client";
-import React from "react";
-// import styles from "../../styles/home.module.css";
-// import Contact from "../../components/About/Contact";
-import HeroSection from "../../components/About/HeroSection";
-// import Service from "../../components/Interior/Service";
-// import WhyChooseUs from "../../components/Architucture/WhyChooseUS";
-import AboutFirm from "@/components/About/AboutFirm";
-import Faq from "../../components/Faq/Faq";
-import TimelineCard from "../../components/About/TimelineCard";
 
-// import cardSection from "../../app/interior/cardSection"
-import AboutMore from "../../components/aboutMore/AboutMore";
-import GetInTouch from "../../components/homepage/GetInTouch";
-import AllProjects from "@/components/homepage/AllProjects"
-const items = [
-  {
-    title: "Preliminary Plans",
-    description:
-      "During this phase, we grasp and understand the goals of the client, ask questions related to their ideas, and analyse the area of transformation. ",
-  },
-  {
-    title: "Schematic Design",
-    description:
-      "The information gathered during the preliminary plan is put into a schematic layout in this phase. Design concepts, products, and materials are also discussed with the client before the actual execution",
-  },
-  {
-    title: "Design Development",
-    description:
-      "During this phase, one plan is determined to be followed, however, all the details remain to be worked out. It is when more refining solutions are developed and shared with the client. ",
-  },
-  {
-    title: "Contract Documentation",
-    description:
-      " As we approach contract documentation, the majority of the ideas are finalised and options are explored. Also, 2D and 3D images and necessary information are constructed before the practical execution of the designs. ",
-  },
-];
+import HeroSection from "@/components/About/HeroSection";
+import AboutFirm from "@/components/About/AboutFirm";
+import Faq from "@/components/Faq/Faq";
+import TimelineCard from "@/components/About/TimelineCard";
+import AboutMore from "@/components/aboutMore/AboutMore";
+import GetInTouch from "@/components/homepage/GetInTouch";
 
 const faqData = [
   {
     question: "1). What is Interior Design?",
     answer:
-      "The concept of interior design creates visual themes to evoke room decorations strategically by using space, style and color. Colonelz, the most renowned interior design company transforms the spaces in the room with living room decor ideas. However, our designers make home interior design and modern interior design to evolve the room decoration styles by making sufficient spaces in the bedroom, kitchen, living room and bathrooms. ",
+      "Interior design creates visual themes using space, style and color."
   },
   {
-    question: "2). What are the Key Elements of Interior Design?",
+    question: "2). Key Elements?",
     answer:
-      "Some key elements must be considered for affordable interior design and decorations. For example, light, space, patterns, texture, color and forms are needed in interior decoration. Therefore, our designers utilize these elements in their interior design ideas. ",
+      "Light, space, patterns, texture, color and forms."
   },
   {
-    question: "3). How do I choose a Color Scheme for my Interior Design Project?",
+    question: "3). How to choose colors?",
     answer:
-      "Our designers allow clients or customers to choose their favorite color for the room based on their vibes. In addition, Colonelz also considers determining a color palette that is chosen by a client. Based on that, our experts advise color schemes for interior decoration. ",
+      "We help clients select palettes based on their preferences."
   },
   {
-    question: "4). Can Interior Design increase the value of my home?",
+    question: "4). Does it increase home value?",
     answer:
-      "Colonelz never fails to satisfy clients or customers because interior designers suggest a superior level of home styling. Renovation interior design, 3D rendering, technology installation and final designing touch are included in this interior design service. Hence, it makes our design pattern more valuable for a home.",
+      "Yes, good design improves value and aesthetics."
   },
   {
-    question: "5). Do I need a professional Interior Designer for my project?",
+    question: "5). Need a designer?",
     answer:
-      "Of course, a professional designer is required to decorate rooms that make a home more stylish. After a few months or years, the value of that home would increase. In addition, the budget plan, professional insights, color choosing and space of the room evoke the value of a room. Thus, Colonelz decides to provide affordable interior design to all customers.",
-  },
-
+      "Yes, professionals improve planning and execution."
+  }
 ];
 
-const page = () => {
+const Page = () => {
   return (
     <>
+      {/* Hero */}
       <HeroSection
         title="INTERIOR DESIGN"
-        //buttonText="Get in Touch"
-        backgroundImage="../../interior.png"
+        backgroundImage="/interior.png"   // ✅ FIXED
         text="Services"
-        background={"#fff"}
-        color={"#fff"}
+        background="#fff"
+        color="#fff"
       />
-
-
-      <div style={{ paddingTop: "100px" }}>
+   
+      {/* About */}
+      <div className="pt-24 px-4 md:px-10 lg:px-20">
         <AboutFirm
-          imgSrc="COLONELZ COMPANY PROFILE _ FOR RESIDENTIAL & COMMERCIAL INTERIOR.pdf-image-156.jpg"
+          imgSrc="/32.webp"   // ✅ FIXED
           imgAlt="About Interior"
           tagText="Interior Design"
           title="What We Do?"
-          description="Working towards creating dream interior spaces for our clients. As per their preferences, Colonelz take top priority in providing spaces that meet their needs and surpass their desires. Plus, we prioritize crafting eco-friendly interiors by using non-toxic and environmentally conscious materials handpicked by our experts for your space."
+          description="We create dream interior spaces tailored to your needs using eco-friendly materials."
         />
       </div>
 
-      {/* <cardSection /> */}
-      {/* <Service /> */}
-      {/* <WhyChooseUs
-        title="Comprehensive Interior Design Planning"
-        tag="EXPERTISE"
-        items={items}
-      /> */}
-      <AllProjects />
+      {/* Timeline */}
       <TimelineCard />
 
+      {/* FAQ */}
       <Faq faqData={faqData} />
-      <GetInTouch />
-      <AboutMore
-        text="Create Your Sanctuary: Personalized Comfort in Every Corner"
-        mainText="Transform your house into a non-public haven with the best interior design company with each detail caters to your consolation and style. We paint closely with you to recognize your alternatives and wishes, making sure every nook of your area feels like a retreat. From comfortable nooks to fashionable living areas, we are cognizant of growing surroundings that display your character and promote rest. Our designs prioritize comfort without compromising on aesthetic attraction, making your private home a real sanctuary. "
-        content="Our interior design company provides interior design services that cater to all your needs. With our interior decorator, you can explore living room decor ideas that enhance your space. Our home interior design solutions are tailored to your preferences. Discover new interior design ideas to create your perfect haven. Modern interior design elements are incorporated to give your home a contemporary feel. We offer affordable interior design options to suit any budget. Trust our interior design company for all your interior design services. Our interior decorator will work closely with you to bring your living room decor ideas to life. Experience home interior design that reflects your style. Our interior design ideas will transform your space. Embrace modern interior design for a chic look. Enjoy affordable interior design solutions for every corner of your home."
-      />
 
-      {/* <Contact bg="#fafafa" /> */}
+      {/* Contact */}
+      <GetInTouch />
+
+      {/* About More */}
+      <AboutMore
+        text="Create Your Sanctuary"
+        mainText="We design spaces that reflect your personality and comfort."
+        content="Modern, affordable, and functional interior solutions tailored to your needs."
+      />
     </>
   );
 };
 
-export default page;
+export default Page;

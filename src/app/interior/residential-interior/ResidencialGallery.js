@@ -1,221 +1,102 @@
-import { useState, useEffect } from "react";
-import style from "../../../styles/imageGallery.module.css";
-import stylesA from "../../../styles/aboutSection.module.css";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+
 const ResidencialGallery = () => {
-    const images = [
-        {
-            src:
-                "/rcc1.webp",
-            thumb:
-                "/rcc1.webp",
+  const images = [
+    "/rcc1.webp",
+    "/Untitled-design-28-1.jpg",
+    "/photo-1586023492125-27b2c045efd7.jpg",
+    "/res-3.webp",
+    "/rcc.webp",
+    "/premium_photo-1674480165860-f60bcf6aa2f7.jpg",
+    "/photo-1521783988139-89397d761dce 1.png",
+    "/photo-1678132446331-da900be50e27 1 (1).png",
+  ];
 
-        },
-        {
-            src:
-                "/Untitled-design-28-1.jpg",
-            thumb:
-                "/Untitled-design-28-1.jpg",
+  const [activeIndex, setActiveIndex] = useState(null);
 
-        },
-        {
-            src:
-                "/photo-1586023492125-27b2c045efd7.jpg",
-            thumb:
-                "/photo-1586023492125-27b2c045efd7.jpg",
+  return (
+    <div className="w-full px-4 md:px-10 lg:px-20 py-16">
 
-        },
-        {
-            src:
-                "/res-3.webp",
-            thumb:
-                "/res-3.webp",
+      {/* Heading */}
+      <div className="text-center mb-12">
+        <div className="flex items-center justify-center gap-3 text-sm uppercase text-gray-500">
+          <span className="w-10 h-[1px] bg-gray-400"></span>
+          Our Gallery
+          <span className="w-10 h-[1px] bg-gray-400"></span>
+        </div>
+        <h2 className="text-2xl md:text-4xl font-bold mt-4">
+          Explore Our Catalogue
+        </h2>
+      </div>
 
-        },
-        {
-            src:
-                "/rcc.webp",
-            thumb:
-                "/rcc.webp",
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="relative w-full h-60 cursor-pointer overflow-hidden rounded-xl"
+            onClick={() => setActiveIndex(index)}
+          >
+            <Image
+              src={src}
+              alt={`gallery-${index}`}
+              fill
+              className="object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+        ))}
+      </div>
 
-        },
-        {
-            src: "/premium_photo-1674480165860-f60bcf6aa2f7.jpg",
-            thumb: "/premium_photo-1674480165860-f60bcf6aa2f7.jpg",
+      {/* Modal */}
+      {activeIndex !== null && (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
 
-        },
+          {/* Close */}
+          <button
+            className="absolute top-5 right-5 text-white text-3xl"
+            onClick={() => setActiveIndex(null)}
+          >
+            ✕
+          </button>
 
-        {
-            src:
-                "/photo-1521783988139-89397d761dce 1.png",
-            thumb:
-                "/photo-1521783988139-89397d761dce 1.png",
+          {/* Image */}
+          <div className="relative w-[90%] md:w-[70%] h-[70vh]">
+            <Image
+              src={images[activeIndex]}
+              alt="preview"
+              fill
+              className="object-contain"
+            />
+          </div>
 
-        },
-        {
-            src:
-                "/photo-1678132446331-da900be50e27 1 (1).png",
-            thumb:
-                "/photo-1678132446331-da900be50e27 1 (1).png",
+          {/* Prev */}
+          <button
+            className="absolute left-5 text-white text-3xl"
+            onClick={() =>
+              setActiveIndex(
+                (activeIndex - 1 + images.length) % images.length
+              )
+            }
+          >
+            ‹
+          </button>
 
-        },
+          {/* Next */}
+          <button
+            className="absolute right-5 text-white text-3xl"
+            onClick={() =>
+              setActiveIndex((activeIndex + 1) % images.length)
+            }
+          >
+            ›
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
 
-
-
-
-
-    ];
-
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    const handleSelect = index => {
-        setActiveIndex(index);
-    };
-
-    if (!isClient) return null;
-    return (
-        <>
-            <div className={`container-fluid px-0  ${style.imageGalleryContainer1}`}>
-                <div className={` ${style.image_row}`}>
-                    <div
-                        style={{ justifyContent: "center", alignItems: "center" }}
-                        className={stylesA.sectionTitle}
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
-                        <div
-                            className={stylesA.left}
-                            style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                textAlign: "center"
-                            }}
-                        >
-                            <div className={stylesA.tag}>
-                                <hr />
-                                Our Gallery
-                                <hr />
-                            </div>
-                            <h2 className="col-lg-12 mt-4 mb-5">Explore Our Catalogue</h2>
-                        </div>
-                    </div>
-                    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-                        <Masonry gutter="15px">
-                            {/* <div className={`${styles.cardImageContainer}`}> */}
-                            {/* <div className={`${style.masonry} `}> */}
-                            {images.map(
-                                (image, index) =>
-                                    // <div className={style.card1} key={index}>
-                                    // {/* <div className={style.cardImageContainer1}> */}
-                                    <a
-                                        key={index}
-                                        onClick={e => {
-                                            e.preventDefault();
-                                            handleSelect(index);
-                                        }}
-                                        href="#"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#exampleLightbox"
-                                        className={style.masonry_item}
-                                        data-aos="zoom-in"
-                                        data-aos-duration="1000"
-                                    >
-                                        <img
-                                            src={image.thumb}
-                                            alt={`thumbnail ${index + 1}`}
-                                            className={`${style.imagesss}`}
-                                            loading="lazy"
-
-                                        />
-                                    </a>
-                                // </div>
-                                // </div>
-                            )}
-                            {/* </div> */}
-                            {/* </div> */}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                    <div
-                        className={`modal fade `}
-                        id="exampleLightbox"
-                        tabIndex="-1"
-                        aria-labelledby="exampleLightboxLabel"
-                        aria-hidden="true"
-                    >
-                        <div className="modal-dialog modal-xl modal-dialog-centered">
-                            <div className="modal-content">
-                                <div className={`modal-body `}>
-                                    <div id="lightboxExampleCarousel" className="carousel slide">
-                                        <img
-                                            src="/close.png"
-                                            className="btn-close"
-                                            data-bs-dismiss="modal"
-                                            aria-label="Close"
-                                        />
-                                        <div className="carousel-inner ratio ratio-16x9 bg-dark">
-                                            {images.map((image, index) =>
-                                                <div
-                                                    className={`carousel-item text-center ${index ===
-                                                        activeIndex
-                                                        ? "active"
-                                                        : ""}`}
-                                                    key={index}
-                                                >
-                                                    <img
-                                                        src={image.src}
-                                                        alt={`image ${index + 1}`}
-                                                        style={{ width: "83%", height: "100%", }}
-                                                    />
-                                                </div>
-                                            )}
-                                        </div>
-                                        <button
-                                            className="carousel-control-prev"
-                                            type="button"
-                                            data-bs-target="#lightboxExampleCarousel"
-                                            data-bs-slide="prev"
-                                            onClick={() =>
-                                                handleSelect(
-                                                    (activeIndex - 1 + images.length) % images.length
-                                                )}
-                                        >
-                                            <span
-                                                className="carousel-control-prev-icon"
-                                                aria-hidden="true"
-                                            />
-                                            <span className="visually-hidden">Previous</span>
-                                        </button>
-                                        <button
-                                            className="carousel-control-next"
-                                            type="button"
-                                            data-bs-target="#lightboxExampleCarousel"
-                                            data-bs-slide="next"
-                                            onClick={() =>
-                                                handleSelect((activeIndex + 1) % images.length)}
-                                        >
-                                            <span
-                                                className="carousel-control-next-icon"
-                                                aria-hidden="true"
-                                            />
-                                            <span className="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </>
-    )
-}
-
-export default ResidencialGallery
+export default ResidencialGallery;

@@ -1,90 +1,108 @@
 "use client";
-import React from "react";
+
 import Image from "next/image";
-import styles from "../../styles/AboutCompany.module.css";
 
 const AboutCompany = () => {
-    return (
-        <div className={` ${styles.backgroundSection}`}>
-            <div className="container mt-0 py-0">
-                {/* Section Title */}
-                <div className="row">
-                    <div className="col-lg-12 col-md-12 col-sm-12 text-center">
-                        <div className="d-flex justify-content-center align-items-center mb-4">
-                            <hr className={styles.hrLine} />
-                            <p className={`mx-3 mt-3 text-uppercase ${styles.title}`}>
-                                Founders
-                            </p>
-                            <hr className={styles.hrLine} />
-                        </div>
-                    </div>
-                    <div className="col-lg-12 ">
-                        <div className="row">
-                            <div className="col-lg-4 d-flex justify-content-center  px-0">
-                                <figure className={styles.imageContainer}>
-                                    <Image
-                                        src="/TEAM PHOTOS/Col Biraj Sahay-Managing Director.png"
-                                        alt="Founder Image"
-                                        width={800}
-                                        height={500}
+  return (
+    <div className="relative max-w-7xl mx-auto">
+      {/* Center Line */}
+      <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-orange-500/20 -translate-x-1/2" />
 
-                                    />
-                                </figure>
-                            </div>
-                            <div className="col-lg-8 px-4 mt-3">
-                                <div className={styles.ppp}>
-                                    <p>
-                                        <b>Colonelz Constructions Pvt. Limited</b>  was founded by <b>Col Sahay,</b> whose journey began with humble beginnings in Jharkhand. Educated at <b> Sainik School Tilaiya</b> and later the prestigious <b> National Defence Academy (NDA),</b> Col Sahay s career in the Indian Armed Forces instilled in him the values of discipline, integrity, and a deep sense of duty. Having served a distinguished tenure in the United Nations and commanded his parent unit, Col Sahay is recognized for his leadership and commitment to excellence.
+      {/* Founder 1 */}
+      <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        {/* Image */}
+        <div className="relative">
+          <div className="hidden lg:block absolute right-[-40px] top-1/2 h-5 w-5 rounded-full bg-orange-500 -translate-y-1/2 z-20" />
 
-                                        However, it was his lifelong passion for architecture and building that eventually drew him back to his childhood aspirations. What started as personal projects for friends and family in the early 2000s evolved into the establishment of < b> Colonelz Constructions</b> in 2013.
-                                    </p>
-                                    <p>
-                                        The company s name pays homage to his olive greens, embodying the resilience, adaptability, and service ethos of the armed forces.
+          <div className="relative h-[550px] overflow-hidden rounded-md">
+            <Image
+              src="/TEAM PHOTOS/Col Biraj Sahay-Managing Director.png"
+              alt="Col Biraj Sahay"
+              fill
+              className="object-cover"
+            />
 
-                                        Since its inception, Colonelz has worked with several leading corporations such as <b>Fiserv, Reliance, and Rolta,</b>  while also delivering custom-designed homes across India. Much like the Army, <b>Colonelz</b> is versatile, embracing projects in diverse locations and environments, always committed to providing top-quality service tailored to the specific needs of each client.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className="col-lg-12 ">
-                        <div className="row">
-
-                            <div className="col-lg-8 px-4 mt-3">
-                                <div className={styles.ppp}>
-                                    <p>
-                                        Carrying forward the legacy of <b>Colonelz Constructions,</b> the next generation is led by <b>Ms. Naomi Sahay,</b> the company’s <b>Principal Designer.</b> Initially pursuing conventional academics, she completed her <b> B.Com</b> <b> Hons</b> from <b>Delhi University.</b> However, while working alongside her father in building the fledgling company, Naomi discovered her true passion for design and art.
-
-                                        Taking a bold step, she shifted her focus to interior design, eventually earning a<b> Master s in Interior Design</b> from <b> Florence, Italy,</b> renowned as the art capital of the world. Her education and exposure to global design trends deeply influence her work, bringing a unique blend of creativity and functionality to every project.
-
-                                        Today, Naomi leads the <b> design team </b>and shapes the creative culture of the company, drawing inspiration from her father’s values of discipline and precision. Under her guidance and mentorship from Col Sahay,<b>Colonelz</b>  continues to craft beautiful, functional spaces with the same ethos of integrity, service, and adaptability that defines the company s fauji roots.
-                                    </p>
-                                    <p>
-                                        Today, Naomi leads the design team and shapes the creative culture of the company, drawing inspiration from her father’s values of discipline and precision. Under her guidance and mentorship from Col Sahay, Colonelz continues to craft beautiful, functional spaces with the same ethos of integrity, service, and adaptability that defines the company s fauji roots.
-
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 d-flex justify-content-center  px-0">
-                                <figure className={styles.imageContainer}>
-                                    <Image
-                                        src="/TEAM PHOTOS/Naomi Sahay-Principle Designer.png"
-                                        alt="Founder Image"
-                                        width={800}
-                                        height={500}
-                                    />
-                                </figure>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          </div>
         </div>
-    );
+
+        {/* Content */}
+        <div>
+          <span className="text-orange-400 uppercase tracking-[0.3em] text-xs">
+            Founder & Managing Director
+          </span>
+
+          <h3 className="mt-4 text-4xl font-bold">Col. Biraj Sahay</h3>
+
+          <p className="mt-6 text-gray-400 leading-8">
+            Founder of Colonelz Constructions Pvt. Limited, Col. Sahay&aposs
+            journey began with discipline and leadership shaped through Sainik
+            School Tilaiya and the National Defence Academy.
+          </p>
+
+          <p className="mt-5 text-gray-400 leading-8">
+            His years in the Indian Armed Forces and the United Nations
+            established the values of integrity, precision, and excellence that
+            define Colonelz today.
+          </p>
+
+          <div className="mt-8 border-l-2 border-orange-500 pl-5">
+            <p className="italic text-gray-300">
+              {
+                "Built on discipline, driven by passion, committed to excellence."
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Founder 2 */}
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Content */}
+        <div className="order-2 lg:order-1 text-right">
+          <span className="text-orange-400 uppercase tracking-[0.3em] text-xs">
+            Principal Designer
+          </span>
+
+          <h3 className="mt-4 text-4xl font-bold">Naomi Sahay</h3>
+
+          <p className="mt-6 text-gray-400 leading-8">
+            Naomi brings an international perspective after completing her
+            Master&aposs in Interior Design from Florence, Italy.
+          </p>
+
+          <p className="mt-5 text-gray-400 leading-8">
+            Her philosophy blends artistic creativity with functionality,
+            creating timeless spaces that inspire people every day.
+          </p>
+
+          <div className="mt-8 border-r-2 border-orange-500 pr-5">
+            <p className="italic text-gray-300">
+              {
+                "Design is not just aesthetics—it&apos how spaces make you feel."
+              }
+            </p>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="relative order-1 lg:order-2">
+          <div className="hidden lg:block absolute left-[-40px] top-1/2 h-5 w-5 rounded-full bg-orange-500 -translate-y-1/2 z-20" />
+
+          <div className="relative h-[550px] overflow-hidden rounded-md">
+            <Image
+              src="/TEAM PHOTOS/Naomi Sahay-Principle Designer.png"
+              alt="Naomi Sahay"
+              fill
+              className="object-cover"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AboutCompany;

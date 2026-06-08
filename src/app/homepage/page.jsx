@@ -1,19 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import HeroSection from "../../components/homepage/HeroSection";
-import BlogSection from "../../components/homepage/BlogSection";
-import GetInTouch from "../../components/homepage/GetInTouch";
-import AboutUs from "../../components/homepage/AboutUs";
-import Testimonials from "../../components/homepage/Testimonials";
-import Video from "../../components/homepage/Video";
-import Portfolio from "../../components/homepage/Portfolio";
-import styles from "../../styles/home.module.css";
-import Services from "../../components/homepage/Services";
-import AboutMore from "../../components/aboutMore/AboutMore";
-import ImageGallery from "../../components/homepage/ImageGallery";
+import HeroSection from "@/components/homepage/HeroSection";
+import BlogSection from "@/components/homepage/BlogSection";
+import GetInTouch from "@/components/homepage/GetInTouch";
+import AboutUs from "@/components/homepage/AboutUs";
+import Testimonials from "@/components/homepage/Testimonials";
+import Video from "@/components/homepage/Video";
+import Portfolio from "@/components/homepage/Portfolio";
+import Services from "@/components/homepage/Services";
+import AboutMore from "@/components/aboutMore/AboutMore";
+import ImageGallery from "@/components/homepage/ImageGallery";
 import Counter from "@/components/homepage/Counter";
 import Para1 from "@/components/homepage/Para1";
 import LogoSlider from "@/components/homepage/LogoSlider";
+
 const textData = [
   {
     image: "/fi_8172688.png",
@@ -27,11 +27,10 @@ const textData = [
     image: "/fi_10365082.png",
     title: "Architecture",
     description:
-      "Architectural services include design, preparation of construction documents,  administration.",
+      "Architectural services include design, preparation of construction documents, administration.",
     buttonText: "View service",
     url: "/architecture",
   },
-
   {
     image: "/fi_10365450.png",
     title: "Construction",
@@ -41,83 +40,37 @@ const textData = [
     url: "/construction",
   },
 ];
-const cards = [
-  {
-    id: 1,
-    image: "/slide-1.jpg",
-    tag: "Web Design",
-    title: "Color Integration",
-    date: 2023,
-  },
-  {
-    id: 2,
-    image: "/slide-2.jpg",
-    tag: "Mobile Software",
-    title: "Color Integration",
-    date: 2023,
-  },
-  {
-    id: 3,
-    image: "/slide-3.jpg",
-    tag: "Web Design",
-    title: "New Gadgets",
-    date: 2023,
-  },
-  {
-    id: 4,
-    image: "/slide-4.jpg",
-    tag: "Web Design",
-    title: "Digital Platform",
-    date: 2023,
-  },
-  {
-    id: 5,
-    image: "/slide-5.jpg",
-    tag: "Web Design",
-    title: "Branding Process",
-    date: 2023,
-  },
-  {
-    id: 6,
-    image: "/slide-6.jpg",
-    tag: "Web Design",
-    title: "Branding Process",
-    date: 2023,
-  },
-];
+
 const Homepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 3000) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 3000);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div>
       <div className={isScrolled ? "" : "scrolled"}>
-        <div className={styles.overflowXCustom}>
+        <div>
           <HeroSection />
         </div>
       </div>
+
       <Para1 />
       <AboutUs />
       <Counter />
+
       <Services
         title="Services We Offer"
         subtitle="Explore Our Specialized Services"
         text={textData}
       />
+
       <Portfolio />
       <Video />
       <Testimonials />
@@ -125,10 +78,11 @@ const Homepage = () => {
       <GetInTouch />
       <ImageGallery />
       <BlogSection />
+
       <AboutMore
         text="Transform Your Space: Timeless Elegance in Every Design"
-        content="From costly materials to seamless functionality, we create interiors that stand the check of time and increase your dwelling experience. Discover how our designs can transform your area right into a haven of grace and style."
-        mainText="At Colonelz, we turn your imagination and prescience into facts with designs that mix traditional beauty and contemporary sophistication. Our expert crew crafts each area with attention to detail, making sure each detail reflects timeless elegance."
+        coxntent="From costly materials to seamless functionality, we create interiors that stand the test of time."
+        mainText="At Colonelz, we turn your imagination into reality with designs that blend traditional beauty and modern sophistication."
       />
     </div>
   );

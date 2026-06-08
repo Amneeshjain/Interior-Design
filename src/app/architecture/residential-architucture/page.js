@@ -1,32 +1,33 @@
 "use client";
-import React from "react";
-import styles from "../../../styles/home.module.css";
-import Contact from "../../../components/About/Contact";
-import HeroSection from "../../../components/About/HeroSection";
-import Process from "../../../components/ResidentialArchitucture/Process";
-import Services from "../../../components/ResidentialArchitucture/Services";
-const page = () => {
+import Contact from "@/components/About/Contact";
+import HeroSection from "@/components/About/HeroSection";
+import Process from "@/components/ResidentialArchitucture/Process";
+import Services from "@/components/ResidentialArchitucture/Services";
+
+const Page = () => {
   return (
     <div>
+      {/* Hero Section */}
       <HeroSection
         title="Articles & news"
         buttonText="Get in Touch"
-        backgroundImage="../../bg-hero.png"
+        backgroundImage="/bg-hero.png" // ✅ fixed path
       />
 
-      <div className={styles.pdCustomOverall}>
+      {/* Sections with spacing */}
+      <div className="py-12 px-4 md:px-10 lg:px-20">
         <Services />
       </div>
 
-      <div className={styles.pdCustomOverall}>
+      <div className="py-12 px-4 md:px-10 lg:px-20 bg-gray-50">
         <Process />
       </div>
 
-      <div className={styles.pdCustomOverall}>
+      <div className="py-12 px-4 md:px-10 lg:px-20">
         <Contact />
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

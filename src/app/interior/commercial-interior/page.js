@@ -1,76 +1,68 @@
 "use client";
-import React from "react";
-import Contact from "../../../components/About/Contact";
+
 import HeroSection from "../../../components/About/HeroSection";
 import AboutMore from "../../../components/aboutMore/AboutMore";
 import Services from "../../../components/homepage/Services";
-// import Process from "@/components/About/Process";
 import TimelineCard from "@/components/About/TimelineCard";
 import Faq from "@/components/Faq/Faq";
 import AboutFirm from "../../../components/About/AboutFirm";
 import GetInTouch from "../../../components/homepage/GetInTouch";
-// import ImageGallery from "@/components/homepage/ImageGallery";
 import CommercialGallery from "./CommercialGallery";
 const textData = [
   {
     image: "/plan.png",
     title: "Innovative and Versatile Design Solutions",
     description:
-      " Creating practical designs tailored for commercial areas, ensuring each element is meticulously considered."
+      " Creating practical designs tailored for commercial areas, ensuring each element is meticulously considered.",
   },
   {
     image: "/interior-design.png",
     title: "Trend Awareness and Integration",
     description:
-      " Keeping track of modern developments to keep industrial spaces contemporary and classy. We also integrate advanced technology solutions for effective performance for commercial interiors."
+      " Keeping track of modern developments to keep industrial spaces contemporary and classy. We also integrate advanced technology solutions for effective performance for commercial interiors.",
   },
   {
     image: "/project-management.png",
     title: "Client-Centric Project Management",
     description:
-      " We effectively communicate with clients and customers to create the designs. Plus, we manage all layout and implementation components carefully to get excellent outcomes."
-  }
+      " We effectively communicate with clients and customers to create the designs. Plus, we manage all layout and implementation components carefully to get excellent outcomes.",
+  },
 ];
 const faqData = [
   {
-    question: "1). What does commercial Interior Design involve?",
+    question: "1. What does commercial Interior Design involve?",
     answer:
-      "Commercial interior designers include spaces, well designs, interior walls and more. Moreover, our services are based on it to maintain commercial interior designs.  "
+      "Commercial interior designers include spaces, well designs, interior walls and more. Moreover, our services are based on it to maintain commercial interior designs.  ",
   },
   {
     question:
-      "2). How do you determine the design style and functionality for my Commercial Space?",
+      "2. How do you determine the design style and functionality for my Commercial Space?",
     answer:
-      "Our commercial interior designers maintain style, space and designs to evolve our brand position in the Indian market. Hence, we determine our styles by showing functionality, from decorations and commercial interior decorations."
+      "Our commercial interior designers maintain style, space and designs to evolve our brand position in the Indian market. Hence, we determine our styles by showing functionality, from decorations and commercial interior decorations.",
   },
   {
     question:
-      "3). What is the typical process for a Commercial Interior Design Project?",
+      "3. What is the typical process for a Commercial Interior Design Project?",
     answer:
-      "Our commercial interior decorator makes plans, procurement, design and fit-out to understand each step of construction, designing and architecture for commercial interior design services. "
+      "Our commercial interior decorator makes plans, procurement, design and fit-out to understand each step of construction, designing and architecture for commercial interior design services. ",
   },
   {
     question:
-      "4). How do you manage budget and cost control for Commercial Interior Design Projects?",
+      "4. How do you manage budget and cost control for Commercial Interior Design Projects?",
     answer:
-      "Project management ability is associated with our services, where time plan, structural changes, budget and civil requirements are there. At this point, we maintain budget and cost control by following these areas."
+      "Project management ability is associated with our services, where time plan, structural changes, budget and civil requirements are there. At this point, we maintain budget and cost control by following these areas.",
   },
   {
     question:
-      "5). What should we consider or prepare before starting a commercial interior design project?",
+      "5. What should we consider or prepare before starting a commercial interior design project?",
     answer:
-      "Cololenz considers plan elaboration before starting the project plan in terms of improving commercial performance. However, among all commercial interior design firms, our company maintains compatibility with clients and project deliverables to accomplish commercial interior design projects. "
-  }
+      "Cololenz considers plan elaboration before starting the project plan in terms of improving commercial performance. However, among all commercial interior design firms, our company maintains compatibility with clients and project deliverables to accomplish commercial interior design projects. ",
+  },
 ];
 const page = () => {
   return (
     <div>
-      <HeroSection
-        text="Interior"
-        title="Commercial Interior"
-        buttonText="Get in Touch"
-        backgroundImage="../../bg-hero.png"
-      />
+      <HeroSection />
       <div style={{ paddingTop: "100px" }}>
         <AboutFirm
           imgSrc="/Meeting room.jpg"
@@ -88,9 +80,7 @@ const page = () => {
         />
       </div>
 
-      {/* <Process /> */}
       <TimelineCard />
-      {/* <ImageGallery /> */}
       <CommercialGallery />
       <Faq faqData={faqData} />
       <GetInTouch />
@@ -102,7 +92,6 @@ const page = () => {
 "
         content="Experience the difference with our commercial interior design services and see how our business interior design expertise can transform your space. Trust our commercial interior design firm and our talented commercial interior designers to deliver exceptional results. Our commercial interior decorator will ensure every detail is perfect."
       />
-      {/* <Contact bg="#fafafa" /> */}
     </div>
   );
 };

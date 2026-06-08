@@ -1,34 +1,23 @@
-"use client";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import MobileMenu from "../components/MobileMenu";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import IpadHeader from "@/components/IpadHeader";
-import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, []);
-
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div>
-          <div className="hide-in-web">
-            <div className="fixedButton">
-              <Link href="/get-in-touch">Get In Touch</Link>
-            </div>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={dmSans.className}>
+        <div className="">
+          <div className="flex flex-col ">
+            <Header />
           </div>
-          <Header />
-          <IpadHeader />
-          <MobileMenu />
-          {children}
+
+          <main className="grow flex flex-col">{children}</main>
+
           <Footer />
         </div>
       </body>

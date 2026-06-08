@@ -1,21 +1,22 @@
-import React from 'react';
-import styles from "../../styles/pararaph.module.css"
+"use client";
 
 const Para1 = () => {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-5 text-center">
 
-    return (
-        <div className='container ' style={{
+        {/* Heading */}
+        <h2 className="text-2xl md:text-4xl font-semibold leading-snug tracking-tight text-gray-900 text-muted">
+          Best turnkey interior design <br className="hidden md:block" />
+          and construction company in Gurugram
+        </h2>
 
-            marginTop: "30px"
-        }}>
-            <div className='row'>
-                <div className={`${styles.p1} col-lg-12 text-center`}>
-                    <h2>
-                        Best turnkey interior design <br/>and Construction company in gurugram</h2>
-                </div>
-            </div>
-        </div >
-    );
+        {/* Decorative line */}
+        <div className="w-16 h-[2px] bg-black mx-auto mt-6" />
+
+      </div>
+    </section>
+  );
 };
 
 export default Para1;

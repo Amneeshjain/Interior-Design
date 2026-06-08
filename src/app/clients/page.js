@@ -2,9 +2,8 @@
 import Herosection from "../../components/Client/Herosection"
 import CustomerStory from "../../components/Client/CustomerStory"
 import TimelineCard from '@/components/About/TimelineCard'
-import GetInTouch from '../project-detail/GetInTouch'
+import GetInTouch from '../../components/homepage/GetInTouch'
 import AboutMore from '../../components/aboutMore/AboutMore'
-import Paragraph from "../../components/Client/Paragraph"
 import Faq from "@/components/Faq/Faq";
 import ImageGallery from "../../components/homepage/ImageGallery";
 
@@ -40,11 +39,7 @@ function page() {
 
     return (
         <div>
-            <Herosection style={{ color: "#fff !important" }}
-                title="Customer Stories "
-                text="Customer Stories ?"
-                backgroundImage="../../bg-hero.png" />
-            <Paragraph />
+            <Herosection />
             <CustomerStory />
             <TimelineCard />
             <ImageGallery />

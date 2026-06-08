@@ -1,71 +1,92 @@
-"use client"
+"use client";
 import React from "react";
-import styles from "../../styles/myprocess.module.css";
 
 const data = [
-    { number: "01.", title: "Understanding the Client's Requirements", description: "We prioritize understanding the client’s vision and needs through detailed discussions, defining the project scope, and assessing spaces to ensure alignment with the client’s goals from the start." },
-    { number: "02.", title: "Pitch Presentation & Tentative Estimate", description: "We present a curated mood board and a ballpark cost estimate to gauge the client’s design preferences and budget." },
-    { number: "03.", title: "Contract Signing & Advance Payment", description: "A formal contract is signed outlining the project scope, terms, and conditions. An advance payment is collected to officially start the project." },
-    { number: "04.", title: " Site Measurements & Documentation", description: "Within 48 hours of signing the contract, we conduct a site visit to take detailed measurements and document existing conditions, ensuring transparency." },
-    { number: "05.", title: " Project Timeline & Detailed Estimate", description: "We provide a project timeline and a comprehensive estimate based on the final scope of work, keeping clients informed and organized." },
-    { number: "06.", title: "Design Phase", description: "Our design team creates 3D models and layouts, incorporating client feedback to ensure the design captures the client’s vision perfectly." },
-    { number: "07.", title: "Execution Phase", description: "Upon client approval, on-site work begins within 3-4 working days, with regular updates provided to ensure efficient execution." },
-    { number: "08.", title: " Handover", description: "The project concludes with a handover certificate, support documents, warranty information, and final design boards, ensuring the client has all necessary references." },
-    // { number: "09.", title: "Post PC", description: "At the project's conclusion, we'll inspect the works and prepare the final certificate for completion." }
+  { number: "01", title: "Requirement Gathering", desc: "Understanding client vision and project scope." },
+  { number: "02", title: "Concept & Estimate", desc: "Mood board and initial budget planning." },
+  { number: "03", title: "Approval & Contract", desc: "Final approval and formal agreement signing." },
+  { number: "04", title: "Design Phase", desc: "3D design, layouts, and client feedback integration." },
+  { number: "05", title: "Execution", desc: "On-site work with regular updates and quality checks." },
+  { number: "06", title: "Handover", desc: "Final delivery with documentation and support." },
 ];
 
-const Newprocess = () => {
-    return (
-        <>
-            <div className={`${styles.bg_color} py-5`} style={{ backgroundColor: "#000", color: "#fff" }}>
-                <div className="container ">
-                    <div className="row">
-                        <div className="text-center py-4">
-                            <h2>OUR DESIGN PROCESS</h2>
-                        </div>
+const SmallTimeline = () => {
+  return (
+    <section className="relative py-20 bg-gradient-to-b from-white to-orange-50 overflow-hidden">
 
-                        <div className="row">
-                            {data.map((stage, index) => (
-                                <div key={index} className="col-lg-6 col-md-6 p-2">
-                                    <div className="process-box py-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "10px", transition: "transform 0.3s ease", cursor: "pointer" }}>
-                                        <div className="d-flex justify-content-start align-items-start">
-                                            <h4 style={{ color: "red", fontWeight: "bold", fontSize: "24px", marginRight: "10px" }}>
+      {/* background glow */}
+      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-200/30 blur-3xl rounded-full" />
 
-                                                {stage.number}
-                                            </h4>
+      <div className="max-w-5xl mx-auto px-5 relative">
 
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <p className="text-xs uppercase tracking-[0.35em] text-orange-500">
+            Our Process
+          </p>
 
-                                            <div>
-                                                <h4 style={{ fontWeight: "600", fontSize: "20px" }}>{stage.title}</h4>
-                                                <p style={{ color: "#bbb", fontSize: "16px" }}>{stage.description}</p>
-                                                <hr style={{ borderColor: "#fff" }} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                            <h2 className=" text-uppercase text-center mt-4 mb-4" >
-                                Average Timeline of Projects <br />6 To 12 Weeks
-                            </h2>
-                        </div>
+          <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mt-3">
+            Simple & Transparent Workflow
+          </h2>
 
-                    </div>
-                </div>
-            </div >
-            <style jsx>{`
-        .vertical-heading {
-          text-transform: uppercase;
-          font-weight: bold;
-          color: white;
-          letter-spacing: 2px;
-        }
-        .process-box:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-      `}</style>
-        </>
-    );
+          <div className="w-20 h-[2px] bg-orange-400 mx-auto mt-5" />
+        </div>
+
+        {/* Timeline Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="
+                group relative
+                p-6
+                rounded-2xl
+                bg-white
+                border border-orange-100
+                shadow-sm
+                hover:shadow-xl
+                hover:-translate-y-2
+                transition-all duration-500
+              "
+            >
+
+              {/* number badge */}
+              <div className="absolute -top-4 left-6 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold shadow-md">
+                {item.number}
+              </div>
+
+              {/* content */}
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-500 transition">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* hover accent line */}
+              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 group-hover:w-full transition-all duration-500" />
+            </div>
+          ))}
+
+        </div>
+
+        {/* Footer note */}
+        <div className="text-center mt-14">
+          <p className="text-sm text-gray-500">
+            Average Project Duration:{" "}
+            <span className="text-orange-600 font-semibold">
+              6–12 Weeks
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
-export default Newprocess;
+export default SmallTimeline;

@@ -1,80 +1,127 @@
 "use client";
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import styles from "../../styles/customerStory.module.css";
+import Paragraph from "./Paragraph";
 
 const CustomerStory = () => {
-    // State to store the fetched project types and projects
-    const [projects, setProjects] = useState([]);
-    const [projectTypes, setProjectTypes] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  const [projectTypes, setProjectTypes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    // Fetch project types from API
-    useEffect(() => {
-        const fetchProjectTypes = async () => {
-            try {
-                const response = await fetch("https://backend-interior.onrender.com/api/project/project-types");
-                const data = await response.json();
-                if (data.success) {
-                    setProjectTypes(data.data);
-                } else {
-                    console.error("Failed to fetch project types:", data.message);
-                }
-            } catch (error) {
-                console.error("Error fetching project types:", error);
-            }
-        };
-        fetchProjectTypes();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [typesRes, projectsRes] = await Promise.all([
+          fetch("https://backend-interior.onrender.com/api/project/project-types"),
+          fetch("https://backend-interior.onrender.com/api/project/projects"),
+        ]);
 
-    // Fetch projects from API
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                const response = await axios.get(`https://backend-interior.onrender.com/api/project/projects`);
-                setProjects(response.data.data); // Set the projects data
-                setLoading(false);
-            } catch (error) {
-                console.error("Error fetching projects:", error);
-                setLoading(false);
-            }
-        };
-        fetchProjects();
-    }, []);
+        const typesData = await typesRes.json();
+        const projectsData = await projectsRes.json();
 
-    if (loading) {
-        return <p>Loading customer stories...</p>;
-    }
+        if (typesData.success) setProjectTypes(typesData.data);
+        if (projectsData.success) setProjects(projectsData.data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchData();
+  }, []);
+
+  if (loading) {
     return (
-        <div className="container py-5">
-            <h2 className={`text-center mb-5 ${styles.heading}`}>Customer Stories</h2>
-
-            {/* Display Projects and their Types in a Single Card */}
-            <div className="row">
-                {projectTypes.map((type) => (
-                    <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={type._id}>
-                        <div className={`card h-100 shadow ${styles.cardHover} ${styles.cardBackground}`}>
-                            <div className="card-body">
-                                <h5 className={`card-title ${styles.categoryTitle}`}>{type.project_type}</h5>
-                                {projects
-                                    .filter((project) => project.projectType._id === type._id)
-                                    .map((project) => (
-                                        <div key={project._id} className="mt-3">
-
-                                            <Link href={`/project-detail/${project.project_slug}`}>
-                                                <h6 className={styles.projectName}>{project.projectName}</h6>
-                                            </Link>
-                                        </div>
-                                    ))}
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+      <div className="py-20 text-center text-gray-500">
+        Loading customer stories...
+      </div>
     );
+  }
+
+  return (
+    <section className="py-10 bg-gradient-to-b from-white via-orange-50/30 to-white">
+      <div className="max-w-7xl mx-auto px-5">
+
+        {/* HEADER */}
+        <div className="text-center mb-10">
+          <span className="inline-block px-3 py-1 text-xs rounded-full bg-orange-500 text-white shadow-sm">
+            Our Work
+          </span>
+
+          <h2 className="text-2xl md:text-3xl font-semibold mt-3">
+            Customer Stories
+          </h2>
+
+          <p className="text-sm text-gray-500 mt-2 max-w-md mx-auto">
+            Explore projects categorized by design type and client needs.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
+
+          {projectTypes.map((type) => (
+            <div
+              key={type._id}
+              className="
+                group
+                bg-white
+                border border-orange-100
+                rounded-2xl
+                p-5
+                shadow-sm
+                hover:shadow-xl
+                hover:-translate-y-1
+                transition-all duration-300
+              "
+            >
+
+              {/* CATEGORY */}
+              <h3 className="
+                text-base font-semibold mb-4 pb-2 border-b
+                border-orange-100
+                flex items-center gap-2
+              ">
+                <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+                {type.project_type}
+              </h3>
+
+              {/* PROJECT LIST */}
+              <div className="space-y-2">
+                {projects
+                  .filter(
+                    (project) =>
+                      project?.projectType?._id === type._id
+                  )
+                  .map((project) => (
+                    <Link
+                      key={project._id}
+                      href={`/project-detail/${project.project_slug}`}
+                      className="
+                        flex items-center gap-2
+                        text-sm text-gray-600
+                        hover:text-orange-500
+                        transition
+                        group-hover:translate-x-1
+                      "
+                    >
+                      <span className="text-orange-400">›</span>
+                      {project.projectName}
+                    </Link>
+                  ))}
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+        <Paragraph/>
+      </div>
+  
+    </section>
+  );
 };
 
 export default CustomerStory;
