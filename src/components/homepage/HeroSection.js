@@ -38,8 +38,7 @@ export default function HeroSection() {
   const slide = slides[current];
 
   return (
-    <section className="relative h-[95vh] overflow-hidden">
-
+    <section className="relative h-screen overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 scale-105 transition-all duration-1000">
         <Image
@@ -59,11 +58,10 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
-
         <div className="max-w-4xl text-white">
-
           {/* Tag */}
-          <span className="
+          <span
+            className="
             inline-flex items-center gap-2
             rounded-full
             border border-orange-400/30
@@ -75,28 +73,31 @@ export default function HeroSection() {
             uppercase
             text-orange-200
             mb-6
-          ">
+          "
+          >
             {slide.title}
           </span>
 
           {/* Title */}
-          <h1 className="
+          <h1
+            className="
             text-4xl md:text-6xl lg:text-7xl
             font-semibold
             leading-tight
             tracking-tight
-          ">
+          "
+          >
             {slide.subtitle}
           </h1>
 
           {/* Description */}
           <p className="mt-6 text-base md:text-lg text-white/75 max-w-2xl mx-auto">
-            Transforming ideas into timeless interiors and architectural masterpieces with precision, discipline, and creativity.
+            Transforming ideas into timeless interiors and architectural
+            masterpieces with precision, discipline, and creativity.
           </p>
 
           {/* CTA */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-
             <a
               href="/projects"
               className="
@@ -133,7 +134,6 @@ export default function HeroSection() {
             >
               Get In Touch
             </a>
-
           </div>
         </div>
       </div>
@@ -146,15 +146,15 @@ export default function HeroSection() {
             onClick={() => setCurrent(i)}
             className={`
               transition-all duration-300 rounded-full
-              ${i === current
-                ? "w-10 h-2 bg-orange-500"
-                : "w-2 h-2 bg-white/40 hover:bg-white/70"
+              ${
+                i === current
+                  ? "w-10 h-2 bg-orange-500"
+                  : "w-2 h-2 bg-white/40 hover:bg-white/70"
               }
             `}
           />
         ))}
       </div>
-
     </section>
   );
 }

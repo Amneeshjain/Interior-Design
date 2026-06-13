@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
 
 const TeamSliderData = [
   {
@@ -80,166 +81,184 @@ const TeamSliderData = [
       "Supporting architects and designers with fresh ideas and enthusiasm.",
   },
 ];
-const Team = () => {
+
+export default function Team() {
   const settings = {
     infinite: true,
     autoplay: true,
-    speed: 800,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
+    speed: 700,
     slidesToShow: 3,
-    centerMode: true,
-    centerPadding: "40px",
+    slidesToScroll: 1,
     arrows: false,
     dots: true,
+
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          centerMode: false,
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerMode: false,
         },
       },
     ],
   };
 
   return (
-    <section className="relative py-20 bg-white overflow-hidden">
-      {/* Header */}
-      <div className="text-center mb-14 ">
-        <p className="text-xs uppercase tracking-[0.35em] text-orange-500 mb-3">
-          Our Team
-        </p>
+    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-orange-50/40 via-white to-orange-50/40">
+      {/* Decorative Blur */}
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-orange-200/20 blur-3xl" />
+      <div className="absolute right-0 bottom-20 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl" />
 
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900">
-          Meet Our Creative Experts
-        </h2>
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-600">
+            Our Team
+          </span>
 
-        <div className="w-20 h-[2px] bg-orange-400/60 mx-auto mt-6" />
-      </div>
+          <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+            Meet Our Creative Experts
+          </h2>
 
-      {/* Slider */}
-      <Slider {...settings}>
-        {TeamSliderData.map(({ id, image, title, profile, descrip }) => (
-          <div key={id} className="px-2 md:px-3">
-            <div
-              className="
-          group
-          relative
-          overflow-hidden
+          <p className="mt-5 max-w-2xl mx-auto text-gray-500 text-lg">
+            A talented team of architects, designers, engineers, and
+            professionals dedicated to transforming ideas into exceptional
+            spaces.
+          </p>
 
-          rounded
+          <div className="w-24 h-[3px] bg-orange-500 rounded-full mx-auto mt-8" />
+        </div>
 
-          border
-          border-orange-100
-
-          bg-white
-
-          shadow-md
-
-          transition-all
-          duration-500
-
-          hover:-translate-y-2
-          hover:shadow-2xl
-        "
-            >
-              {/* Image */}
+        {/* Slider */}
+        <Slider {...settings}>
+          {TeamSliderData.map(({ id, image, title, profile, descrip }) => (
+            <div key={id} className="px-4 py-6">
               <div
                 className="
-            relative
-
-            h-[420px]
-            sm:h-[480px]
-            md:h-[520px]
-            lg:h-[580px]
-          "
+                    group
+                    relative
+                    max-w-[340px]
+                    mx-auto
+                    overflow-hidden
+                    rounded-xl
+                    border
+                    border-orange-100
+                    bg-white
+                    shadow-lg
+                    transition-all
+                    duration-500
+                    hover:-translate-y-3
+                    hover:shadow-[0_25px_60px_rgba(249,115,22,0.15)]
+                  "
               >
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  className="
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-105
-            "
-                />
+                {/* Image */}
+                <div className="relative aspect-3/4 overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    sizes="(max-width:768px) 100vw,
+                             (max-width:1024px) 50vw,
+                             33vw"
+                    className="
+                        object-cover
+                        object-top
+                        transition-all
+                        duration-700
+                        group-hover:scale-105
+                      "
+                  />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-              </div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
 
-              {/* Content */}
-              <div
-                className="
-            absolute
-            bottom-0
-            left-0
-            w-full
+                  {/* Content */}
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <span
+                      className="
+                          inline-flex
+                          rounded-full
+                          bg-orange-500/20
+                          backdrop-blur-md
+                          px-3
+                          py-1
+                          text-xs
+                          font-medium
+                          text-orange-200
+                          border
+                          border-orange-300/20
+                        "
+                    >
+                      {profile}
+                    </span>
 
-            p-4
-            md:p-6
+                    <h3 className="mt-3 text-2xl font-bold text-white">
+                      {title}
+                    </h3>
 
-            z-10
-          "
-              >
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
-                  {title}
-                </h3>
-
-                <p className="mt-1 text-sm md:text-base text-orange-300">
-                  {profile}
-                </p>
-
-                <p
-                  className="
-              mt-3
-
-              text-xs
-              md:text-sm
-
-              leading-6
-
-              text-white/80
-
-              opacity-0
-              translate-y-4
-
-              group-hover:opacity-100
-              group-hover:translate-y-0
-
-              transition-all
-              duration-500
-            "
-                >
-                  {descrip}
-                </p>
+                    <div
+                      className="
+                          overflow-hidden
+                          max-h-0
+                          opacity-0
+                          transition-all
+                          duration-500
+                          group-hover:max-h-32
+                          group-hover:opacity-100
+                        "
+                    >
+                      <p className="mt-3 text-sm leading-relaxed text-white/80">
+                        {descrip}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
 
-      {/* Dots */}
       <style jsx global>{`
+        .slick-track {
+          display: flex !important;
+        }
+
+        .slick-slide {
+          height: inherit !important;
+        }
+
+        .slick-slide > div {
+          height: 100%;
+        }
+
+        .slick-dots {
+          bottom: -40px;
+        }
+
         .slick-dots li button:before {
           color: #fb923c;
-          font-size: 10px;
+          font-size: 12px;
+          opacity: 0.5;
         }
+
         .slick-dots li.slick-active button:before {
           color: #f97316;
+          opacity: 1;
         }
       `}</style>
     </section>
   );
-};
-
-export default Team;
+}
