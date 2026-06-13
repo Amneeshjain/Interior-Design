@@ -198,7 +198,7 @@ const Footer = () => {
           <p className="text-sm text-gray-500">
             Designed & Developed by{" "}
             <Link href="https://mediadynox.com" className="text-orange-400 hover:underline">
-              Media Dynox
+              Amneesh Jain
             </Link>
           </p>
         </div>

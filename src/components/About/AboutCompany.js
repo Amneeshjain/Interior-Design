@@ -9,12 +9,12 @@ const AboutCompany = () => {
       <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-orange-500/20 -translate-x-1/2" />
 
       {/* Founder 1 */}
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+      <div className="grid lg:grid-cols-2 gap-16 items-center mb-16 mt-16">
         {/* Image */}
         <div className="relative">
           <div className="hidden lg:block absolute right-[-40px] top-1/2 h-5 w-5 rounded-full bg-orange-500 -translate-y-1/2 z-20" />
 
-          <div className="relative h-[550px] overflow-hidden rounded-md">
+          <div className="relative h-[670px] overflow-hidden rounded-md">
             <Image
               src="/TEAM PHOTOS/Col Biraj Sahay-Managing Director.png"
               alt="Col Biraj Sahay"
@@ -89,7 +89,7 @@ const AboutCompany = () => {
         <div className="relative order-1 lg:order-2">
           <div className="hidden lg:block absolute left-[-40px] top-1/2 h-5 w-5 rounded-full bg-orange-500 -translate-y-1/2 z-20" />
 
-          <div className="relative h-[550px] overflow-hidden rounded-md">
+          <div className="relative h-[670px] overflow-hidden rounded-md">
             <Image
               src="/TEAM PHOTOS/Naomi Sahay-Principle Designer.png"
               alt="Naomi Sahay"
